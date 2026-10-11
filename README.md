@@ -77,7 +77,7 @@ Example definitions and factories live in `dist/examples.js`. Existing models re
 
 ## Visual grid and frame builder
 
-Open **Generate → Grid & frame**. Choose a panel, tower or box, then use **+ / −** to grow its width, height and depth. The live 3D preview supports orbit, zoom, Front and Top views. Pick a Classic rod by its colored thumbnail; the cell size follows the actual modeled rod length plus its connector seats.
+Open **Generate → Grid & frame**. Choose a panel, rectangular frame, octagonal ring or tower, then use **+ / −** to grow its width, height and depth. The live 3D preview supports orbit, zoom, Front and Top views. Pick a Classic rod by its colored thumbnail; the cell size follows the actual modeled rod length plus its connector seats.
 
 ![Procedural frame built from Classic connectors and stock rods](docs/screenshots/frame-builder.png)
 
@@ -88,6 +88,14 @@ Open **Generate → Grid & frame**. Choose a panel, tower or box, then use **+ /
 - Counts range from 1 to 30 cells per direction, subject to the existing 2,500-part model limit. Tests cover every stock rod size, all shared boundary directions, socket alignment, duplicate reuse, obstacles, save/import and a connected 2,072-part frame. The preview batches repeated geometry for large structures.
 
 These are procedural demonstrations of the existing referenced Classic connector and rod system, not official building plans. Connector geometry and fit tolerances remain approximate; generated frames do not add structural load or collision simulation.
+
+### Octagonal rings and towers
+
+**Ring** makes a flat octagon in either plane. **Octagonal tower** stacks complete rings, with **+ / −** for stock rod segments per side and vertical levels. White 8-way connectors form rings; paired blue 3D connectors form tower nodes. The shape uses real 45° sockets and whole stock rods. Its width follows those lengths rather than an arbitrary radius.
+
+![Octagonal tower preview with stock rods and editable side segments](docs/screenshots/octagonal-builder.png)
+
+Tower braces occupy four alternating walls, where the paired connectors have a matching diagonal socket. Other walls remain open. Adjacent generations reuse a complete shared boundary ring, and duplicate or obstructed pieces follow the same reuse/skip rules as rectangular frames. Tests cover every offered rod size, both ring planes, a connected 2,400-part tower, obstacles, shared rings and saved user properties. **Examples → Octagonal tower** opens a 336-part demonstration with separate level layers. It is an original procedural build, not an official model or a verified load-bearing design.
 
 ## Visual path builder
 

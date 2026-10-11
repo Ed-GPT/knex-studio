@@ -1,3 +1,4 @@
+import {buildRadial} from './radial-builder.js';
 import {buildFrame} from './frame-builder.js';
 import {angledSupportModel,ANGLED_REFERENCE,ballJointModel,BALL_REFERENCE,classicHingeModel,classicClipBench,yClipBench,HINGE_REFERENCE} from './clip-models.js';
 import {scaleModel,pantographModel,SCALE_REFERENCE,PANTOGRAPH_REFERENCE} from './mechanism-models.js';
@@ -24,6 +25,7 @@ export function gridWall(){
  return m;
 }
 export function rigidTower(){const m=buildFrame({rod:'r-rigid-tan',counts:[1,4,1],braced:true}).model;m.name='Rigid-rod tower';for(const p of m.parts)p.pos[1]+=12;return m;}
+export function octagonalTower(){const m=buildRadial({kind:'tube',counts:[2,4,1],rod:'r-yellow',braced:true}).model;m.name='Octagonal observation tower';for(const p of m.parts)p.pos[1]+=12;return m;}
 export const EXAMPLES=[
  {id:'square',title:'One square',level:'Simple',skill:'Snap · repeat',hint:'Select the square, then use Repeat + to extend it.',factory:repeatableSquare,kind:'Original connection-grid demo',source:JOINT_REFERENCE},
  {id:'hinge',title:'Single hinge',level:'Simple',skill:'Lock · swing',hint:'Run the hinge, pull the red arm, and release it.',factory:singleHinge,action:'hinges',kind:'Joint demo with a fixed axle, not a freestanding model',source:JOINT_REFERENCE},
@@ -36,6 +38,7 @@ export const EXAMPLES=[
  {id:'two-speed',title:'Two-speed windmill',level:'Advanced',skill:'Original motor · slow / fast',hint:'Run the 92401 motor. Switch between Slow and Fast; the keyed rotor follows and the housing stays fixed.',factory:twoSpeedWindmill,action:'motors',kind:'Original windmill with photo-reconstructed 92401 motor; approximate unloaded preview speeds, no torque simulation',source:'https://www.knexusergroup.org.uk/en/knex-hint-M9.html'},
  {id:'compound',title:'Two-stage gearbox',level:'Advanced',skill:'Gears · ratios',hint:'Start the motor and compare the input and output axles.',factory:compoundGearModel,action:'motors',kind:'Original parallel-axis gear demonstration; approximate tooth geometry',source:'https://shop.knexusergroup.org.uk/collections/knex-parts-gears'},
  {id:'tower',title:'Braced tower',level:'Advanced',skill:'Layers · bracing',hint:'Open Scene to hide a storey or select a whole level.',factory:towerModel,kind:'Original structure using classic 3D joints',source:'https://www.knexusergroup.org.uk/en/knex-hint-A4.html'},
+ {id:'octagonal-tower',title:'Octagonal tower',level:'Advanced',skill:'Procedural · eight sides',hint:'Four alternating walls are braced with actual red rods. Levels have separate layers. Open Grid & frame to change the side segments, height and stock size.',factory:octagonalTower,kind:'Original stock-length procedural frame, not an official manual replica; stability does not simulate connector flex or buckling',source:'https://www.knexusergroup.org.uk/en/knex-hint-A4.html'},
  {id:'rigid-tower',title:'Rigid-rod tower',level:'Advanced',skill:'Rigid rods · generated frame',hint:'An original four-storey frame with tan rigid edges and black rigid diagonals. Open Scene for levels, or Simulate → Stability to test its weight and support.',factory:rigidTower,kind:'Original generated structure, not a manual replica; rigid-body stability does not simulate bending or buckling',source:'https://www.knexusergroup.org.uk/en/knex-hint-A7.html'},
  {id:'rover',title:'Twin-motor rover',level:'Advanced',skill:'Drive · controller',hint:'Open Test drive and use the arrow keys to steer.',factory:roverModel,action:'drive',kind:'Original differential-drive demo; approximate flat-ground physics',source:'https://www.knexusergroup.org.uk/en/knex-hint-M4.html'},
  {id:'scales',title:'Balance scale',level:'Advanced',skill:'Loads · coupled hinges',hint:'Run the hinges, pull either weight, then release. Use Left and Right extra payload to compare loads.',factory:scaleModel,action:'hinges',kind:'Adaptation of the 79565 balance mechanism with a braced beam and suspended wheel weights; not an exact manual copy',source:SCALE_REFERENCE},
