@@ -97,6 +97,14 @@ Open **Generate → Grid & frame**. Choose a panel, rectangular frame, octagonal
 
 These are procedural demonstrations of the existing referenced Classic connector and rod system, not official building plans. Connector geometry and fit tolerances remain approximate; generated frames do not add structural load or collision simulation.
 
+### Roof trusses and gable roofs
+
+Choose **Roof truss** for a flat triangle or **Gable roof** for repeated triangular frames. **Half-span +** increases both half the width and the rise by one stock cell; the slope stays at 45°. **Depth bays +** extends the roof. The rafters always use the next matching stock rod length; unsupported rod choices are disabled. **Interior braces** adds diagonals inside the trusses and horizontal cross-bay planes while keeping the outside rafters when disabled.
+
+![Visual stock-length gable roof generator](docs/screenshots/truss-builder.png)
+
+Each bay gets a scene layer. Repeating at the previous roof's depth reuses the shared boundary truss. The same placement rules skip obstacles and incomplete spans, preserve existing parts and make insertion one undo step. **Examples → Gable roof** opens a 344-part demonstration. Tests cover a connected 2,334-part roof. This is an original procedural lattice, not a certified structural design; connector flexibility and buckling are not simulated. Only the actual XY and XZ socket planes receive braces. No molded roof panels or arbitrary slopes are inferred.
+
 ### Paneled grids and frames
 
 Enable **Molded panels** and choose a color thumbnail. The builder offers only square panels that fit the selected stock rods: white, blue, yellow, red and tan rigid. Choosing panels turns diagonal braces off because they share sockets; choosing braces removes panels. Unsupported sizes disable the panel option.
