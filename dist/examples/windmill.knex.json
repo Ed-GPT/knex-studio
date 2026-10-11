@@ -1,0 +1,361 @@
+{
+  "format": "knex-studio",
+  "version": 1,
+  "name": "Windmill motion demo",
+  "parts": [
+    {
+      "id": "pmv3qwy53-1",
+      "type": "c-white",
+      "pos": [
+        0,
+        125,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3qwy53-2",
+      "type": "c-white",
+      "pos": [
+        0,
+        125,
+        -70
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3qwy54-3",
+      "type": "r-gray",
+      "pos": [
+        0,
+        125,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmv3qwy54-4",
+      "type": "c-white",
+      "pos": [
+        -14.499999999999988,
+        125,
+        54.999999999999986
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3qwy54-5",
+      "type": "r-yellow",
+      "pos": [
+        23.000000000000014,
+        162.5,
+        54.99999999999998
+      ],
+      "quat": [
+        0,
+        8.497279155086132e-17,
+        0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmv3qwy55-6",
+      "type": "r-yellow",
+      "pos": [
+        -52,
+        162.5,
+        54.99999999999999
+      ],
+      "quat": [
+        0,
+        -2.0514246579479128e-16,
+        0.9238795325112867,
+        0.3826834323650898
+      ]
+    },
+    {
+      "id": "pmv3qwy55-7",
+      "type": "r-yellow",
+      "pos": [
+        -52,
+        87.5,
+        54.99999999999999
+      ],
+      "quat": [
+        0,
+        -2.0514246579479138e-16,
+        -0.9238795325112867,
+        0.38268343236508956
+      ]
+    },
+    {
+      "id": "pmv3qwy55-8",
+      "type": "r-yellow",
+      "pos": [
+        23.000000000000007,
+        87.49999999999999,
+        54.99999999999998
+      ],
+      "quat": [
+        0,
+        8.49727915508613e-17,
+        -0.3826834323650899,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmv3qwy55-9",
+      "type": "r-yellow",
+      "pos": [
+        -8.960767258309242e-15,
+        71.96699141100893,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        -0.7071067811865476,
+        0.7071067811865475
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3qwy55-10",
+      "type": "c-red",
+      "pos": [
+        -1.830884512565306e-14,
+        18.93398282201786,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        -8.040613248383182e-17,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3qwy55-11",
+      "type": "r-yellow",
+      "pos": [
+        -8.960767258309242e-15,
+        71.96699141100893,
+        -70
+      ],
+      "quat": [
+        0,
+        0,
+        -0.7071067811865476,
+        0.7071067811865475
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3qwy55-12",
+      "type": "c-red",
+      "pos": [
+        -1.830884512565306e-14,
+        18.93398282201786,
+        -70
+      ],
+      "quat": [
+        0,
+        0,
+        -8.040613248383182e-17,
+        1
+      ],
+      "grounded": true
+    }
+  ],
+  "links": [
+    {
+      "a": "pmv3qwy53-1",
+      "ap": "hole",
+      "b": "pmv3qwy54-3",
+      "bp": "shaft",
+      "mode": "through",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3qwy53-2",
+      "ap": "hole",
+      "b": "pmv3qwy54-3",
+      "bp": "shaft",
+      "mode": "through",
+      "offset": -70
+    },
+    {
+      "a": "pmv3qwy54-3",
+      "ap": "shaft",
+      "b": "pmv3qwy54-4",
+      "bp": "slot0",
+      "mode": "side",
+      "offset": 55,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3qwy54-4",
+      "ap": "slot1",
+      "b": "pmv3qwy54-5",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3qwy54-4",
+      "ap": "slot3",
+      "b": "pmv3qwy55-6",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3qwy54-4",
+      "ap": "slot5",
+      "b": "pmv3qwy55-7",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3qwy54-4",
+      "ap": "slot7",
+      "b": "pmv3qwy55-8",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3qwy53-1",
+      "ap": "slot6",
+      "b": "pmv3qwy55-9",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3qwy55-9",
+      "ap": "end1",
+      "b": "pmv3qwy55-10",
+      "bp": "slot2",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 2
+    },
+    {
+      "a": "pmv3qwy53-2",
+      "ap": "slot6",
+      "b": "pmv3qwy55-11",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3qwy55-11",
+      "ap": "end1",
+      "b": "pmv3qwy55-12",
+      "bp": "slot2",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 2
+    }
+  ],
+  "editor": {
+    "layers": [
+      {
+        "id": "layer-mv3yjlp0-16",
+        "name": "Supports",
+        "partIds": [
+          "pmv3qwy53-1",
+          "pmv3qwy53-2",
+          "pmv3qwy55-9",
+          "pmv3qwy55-10",
+          "pmv3qwy55-11",
+          "pmv3qwy55-12"
+        ],
+        "visible": true,
+        "locked": false
+      },
+      {
+        "id": "layer-mv3yjlp0-18",
+        "name": "Rotor",
+        "partIds": [
+          "pmv3qwy54-3",
+          "pmv3qwy54-4",
+          "pmv3qwy54-5",
+          "pmv3qwy55-6",
+          "pmv3qwy55-7",
+          "pmv3qwy55-8"
+        ],
+        "visible": true,
+        "locked": false
+      }
+    ],
+    "groups": [
+      {
+        "id": "group-mv3yjlp0-15",
+        "name": "Grounded supports",
+        "partIds": [
+          "pmv3qwy53-1",
+          "pmv3qwy53-2",
+          "pmv3qwy55-9",
+          "pmv3qwy55-10",
+          "pmv3qwy55-11",
+          "pmv3qwy55-12"
+        ]
+      },
+      {
+        "id": "group-mv3yjlp0-17",
+        "name": "Rotor",
+        "partIds": [
+          "pmv3qwy54-3",
+          "pmv3qwy54-4",
+          "pmv3qwy54-5",
+          "pmv3qwy55-6",
+          "pmv3qwy55-7",
+          "pmv3qwy55-8"
+        ]
+      }
+    ]
+  }
+}

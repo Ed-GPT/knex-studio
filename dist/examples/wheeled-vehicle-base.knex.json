@@ -1,0 +1,1226 @@
+{
+  "format": "knex-studio",
+  "version": 1,
+  "name": "Wheeled Vehicle Base · manual build",
+  "parts": [
+    {
+      "id": "pmv3t2que-1",
+      "type": "m-green",
+      "pos": [
+        0,
+        23.5,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2que-2",
+      "type": "r-red",
+      "pos": [
+        0,
+        23.5,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmv3t2que-3",
+      "type": "c-white",
+      "pos": [
+        0,
+        23.5,
+        -18.75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2que-4",
+      "type": "c-white",
+      "pos": [
+        0,
+        23.5,
+        18.75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2que-5",
+      "type": "s-silver",
+      "pos": [
+        -5.8952842607595806e-15,
+        23.5,
+        -26.54999999999999
+      ],
+      "quat": [
+        1.1102230246251565e-16,
+        6.798155367234457e-33,
+        0.9999999999999998,
+        6.123233995736766e-17
+      ]
+    },
+    {
+      "id": "pmv3t2que-6",
+      "type": "s-blue",
+      "pos": [
+        -7.271960811294775e-15,
+        23.5,
+        -32.74999999999999
+      ],
+      "quat": [
+        1.1102230246251565e-16,
+        6.798155367234457e-33,
+        0.9999999999999998,
+        6.123233995736766e-17
+      ]
+    },
+    {
+      "id": "pmv3t2que-7",
+      "type": "c-yellow",
+      "pos": [
+        -8.315570454442422e-15,
+        23.5,
+        -37.44999999999999
+      ],
+      "quat": [
+        1.1102230246251565e-16,
+        6.798155367234457e-33,
+        0.9999999999999998,
+        6.123233995736766e-17
+      ]
+    },
+    {
+      "id": "pmv3t2quf-8",
+      "type": "s-blue",
+      "pos": [
+        -9.359180097590068e-15,
+        23.5,
+        -42.149999999999984
+      ],
+      "quat": [
+        1.1102230246251565e-16,
+        6.798155367234457e-33,
+        0.9999999999999998,
+        6.123233995736766e-17
+      ]
+    },
+    {
+      "id": "pmv3t2quf-9",
+      "type": "k-tan",
+      "pos": [
+        -1.0413891970983968e-14,
+        23.5,
+        -46.89999999999999
+      ],
+      "quat": [
+        0,
+        1,
+        0,
+        6.123233995736766e-17
+      ]
+    },
+    {
+      "id": "pmv3t2quf-10",
+      "type": "h-small",
+      "pos": [
+        -1.0658141036401503e-14,
+        23.5,
+        -53.199999999999996
+      ],
+      "quat": [
+        0,
+        1,
+        0,
+        6.123233995736766e-17
+      ]
+    },
+    {
+      "id": "pmv3t2quf-11",
+      "type": "t-small",
+      "pos": [
+        -1.0658141036401503e-14,
+        23.5,
+        -53.199999999999996
+      ],
+      "quat": [
+        0,
+        1,
+        0,
+        6.123233995736766e-17
+      ]
+    },
+    {
+      "id": "pmv3t2quf-12",
+      "type": "s-silver",
+      "pos": [
+        5.8952842607595806e-15,
+        23.5,
+        26.54999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2quf-13",
+      "type": "s-blue",
+      "pos": [
+        7.271960811294775e-15,
+        23.5,
+        32.74999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2quf-14",
+      "type": "c-yellow",
+      "pos": [
+        8.315570454442422e-15,
+        23.5,
+        37.44999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2quf-15",
+      "type": "s-blue",
+      "pos": [
+        9.359180097590068e-15,
+        23.5,
+        42.149999999999984
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2quf-16",
+      "type": "k-tan",
+      "pos": [
+        1.0413891970983968e-14,
+        23.5,
+        46.89999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2quf-17",
+      "type": "h-small",
+      "pos": [
+        1.2434497875801753e-14,
+        23.5,
+        53.19999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2quf-18",
+      "type": "t-small",
+      "pos": [
+        1.2434497875801753e-14,
+        23.5,
+        53.19999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2quf-19",
+      "type": "k-cap",
+      "pos": [
+        -1.4210854715202004e-14,
+        23.5,
+        -64.9
+      ],
+      "quat": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pmv3t2quf-20",
+      "type": "k-cap",
+      "pos": [
+        1.4210854715202004e-14,
+        23.5,
+        64.9
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2quf-21",
+      "type": "r-red",
+      "pos": [
+        -164.5,
+        23.5,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmv3t2quf-22",
+      "type": "c-yellow",
+      "pos": [
+        -150,
+        23.5,
+        -37.44999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2quf-23",
+      "type": "c-yellow",
+      "pos": [
+        -150,
+        23.5,
+        -18.75
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qug-24",
+      "type": "c-yellow",
+      "pos": [
+        -150,
+        23.5,
+        18.749999999999993
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qug-25",
+      "type": "c-yellow",
+      "pos": [
+        -150,
+        23.5,
+        37.44999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qug-26",
+      "type": "s-blue",
+      "pos": [
+        -164.5,
+        23.5,
+        -14.049999999999995
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qug-27",
+      "type": "s-blue",
+      "pos": [
+        -164.5,
+        23.5,
+        -10.949999999999998
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qug-28",
+      "type": "s-silver",
+      "pos": [
+        -164.5,
+        23.5,
+        -4.749999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qug-29",
+      "type": "s-silver",
+      "pos": [
+        -164.5,
+        23.5,
+        4.55
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qug-30",
+      "type": "s-blue",
+      "pos": [
+        -164.5,
+        23.5,
+        10.75
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qug-31",
+      "type": "s-blue",
+      "pos": [
+        -164.5,
+        23.5,
+        13.849999999999998
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qug-32",
+      "type": "s-blue",
+      "pos": [
+        -164.5,
+        23.5,
+        -23.449999999999996
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qug-33",
+      "type": "s-silver",
+      "pos": [
+        -164.5,
+        23.5,
+        -29.64999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qug-34",
+      "type": "s-silver",
+      "pos": [
+        -164.5,
+        23.5,
+        -45.24999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qug-35",
+      "type": "h-small",
+      "pos": [
+        -164.5,
+        23.5,
+        -53.19999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qug-36",
+      "type": "t-small",
+      "pos": [
+        -164.5,
+        23.5,
+        -53.19999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qug-37",
+      "type": "s-blue",
+      "pos": [
+        -164.5,
+        23.5,
+        23.449999999999996
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qug-38",
+      "type": "s-silver",
+      "pos": [
+        -164.5,
+        23.5,
+        29.64999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qug-39",
+      "type": "s-silver",
+      "pos": [
+        -164.5,
+        23.5,
+        45.24999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qug-40",
+      "type": "h-small",
+      "pos": [
+        -164.5,
+        23.5,
+        53.19999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qug-41",
+      "type": "t-small",
+      "pos": [
+        -164.5,
+        23.5,
+        53.19999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qug-42",
+      "type": "k-cap",
+      "pos": [
+        -164.5,
+        23.5,
+        -64.9
+      ],
+      "quat": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pmv3t2qug-43",
+      "type": "k-cap",
+      "pos": [
+        -164.5,
+        23.5,
+        64.9
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qug-44",
+      "type": "r-red",
+      "pos": [
+        -75.00000000000001,
+        23.5,
+        -18.75
+      ],
+      "quat": [
+        0,
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pmv3t2quh-45",
+      "type": "r-red",
+      "pos": [
+        -75.00000000000001,
+        23.5,
+        18.75
+      ],
+      "quat": [
+        0,
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pmv3t2quh-46",
+      "type": "r-red",
+      "pos": [
+        -75.00000000000003,
+        23.5,
+        -37.44999999999999
+      ],
+      "quat": [
+        0,
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pmv3t2quh-47",
+      "type": "r-red",
+      "pos": [
+        -75.00000000000001,
+        23.5,
+        37.44999999999999
+      ],
+      "quat": [
+        0,
+        -1,
+        0,
+        0
+      ]
+    }
+  ],
+  "links": [
+    {
+      "a": "pmv3t2que-1",
+      "ap": "hole",
+      "b": "pmv3t2que-2",
+      "bp": "shaft",
+      "mode": "through",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2que-1",
+      "ap": "mount-back",
+      "b": "pmv3t2que-3",
+      "bp": "motor-mount",
+      "mode": "mount",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2que-1",
+      "ap": "mount-front",
+      "b": "pmv3t2que-4",
+      "bp": "motor-mount",
+      "mode": "mount",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2que-2",
+      "ap": "shaft",
+      "b": "pmv3t2que-3",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -18.75
+    },
+    {
+      "a": "pmv3t2que-2",
+      "ap": "shaft",
+      "b": "pmv3t2que-4",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 18.75
+    },
+    {
+      "a": "pmv3t2que-2",
+      "ap": "shaft",
+      "b": "pmv3t2que-5",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -26.549999999999997,
+      "roll": 180,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2que-2",
+      "ap": "shaft",
+      "b": "pmv3t2que-6",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -32.75,
+      "roll": 180,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2que-2",
+      "ap": "shaft",
+      "b": "pmv3t2que-7",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -37.449999999999996,
+      "roll": 180,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2que-2",
+      "ap": "shaft",
+      "b": "pmv3t2quf-8",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -42.14999999999999,
+      "roll": 180,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2que-2",
+      "ap": "shaft",
+      "b": "pmv3t2quf-9",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -46.9,
+      "roll": 180,
+      "portIndex": 0,
+      "locked": true
+    },
+    {
+      "a": "pmv3t2quf-9",
+      "ap": "key",
+      "b": "pmv3t2quf-10",
+      "bp": "key",
+      "mode": "keyed",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2que-2",
+      "ap": "shaft",
+      "b": "pmv3t2quf-10",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -53.199999999999996
+    },
+    {
+      "a": "pmv3t2quf-10",
+      "ap": "tire",
+      "b": "pmv3t2quf-11",
+      "bp": "tire",
+      "mode": "tire",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2que-2",
+      "ap": "shaft",
+      "b": "pmv3t2quf-12",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 26.549999999999997,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2que-2",
+      "ap": "shaft",
+      "b": "pmv3t2quf-13",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 32.75,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2que-2",
+      "ap": "shaft",
+      "b": "pmv3t2quf-14",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 37.449999999999996,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2que-2",
+      "ap": "shaft",
+      "b": "pmv3t2quf-15",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 42.14999999999999,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2que-2",
+      "ap": "shaft",
+      "b": "pmv3t2quf-16",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 46.9,
+      "roll": 0,
+      "portIndex": 0,
+      "locked": true
+    },
+    {
+      "a": "pmv3t2quf-16",
+      "ap": "key",
+      "b": "pmv3t2quf-17",
+      "bp": "key",
+      "mode": "keyed",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2que-2",
+      "ap": "shaft",
+      "b": "pmv3t2quf-17",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 53.19999999999999
+    },
+    {
+      "a": "pmv3t2quf-17",
+      "ap": "tire",
+      "b": "pmv3t2quf-18",
+      "bp": "tire",
+      "mode": "tire",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2que-2",
+      "ap": "end0",
+      "b": "pmv3t2quf-19",
+      "bp": "slot0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2que-2",
+      "ap": "end1",
+      "b": "pmv3t2quf-20",
+      "bp": "slot0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2quf-21",
+      "ap": "shaft",
+      "b": "pmv3t2quf-22",
+      "bp": "slot4",
+      "mode": "side",
+      "offset": -37.449999999999996,
+      "roll": 0,
+      "portIndex": 4
+    },
+    {
+      "a": "pmv3t2quf-21",
+      "ap": "shaft",
+      "b": "pmv3t2quf-23",
+      "bp": "slot4",
+      "mode": "side",
+      "offset": -18.75,
+      "roll": 0,
+      "portIndex": 4
+    },
+    {
+      "a": "pmv3t2quf-21",
+      "ap": "shaft",
+      "b": "pmv3t2qug-24",
+      "bp": "slot4",
+      "mode": "side",
+      "offset": 18.75,
+      "roll": 0,
+      "portIndex": 4
+    },
+    {
+      "a": "pmv3t2quf-21",
+      "ap": "shaft",
+      "b": "pmv3t2qug-25",
+      "bp": "slot4",
+      "mode": "side",
+      "offset": 37.449999999999996,
+      "roll": 0,
+      "portIndex": 4
+    },
+    {
+      "a": "pmv3t2quf-21",
+      "ap": "shaft",
+      "b": "pmv3t2qug-26",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -14.049999999999999,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2quf-21",
+      "ap": "shaft",
+      "b": "pmv3t2qug-27",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -10.95,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2quf-21",
+      "ap": "shaft",
+      "b": "pmv3t2qug-28",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -4.75,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2quf-21",
+      "ap": "shaft",
+      "b": "pmv3t2qug-29",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 4.550000000000001,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2quf-21",
+      "ap": "shaft",
+      "b": "pmv3t2qug-30",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 10.750000000000002,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2quf-21",
+      "ap": "shaft",
+      "b": "pmv3t2qug-31",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 13.850000000000001,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2quf-21",
+      "ap": "shaft",
+      "b": "pmv3t2qug-32",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -23.45,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2quf-21",
+      "ap": "shaft",
+      "b": "pmv3t2qug-33",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -29.65,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2quf-21",
+      "ap": "shaft",
+      "b": "pmv3t2qug-34",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -45.25,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2quf-21",
+      "ap": "shaft",
+      "b": "pmv3t2qug-35",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -53.2,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2qug-35",
+      "ap": "tire",
+      "b": "pmv3t2qug-36",
+      "bp": "tire",
+      "mode": "tire",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2quf-21",
+      "ap": "shaft",
+      "b": "pmv3t2qug-37",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 23.45,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2quf-21",
+      "ap": "shaft",
+      "b": "pmv3t2qug-38",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 29.65,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2quf-21",
+      "ap": "shaft",
+      "b": "pmv3t2qug-39",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 45.25,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2quf-21",
+      "ap": "shaft",
+      "b": "pmv3t2qug-40",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 53.2,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2qug-40",
+      "ap": "tire",
+      "b": "pmv3t2qug-41",
+      "bp": "tire",
+      "mode": "tire",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2quf-21",
+      "ap": "end0",
+      "b": "pmv3t2qug-42",
+      "bp": "slot0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2quf-21",
+      "ap": "end1",
+      "b": "pmv3t2qug-43",
+      "bp": "slot0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2que-3",
+      "ap": "slot4",
+      "b": "pmv3t2qug-44",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2qug-44",
+      "ap": "end1",
+      "b": "pmv3t2quf-23",
+      "bp": "slot0",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3t2que-4",
+      "ap": "slot4",
+      "b": "pmv3t2quh-45",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2quh-45",
+      "ap": "end1",
+      "b": "pmv3t2qug-24",
+      "bp": "slot0",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3t2que-7",
+      "ap": "slot0",
+      "b": "pmv3t2quh-46",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2quh-46",
+      "ap": "end1",
+      "b": "pmv3t2quf-22",
+      "bp": "slot0",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3t2quf-14",
+      "ap": "slot4",
+      "b": "pmv3t2quh-47",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2quh-47",
+      "ap": "end1",
+      "b": "pmv3t2qug-25",
+      "bp": "slot0",
+      "mode": "end"
+    }
+  ]
+}

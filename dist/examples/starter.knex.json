@@ -1,0 +1,23 @@
+{
+  "format": "knex-studio",
+  "version": 1,
+  "name": "Start with a connector",
+  "parts": [
+    {
+      "id": "pmv3mtyo3-57",
+      "type": "c-white",
+      "pos": [
+        0,
+        20,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "links": []
+}

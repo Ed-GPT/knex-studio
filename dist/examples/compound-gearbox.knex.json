@@ -1,0 +1,619 @@
+{
+  "format": "knex-studio",
+  "version": 1,
+  "editor": {
+    "layers": [
+      {
+        "id": "layer-mv3xml62-11",
+        "name": "Input stage",
+        "partIds": [
+          "pmv3xml61-136",
+          "pmv3xml61-137",
+          "pmv3xml61-138",
+          "pmv3xml61-139",
+          "pmv3xml61-140",
+          "pmv3xml61-141",
+          "pmv3xml61-142",
+          "pmv3xml61-143"
+        ],
+        "visible": true,
+        "locked": false
+      },
+      {
+        "id": "layer-mv3xml62-13",
+        "name": "Output stage",
+        "partIds": [
+          "pmv3xml61-144",
+          "pmv3xml61-145",
+          "pmv3xml61-146",
+          "pmv3xml61-147",
+          "pmv3xml61-148",
+          "pmv3xml61-149",
+          "pmv3xml61-150",
+          "pmv3xml61-151",
+          "pmv3xml61-152",
+          "pmv3xml61-153",
+          "pmv3xml62-154",
+          "pmv3xml62-155"
+        ],
+        "visible": true,
+        "locked": false
+      }
+    ],
+    "groups": [
+      {
+        "id": "group-mv3yjlox-1",
+        "name": "Grounded supports",
+        "partIds": [
+          "pmv3xml61-136",
+          "pmv3xml61-142",
+          "pmv3xml61-143",
+          "pmv3xml61-148",
+          "pmv3xml61-149"
+        ]
+      },
+      {
+        "id": "group-mv3yjlox-2",
+        "name": "Input axle",
+        "partIds": [
+          "pmv3xml61-137",
+          "pmv3xml61-138",
+          "pmv3xml61-139"
+        ]
+      },
+      {
+        "id": "group-mv3yjlox-3",
+        "name": "Intermediate axle",
+        "partIds": [
+          "pmv3xml61-140",
+          "pmv3xml61-141",
+          "pmv3xml61-144",
+          "pmv3xml61-145"
+        ]
+      },
+      {
+        "id": "group-mv3yjlox-4",
+        "name": "Output axle",
+        "partIds": [
+          "pmv3xml61-146",
+          "pmv3xml61-147",
+          "pmv3xml61-150",
+          "pmv3xml61-151",
+          "pmv3xml61-152",
+          "pmv3xml61-153",
+          "pmv3xml62-154",
+          "pmv3xml62-155"
+        ]
+      }
+    ]
+  },
+  "name": "Compound gearbox · two stages",
+  "parts": [
+    {
+      "id": "pmv3xml61-136",
+      "type": "m-blue",
+      "pos": [
+        0,
+        55,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3xml61-137",
+      "type": "r-gray",
+      "pos": [
+        0,
+        55,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmv3xml61-138",
+      "type": "k-tan",
+      "pos": [
+        8.881784197001252e-15,
+        55,
+        39.99999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3xml61-139",
+      "type": "g-red34",
+      "pos": [
+        1.0658141036401503e-14,
+        55,
+        46.34999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3xml61-140",
+      "type": "g-gray14",
+      "pos": [
+        37.500000000000014,
+        55,
+        46.34999999999998
+      ],
+      "quat": [
+        1.2430553930998554e-17,
+        1.1032421752746245e-16,
+        0.11196447610330786,
+        0.9937122098932426
+      ]
+    },
+    {
+      "id": "pmv3xml61-141",
+      "type": "r-red",
+      "pos": [
+        37.500000000000014,
+        55,
+        46.34999999999998
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865476
+      ]
+    },
+    {
+      "id": "pmv3xml61-142",
+      "type": "c-gray",
+      "pos": [
+        37.50000000000001,
+        55,
+        8.34999999999998
+      ],
+      "quat": [
+        7.850462293418875e-17,
+        7.850462293418876e-17,
+        0.7071067811865475,
+        0.7071067811865476
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3xml61-143",
+      "type": "c-gray",
+      "pos": [
+        37.50000000000002,
+        55,
+        84.34999999999998
+      ],
+      "quat": [
+        7.850462293418875e-17,
+        7.850462293418876e-17,
+        0.7071067811865475,
+        0.7071067811865476
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3xml61-144",
+      "type": "k-tan",
+      "pos": [
+        37.50000000000002,
+        55,
+        68.34999999999998
+      ],
+      "quat": [
+        0,
+        1.1102230246251565e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3xml61-145",
+      "type": "g-red34",
+      "pos": [
+        37.50000000000002,
+        55,
+        74.69999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251565e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3xml61-146",
+      "type": "g-gray14",
+      "pos": [
+        75.00000000000003,
+        55,
+        74.69999999999997
+      ],
+      "quat": [
+        1.2430553930998551e-17,
+        1.1032421752746242e-16,
+        0.11196447610330786,
+        0.9937122098932426
+      ]
+    },
+    {
+      "id": "pmv3xml61-147",
+      "type": "r-red",
+      "pos": [
+        75.00000000000003,
+        55,
+        74.69999999999997
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865476
+      ]
+    },
+    {
+      "id": "pmv3xml61-148",
+      "type": "c-gray",
+      "pos": [
+        75.00000000000001,
+        55,
+        29.699999999999974
+      ],
+      "quat": [
+        7.850462293418875e-17,
+        7.850462293418876e-17,
+        0.7071067811865475,
+        0.7071067811865476
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3xml61-149",
+      "type": "c-gray",
+      "pos": [
+        75.00000000000004,
+        55,
+        119.69999999999997
+      ],
+      "quat": [
+        7.850462293418875e-17,
+        7.850462293418876e-17,
+        0.7071067811865475,
+        0.7071067811865476
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3xml61-150",
+      "type": "k-tan",
+      "pos": [
+        75.00000000000004,
+        55,
+        125.69999999999997
+      ],
+      "quat": [
+        0,
+        1.1102230246251565e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3xml61-151",
+      "type": "c-white",
+      "pos": [
+        75.00000000000004,
+        55,
+        132.04999999999998
+      ],
+      "quat": [
+        0,
+        1.1102230246251565e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3xml61-152",
+      "type": "r-green",
+      "pos": [
+        93.75000000000004,
+        55,
+        132.04999999999998
+      ],
+      "quat": [
+        0,
+        1.1102230246251565e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3xml61-153",
+      "type": "r-green",
+      "pos": [
+        75.00000000000004,
+        73.75,
+        132.04999999999998
+      ],
+      "quat": [
+        0,
+        9.614043519462414e-33,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmv3xml62-154",
+      "type": "r-green",
+      "pos": [
+        56.25000000000005,
+        55,
+        132.04999999999998
+      ],
+      "quat": [
+        0,
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pmv3xml62-155",
+      "type": "r-green",
+      "pos": [
+        75.00000000000004,
+        36.25,
+        132.04999999999998
+      ],
+      "quat": [
+        0,
+        -2.884213055838725e-32,
+        -0.7071067811865476,
+        0.7071067811865475
+      ]
+    }
+  ],
+  "links": [
+    {
+      "a": "pmv3xml61-136",
+      "ap": "hole",
+      "b": "pmv3xml61-137",
+      "bp": "shaft",
+      "mode": "through",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3xml61-137",
+      "ap": "shaft",
+      "b": "pmv3xml61-138",
+      "bp": "hole",
+      "mode": "through",
+      "locked": true,
+      "offset": 40,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3xml61-138",
+      "ap": "key",
+      "b": "pmv3xml61-139",
+      "bp": "key",
+      "mode": "keyed",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3xml61-137",
+      "ap": "shaft",
+      "b": "pmv3xml61-139",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 46.34999999999999
+    },
+    {
+      "a": "pmv3xml61-139",
+      "ap": "teeth",
+      "b": "pmv3xml61-140",
+      "bp": "teeth",
+      "mode": "mesh",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3xml61-140",
+      "ap": "hole",
+      "b": "pmv3xml61-141",
+      "bp": "shaft",
+      "mode": "through",
+      "locked": true,
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3xml61-141",
+      "ap": "shaft",
+      "b": "pmv3xml61-142",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -38,
+      "roll": 90,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3xml61-141",
+      "ap": "shaft",
+      "b": "pmv3xml61-143",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 38,
+      "roll": 90,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3xml61-141",
+      "ap": "shaft",
+      "b": "pmv3xml61-144",
+      "bp": "hole",
+      "mode": "through",
+      "locked": true,
+      "offset": 22,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3xml61-144",
+      "ap": "key",
+      "b": "pmv3xml61-145",
+      "bp": "key",
+      "mode": "keyed",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3xml61-141",
+      "ap": "shaft",
+      "b": "pmv3xml61-145",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 28.35000000000001
+    },
+    {
+      "a": "pmv3xml61-145",
+      "ap": "teeth",
+      "b": "pmv3xml61-146",
+      "bp": "teeth",
+      "mode": "mesh",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3xml61-146",
+      "ap": "hole",
+      "b": "pmv3xml61-147",
+      "bp": "shaft",
+      "mode": "through",
+      "locked": true,
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3xml61-147",
+      "ap": "shaft",
+      "b": "pmv3xml61-148",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -45,
+      "roll": 90,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3xml61-147",
+      "ap": "shaft",
+      "b": "pmv3xml61-149",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 45,
+      "roll": 90,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3xml61-147",
+      "ap": "shaft",
+      "b": "pmv3xml61-150",
+      "bp": "hole",
+      "mode": "through",
+      "locked": true,
+      "offset": 51,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3xml61-150",
+      "ap": "key",
+      "b": "pmv3xml61-151",
+      "bp": "key",
+      "mode": "keyed",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3xml61-147",
+      "ap": "shaft",
+      "b": "pmv3xml61-151",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 57.35
+    },
+    {
+      "a": "pmv3xml61-151",
+      "ap": "slot0",
+      "b": "pmv3xml61-152",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3xml61-151",
+      "ap": "slot2",
+      "b": "pmv3xml61-153",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3xml61-151",
+      "ap": "slot4",
+      "b": "pmv3xml62-154",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3xml61-151",
+      "ap": "slot6",
+      "b": "pmv3xml62-155",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "format": "knex-studio",
+  "version": 1,
+  "name": "Enclosed motors: 92840 and 22722",
+  "parts": [
+    {
+      "id": "pmv3rwfh8-38",
+      "type": "m-blue",
+      "pos": [
+        30,
+        22,
+        -50
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3rwfh8-39",
+      "type": "r-yellow",
+      "pos": [
+        30,
+        22,
+        -50
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmv3rwfh8-40",
+      "type": "m-green",
+      "pos": [
+        30,
+        22,
+        55
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3rwfh8-41",
+      "type": "r-yellow",
+      "pos": [
+        30,
+        22,
+        55
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    }
+  ],
+  "links": [
+    {
+      "a": "pmv3rwfh8-38",
+      "ap": "hole",
+      "b": "pmv3rwfh8-39",
+      "bp": "shaft",
+      "mode": "through",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh8-40",
+      "ap": "hole",
+      "b": "pmv3rwfh8-41",
+      "bp": "shaft",
+      "mode": "through",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    }
+  ]
+}

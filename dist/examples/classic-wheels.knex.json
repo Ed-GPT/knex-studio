@@ -1,0 +1,129 @@
+{
+  "format": "knex-studio",
+  "version": 1,
+  "name": "Classic wheels: 47, 65 and 90 mm",
+  "parts": [
+    {
+      "id": "pmv3t2qui-48",
+      "type": "h-small",
+      "pos": [
+        -95,
+        23.5,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qui-49",
+      "type": "t-small",
+      "pos": [
+        -95,
+        23.5,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qui-50",
+      "type": "h-medium",
+      "pos": [
+        0,
+        32.5,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qui-51",
+      "type": "t-medium",
+      "pos": [
+        0,
+        32.5,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qui-52",
+      "type": "h-medium",
+      "pos": [
+        110,
+        45,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3t2qui-53",
+      "type": "t-large",
+      "pos": [
+        110,
+        45,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "links": [
+    {
+      "a": "pmv3t2qui-48",
+      "ap": "tire",
+      "b": "pmv3t2qui-49",
+      "bp": "tire",
+      "mode": "tire",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2qui-50",
+      "ap": "tire",
+      "b": "pmv3t2qui-51",
+      "bp": "tire",
+      "mode": "tire",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3t2qui-52",
+      "ap": "tire",
+      "b": "pmv3t2qui-53",
+      "bp": "tire",
+      "mode": "tire",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    }
+  ]
+}

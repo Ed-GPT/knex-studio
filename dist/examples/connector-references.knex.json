@@ -1,0 +1,143 @@
+{
+  "format": "knex-studio",
+  "version": 1,
+  "name": "Classic connector references",
+  "parts": [
+    {
+      "id": "pmv3vm5l2-46",
+      "type": "c-gray",
+      "pos": [
+        -62,
+        15,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3vm5l2-47",
+      "type": "c-orange",
+      "pos": [
+        0,
+        15,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3vm5l2-48",
+      "type": "c-lgray",
+      "pos": [
+        62,
+        15,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3vm5l2-49",
+      "type": "c-red",
+      "pos": [
+        -62,
+        75,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3vm5l2-50",
+      "type": "c-green",
+      "pos": [
+        0,
+        75,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3vm5l2-51",
+      "type": "c-yellow",
+      "pos": [
+        62,
+        75,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3vm5l2-52",
+      "type": "c-white",
+      "pos": [
+        -62,
+        135,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3vm5l2-53",
+      "type": "c-blue",
+      "pos": [
+        0,
+        135,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3vm5l2-54",
+      "type": "c-purple",
+      "pos": [
+        62,
+        135,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "links": []
+}

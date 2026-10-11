@@ -1,0 +1,276 @@
+{
+  "format": "knex-studio",
+  "version": 1,
+  "name": "Motor gear train · 34 to 14 teeth",
+  "parts": [
+    {
+      "id": "pmv3wg1kn-96",
+      "type": "m-blue",
+      "pos": [
+        0,
+        55,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3wg1kn-97",
+      "type": "r-gray",
+      "pos": [
+        0,
+        55,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmv3wg1kn-98",
+      "type": "k-tan",
+      "pos": [
+        8.881784197001252e-15,
+        55,
+        39.99999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3wg1kn-99",
+      "type": "g-red34",
+      "pos": [
+        1.0658141036401503e-14,
+        55,
+        46.34999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3wg1kn-100",
+      "type": "g-gray14",
+      "pos": [
+        37.500000000000014,
+        55,
+        46.34999999999998
+      ],
+      "quat": [
+        1.2430553930998554e-17,
+        1.1032421752746245e-16,
+        0.11196447610330786,
+        0.9937122098932426
+      ]
+    },
+    {
+      "id": "pmv3wg1kn-101",
+      "type": "r-red",
+      "pos": [
+        37.500000000000014,
+        55,
+        46.34999999999998
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865476
+      ]
+    },
+    {
+      "id": "pmv3wg1kn-102",
+      "type": "c-gray",
+      "pos": [
+        37.50000000000001,
+        55,
+        8.34999999999998
+      ],
+      "quat": [
+        7.850462293418875e-17,
+        7.850462293418876e-17,
+        0.7071067811865475,
+        0.7071067811865476
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3wg1kn-103",
+      "type": "c-gray",
+      "pos": [
+        37.50000000000002,
+        55,
+        84.34999999999998
+      ],
+      "quat": [
+        7.850462293418875e-17,
+        7.850462293418876e-17,
+        0.7071067811865475,
+        0.7071067811865476
+      ],
+      "grounded": true
+    }
+  ],
+  "links": [
+    {
+      "a": "pmv3wg1kn-96",
+      "ap": "hole",
+      "b": "pmv3wg1kn-97",
+      "bp": "shaft",
+      "mode": "through",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3wg1kn-97",
+      "ap": "shaft",
+      "b": "pmv3wg1kn-98",
+      "bp": "hole",
+      "mode": "through",
+      "locked": true,
+      "offset": 40,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3wg1kn-98",
+      "ap": "key",
+      "b": "pmv3wg1kn-99",
+      "bp": "key",
+      "mode": "keyed",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3wg1kn-97",
+      "ap": "shaft",
+      "b": "pmv3wg1kn-99",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 46.34999999999999
+    },
+    {
+      "a": "pmv3wg1kn-99",
+      "ap": "teeth",
+      "b": "pmv3wg1kn-100",
+      "bp": "teeth",
+      "mode": "mesh",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3wg1kn-100",
+      "ap": "hole",
+      "b": "pmv3wg1kn-101",
+      "bp": "shaft",
+      "mode": "through",
+      "locked": true,
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3wg1kn-101",
+      "ap": "shaft",
+      "b": "pmv3wg1kn-102",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -38,
+      "roll": 90,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3wg1kn-101",
+      "ap": "shaft",
+      "b": "pmv3wg1kn-103",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 38,
+      "roll": 90,
+      "portIndex": 0
+    }
+  ],
+  "editor": {
+    "layers": [
+      {
+        "id": "layer-mv3yjloy-6",
+        "name": "Supports",
+        "partIds": [
+          "pmv3wg1kn-96",
+          "pmv3wg1kn-102",
+          "pmv3wg1kn-103"
+        ],
+        "visible": true,
+        "locked": false
+      },
+      {
+        "id": "layer-mv3yjloy-8",
+        "name": "Input axle",
+        "partIds": [
+          "pmv3wg1kn-97",
+          "pmv3wg1kn-98",
+          "pmv3wg1kn-99"
+        ],
+        "visible": true,
+        "locked": false
+      },
+      {
+        "id": "layer-mv3yjloy-10",
+        "name": "Output axle",
+        "partIds": [
+          "pmv3wg1kn-100",
+          "pmv3wg1kn-101"
+        ],
+        "visible": true,
+        "locked": false
+      }
+    ],
+    "groups": [
+      {
+        "id": "group-mv3yjloy-5",
+        "name": "Grounded supports",
+        "partIds": [
+          "pmv3wg1kn-96",
+          "pmv3wg1kn-102",
+          "pmv3wg1kn-103"
+        ]
+      },
+      {
+        "id": "group-mv3yjloy-7",
+        "name": "Input axle",
+        "partIds": [
+          "pmv3wg1kn-97",
+          "pmv3wg1kn-98",
+          "pmv3wg1kn-99"
+        ]
+      },
+      {
+        "id": "group-mv3yjloy-9",
+        "name": "Output axle",
+        "partIds": [
+          "pmv3wg1kn-100",
+          "pmv3wg1kn-101"
+        ]
+      }
+    ]
+  }
+}

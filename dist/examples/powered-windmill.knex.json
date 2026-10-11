@@ -1,0 +1,1127 @@
+{
+  "format": "knex-studio",
+  "version": 1,
+  "name": "Motor-powered windmill",
+  "parts": [
+    {
+      "id": "pmv3rwfgz-1",
+      "type": "m-blue",
+      "pos": [
+        0,
+        232.1320343559643,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh0-2",
+      "type": "c-white",
+      "pos": [
+        0,
+        232.1320343559643,
+        -18.75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh0-3",
+      "type": "c-white",
+      "pos": [
+        0,
+        232.1320343559643,
+        18.75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh0-4",
+      "type": "r-red",
+      "pos": [
+        -53.033008588991066,
+        179.09902576697326,
+        -18.75
+      ],
+      "quat": [
+        0,
+        0,
+        -0.9238795325112867,
+        0.38268343236508956
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh0-5",
+      "type": "c-white",
+      "pos": [
+        -106.06601717798213,
+        126.0660171779822,
+        -18.75
+      ],
+      "quat": [
+        0,
+        0,
+        -5.551115123125784e-17,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh1-6",
+      "type": "r-yellow",
+      "pos": [
+        -106.06601717798213,
+        73.03300858899115,
+        -18.75
+      ],
+      "quat": [
+        0,
+        0,
+        -0.7071067811865476,
+        0.7071067811865474
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh1-7",
+      "type": "c-white",
+      "pos": [
+        -106.06601717798213,
+        20.000000000000085,
+        -18.75
+      ],
+      "quat": [
+        0,
+        0,
+        -8.040613248383184e-17,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh1-8",
+      "type": "r-red",
+      "pos": [
+        53.03300858899106,
+        179.09902576697323,
+        -18.75
+      ],
+      "quat": [
+        0,
+        0,
+        -0.3826834323650899,
+        0.9238795325112867
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh1-9",
+      "type": "c-white",
+      "pos": [
+        106.06601717798212,
+        126.06601717798212,
+        -18.75
+      ],
+      "quat": [
+        0,
+        0,
+        -1.1102230246251565e-16,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh1-10",
+      "type": "r-yellow",
+      "pos": [
+        106.0660171779821,
+        73.03300858899105,
+        -18.75
+      ],
+      "quat": [
+        0,
+        0,
+        -0.7071067811865477,
+        0.7071067811865474
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh1-11",
+      "type": "c-white",
+      "pos": [
+        106.06601717798209,
+        19.99999999999998,
+        -18.75
+      ],
+      "quat": [
+        0,
+        0,
+        -1.9142843494634747e-16,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh2-12",
+      "type": "r-gray",
+      "pos": [
+        4.263256414560601e-14,
+        126.06601717798219,
+        -18.75
+      ],
+      "quat": [
+        0,
+        0,
+        -5.551115123125784e-17,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh2-13",
+      "type": "r-gray",
+      "pos": [
+        4.263256414560601e-14,
+        20.00000000000007,
+        -18.75
+      ],
+      "quat": [
+        0,
+        0,
+        -8.040613248383184e-17,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh2-14",
+      "type": "r-red",
+      "pos": [
+        -106.06601717798213,
+        5.500000000000085,
+        -18.75
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh2-15",
+      "type": "r-red",
+      "pos": [
+        106.06601717798209,
+        5.499999999999979,
+        -18.75
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh2-16",
+      "type": "r-red",
+      "pos": [
+        -53.033008588991066,
+        179.09902576697326,
+        18.75
+      ],
+      "quat": [
+        0,
+        0,
+        -0.9238795325112867,
+        0.38268343236508956
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh2-17",
+      "type": "c-white",
+      "pos": [
+        -106.06601717798213,
+        126.0660171779822,
+        18.75
+      ],
+      "quat": [
+        0,
+        0,
+        -5.551115123125784e-17,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh3-18",
+      "type": "r-yellow",
+      "pos": [
+        -106.06601717798213,
+        73.03300858899115,
+        18.75
+      ],
+      "quat": [
+        0,
+        0,
+        -0.7071067811865476,
+        0.7071067811865474
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh3-19",
+      "type": "c-white",
+      "pos": [
+        -106.06601717798213,
+        20.000000000000085,
+        18.75
+      ],
+      "quat": [
+        0,
+        0,
+        -8.040613248383184e-17,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh3-20",
+      "type": "r-red",
+      "pos": [
+        53.03300858899106,
+        179.09902576697323,
+        18.75
+      ],
+      "quat": [
+        0,
+        0,
+        -0.3826834323650899,
+        0.9238795325112867
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh3-21",
+      "type": "c-white",
+      "pos": [
+        106.06601717798212,
+        126.06601717798212,
+        18.75
+      ],
+      "quat": [
+        0,
+        0,
+        -1.1102230246251565e-16,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh3-22",
+      "type": "r-yellow",
+      "pos": [
+        106.0660171779821,
+        73.03300858899105,
+        18.75
+      ],
+      "quat": [
+        0,
+        0,
+        -0.7071067811865477,
+        0.7071067811865474
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh4-23",
+      "type": "c-white",
+      "pos": [
+        106.06601717798209,
+        19.99999999999998,
+        18.75
+      ],
+      "quat": [
+        0,
+        0,
+        -1.9142843494634747e-16,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh4-24",
+      "type": "r-gray",
+      "pos": [
+        4.263256414560601e-14,
+        126.06601717798219,
+        18.75
+      ],
+      "quat": [
+        0,
+        0,
+        -5.551115123125784e-17,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh4-25",
+      "type": "r-gray",
+      "pos": [
+        4.263256414560601e-14,
+        20.00000000000007,
+        18.75
+      ],
+      "quat": [
+        0,
+        0,
+        -8.040613248383184e-17,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3rwfh4-26",
+      "type": "r-gray",
+      "pos": [
+        0,
+        232.1320343559643,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmv3rwfh5-27",
+      "type": "k-tan",
+      "pos": [
+        1.368904989362818e-14,
+        232.1320343559643,
+        61.649999999999984
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3rwfh5-28",
+      "type": "c-white",
+      "pos": [
+        1.509903313490213e-14,
+        232.1320343559643,
+        67.99999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3rwfh5-29",
+      "type": "r-red",
+      "pos": [
+        75.00000000000003,
+        232.1320343559643,
+        67.99999999999997
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3rwfh5-30",
+      "type": "r-red",
+      "pos": [
+        53.033008588991095,
+        285.16504294495536,
+        67.99999999999997
+      ],
+      "quat": [
+        0,
+        8.497279155086132e-17,
+        0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmv3rwfh5-31",
+      "type": "r-red",
+      "pos": [
+        2.9928334483673544e-14,
+        307.13203435596427,
+        67.99999999999999
+      ],
+      "quat": [
+        0,
+        9.614043519462416e-33,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmv3rwfh6-32",
+      "type": "r-red",
+      "pos": [
+        -53.033008588991045,
+        285.16504294495536,
+        68
+      ],
+      "quat": [
+        0,
+        -2.0514246579479128e-16,
+        0.9238795325112867,
+        0.3826834323650898
+      ]
+    },
+    {
+      "id": "pmv3rwfh6-33",
+      "type": "r-red",
+      "pos": [
+        -75,
+        232.1320343559643,
+        67.99999999999999
+      ],
+      "quat": [
+        0,
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pmv3rwfh6-34",
+      "type": "r-red",
+      "pos": [
+        -53.03300858899105,
+        179.09902576697326,
+        68
+      ],
+      "quat": [
+        0,
+        -2.0514246579479138e-16,
+        -0.9238795325112867,
+        0.38268343236508956
+      ]
+    },
+    {
+      "id": "pmv3rwfh6-35",
+      "type": "r-red",
+      "pos": [
+        -9.671614810081148e-16,
+        157.13203435596427,
+        67.99999999999999
+      ],
+      "quat": [
+        0,
+        -2.8842130558387253e-32,
+        -0.7071067811865476,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmv3rwfh6-36",
+      "type": "r-red",
+      "pos": [
+        53.03300858899107,
+        179.09902576697323,
+        67.99999999999997
+      ],
+      "quat": [
+        0,
+        8.49727915508613e-17,
+        -0.3826834323650899,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmv3rwfh7-37",
+      "type": "s-blue",
+      "pos": [
+        1.6209256159527285e-14,
+        232.1320343559643,
+        72.99999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ],
+      "grounded": true
+    }
+  ],
+  "links": [
+    {
+      "a": "pmv3rwfgz-1",
+      "ap": "mount-back",
+      "b": "pmv3rwfh0-2",
+      "bp": "motor-mount",
+      "mode": "mount",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfgz-1",
+      "ap": "mount-front",
+      "b": "pmv3rwfh0-3",
+      "bp": "motor-mount",
+      "mode": "mount",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh0-2",
+      "ap": "slot5",
+      "b": "pmv3rwfh0-4",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh0-4",
+      "ap": "end1",
+      "b": "pmv3rwfh0-5",
+      "bp": "slot1",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 1
+    },
+    {
+      "a": "pmv3rwfh0-5",
+      "ap": "slot6",
+      "b": "pmv3rwfh1-6",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh1-6",
+      "ap": "end1",
+      "b": "pmv3rwfh1-7",
+      "bp": "slot2",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 2
+    },
+    {
+      "a": "pmv3rwfh0-2",
+      "ap": "slot7",
+      "b": "pmv3rwfh1-8",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh1-8",
+      "ap": "end1",
+      "b": "pmv3rwfh1-9",
+      "bp": "slot3",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 3
+    },
+    {
+      "a": "pmv3rwfh1-9",
+      "ap": "slot6",
+      "b": "pmv3rwfh1-10",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh1-10",
+      "ap": "end1",
+      "b": "pmv3rwfh1-11",
+      "bp": "slot2",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 2
+    },
+    {
+      "a": "pmv3rwfh0-5",
+      "ap": "slot0",
+      "b": "pmv3rwfh2-12",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh2-12",
+      "ap": "end1",
+      "b": "pmv3rwfh1-9",
+      "bp": "slot4",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3rwfh1-7",
+      "ap": "slot0",
+      "b": "pmv3rwfh2-13",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh2-13",
+      "ap": "end1",
+      "b": "pmv3rwfh1-11",
+      "bp": "slot4",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3rwfh1-7",
+      "ap": "slot6",
+      "b": "pmv3rwfh2-14",
+      "bp": "shaft",
+      "mode": "side",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh1-11",
+      "ap": "slot6",
+      "b": "pmv3rwfh2-15",
+      "bp": "shaft",
+      "mode": "side",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh0-3",
+      "ap": "slot5",
+      "b": "pmv3rwfh2-16",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh2-16",
+      "ap": "end1",
+      "b": "pmv3rwfh2-17",
+      "bp": "slot1",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 1
+    },
+    {
+      "a": "pmv3rwfh2-17",
+      "ap": "slot6",
+      "b": "pmv3rwfh3-18",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh3-18",
+      "ap": "end1",
+      "b": "pmv3rwfh3-19",
+      "bp": "slot2",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 2
+    },
+    {
+      "a": "pmv3rwfh0-3",
+      "ap": "slot7",
+      "b": "pmv3rwfh3-20",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh3-20",
+      "ap": "end1",
+      "b": "pmv3rwfh3-21",
+      "bp": "slot3",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 3
+    },
+    {
+      "a": "pmv3rwfh3-21",
+      "ap": "slot6",
+      "b": "pmv3rwfh3-22",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh3-22",
+      "ap": "end1",
+      "b": "pmv3rwfh4-23",
+      "bp": "slot2",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 2
+    },
+    {
+      "a": "pmv3rwfh2-17",
+      "ap": "slot0",
+      "b": "pmv3rwfh4-24",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh4-24",
+      "ap": "end1",
+      "b": "pmv3rwfh3-21",
+      "bp": "slot4",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3rwfh3-19",
+      "ap": "slot0",
+      "b": "pmv3rwfh4-25",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh4-25",
+      "ap": "end1",
+      "b": "pmv3rwfh4-23",
+      "bp": "slot4",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3rwfh3-19",
+      "ap": "slot6",
+      "b": "pmv3rwfh2-14",
+      "bp": "shaft",
+      "mode": "side",
+      "offset": 37.49999999999999
+    },
+    {
+      "a": "pmv3rwfh4-23",
+      "ap": "slot6",
+      "b": "pmv3rwfh2-15",
+      "bp": "shaft",
+      "mode": "side",
+      "offset": 37.49999999999999
+    },
+    {
+      "a": "pmv3rwfgz-1",
+      "ap": "hole",
+      "b": "pmv3rwfh4-26",
+      "bp": "shaft",
+      "mode": "through",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh4-26",
+      "ap": "shaft",
+      "b": "pmv3rwfh0-2",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -18.75
+    },
+    {
+      "a": "pmv3rwfh4-26",
+      "ap": "shaft",
+      "b": "pmv3rwfh0-3",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 18.75
+    },
+    {
+      "a": "pmv3rwfh4-26",
+      "ap": "shaft",
+      "b": "pmv3rwfh5-27",
+      "bp": "hole",
+      "mode": "through",
+      "locked": true,
+      "offset": 61.65,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh5-27",
+      "ap": "key",
+      "b": "pmv3rwfh5-28",
+      "bp": "key",
+      "mode": "keyed",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh4-26",
+      "ap": "shaft",
+      "b": "pmv3rwfh5-28",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 68
+    },
+    {
+      "a": "pmv3rwfh5-28",
+      "ap": "slot0",
+      "b": "pmv3rwfh5-29",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh5-28",
+      "ap": "slot1",
+      "b": "pmv3rwfh5-30",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh5-28",
+      "ap": "slot2",
+      "b": "pmv3rwfh5-31",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh5-28",
+      "ap": "slot3",
+      "b": "pmv3rwfh6-32",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh5-28",
+      "ap": "slot4",
+      "b": "pmv3rwfh6-33",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh5-28",
+      "ap": "slot5",
+      "b": "pmv3rwfh6-34",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh5-28",
+      "ap": "slot6",
+      "b": "pmv3rwfh6-35",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh5-28",
+      "ap": "slot7",
+      "b": "pmv3rwfh6-36",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3rwfh4-26",
+      "ap": "shaft",
+      "b": "pmv3rwfh7-37",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 73,
+      "roll": 0,
+      "portIndex": 0
+    }
+  ],
+  "editor": {
+    "layers": [
+      {
+        "id": "layer-mv3yjloz-12",
+        "name": "Supports",
+        "partIds": [
+          "pmv3rwfgz-1",
+          "pmv3rwfh0-2",
+          "pmv3rwfh0-3",
+          "pmv3rwfh0-4",
+          "pmv3rwfh0-5",
+          "pmv3rwfh1-6",
+          "pmv3rwfh1-7",
+          "pmv3rwfh1-8",
+          "pmv3rwfh1-9",
+          "pmv3rwfh1-10",
+          "pmv3rwfh1-11",
+          "pmv3rwfh2-12",
+          "pmv3rwfh2-13",
+          "pmv3rwfh2-14",
+          "pmv3rwfh2-15",
+          "pmv3rwfh2-16",
+          "pmv3rwfh2-17",
+          "pmv3rwfh3-18",
+          "pmv3rwfh3-19",
+          "pmv3rwfh3-20",
+          "pmv3rwfh3-21",
+          "pmv3rwfh3-22",
+          "pmv3rwfh4-23",
+          "pmv3rwfh4-24",
+          "pmv3rwfh4-25",
+          "pmv3rwfh7-37"
+        ],
+        "visible": true,
+        "locked": false
+      },
+      {
+        "id": "layer-mv3yjloz-14",
+        "name": "Rotor",
+        "partIds": [
+          "pmv3rwfh4-26",
+          "pmv3rwfh5-27",
+          "pmv3rwfh5-28",
+          "pmv3rwfh5-29",
+          "pmv3rwfh5-30",
+          "pmv3rwfh5-31",
+          "pmv3rwfh6-32",
+          "pmv3rwfh6-33",
+          "pmv3rwfh6-34",
+          "pmv3rwfh6-35",
+          "pmv3rwfh6-36"
+        ],
+        "visible": true,
+        "locked": false
+      }
+    ],
+    "groups": [
+      {
+        "id": "group-mv3yjloz-11",
+        "name": "Grounded supports",
+        "partIds": [
+          "pmv3rwfgz-1",
+          "pmv3rwfh0-2",
+          "pmv3rwfh0-3",
+          "pmv3rwfh0-4",
+          "pmv3rwfh0-5",
+          "pmv3rwfh1-6",
+          "pmv3rwfh1-7",
+          "pmv3rwfh1-8",
+          "pmv3rwfh1-9",
+          "pmv3rwfh1-10",
+          "pmv3rwfh1-11",
+          "pmv3rwfh2-12",
+          "pmv3rwfh2-13",
+          "pmv3rwfh2-14",
+          "pmv3rwfh2-15",
+          "pmv3rwfh2-16",
+          "pmv3rwfh2-17",
+          "pmv3rwfh3-18",
+          "pmv3rwfh3-19",
+          "pmv3rwfh3-20",
+          "pmv3rwfh3-21",
+          "pmv3rwfh3-22",
+          "pmv3rwfh4-23",
+          "pmv3rwfh4-24",
+          "pmv3rwfh4-25",
+          "pmv3rwfh7-37"
+        ]
+      },
+      {
+        "id": "group-mv3yjloz-13",
+        "name": "Rotor",
+        "partIds": [
+          "pmv3rwfh4-26",
+          "pmv3rwfh5-27",
+          "pmv3rwfh5-28",
+          "pmv3rwfh5-29",
+          "pmv3rwfh5-30",
+          "pmv3rwfh5-31",
+          "pmv3rwfh6-32",
+          "pmv3rwfh6-33",
+          "pmv3rwfh6-34",
+          "pmv3rwfh6-35",
+          "pmv3rwfh6-36"
+        ]
+      }
+    ]
+  }
+}

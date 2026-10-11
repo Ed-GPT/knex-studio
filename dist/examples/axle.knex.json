@@ -1,0 +1,149 @@
+{
+  "format": "knex-studio",
+  "version": 1,
+  "name": "Axles & connections",
+  "parts": [
+    {
+      "id": "pmv3mtyo2-51",
+      "type": "c-white",
+      "pos": [
+        0,
+        35,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3mtyo2-52",
+      "type": "r-red",
+      "pos": [
+        0,
+        35,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmv3mtyo2-53",
+      "type": "s-blue",
+      "pos": [
+        1.7763568394002505e-15,
+        35,
+        7.999999999999998
+      ],
+      "quat": [
+        4.248639577543065e-17,
+        1.0257123289739567e-16,
+        0.38268343236508967,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmv3mtyo2-54",
+      "type": "s-silver",
+      "pos": [
+        3.9968028886505635e-15,
+        35,
+        17.999999999999996
+      ],
+      "quat": [
+        4.248639577543065e-17,
+        1.0257123289739567e-16,
+        0.38268343236508967,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmv3mtyo2-55",
+      "type": "c-yellow",
+      "pos": [
+        8.43769498715119e-15,
+        35,
+        37.99999999999999
+      ],
+      "quat": [
+        4.248639577543065e-17,
+        1.0257123289739567e-16,
+        0.38268343236508967,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmv3mtyo3-56",
+      "type": "r-yellow",
+      "pos": [
+        14.5,
+        35,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    }
+  ],
+  "links": [
+    {
+      "a": "pmv3mtyo2-51",
+      "ap": "hole",
+      "b": "pmv3mtyo2-52",
+      "bp": "shaft",
+      "mode": "through",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3mtyo2-52",
+      "ap": "shaft",
+      "b": "pmv3mtyo2-53",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 8,
+      "roll": 45,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3mtyo2-52",
+      "ap": "shaft",
+      "b": "pmv3mtyo2-54",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 18,
+      "roll": 45,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3mtyo2-52",
+      "ap": "shaft",
+      "b": "pmv3mtyo2-55",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 38,
+      "roll": 45,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3mtyo2-51",
+      "ap": "slot0",
+      "b": "pmv3mtyo3-56",
+      "bp": "shaft",
+      "mode": "side",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    }
+  ]
+}

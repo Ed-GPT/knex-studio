@@ -1,0 +1,1280 @@
+{
+  "format": "knex-studio",
+  "version": 1,
+  "name": "Swing · reference-based single bay",
+  "parts": [
+    {
+      "id": "pmv3vm5ki-1",
+      "type": "c-blue",
+      "pos": [
+        0,
+        235,
+        -106.06601717798213
+      ],
+      "quat": [
+        0,
+        1,
+        0,
+        6.123233995736766e-17
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kj-2",
+      "type": "c-purple",
+      "pos": [
+        0,
+        235,
+        -106.06601717798213
+      ],
+      "quat": [
+        0.7071067811865476,
+        1.232595164407831e-32,
+        1.232595164407831e-32,
+        0.7071067811865475
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kj-3",
+      "type": "c-blue",
+      "pos": [
+        -75,
+        10,
+        -106.06601717798213
+      ],
+      "quat": [
+        0,
+        1,
+        0,
+        6.123233995736766e-17
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kj-4",
+      "type": "c-purple",
+      "pos": [
+        -75,
+        10,
+        -106.06601717798213
+      ],
+      "quat": [
+        0.7071067811865476,
+        1.232595164407831e-32,
+        1.232595164407831e-32,
+        0.7071067811865475
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kk-5",
+      "type": "c-green",
+      "pos": [
+        -75,
+        160,
+        -106.06601717798213
+      ],
+      "quat": [
+        0,
+        0,
+        -0.7071067811865475,
+        0.7071067811865476
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kk-6",
+      "type": "r-red",
+      "pos": [
+        -75.00000000000001,
+        85.00000000000003,
+        -106.06601717798213
+      ],
+      "quat": [
+        0,
+        5.3024515623553115e-33,
+        0.7071067811865476,
+        0.7071067811865475
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kk-7",
+      "type": "r-yellow",
+      "pos": [
+        -37.49999999999999,
+        197.5,
+        -106.06601717798213
+      ],
+      "quat": [
+        0,
+        0,
+        0.3826834323650898,
+        0.9238795325112867
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kl-8",
+      "type": "c-blue",
+      "pos": [
+        75,
+        10,
+        -106.06601717798213
+      ],
+      "quat": [
+        0,
+        1,
+        0,
+        6.123233995736766e-17
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kl-9",
+      "type": "c-purple",
+      "pos": [
+        75,
+        10,
+        -106.06601717798213
+      ],
+      "quat": [
+        0.7071067811865476,
+        1.232595164407831e-32,
+        1.232595164407831e-32,
+        0.7071067811865475
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kl-10",
+      "type": "c-green",
+      "pos": [
+        75,
+        160,
+        -106.06601717798213
+      ],
+      "quat": [
+        -0.7071067811865475,
+        0.7071067811865476,
+        -4.329780281177466e-17,
+        4.329780281177467e-17
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kl-11",
+      "type": "r-red",
+      "pos": [
+        74.99999999999999,
+        85.00000000000003,
+        -106.06601717798213
+      ],
+      "quat": [
+        0,
+        5.3024515623553115e-33,
+        0.7071067811865476,
+        0.7071067811865475
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5km-12",
+      "type": "r-yellow",
+      "pos": [
+        37.499999999999986,
+        197.5,
+        -106.06601717798213
+      ],
+      "quat": [
+        0,
+        1.1314261122877003e-16,
+        0.9238795325112867,
+        0.3826834323650898
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5km-13",
+      "type": "r-red",
+      "pos": [
+        1.4210854715202004e-14,
+        160,
+        -106.06601717798213
+      ],
+      "quat": [
+        0,
+        0,
+        5.551115123125783e-17,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5ko-14",
+      "type": "c-blue",
+      "pos": [
+        0,
+        235,
+        106.06601717798213
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5ko-15",
+      "type": "c-purple",
+      "pos": [
+        0,
+        235,
+        106.06601717798213
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kp-16",
+      "type": "c-blue",
+      "pos": [
+        -75,
+        10,
+        106.06601717798213
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kp-17",
+      "type": "c-purple",
+      "pos": [
+        -75,
+        10,
+        106.06601717798213
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kp-18",
+      "type": "c-green",
+      "pos": [
+        -75,
+        160,
+        106.06601717798213
+      ],
+      "quat": [
+        0,
+        0,
+        -0.7071067811865475,
+        0.7071067811865476
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kp-19",
+      "type": "r-red",
+      "pos": [
+        -74.99999999999999,
+        85,
+        106.06601717798213
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kq-20",
+      "type": "r-yellow",
+      "pos": [
+        -37.49999999999999,
+        197.5,
+        106.06601717798213
+      ],
+      "quat": [
+        0,
+        0,
+        0.3826834323650898,
+        0.9238795325112867
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kq-21",
+      "type": "c-blue",
+      "pos": [
+        75,
+        10,
+        106.06601717798213
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kq-22",
+      "type": "c-purple",
+      "pos": [
+        75,
+        10,
+        106.06601717798213
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kt-23",
+      "type": "c-green",
+      "pos": [
+        75,
+        160,
+        106.06601717798213
+      ],
+      "quat": [
+        -0.7071067811865475,
+        0.7071067811865476,
+        -4.329780281177466e-17,
+        4.329780281177467e-17
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kt-24",
+      "type": "r-red",
+      "pos": [
+        75.00000000000001,
+        85,
+        106.06601717798213
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kt-25",
+      "type": "r-yellow",
+      "pos": [
+        37.499999999999986,
+        197.5,
+        106.06601717798213
+      ],
+      "quat": [
+        0,
+        1.1314261122877003e-16,
+        0.9238795325112867,
+        0.3826834323650898
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5ku-26",
+      "type": "r-red",
+      "pos": [
+        1.4210854715202004e-14,
+        160,
+        106.06601717798213
+      ],
+      "quat": [
+        0,
+        0,
+        5.551115123125783e-17,
+        1
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kv-27",
+      "type": "r-gray",
+      "pos": [
+        2.904015606397342e-14,
+        234.99999999999997,
+        1.4210854715202004e-14
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        -1.570092458683775e-16,
+        0.7071067811865475
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kw-28",
+      "type": "r-gray",
+      "pos": [
+        -74.99999999999997,
+        9.999999999999977,
+        1.4210854715202004e-14
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        -1.570092458683775e-16,
+        0.7071067811865475
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kw-29",
+      "type": "r-gray",
+      "pos": [
+        75.00000000000003,
+        9.999999999999977,
+        1.4210854715202004e-14
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        -1.570092458683775e-16,
+        0.7071067811865475
+      ],
+      "grounded": true
+    },
+    {
+      "id": "pmv3vm5kw-30",
+      "type": "c-blue",
+      "pos": [
+        0,
+        85,
+        -37.5
+      ],
+      "quat": [
+        0,
+        1,
+        0,
+        6.123233995736766e-17
+      ]
+    },
+    {
+      "id": "pmv3vm5kw-31",
+      "type": "c-purple",
+      "pos": [
+        0,
+        85,
+        -37.5
+      ],
+      "quat": [
+        0.7071067811865476,
+        1.232595164407831e-32,
+        1.232595164407831e-32,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmv3vm5kw-32",
+      "type": "c-blue",
+      "pos": [
+        -75,
+        85,
+        -37.5
+      ],
+      "quat": [
+        0,
+        1,
+        0,
+        6.123233995736766e-17
+      ]
+    },
+    {
+      "id": "pmv3vm5kw-33",
+      "type": "c-purple",
+      "pos": [
+        -75,
+        85,
+        -37.5
+      ],
+      "quat": [
+        0.7071067811865476,
+        1.232595164407831e-32,
+        1.232595164407831e-32,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmv3vm5kx-34",
+      "type": "r-blue",
+      "pos": [
+        -37.50000000000001,
+        85,
+        -37.5
+      ],
+      "quat": [
+        0,
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pmv3vm5kx-35",
+      "type": "c-gray",
+      "pos": [
+        2.0713483379284745e-14,
+        234.99999999999997,
+        -37.49999999999998
+      ],
+      "quat": [
+        2.465190328815662e-32,
+        1.570092458683775e-16,
+        -0.7071067811865474,
+        0.7071067811865476
+      ]
+    },
+    {
+      "id": "pmv3vm5kx-36",
+      "type": "r-red",
+      "pos": [
+        5.4464263327889503e-14,
+        159.99999999999994,
+        -37.49999999999999
+      ],
+      "quat": [
+        0,
+        1.5700924586837752e-16,
+        -0.7071067811865474,
+        0.7071067811865478
+      ]
+    },
+    {
+      "id": "pmv3vm5ky-37",
+      "type": "c-blue",
+      "pos": [
+        0,
+        85,
+        37.5
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3vm5ky-38",
+      "type": "c-purple",
+      "pos": [
+        0,
+        85,
+        37.5
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmv3vm5ky-39",
+      "type": "c-blue",
+      "pos": [
+        -75,
+        85,
+        37.5
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmv3vm5ky-40",
+      "type": "c-purple",
+      "pos": [
+        -75,
+        85,
+        37.5
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmv3vm5kz-41",
+      "type": "r-blue",
+      "pos": [
+        -37.50000000000001,
+        85,
+        37.5
+      ],
+      "quat": [
+        0,
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pmv3vm5kz-42",
+      "type": "c-gray",
+      "pos": [
+        3.736682874866209e-14,
+        234.99999999999997,
+        37.50000000000001
+      ],
+      "quat": [
+        2.465190328815662e-32,
+        1.570092458683775e-16,
+        -0.7071067811865474,
+        0.7071067811865476
+      ]
+    },
+    {
+      "id": "pmv3vm5l0-43",
+      "type": "r-red",
+      "pos": [
+        7.111760869726685e-14,
+        159.99999999999994,
+        37.49999999999999
+      ],
+      "quat": [
+        0,
+        1.5700924586837752e-16,
+        -0.7071067811865474,
+        0.7071067811865478
+      ]
+    },
+    {
+      "id": "pmv3vm5l0-44",
+      "type": "r-blue",
+      "pos": [
+        7.723873991170413e-15,
+        85,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        -1.570092458683775e-16,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmv3vm5l1-45",
+      "type": "r-blue",
+      "pos": [
+        -75,
+        85,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        -1.570092458683775e-16,
+        0.7071067811865475
+      ]
+    }
+  ],
+  "links": [
+    {
+      "a": "pmv3vm5ki-1",
+      "ap": "interlock",
+      "b": "pmv3vm5kj-2",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kj-3",
+      "ap": "interlock",
+      "b": "pmv3vm5kj-4",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kj-3",
+      "ap": "slot5",
+      "b": "pmv3vm5kk-6",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kk-6",
+      "ap": "end1",
+      "b": "pmv3vm5kk-5",
+      "bp": "slot0",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3vm5kk-5",
+      "ap": "slot3",
+      "b": "pmv3vm5kk-7",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kk-7",
+      "ap": "end1",
+      "b": "pmv3vm5ki-1",
+      "bp": "slot2",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3vm5kl-8",
+      "ap": "interlock",
+      "b": "pmv3vm5kl-9",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kl-8",
+      "ap": "slot5",
+      "b": "pmv3vm5kl-11",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kl-11",
+      "ap": "end1",
+      "b": "pmv3vm5kl-10",
+      "bp": "slot0",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3vm5kl-10",
+      "ap": "slot3",
+      "b": "pmv3vm5km-12",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5km-12",
+      "ap": "end1",
+      "b": "pmv3vm5ki-1",
+      "bp": "slot0",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3vm5kk-5",
+      "ap": "slot2",
+      "b": "pmv3vm5km-13",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5km-13",
+      "ap": "end1",
+      "b": "pmv3vm5kl-10",
+      "bp": "slot2",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3vm5ko-14",
+      "ap": "interlock",
+      "b": "pmv3vm5ko-15",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kp-16",
+      "ap": "interlock",
+      "b": "pmv3vm5kp-17",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kp-16",
+      "ap": "slot5",
+      "b": "pmv3vm5kp-19",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kp-19",
+      "ap": "end1",
+      "b": "pmv3vm5kp-18",
+      "bp": "slot0",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3vm5kp-18",
+      "ap": "slot3",
+      "b": "pmv3vm5kq-20",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kq-20",
+      "ap": "end1",
+      "b": "pmv3vm5ko-14",
+      "bp": "slot0",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3vm5kq-21",
+      "ap": "interlock",
+      "b": "pmv3vm5kq-22",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kq-21",
+      "ap": "slot5",
+      "b": "pmv3vm5kt-24",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kt-24",
+      "ap": "end1",
+      "b": "pmv3vm5kt-23",
+      "bp": "slot0",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3vm5kt-23",
+      "ap": "slot3",
+      "b": "pmv3vm5kt-25",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kt-25",
+      "ap": "end1",
+      "b": "pmv3vm5ko-14",
+      "bp": "slot2",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3vm5kp-18",
+      "ap": "slot2",
+      "b": "pmv3vm5ku-26",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5ku-26",
+      "ap": "end1",
+      "b": "pmv3vm5kt-23",
+      "bp": "slot2",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3vm5kj-2",
+      "ap": "slot2",
+      "b": "pmv3vm5kv-27",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kv-27",
+      "ap": "end1",
+      "b": "pmv3vm5ko-15",
+      "bp": "slot2",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3vm5kj-4",
+      "ap": "slot2",
+      "b": "pmv3vm5kw-28",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kw-28",
+      "ap": "end1",
+      "b": "pmv3vm5kp-17",
+      "bp": "slot2",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3vm5kl-9",
+      "ap": "slot2",
+      "b": "pmv3vm5kw-29",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kw-29",
+      "ap": "end1",
+      "b": "pmv3vm5kq-22",
+      "bp": "slot2",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3vm5kw-30",
+      "ap": "interlock",
+      "b": "pmv3vm5kw-31",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kw-32",
+      "ap": "interlock",
+      "b": "pmv3vm5kw-33",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kw-30",
+      "ap": "slot3",
+      "b": "pmv3vm5kx-34",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kx-34",
+      "ap": "end1",
+      "b": "pmv3vm5kw-33",
+      "bp": "slot0",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3vm5kv-27",
+      "ap": "shaft",
+      "b": "pmv3vm5kx-35",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -37.5,
+      "roll": -90,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kx-35",
+      "ap": "slot0",
+      "b": "pmv3vm5kx-36",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kx-36",
+      "ap": "end1",
+      "b": "pmv3vm5kw-30",
+      "bp": "slot5",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3vm5ky-37",
+      "ap": "interlock",
+      "b": "pmv3vm5ky-38",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5ky-39",
+      "ap": "interlock",
+      "b": "pmv3vm5ky-40",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5ky-38",
+      "ap": "slot0",
+      "b": "pmv3vm5kz-41",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kz-41",
+      "ap": "end1",
+      "b": "pmv3vm5ky-39",
+      "bp": "slot3",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3vm5kv-27",
+      "ap": "shaft",
+      "b": "pmv3vm5kz-42",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 37.5,
+      "roll": -90,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5kz-42",
+      "ap": "slot0",
+      "b": "pmv3vm5l0-43",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5l0-43",
+      "ap": "end1",
+      "b": "pmv3vm5ky-37",
+      "bp": "slot5",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3vm5kw-31",
+      "ap": "slot2",
+      "b": "pmv3vm5l0-44",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5l0-44",
+      "ap": "end1",
+      "b": "pmv3vm5ky-38",
+      "bp": "slot2",
+      "mode": "end"
+    },
+    {
+      "a": "pmv3vm5kw-33",
+      "ap": "slot2",
+      "b": "pmv3vm5l1-45",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmv3vm5l1-45",
+      "ap": "end1",
+      "b": "pmv3vm5ky-40",
+      "bp": "slot2",
+      "mode": "end"
+    }
+  ],
+  "editor": {
+    "layers": [
+      {
+        "id": "layer-mv3yjlp2-20",
+        "name": "Supports",
+        "partIds": [
+          "pmv3vm5ki-1",
+          "pmv3vm5kj-2",
+          "pmv3vm5kj-3",
+          "pmv3vm5kj-4",
+          "pmv3vm5kk-5",
+          "pmv3vm5kk-6",
+          "pmv3vm5kk-7",
+          "pmv3vm5kl-8",
+          "pmv3vm5kl-9",
+          "pmv3vm5kl-10",
+          "pmv3vm5kl-11",
+          "pmv3vm5km-12",
+          "pmv3vm5km-13",
+          "pmv3vm5ko-14",
+          "pmv3vm5ko-15",
+          "pmv3vm5kp-16",
+          "pmv3vm5kp-17",
+          "pmv3vm5kp-18",
+          "pmv3vm5kp-19",
+          "pmv3vm5kq-20",
+          "pmv3vm5kq-21",
+          "pmv3vm5kq-22",
+          "pmv3vm5kt-23",
+          "pmv3vm5kt-24",
+          "pmv3vm5kt-25",
+          "pmv3vm5ku-26",
+          "pmv3vm5kv-27",
+          "pmv3vm5kw-28",
+          "pmv3vm5kw-29"
+        ],
+        "visible": true,
+        "locked": false
+      },
+      {
+        "id": "layer-mv3yjlp2-22",
+        "name": "Swing seat",
+        "partIds": [
+          "pmv3vm5kx-35",
+          "pmv3vm5kx-36",
+          "pmv3vm5kw-30",
+          "pmv3vm5kw-31",
+          "pmv3vm5kx-34",
+          "pmv3vm5kw-33",
+          "pmv3vm5l0-44",
+          "pmv3vm5ky-38",
+          "pmv3vm5l1-45",
+          "pmv3vm5ky-40",
+          "pmv3vm5kw-32",
+          "pmv3vm5ky-37",
+          "pmv3vm5ky-39",
+          "pmv3vm5kz-41",
+          "pmv3vm5l0-43",
+          "pmv3vm5kz-42"
+        ],
+        "visible": true,
+        "locked": false
+      }
+    ],
+    "groups": [
+      {
+        "id": "group-mv3yjlp2-19",
+        "name": "Grounded supports",
+        "partIds": [
+          "pmv3vm5ki-1",
+          "pmv3vm5kj-2",
+          "pmv3vm5kj-3",
+          "pmv3vm5kj-4",
+          "pmv3vm5kk-5",
+          "pmv3vm5kk-6",
+          "pmv3vm5kk-7",
+          "pmv3vm5kl-8",
+          "pmv3vm5kl-9",
+          "pmv3vm5kl-10",
+          "pmv3vm5kl-11",
+          "pmv3vm5km-12",
+          "pmv3vm5km-13",
+          "pmv3vm5ko-14",
+          "pmv3vm5ko-15",
+          "pmv3vm5kp-16",
+          "pmv3vm5kp-17",
+          "pmv3vm5kp-18",
+          "pmv3vm5kp-19",
+          "pmv3vm5kq-20",
+          "pmv3vm5kq-21",
+          "pmv3vm5kq-22",
+          "pmv3vm5kt-23",
+          "pmv3vm5kt-24",
+          "pmv3vm5kt-25",
+          "pmv3vm5ku-26",
+          "pmv3vm5kv-27",
+          "pmv3vm5kw-28",
+          "pmv3vm5kw-29"
+        ]
+      },
+      {
+        "id": "group-mv3yjlp2-21",
+        "name": "Swing seat",
+        "partIds": [
+          "pmv3vm5kx-35",
+          "pmv3vm5kx-36",
+          "pmv3vm5kw-30",
+          "pmv3vm5kw-31",
+          "pmv3vm5kx-34",
+          "pmv3vm5kw-33",
+          "pmv3vm5l0-44",
+          "pmv3vm5ky-38",
+          "pmv3vm5l1-45",
+          "pmv3vm5ky-40",
+          "pmv3vm5kw-32",
+          "pmv3vm5ky-37",
+          "pmv3vm5ky-39",
+          "pmv3vm5kz-41",
+          "pmv3vm5l0-43",
+          "pmv3vm5kz-42"
+        ]
+      }
+    ]
+  }
+}
