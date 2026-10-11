@@ -11,7 +11,7 @@ export function playgroundView(scene,model,course){const state=createDrive(model
  if(course==='circuit')for(let x=-1200;x<=1200;x+=160)for(const z of[-730,730])box(x,.1,z,65,1,6,mat('#d7d7ca'));
  else for(let x=-1200;x<=1200;x+=160)box(x,.1,0,65,1,6,mat('#d7d7ca'));
  const start=COURSES[course].start;for(let i=0;i<8;i++)box(start[0],1,start[1]-140+i*40,45,1,40,mat(i%2?'#e2e4e3':'#20262b'));
- for(const p of state.model.parts.filter(p=>state.ids.has(p.id))){const mesh=makePart(p.type);mesh.userData.partId=p.id;vehicle.add(mesh);}
+ for(const p of state.model.parts.filter(p=>state.ids.has(p.id))){const mesh=makePart(p.type,p);mesh.userData.partId=p.id;vehicle.add(mesh);}
  const sync=()=>{const yaw=Q().setFromAxisAngle(V([0,1,0]),state.yaw);for(const g of vehicle.children){const p=state.model.parts.find(p=>p.id===g.userData.partId);g.position.copy(V(p.pos).sub(V(state.center)));g.position.y-=state.groundY;g.quaternion.fromArray(p.quat);}vehicle.position.set(state.x,0,state.z);vehicle.quaternion.copy(yaw);};sync();
  return{state,root,step(dt,commands,options){stepDrive(state,dt,commands,options);sync();},dispose(){scene.remove(root);environment.traverse(o=>{o.geometry?.dispose();if(o.material)o.material.dispose();});},reset(){this.dispose();return playgroundView(scene,model,course);}};
 }

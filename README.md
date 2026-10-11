@@ -75,11 +75,39 @@ The swing is a single-bay adaptation of a published guide. The wheeled chassis f
 
 Example definitions and factories live in `dist/examples.js`. Existing models remain compatible with the version-1 JSON format.
 
+## Visual path builder
+
+Open **Generate → Path builder**, or choose **Flexi & track** in the part library.
+
+![Visual path builder using Classic coaster cross-ties and split tubing](docs/screenshots/path-builder.png)
+
+Importable paths: [hill](docs/paths/hill.json), [S-bend](docs/paths/s.json), [corner](docs/paths/bend.json).
+
+- Drag pink handles in 3D; Shift-drag changes height. Top and Front views, numeric coordinates, add/remove handles, and Hill/S-bend/Corner presets provide alternative controls. Hints can be hidden.
+- **Track:** repeat real green cross-ties 91430 along a spline, set spacing and banking, and generate two purple split-tubing cuts. The tubing is identified from the Thunderbolt Strike set 51587 manual, which documents 6.096 m stock lengths and cutting. Each rail must fit one stock length; rail joins are not generated.
+- **Flexi:** shape real green rod 91108 at a fixed approximate length of 190 mm, with two gray 90901 end connectors. Editing resizes the reference curve to preserve the rod length. End sockets follow the curve tangents.
+- **Save path / Import path:** exchange a `knex-path` version 1 JSON file containing `kind` (`track` or `flexi`), 2–24 XYZ `points` in millimetres, `spacing` (30–190 mm), and `bank` (−60 to 60 degrees). These are editor input bounds, not manufacturer bending limits. No proprietary coaster file import yet.
+- **Add to model** inserts an editable group in one undo step. The generated local curves and tubing bank survive model saves, duplication and patterns. Save the path separately to retain the authoring handles; committed parts do not yet reopen as a procedural path.
+
+Through-hole placement follows the pointer anywhere along a rod and seeks nearby clear space when occupied. It respects part thickness at the ends. The attached part remains free to slide; the existing continuous obstruction checks still apply.
+
+### Real parts and uncertainties
+
+| Part | Verified reference | Still approximate |
+| --- | --- | --- |
+| Green flexi 91108 | [Supplier photo, approx. 190 mm, approx. 3.7 g](https://shop.knexusergroup.org.uk/products/91108) | Cross-section, flange details, minimum bend radius, spring stiffness |
+| Green cross-tie 91430 | [Supplier photo and approx. 3.68 g](https://shop.knexusergroup.org.uk/products/91430) | Body dimensions, socket tolerances and gauge (rendered at an unverified 44 mm) |
+| Purple split tubing, set 51587 | [K’NEX Thunderbolt Strike manual](https://www.knexusergroup.org.uk/bk/51587.pdf), pages 5 and 34–39 | Tube section, bending/twist limits and mass. No individual part number is claimed. |
+
+The [Classic coaster guide](https://www.knexusergroup.org.uk/en/knex-hint-R2.html) confirms tubing on cross-tie posts. Shapes are photo/manual reconstructions, not factory CAD. Red tubing 403420V was not used because its supplier title and description disagree on stock length.
+
+**Track output is an unsupported layout preview.** It does not include structural frames, flexi backbones, splices, lift chains or a car. Tubing-to-post links keep the layout together for editing; they are not an elastic solver. Curvature is reported geometrically, with no claim of a verified buildable bend. The editor does not validate self-intersections, rail clearance or structural feasibility. For balance, curves are held rigid; tubing mass uses an explicit unverified estimate of 0.019 g/mm until measured data is available.
+
 ## Physics and accuracy
 
-Parts are procedural reconstructions from identified references, not production CAD. Nominal rod lengths differ from effective connector-center spacing. Small clip details, clearances, motor housing dimensions and tooth shapes remain approximate. The catalog does not include every historical part, flexi rods or flexible coaster track.
+Parts are procedural reconstructions from identified references, not production CAD. Nominal rod lengths differ from effective connector-center spacing. Small clip details, clearances, motor housing dimensions and tooth shapes remain approximate. The catalog does not include every historical part. Classic flexi 91108 and split-tubing track are available as shape previews; Micro track is not included.
 
-- **Hinges:** coupled rigid groups with gravity, mass and approximate inertia. Locked supports remain fixed. If no support is locked, the largest connected group is held fixed and the UI reports it. No part-to-part contacts, flexible members or gear transmission in this mode.
+- **Hinges:** coupled rigid groups with gravity, mass and approximate inertia. Mouse pulling uses a force-limited spring; pivot correction keeps connected hinges closed under hard pulls. Locked supports remain fixed. If no support is locked, the largest connected group is held fixed and the UI reports it. No part-to-part contacts, flexible members or gear transmission in this mode.
 - **Stability:** approximate rigid-build balance and tipping against a flat floor. Joint poses are held fixed during this test.
 - **Motors and gears:** imposed rotational speed and parallel-axis gear ratios. No torque, battery-load or swept rotational collision simulation.
 - **Playground:** approximate flat-ground traction and differential steering, without suspension, jumps or full vehicle contact physics.
@@ -107,6 +135,8 @@ Autosave and the recovery archive are local to a browser and site origin. **Save
 - `dist/app.js`: editor, selection, interactions and simulation controls.
 - `dist/examples.js`, `dist/example-gallery.js`: example factories and rendered gallery.
 - `dist/hinge-system.js`, `dist/stability.js`, `dist/motor.js`: simulation modes.
+- `dist/path-builder.js`, `dist/path-builder-ui.js`, `dist/flexible-parts.js`: sourced flexible parts and visual path generation.
+- `dist/axle-placement.js`: nearest clear through-hole placement along a shaft.
 - `tests/`: Node test suite for geometry, connections, motion, collisions, examples and serialization.
 
 Bundled third-party notices: [Three.js](dist/vendor/THREE-LICENSE), [cannon-es](dist/vendor/cannon-es.LICENSE), and the font OFL notices under `dist/fonts/`.

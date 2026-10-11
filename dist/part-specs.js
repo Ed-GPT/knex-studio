@@ -1,6 +1,8 @@
 // K’NEX User Group product listings, checked 2026-10-11. Approximate supplier values, not factory measurements.
 // Motor load conditions and battery inclusion in listed mass are unspecified.
 export const PART_SPECS={
+ "f-green190":{partNumber:"91108",massG:3.7,source:"https://shop.knexusergroup.org.uk/products/91108",quality:"Supplier approximate",checked:"2026-10-11"},
+ "c-cross-tie":{partNumber:"91430",massG:3.68,source:"https://shop.knexusergroup.org.uk/products/91430",quality:"Supplier approximate",checked:"2026-10-11"},
   "g-blue14": {
     "partNumber": "91317",
     "massG": 3.12,
