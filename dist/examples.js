@@ -1,3 +1,4 @@
+import {panelWall,panelBench,PANEL_REFERENCE} from './panel-models.js';
 import {buildRadial} from './radial-builder.js';
 import {buildFrame} from './frame-builder.js';
 import {angledSupportModel,ANGLED_REFERENCE,ballJointModel,BALL_REFERENCE,classicHingeModel,classicClipBench,yClipBench,HINGE_REFERENCE} from './clip-models.js';
@@ -27,6 +28,7 @@ export function gridWall(){
 export function rigidTower(){const m=buildFrame({rod:'r-rigid-tan',counts:[1,4,1],braced:true}).model;m.name='Rigid-rod tower';for(const p of m.parts)p.pos[1]+=12;return m;}
 export function octagonalTower(){const m=buildRadial({kind:'tube',counts:[2,4,1],rod:'r-yellow',braced:true}).model;m.name='Octagonal observation tower';for(const p of m.parts)p.pos[1]+=12;return m;}
 export const EXAMPLES=[
+ {id:'panel-wall',title:'Panel wall',level:'Intermediate',skill:'Panels · shared corners',hint:'Panels snap into the four inward diagonal sockets. Select a panel to disconnect and move it; the surrounding rods stay in place.',factory:panelWall,kind:'Original stock-grid demonstration using Classic molded panels; approximate plate details',source:PANEL_REFERENCE},
  {id:'square',title:'One square',level:'Simple',skill:'Snap · repeat',hint:'Select the square, then use Repeat + to extend it.',factory:repeatableSquare,kind:'Original connection-grid demo',source:JOINT_REFERENCE},
  {id:'hinge',title:'Single hinge',level:'Simple',skill:'Lock · swing',hint:'Run the hinge, pull the red arm, and release it.',factory:singleHinge,action:'hinges',kind:'Joint demo with a fixed axle, not a freestanding model',source:JOINT_REFERENCE},
  {id:'axle',title:'Axle & bearings',level:'Simple',skill:'Slide · spin',hint:'Select a loose connector and drag the gold arrow or ring.',factory:()=>exampleModel('axle'),kind:'Original connection-method demo',source:JOINT_REFERENCE},
@@ -48,6 +50,7 @@ export const EXAMPLES=[
  {id:'nested',title:'Double hinge',level:'Advanced',skill:'Coupled physics',hint:'Run the hinges and pull either hanging section.',factory:nestedSwingModel,action:'hinges',kind:'Mechanical variation of the single-bay swing',source:SWING_REFERENCE}
 ];
 export const REFERENCE_SCENES=[
+ {id:'classic-panels',title:'Classic molded panels',factory:panelBench},
  {id:'y-clips',title:'Y clips · grip & peg',factory:yClipBench},
  {id:'classic-clips',title:'Clips & hinge halves',factory:classicClipBench},
  {id:'connectors',title:'Classic connectors',factory:connectorReferenceModels},

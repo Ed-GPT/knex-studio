@@ -208,6 +208,16 @@ The larger gray **92401 Tony motor** has its own reconstructed four-AA housing a
 
 ![Two-speed motor driving an original windmill example](docs/screenshots/classic-two-speed-motor.png)
 
+## Classic molded panels
+
+**Parts → Panels** opens a searchable flyout with 35 original 910xx variants: four triangular sizes and four square sizes. Each uses molded rod-end pegs that snap into ordinary connector sockets. Square panels close four corner joints automatically when placed in a matching frame. Triangle panels have three straight pegs. No axle hole is inferred from the face perforations.
+
+**Examples → Panel wall** opens a 35-part shared-corner build. **Part reference scenes → Classic molded panels** compares all eight shapes. Panels move with their connected assembly and retain their pegs through disconnect/reconnect, repeat and save. Supplier approximate masses contribute to balance and joint simulation.
+
+![Classic molded panels mounted in a shared-corner frame](docs/screenshots/classic-panels.png)
+
+The photos determine the outline, perforation pattern and peg arrangement; plate thickness, rib/peg tolerances and some dimensions remain estimates. Curved and flexible panels are still separate pending work. [Part identities and fit limits](docs/CLASSIC-PARTS.md#classic-molded-panels).
+
 ## Physics and accuracy
 
 Parts are procedural reconstructions from identified references, not production CAD. Nominal rod lengths differ from effective connector-center spacing. Small clip details, clearances, motor housing dimensions and tooth shapes remain approximate. The catalog does not include every historical part. Classic flexi rods in four stock lengths and split-tubing track are available as shape previews; Micro track is not included.

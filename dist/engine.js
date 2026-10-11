@@ -1,3 +1,4 @@
+import {CLASSIC_PANELS,panelPorts} from './classic-panels.js';
 import {TWO_SPEED_MOTOR,motorMountPlane} from './classic-motors.js';
 import {ANGLED_CLIP,angledPorts,recessPorts,occupancyKey} from './angled-clips.js';
 import {CLASSIC_RIGID_RODS} from './classic-rods.js';
@@ -17,7 +18,7 @@ export const SOCKET=10.1;
 // Patent US7666054B2: D=10.1 mm, shortest centre spacing 37.5 mm.
 // Exact sqrt(2) progression avoids accumulated rounding in closed frames.
 export const CATALOG=[
- ANGLED_CLIP,TWO_SPEED_MOTOR,
+ ...CLASSIC_PANELS,ANGLED_CLIP,TWO_SPEED_MOTOR,
  ...CLASSIC_CLIPS,...CLASSIC_Y_CLIPS,...BALL_JOINTS,
  ...FLEXIBLE_PARTS,
  ...CLASSIC_WHEELS,
@@ -50,7 +51,7 @@ export const BY_ID=Object.fromEntries(CATALOG.map(p=>[p.id,p]));
 let serial=0;
 export function part(type,pos=[0,20,0],quat=[0,0,0,1]){if(!Object.hasOwn(BY_ID,type))throw Error('Unknown part');return{id:`p${Date.now().toString(36)}-${++serial}`,type,pos:[...pos],quat:[...quat]};}
 export const definition=p=>BY_ID[p.type];
-export function localPorts(p){const d=definition(p);if(d.angledClip)return angledPorts();if(d.ballFamily)return [{key:'slot0',kind:'slot',pos:[SOCKET,0,0],dir:[1,0,0]},ballPort(d)];if(d.yClip)return yClipPorts();if(d.hingeHalf)return [{key:'slot0',kind:'slot',pos:[SOCKET,0,0],dir:[1,0,0]},hingePort(d)];if(d.endBearing)return [{key:'bearing',kind:'bearing',pos:bearingPoint(d),dir:[0,0,-1]}];if(d.flexi){const points=p.path||defaultPath(d);return[0,1].map(i=>({key:`end${i}`,kind:"end",pos:points[i?points.length-1:0],dir:V(points[i?points.length-1:0]).sub(V(points[i?points.length-2:1])).normalize().toArray()}));}if(d.tubing)return [];if(d.chain)return [{key:'socket',kind:'chain',pos:[0,0,0],dir:[-1,0,0]},{key:'pin',kind:'chain',pos:[d.pitch,0,0],dir:[1,0,0]}];if(d.endCap)return [{key:'slot0',kind:'slot',pos:[0,0,0],dir:[0,0,-1]}];if(d.motor&&!d.legacy)return [];if(d.motor)return[-1,1].map((s,i)=>({key:`end${i}`,kind:'end',pos:[s*(37.5*Math.SQRT2**3/2-SOCKET),0,0],dir:[s,0,0]}));if(d.group==='rods')return[-1,1].map((s,i)=>({key:`end${i}`,kind:'end',pos:[s*d.length/2,0,0],dir:[s,0,0]}));return d.slots.map((deg,i)=>{let a=deg*DEG;return{key:`slot${i}`,kind:'slot',pos:[SOCKET*Math.cos(a),SOCKET*Math.sin(a),0],dir:[Math.cos(a),Math.sin(a),0]};}).concat(recessPorts(d));}
+export function localPorts(p){const d=definition(p);if(d.panel)return panelPorts(d);if(d.angledClip)return angledPorts();if(d.ballFamily)return [{key:'slot0',kind:'slot',pos:[SOCKET,0,0],dir:[1,0,0]},ballPort(d)];if(d.yClip)return yClipPorts();if(d.hingeHalf)return [{key:'slot0',kind:'slot',pos:[SOCKET,0,0],dir:[1,0,0]},hingePort(d)];if(d.endBearing)return [{key:'bearing',kind:'bearing',pos:bearingPoint(d),dir:[0,0,-1]}];if(d.flexi){const points=p.path||defaultPath(d);return[0,1].map(i=>({key:`end${i}`,kind:"end",pos:points[i?points.length-1:0],dir:V(points[i?points.length-1:0]).sub(V(points[i?points.length-2:1])).normalize().toArray()}));}if(d.tubing)return [];if(d.chain)return [{key:'socket',kind:'chain',pos:[0,0,0],dir:[-1,0,0]},{key:'pin',kind:'chain',pos:[d.pitch,0,0],dir:[1,0,0]}];if(d.endCap)return [{key:'slot0',kind:'slot',pos:[0,0,0],dir:[0,0,-1]}];if(d.motor&&!d.legacy)return [];if(d.motor)return[-1,1].map((s,i)=>({key:`end${i}`,kind:'end',pos:[s*(37.5*Math.SQRT2**3/2-SOCKET),0,0],dir:[s,0,0]}));if(d.group==='rods')return[-1,1].map((s,i)=>({key:`end${i}`,kind:'end',pos:[s*d.length/2,0,0],dir:[s,0,0]}));return d.slots.map((deg,i)=>{let a=deg*DEG;return{key:`slot${i}`,kind:'slot',pos:[SOCKET*Math.cos(a),SOCKET*Math.sin(a),0],dir:[Math.cos(a),Math.sin(a),0]};}).concat(recessPorts(d));}
 export function worldPort(p,port){return{...port,...Object.fromEntries(['tangent','sideAxis'].filter(k=>port[k]).map(k=>[k,V(port[k]).applyQuaternion(Q(p.quat)).toArray()])),partId:p.id,pos:V(port.pos).applyQuaternion(Q(p.quat)).add(V(p.pos)).toArray(),dir:V(port.dir).applyQuaternion(Q(p.quat)).toArray()};}
 export const ports=p=>localPorts(p).map(x=>worldPort(p,x));
 export function busy(model,id,key){if(/^tire[01]?$/.test(key))return tyreSeatBusy(model,id,key);return model.links.some(l=>(l.a===id&&occupancyKey(l.ap)===occupancyKey(key))||(l.b===id&&occupancyKey(l.bp)===occupancyKey(key)));}

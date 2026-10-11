@@ -1,6 +1,6 @@
 // A compact category rail with a visual flyout. Part cards keep the same
 // data-part contract as the editor's click and drag placement handlers.
-const names={rods:'Rods',flexible:'Flexi & track',connectors:'Connectors',wheels:'Wheels',gears:'Gears & chain',extras:'Clips & spacers',motors:'Motors'};
+const names={rods:'Rods',flexible:'Flexi & track',connectors:'Connectors',panels:'Panels',wheels:'Wheels',gears:'Gears & chain',extras:'Clips & spacers',motors:'Motors'};
 const matches=(d,q)=>[d.name,d.nominal,d.partNumber].some(v=>String(v??'').toLowerCase().includes(q));
 export function createPartLibrary({root,parts,icon,choose,active}){
  const flyout=document.createElement('section');flyout.id='part-flyout';flyout.className='part-flyout';flyout.hidden=true;flyout.setAttribute('role','dialog');flyout.setAttribute('aria-label','Part picker');document.body.append(flyout);

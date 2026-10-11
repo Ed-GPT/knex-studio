@@ -1,0 +1,7 @@
+import {CLASSIC_PANELS} from './classic-panels.js';
+import {part,add,emptyModel,targets,solve} from './engine.js';
+import {buildFrame} from './frame-builder.js';
+import {makeGroup,makeLayer} from './editor-state.js';
+export const PANEL_REFERENCE='https://www.knexusergroup.org.uk/en/knex-handy-hints-panels.html';
+export function panelWall(){const m=buildFrame({kind:'grid',counts:[3,2,1],rod:'r-blue',braced:false}).model;m.name='Classic panel wall';const colors=['91070','91072','91074','91076','91078','91070'],ids=[];for(let y=0;y<2;y++)for(let x=0;x<3;x++){const p=part('panel-'+colors[y*3+x],[(x+.5)*75,(y+.5)*75,0]);add(m,{part:p});ids.push(p.id);}makeLayer(m,ids,'Panels');makeGroup(m,m.parts.map(p=>p.id),'Paneled wall');for(const p of m.parts)p.pos[1]+=15;return m;}
+export function panelBench(){const m=emptyModel('Classic molded panels');for(let tier=0;tier<4;tier++)for(const [row,shape]of ['triangle','square'].entries()){const variants=CLASSIC_PANELS.filter(d=>d.tier===tier&&d.panelShape===shape),d=variants.find(d=>d.name.startsWith('Silver'))||variants.find(d=>d.name.startsWith('Blue'))||variants.at(-1),p=part(d.id,[tier*250,row*220+75,0]);m.parts.push(p);const ids=[p.id];for(const target of targets(m,'c-white','end').filter(t=>t.partId===p.id)){const c=add(m,solve(m,'c-white',target,'end'));ids.push(c.id);}makeGroup(m,ids,shape+' '+d.panelSize);makeLayer(m,ids,shape+' '+d.panelSize);}return m;}
