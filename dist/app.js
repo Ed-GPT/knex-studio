@@ -242,7 +242,14 @@ $('#placement-tools').addEventListener('pointerleave',e=>{if(e.relatedTarget===r
 renderer.domElement.addEventListener('pointerdown',e=>{setPartHover(null);lastDown={x:e.clientX,y:e.clientY,button:e.button};});
 renderer.domElement.addEventListener('pointerup',e=>{if(driveView||controllerRunning||tippingActive||physicsBody)return;if(!lastDown||lastDown.button!==0||Math.hypot(e.clientX-lastDown.x,e.clientY-lastDown.y)>5)return;const b=renderer.domElement.getBoundingClientRect();updatePointer(new T.Vector2((e.clientX-b.left)/b.width*2-1,-(e.clientY-b.top)/b.height*2+1));if(tool==='build'&&proposal){commitProposal();return;}ray.setFromCamera(lastMouse,camera);const hit=pickableHits()[0],id=hit?.object.userData.partId;selectIds(id?(e.altKey?[id]:groupFor(model,id)?.partIds||[id]):[],e);});
 
+function renderScaleLoads(){
+ const root=$('#scale-loads'),loads=['Left load','Right load'].map(name=>{const g=model.editor?.groups?.find(g=>g.name===name);return g&&model.parts.find(p=>g.partIds.includes(p.id)&&definition(p).tire);});
+ root.hidden=loads.some(p=>!p);if(root.hidden)return;
+ root.innerHTML='<span class="section-label">Extra payload</span><div>'+loads.map((p,i)=>`<label>${i?'Right':'Left'}<input type="number" min="0" max="1000" step="1" data-scale-load="${i}" aria-label="${i?'Right':'Left'} extra payload in grams" value="${Math.max(0,partMass(p,definition(p))-massOf(definition(p))).toFixed(1)}"><span>g</span></label>`).join('')+'</div>';
+ root.querySelectorAll('input').forEach(input=>input.onchange=()=>{const value=Number(input.value);if(!Number.isFinite(value)||value<0||value>1000){toast('Use a payload between 0 and 1000 g.');renderScaleLoads();return;}const p=loads[Number(input.dataset.scaleLoad)];snapshot();if(value)p.massG=massOf(definition(p))+value;else delete p.massG;update();});
+}
 function updatePhysicsPanel(){
+ renderScaleLoads();
  if(!physicsBody&&!physicsBaseline)$('#physics-angle').textContent='0.0°';
  $('#physics-panel').hidden=!physicsOpen;document.body.classList.toggle('physics-active',physicsOpen);
  $('#physics-toggle').textContent=physicsBody?'Pause hinge':'Run hinge';$('#physics-reset').disabled=!physicsBaseline;
