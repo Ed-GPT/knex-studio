@@ -1,3 +1,5 @@
+import {idlerGearModel,classicGearBench} from './gear-models.js';
+import {SNAP_GEAR_REFERENCE} from './classic-gears.js';
 import {panelWall,panelBench,PANEL_REFERENCE} from './panel-models.js';
 import {buildRadial} from './radial-builder.js';
 import {buildFrame} from './frame-builder.js';
@@ -29,6 +31,7 @@ export function rigidTower(){const m=buildFrame({rod:'r-rigid-tan',counts:[1,4,1
 export function octagonalTower(){const m=buildRadial({kind:'tube',counts:[2,4,1],rod:'r-yellow',braced:true}).model;m.name='Octagonal observation tower';for(const p of m.parts)p.pos[1]+=12;return m;}
 export function paneledTunnel(){const m=buildFrame({kind:'frame',counts:[3,2,2],rod:'r-blue',braced:false,panel:'panel-91072'}).model;m.name='Paneled tunnel';for(const p of m.parts)p.pos[1]+=15;return m;}
 export const EXAMPLES=[
+ {id:'idler-gears',title:'Snap-on idler gears',level:'Intermediate',skill:'Free gear · fixed axle',hint:'Run the motor. The small gray gear spins freely on its locked white rod; the gold output turns in the same direction as the input.',factory:idlerGearModel,action:'motors',kind:'Original parallel-axis test fixture based on Hint G2, not an official model or freestanding structure; approximate tooth geometry',source:SNAP_GEAR_REFERENCE},
  {id:'paneled-tunnel',title:'Paneled tunnel',level:'Advanced',skill:'Generated · four covered faces',hint:'Four faces use original molded panels. The two ends stay open because the blue connector pairs have no diagonal sockets in that plane. Generate → Grid & frame creates more sizes.',factory:paneledTunnel,kind:'Original generated frame with photo-based Classic panels, not an official model or load-bearing design',source:PANEL_REFERENCE},
  {id:'panel-wall',title:'Panel wall',level:'Intermediate',skill:'Panels · shared corners',hint:'Panels snap into the four inward diagonal sockets. Select a panel to disconnect and move it; the surrounding rods stay in place.',factory:panelWall,kind:'Original stock-grid demonstration using Classic molded panels; approximate plate details',source:PANEL_REFERENCE},
  {id:'square',title:'One square',level:'Simple',skill:'Snap · repeat',hint:'Select the square, then use Repeat + to extend it.',factory:repeatableSquare,kind:'Original connection-grid demo',source:JOINT_REFERENCE},
@@ -52,6 +55,7 @@ export const EXAMPLES=[
  {id:'nested',title:'Double hinge',level:'Advanced',skill:'Coupled physics',hint:'Run the hinges and pull either hanging section.',factory:nestedSwingModel,action:'hinges',kind:'Mechanical variation of the single-bay swing',source:SWING_REFERENCE}
 ];
 export const REFERENCE_SCENES=[
+ {id:'classic-gears',title:'Classic gear variants',factory:classicGearBench},
  {id:'classic-panels',title:'Classic molded panels',factory:panelBench},
  {id:'y-clips',title:'Y clips · grip & peg',factory:yClipBench},
  {id:'classic-clips',title:'Clips & hinge halves',factory:classicClipBench},

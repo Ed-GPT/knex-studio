@@ -14,7 +14,7 @@ Source: [K’NEX User Group picture catalog](https://www.knexusergroup.org.uk/en
 | Coaster track | 91430 cross-tie, split purple tubing identified in 51587 manual | Unsupported layout preview; no coaster vehicle or rail splice mechanics |
 | Clips and spacers | 90900 tan drive clip, 848900 snap cap, 90994 blue spacer, 91224 sleeve; 90901 hole-end clip as 1-way connector | Three molded hinge halves, two rod-end stops, ten Y-clip colors, four ball-joint halves and the 91690 angled clip; other families pending |
 | Wheels | 16 hubs/tyres: pulley, spoked, racing and narrow families | Rod-end bearings, through bores, compatible tyre seats and keyed drive; profiles and tolerances approximate |
-| Gears and chain | 91317, 90988, 90985, 90993, 91998 and 90987 | Parallel-axis mesh only; chain is not an articulated transmission |
+| Gears and chain | 11 original gears plus 90987 chain; variants listed below | Parallel-axis mesh only; chain is not an articulated transmission |
 | Enclosed battery motors | 92840 blue, 22722 green, 92401 two-speed | Separate reconstructed housings; imposed preview speeds, no torque/load simulation |
 
 ## Flexi variants
@@ -181,7 +181,7 @@ The following are identified candidates, not yet implemented. Their names and nu
 | Hinges | 9091213 packaged assembly | Audit package contents; implemented standard halves already mate |
 | Connector variants | Original color variants; distinct 90910 orange track connector | Reuse canonical geometry only when mold and connections match; audit interlock, motor mount and tyre compatibility |
 | Rigid/curved rods | 90956W white translucent rigid; 91995 long 405 (Mighty Makers scope to audit); 3011001/3012001/3013001 curved; 3007001 X-rod | Verify physical profiles, endpoint spacing, side clips and material differences |
-| Gears | 91700 partial crown, 90996 multitrack, 91324/99119 snap-on, 90983 motor gear; original color variants | Tooth count, profile, grip, perpendicular/worm transmission; avoid treating every gear as a parallel spur gear |
+| Gears | 91700 partial crown, 90996 multitrack, 90983 motor gear; additional original variants | Tooth count, profile, grip, perpendicular/worm transmission; avoid treating every gear as a parallel spur gear |
 | Motors | 92890 spring, 92815 12 V, 92875/20554/92880 tethered, 92845 control; 92660 solar | Separate housings, mounts, drive geometry and controls. The 12 V motor drives 90983 by a worm, not a coaxial rod bore |
 | Wheel families | 20301 narrow wheel and remaining original variants | Verify distinct molded profile, axle grip and dimensions |
 | Other panels | 99020 curved, 99005/99007/99008 flexible, 99013 special, 3310034 rectangular (scope to audit) | Attachment geometry, real sizes and optional mass; no generic plate substitutions |
@@ -190,3 +190,21 @@ The following are identified candidates, not yet implemented. Their names and nu
 Additional motor references: [spring motor](https://www.knexusergroup.org.uk/en/knex-hint-M1.html), [12 V motor](https://www.knexusergroup.org.uk/en/knex-hint-M3.html), [two-speed motor](https://www.knexusergroup.org.uk/en/knex-hint-M9.html).
 
 Scope exclusions confirmed during the clip audit: [3010001 straight clip without hole](https://shop.knexusergroup.org.uk/products/3010001) and [3020001 long hinge half](https://shop.knexusergroup.org.uk/products/3020001) are described as K-Force parts and are deferred from this original-parts expansion. [90911](https://shop.knexusergroup.org.uk/products/90911) joins orange Classic coaster track; it must not be implemented as a rod splice.
+
+
+## Classic snap-on and color-variant gears
+
+| Part | Verified supplier description | Mount |
+| --- | --- | --- |
+| [91324](https://shop.knexusergroup.org.uk/products/91324) | Gray snap-on, 14 teeth, 25 mm, approx. 1.9 g; listing allows gray or black supply | Free-spinning rod-end bearing |
+| [99119](https://shop.knexusergroup.org.uk/products/99119) | Black snap-on, 14 teeth, 25 mm, approx. 1.9 g | Free-spinning rod-end bearing |
+| [91313](https://shop.knexusergroup.org.uk/products/91313) | Gold, 14 teeth, 25 mm, approx. 3.12 g | Through axle; tan clip for driven rotation |
+| [91317D](https://shop.knexusergroup.org.uk/products/91317d) | Dark blue, 14 teeth, 25 mm, approx. 3.03 g; shade varies | Through axle; tan clip for driven rotation |
+| [91993](https://shop.knexusergroup.org.uk/products/91993) | Gray crown, 34 teeth, 55 mm, approx. 11.16 g | Through axle; tan clip for driven rotation |
+| [90997](https://shop.knexusergroup.org.uk/products/90997) | Black crown, 82 teeth, 130 mm, approx. 24 g | Through axle; tan clip for driven rotation |
+
+[Hint G2](https://www.knexusergroup.org.uk/en/knex-hint-G2.html) explicitly describes snap-on gears as freely spinning on a Classic rod end. Their modeled center is capped, with a rear bearing recess: they cannot accept a through axle or tan key. End mounting is the default placement mode. The motor traversal now carries motion through independently mounted gears while leaving their locked support rods fixed. An unmounted, locked or displaced gear blocks the drive before any poses change.
+
+The **Snap-on idler gears** example has a red 34-tooth input, a gray 14-tooth free idler and a keyed gold 14-tooth output. Output rotation matches the input direction at 34/14 times its speed. The motor housing, white idler pin and two output bearings form a locked test fixture; it is not a freestanding official model. **Classic gear variants** is a separate reference scene.
+
+All new widths (6.3 mm), tooth shapes, cap profile and bearing clearances remain photo estimates. Crown gears currently support parallel-axis meshing only. There is no contact, backlash, torque or slip calculation. The green multitrack part is deliberately pending: its [90996 product listing](https://shop.knexusergroup.org.uk/products/90996) says 84 outer teeth, while [Hint G6](https://www.knexusergroup.org.uk/en/knex-hint-G6.html) says 82; both say 64 inner teeth. The partial crown 91700 also needs distinct engagement logic rather than a full-ring substitute.

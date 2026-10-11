@@ -68,12 +68,20 @@ Every thumbnail is rendered from the actual example model. Counts come from its 
 | Level | Builds | Explore |
 | --- | --- | --- |
 | Simple | One square, Single hinge, Axle & bearings | Snapping, patterns, locking, sliding and rotation |
-| Intermediate | Shared-edge grid, Playground swing, Wheeled chassis | Shared boundaries, gravity, wheels and axles |
+| Intermediate | Shared-edge grid, Playground swing, Wheeled chassis, Snap-on idler gears | Shared boundaries, gravity, wheels and axles |
 | Advanced | Motor windmill, Two-stage gearbox, Braced tower, Twin-motor rover, Double hinge, Molded double hinge, Balance scale, Pantograph | Motor drives, gearing, layers, remote control, payloads and closed-loop joints |
 
 The swing is a single-bay adaptation of a published guide. The wheeled chassis follows an illustrated vehicle guide with supported part variants. The other builds are original demonstrations of referenced K’NEX connection methods; they are not verified official building plans. The single hinge deliberately fixes its axle in space. Reference scenes for connector shapes, hubs/tyres and motor housings are separated from the build gallery. Each build has optional reference information.
 
 Example definitions and factories live in `dist/examples.js`. Existing models remain compatible with the version-1 JSON format.
+
+## Snap-on idler gears
+
+The original gray 91324 and black 99119 gears snap onto a rod end and spin independently of that rod. A locked support can therefore hold an idler while a motor drives the gears on either side. Select **Examples → Snap-on idler gears**, then start the motor. Gold and dark-blue 14-tooth, gray 34-tooth crown and black 82-tooth crown variants are also available under **Gears & chain**.
+
+![Original snap-on idler and keyed output in the motor test fixture](docs/screenshots/classic-idler-gears.png)
+
+See [part references and limits](docs/CLASSIC-PARTS.md#classic-snap-on-and-color-variant-gears). Geometry is reconstructed from photos; gear playback uses ideal parallel-axis ratios, without torque or contact simulation.
 
 ## Visual grid and frame builder
 

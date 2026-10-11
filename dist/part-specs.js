@@ -1,6 +1,12 @@
 // K’NEX User Group product listings, checked 2026-10-11. Approximate supplier values, not factory measurements.
 // Motor load conditions and battery inclusion in listed mass are unspecified.
 export const PART_SPECS={
+"g-snap-gray14":{"partNumber": "91324", "massG": 1.9, "source": "https://shop.knexusergroup.org.uk/products/91324", "quality": "Supplier approximate", "checked": "2026-10-12"},
+"g-snap-black14":{"partNumber": "99119", "massG": 1.9, "source": "https://shop.knexusergroup.org.uk/products/99119", "quality": "Supplier approximate", "checked": "2026-10-12"},
+"g-gold14":{"partNumber": "91313", "massG": 3.12, "source": "https://shop.knexusergroup.org.uk/products/91313", "quality": "Supplier approximate", "checked": "2026-10-12"},
+"g-dark-blue14":{"partNumber": "91317D", "massG": 3.03, "source": "https://shop.knexusergroup.org.uk/products/91317d", "quality": "Supplier approximate", "checked": "2026-10-12"},
+"g-gray34":{"partNumber": "91993", "massG": 11.16, "source": "https://shop.knexusergroup.org.uk/products/91993", "quality": "Supplier approximate", "checked": "2026-10-12"},
+"g-black82":{"partNumber": "90997", "massG": 24, "source": "https://shop.knexusergroup.org.uk/products/90997", "quality": "Supplier approximate", "checked": "2026-10-12"},
 "panel-91090":{"partNumber": "91090", "massG": 29.0, "source": "https://shop.knexusergroup.org.uk/products/91090", "quality": "Supplier approximate", "checked": "2026-10-12"},
 "panel-91091":{"partNumber": "91091", "massG": 29.0, "source": "https://shop.knexusergroup.org.uk/products/91091", "quality": "Supplier approximate", "checked": "2026-10-12"},
 "panel-91093":{"partNumber": "91093", "massG": 29.0, "source": "https://shop.knexusergroup.org.uk/products/91093", "quality": "Supplier approximate", "checked": "2026-10-12"},

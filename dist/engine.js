@@ -1,3 +1,4 @@
+import {CLASSIC_GEARS} from './classic-gears.js';
 import {CLASSIC_PANELS,panelPorts} from './classic-panels.js';
 import {TWO_SPEED_MOTOR,motorMountPlane} from './classic-motors.js';
 import {ANGLED_CLIP,angledPorts,recessPorts,occupancyKey} from './angled-clips.js';
@@ -18,7 +19,7 @@ export const SOCKET=10.1;
 // Patent US7666054B2: D=10.1 mm, shortest centre spacing 37.5 mm.
 // Exact sqrt(2) progression avoids accumulated rounding in closed frames.
 export const CATALOG=[
- ...CLASSIC_PANELS,ANGLED_CLIP,TWO_SPEED_MOTOR,
+ ...CLASSIC_GEARS,...CLASSIC_PANELS,ANGLED_CLIP,TWO_SPEED_MOTOR,
  ...CLASSIC_CLIPS,...CLASSIC_Y_CLIPS,...BALL_JOINTS,
  ...FLEXIBLE_PARTS,
  ...CLASSIC_WHEELS,
@@ -56,7 +57,7 @@ export function worldPort(p,port){return{...port,...Object.fromEntries(['tangent
 export const ports=p=>localPorts(p).map(x=>worldPort(p,x));
 export function busy(model,id,key){if(/^tire[01]?$/.test(key))return tyreSeatBusy(model,id,key);return model.links.some(l=>(l.a===id&&occupancyKey(l.ap)===occupancyKey(key))||(l.b===id&&occupancyKey(l.bp)===occupancyKey(key)));}
 export const limits=p=>Math.max(0,definition(p).length/2-8);
-export const keyCompatible=d=>d.wheelHub&&d.keyable!==false||d.gear&&!d.axleGrip||d.group==='connectors'&&!d.interlock&&!d.noBore;
+export const keyCompatible=d=>d.wheelHub&&d.keyable!==false||d.gear&&!d.axleGrip&&!d.endBearing&&!d.noBore&&d.keyable!==false||d.group==='connectors'&&!d.interlock&&!d.noBore;
 export const keyZ=d=>d.driveClip?3.2:d.keyDepth!==undefined?d.keyDepth:-(d.thickness||6.3)/2;
 export const tireCompatible=(a,b)=>a.tire&&a.fits.includes(b.id)||b.tire&&b.fits.includes(a.id);
 export function targets(model,type,mode){const d=BY_ID[type];let list=[];for(const p of model.parts){const t=definition(p);if((d.flexi||t.flexi)&&mode!=='end'||d.tubing||t.tubing)continue;if(mode==='wedge'){if(d.angledClip)list.push(...ports(p).filter(x=>x.kind==='recess'&&!busy(model,p.id,x.key)));else if(recessPorts(d).length&&t.angledClip)list.push(...ports(p).filter(x=>x.kind==='wedge'&&!busy(model,p.id,x.key)));
