@@ -12,7 +12,7 @@ Source: [K’NEX User Group picture catalog](https://www.knexusergroup.org.uk/en
 | Standard connectors | 1, straight 2, angled 2, 3, 4, 5, 8 way; 4 and 7 way 3D | Mold details approximate; additional original colors pending |
 | Flexi rods | 12 variants across four approximate lengths, listed below | Fixed-length shape editing, tangent-aligned end sockets; no elastic dynamics or verified bend limits |
 | Coaster track | 91430 cross-tie, split purple tubing identified in 51587 manual | Unsupported layout preview; no coaster vehicle or rail splice mechanics |
-| Clips and spacers | 90900 tan drive clip, 848900 snap cap, 90994 blue spacer, 91224 sleeve; 90901 hole-end clip as 1-way connector | Three molded hinge halves and two rod-end stops, detailed below; other clip families pending |
+| Clips and spacers | 90900 tan drive clip, 848900 snap cap, 90994 blue spacer, 91224 sleeve; 90901 hole-end clip as 1-way connector | Three molded hinge halves, two rod-end stops and ten Y-clip colors; other clip families pending |
 | Wheels | 16 hubs/tyres: pulley, spoked, racing and narrow families | Rod-end bearings, through bores, compatible tyre seats and keyed drive; profiles and tolerances approximate |
 | Gears and chain | 91317, 90988, 90985, 90993, 91998 and 90987 | Parallel-axis mesh only; chain is not an articulated transmission |
 | Enclosed battery motors | 92840 blue, 22722 green | Imposed preview speed; dimensions and torque remain unverified |
@@ -79,13 +79,34 @@ The [hinge guide](https://www.knexusergroup.org.uk/en/knex-hint-A8.html) disting
 
 The **Molded double hinge** example has a mounting fixture locked in space. It demonstrates the two joints rather than a complete supported real-world build. The **Clips & hinge halves** reference scene also includes a rod with both end-stop variants.
 
+## Classic Y clips
+
+The [Classic connection guide](https://www.knexusergroup.org.uk/en/knex-hint-A10.html) shows the compact jaw gripping a rod sideways and a connector attached to the male rod-end peg. This is a rigid connection, with separately occupied grip and peg. Generic bore, keyed-drive, hinge and rod-end-to-jaw connections are unavailable. The Micro tan clip is excluded.
+
+| Color | Supplier reference |
+| --- | --- |
+| Black | [90914](https://shop.knexusergroup.org.uk/products/90914) |
+| Blue | [90916](https://shop.knexusergroup.org.uk/products/90916) |
+| Fluorescent green | [90914FG](https://shop.knexusergroup.org.uk/products/90914FG) |
+| Fluorescent orange | [90922](https://shop.knexusergroup.org.uk/products/90922) |
+| Gold | [90917](https://shop.knexusergroup.org.uk/products/90917) |
+| Green | [90914G](https://shop.knexusergroup.org.uk/products/90914G) |
+| Gray | [909141](https://shop.knexusergroup.org.uk/products/909141) |
+| Mid blue | [909142](https://shop.knexusergroup.org.uk/products/909142) |
+| Red | [90923](https://shop.knexusergroup.org.uk/products/90923) |
+| Silver | [90918](https://shop.knexusergroup.org.uk/products/90918) |
+
+Each listing supplies an approximate 0.6 g mass. Their photos show the same peg-and-jaw family; colors and dimensions are reconstructed estimates, with no production-CAD or material-finish claim. In particular the modeled 10.1 mm peg-to-grip offset, 6.3 mm thickness and jaw profile are unverified. The orange 90914OR listing is deferred because its product image shows a blue clip. The low-resolution gray and mid-blue photos provide less shape detail; those variants reuse the common family profile supported by the other photos.
+
+Side-on placement uses the nearest clear shaft position and conservative overlap checks. The reference bench includes ten separate three-part assemblies. Automated checks cover both attachment orders, arbitrary orientations, independent port occupancy, rejection of incompatible connections, rigid grouping, detach/reconnect, duplication and saving.
+
 ## Remaining coverage and reference work
 
 The following are identified candidates, not yet implemented. Their names and numbers come from the Classic catalog; geometry and behavior must be verified before adding them. This list must be expanded as the remaining catalog is audited.
 
 | Family | Identified candidates | Required work |
 | --- | --- | --- |
-| Clips | 91690 angled 3D; 90914 rod-end/Y clip; 90940/90945 ball and socket; 90911 splice; 3010001 straight without hole; 23692E end cap | Distinct geometry and actual connections; parts without bores must not inherit through-hole behavior |
+| Clips | 91690 angled 3D; 90914OR orange Y clip (photo mismatch); 90940/90945 ball and socket; 90911 splice; 3010001 straight without hole; 23692E end cap | Distinct geometry and actual connections; parts without bores must not inherit through-hole behavior |
 | Hinges | 9091213 packaged assembly; 3020001 long half | Audit original-system scope and distinct long-half geometry; implemented standard halves already mate |
 | Connector variants | Original color variants; distinct 90910 orange track connector | Reuse canonical geometry only when mold and connections match; audit interlock, motor mount and tyre compatibility |
 | Rigid/curved rods | 90957 tan rigid 128; 91956/919561/90956B rigid 190; 91995 long 405; 3011001/3012001/3013001 curved; 3007001 X-rod | Verify physical profiles, endpoint spacing, side clips and material differences |

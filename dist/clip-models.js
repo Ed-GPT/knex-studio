@@ -9,3 +9,15 @@ export function classicHingeModel(){
  const green=attach('hinge-green',middle,'hinge'),lower=attach('r-blue',green,'end');attach('clip-blue',lower,'end');const lowerIds=m.parts.filter(p=>!fixed.includes(p.id)&&!upper.includes(p.id)).map(p=>p.id);makeGroup(m,lowerIds,'Second arm');makeLayer(m,lowerIds,'Second arm');return m;
 }
 export function classicClipBench(){const m=classicHingeModel();m.name='Classic clips and hinge halves';const rod=part('r-blue',[200,80,0]);m.parts.push(rod);for(const type of ['clip-blue','clip-bronze'])add(m,solve(m,type,targets(m,type,'end').find(t=>t.partId===rod.id),'end'));makeGroup(m,m.parts.slice(-3).map(p=>p.id),'Rod-end stops');return m;}
+
+export function yClipBench(){
+ const m=emptyModel('Classic Y clips · side grip and rod end');
+ const variants=['black','blue','fluor-green','fluor-orange','gold','green','gray','mid-blue','red','silver'];
+ for(const [i,key] of variants.entries()){
+  const start=m.parts.length,rod=part('r-blue',[(i%5)*95,25,Math.floor(i/5)*100]);m.parts.push(rod);
+  const clip=add(m,solve(m,'y-'+key,targets(m,'y-'+key,'side').find(t=>t.partId===rod.id),'side'));
+  add(m,solve(m,'c-gray',targets(m,'c-gray','end').find(t=>t.partId===clip.id),'end'));
+  makeGroup(m,m.parts.slice(start).map(p=>p.id),key.replaceAll('-',' ')+' clip assembly');
+ }
+ return m;
+}

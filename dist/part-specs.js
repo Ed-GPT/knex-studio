@@ -1,6 +1,16 @@
 // K’NEX User Group product listings, checked 2026-10-11. Approximate supplier values, not factory measurements.
 // Motor load conditions and battery inclusion in listed mass are unspecified.
 export const PART_SPECS={
+"y-black":{"partNumber": "90914", "massG": 0.6, "source": "https://shop.knexusergroup.org.uk/products/90914", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"y-blue":{"partNumber": "90916", "massG": 0.6, "source": "https://shop.knexusergroup.org.uk/products/90916", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"y-fluor-green":{"partNumber": "90914FG", "massG": 0.6, "source": "https://shop.knexusergroup.org.uk/products/90914FG", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"y-fluor-orange":{"partNumber": "90922", "massG": 0.6, "source": "https://shop.knexusergroup.org.uk/products/90922", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"y-gold":{"partNumber": "90917", "massG": 0.6, "source": "https://shop.knexusergroup.org.uk/products/90917", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"y-green":{"partNumber": "90914G", "massG": 0.6, "source": "https://shop.knexusergroup.org.uk/products/90914G", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"y-gray":{"partNumber": "909141", "massG": 0.6, "source": "https://shop.knexusergroup.org.uk/products/909141", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"y-mid-blue":{"partNumber": "909142", "massG": 0.6, "source": "https://shop.knexusergroup.org.uk/products/909142", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"y-red":{"partNumber": "90923", "massG": 0.6, "source": "https://shop.knexusergroup.org.uk/products/90923", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"y-silver":{"partNumber": "90918", "massG": 0.6, "source": "https://shop.knexusergroup.org.uk/products/90918", "quality": "Supplier approximate", "checked": "2026-10-11"},
 "hinge-blue":{"partNumber": "90912", "massG": 0.8, "source": "https://shop.knexusergroup.org.uk/products/90912", "quality": "Supplier approximate", "checked": "2026-10-11"},
 "hinge-black":{"partNumber": "90919", "massG": 0.62, "source": "https://shop.knexusergroup.org.uk/products/90919", "quality": "Supplier approximate", "checked": "2026-10-11"},
 "hinge-green":{"partNumber": "90913", "massG": 0.62, "source": "https://shop.knexusergroup.org.uk/products/90913", "quality": "Supplier approximate", "checked": "2026-10-11"},

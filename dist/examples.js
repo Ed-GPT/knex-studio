@@ -1,4 +1,4 @@
-import {classicHingeModel,classicClipBench,HINGE_REFERENCE} from './clip-models.js';
+import {classicHingeModel,classicClipBench,yClipBench,HINGE_REFERENCE} from './clip-models.js';
 import {scaleModel,pantographModel,SCALE_REFERENCE,PANTOGRAPH_REFERENCE} from './mechanism-models.js';
 import {exampleModel,emptyModel,part,targets,solve,add} from './engine.js';
 import {repeatableSquare,towerModel,compoundGearModel} from './advanced-models.js';
@@ -39,6 +39,7 @@ export const EXAMPLES=[
  {id:'nested',title:'Double hinge',level:'Advanced',skill:'Coupled physics',hint:'Run the hinges and pull either hanging section.',factory:nestedSwingModel,action:'hinges',kind:'Mechanical variation of the single-bay swing',source:SWING_REFERENCE}
 ];
 export const REFERENCE_SCENES=[
+ {id:'y-clips',title:'Y clips · grip & peg',factory:yClipBench},
  {id:'classic-clips',title:'Clips & hinge halves',factory:classicClipBench},
  {id:'connectors',title:'Classic connectors',factory:connectorReferenceModels},
  {id:'wheels',title:'Hubs & tyres',factory:wheelReferenceModels},
