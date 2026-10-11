@@ -8,11 +8,11 @@ Source: [K’NEX User Group picture catalog](https://www.knexusergroup.org.uk/en
 
 | Family | Available | Known limits |
 | --- | --- | --- |
-| Standard rigid rods | Six original lengths and standard colors | Nominal lengths differ from the engine's effective socket spacing; color and rigid-material variants still pending |
+| Standard rigid rods | Six original lengths and standard colors | Nominal lengths differ from the engine's effective socket spacing; four rigid-material variants implemented below; additional colors pending |
 | Standard connectors | 1, straight 2, angled 2, 3, 4, 5, 8 way; 4 and 7 way 3D | Mold details approximate; additional original colors pending |
 | Flexi rods | 12 variants across four approximate lengths, listed below | Fixed-length shape editing, tangent-aligned end sockets; no elastic dynamics or verified bend limits |
 | Coaster track | 91430 cross-tie, split purple tubing identified in 51587 manual | Unsupported layout preview; no coaster vehicle or rail splice mechanics |
-| Clips and spacers | 90900 tan drive clip, 848900 snap cap, 90994 blue spacer, 91224 sleeve; 90901 hole-end clip as 1-way connector | Three molded hinge halves, two rod-end stops and ten Y-clip colors; other clip families pending |
+| Clips and spacers | 90900 tan drive clip, 848900 snap cap, 90994 blue spacer, 91224 sleeve; 90901 hole-end clip as 1-way connector | Three molded hinge halves, two rod-end stops, ten Y-clip colors, four ball-joint halves and the 91690 angled clip; other families pending |
 | Wheels | 16 hubs/tyres: pulley, spoked, racing and narrow families | Rod-end bearings, through bores, compatible tyre seats and keyed drive; profiles and tolerances approximate |
 | Gears and chain | 91317, 90988, 90985, 90993, 91998 and 90987 | Parallel-axis mesh only; chain is not an articulated transmission |
 | Enclosed battery motors | 92840 blue, 22722 green | Imposed preview speed; dimensions and torque remain unverified |
@@ -128,14 +128,24 @@ The original nine-part **Ball-joint pendulum** example combines both sizes and h
 
 The grid/frame generator uses actual rigid part identities, with black rigid diagonals for tan cells and no invented longer diagonals for 190 mm cells. The original four-storey Rigid-rod tower is generated from those parts and is not a manual replica. Physics uses each listed approximate mass, but treats all straight rods as rigid bodies, without stiffness, bending, buckling or fracture. Tests verify end alignment, off-center bearing movement, unsupported solid-shaft side-grip rejection, shared-boundary reuse, finite geometry and save/import.
 
+## Classic angled clip
+
+The orange [91690 angled clip](https://shop.knexusergroup.org.uk/products/91690) fits the triangular openings near a Classic connector's center. [Hint A15](https://www.knexusergroup.org.uk/en/knex-hint-A15.html) documents the rod at 45° to the connector plane and suggests splayed supporting legs. Its approximate supplier mass is 0.625 g.
+
+The editor provides a separate keyed recess connection on either connector face. A peg occupies both sides of that opening; ordinary rod sockets remain independent. The clip's inclined jaw accepts end and side connections. Reverse assembly lets a connector attach to an existing clip, with Tab choosing the recess and face. Rotation controls are unavailable for the keyed fit. Attached parts form one rigid assembly, including during pattern repetition and save/import.
+
+The modeled peg profile, 7.3 mm radial mounting position, 6.3 mm connector thickness and jaw dimensions are photo estimates. The 45° relationship is documented; manufacturing tolerances, insertion force, plastic flex and complete close-fitting collision geometry are not verified. The original 13-part **Splayed support** example demonstrates four legs and is not an official manual replica.
+
+![Four legs mounted through Classic orange angled clips](screenshots/classic-angled-clips.png)
+
 ## Remaining coverage and reference work
 
 The following are identified candidates, not yet implemented. Their names and numbers come from the Classic catalog; geometry and behavior must be verified before adding them. This list must be expanded as the remaining catalog is audited.
 
 | Family | Identified candidates | Required work |
 | --- | --- | --- |
-| Clips | 91690 angled 3D; 90914OR orange Y clip (photo mismatch); 90911 splice; 3010001 straight without hole; 23692E end cap | Distinct geometry and actual connections; parts without bores must not inherit through-hole behavior |
-| Hinges | 9091213 packaged assembly; 3020001 long half | Audit original-system scope and distinct long-half geometry; implemented standard halves already mate |
+| Clips | 90914OR orange Y clip (photo mismatch); 90911 orange coaster-track splice; 23692E end cap | Distinct geometry and actual connections; parts without bores must not inherit through-hole behavior |
+| Hinges | 9091213 packaged assembly | Audit package contents; implemented standard halves already mate |
 | Connector variants | Original color variants; distinct 90910 orange track connector | Reuse canonical geometry only when mold and connections match; audit interlock, motor mount and tyre compatibility |
 | Rigid/curved rods | 90956W white translucent rigid; 91995 long 405 (Mighty Makers scope to audit); 3011001/3012001/3013001 curved; 3007001 X-rod | Verify physical profiles, endpoint spacing, side clips and material differences |
 | Gears | 91700 partial crown, 90996 multitrack, 91324/99119 snap-on, 90983 motor gear; original color variants | Tooth count, profile, grip, perpendicular/worm transmission; avoid treating every gear as a parallel spur gear |
@@ -145,3 +155,5 @@ The following are identified candidates, not yet implemented. Their names and nu
 | Other mechanisms | Pulleys, rubber bands, original coaster cars, lift components and special axles | Finish catalog audit and identify documented original parts and supported mechanics |
 
 Additional motor references: [spring motor](https://www.knexusergroup.org.uk/en/knex-hint-M1.html), [12 V motor](https://www.knexusergroup.org.uk/en/knex-hint-M3.html), [two-speed motor](https://www.knexusergroup.org.uk/en/knex-hint-M9.html).
+
+Scope exclusions confirmed during the clip audit: [3010001 straight clip without hole](https://shop.knexusergroup.org.uk/products/3010001) and [3020001 long hinge half](https://shop.knexusergroup.org.uk/products/3020001) are described as K-Force parts and are deferred from this original-parts expansion. [90911](https://shop.knexusergroup.org.uk/products/90911) joins orange Classic coaster track; it must not be implemented as a rod splice.

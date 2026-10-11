@@ -35,7 +35,7 @@ export function manualVehicle(){
   const hub=attach('h-small',rear,'through',{offset:sign*53.2});attach('t-small',hub,'tire');
  }
  for(const key of['end0','end1'])attach('k-cap',rear,'end',{},key);
- for(const node of[...white,...frontYellow]){const socket=ports(node).find(p=>V(p.dir).dot(V([-1,0,0]))>.999);attach('r-red',node,'end',{},socket.key);}
+ for(const node of[...white,...frontYellow]){const socket=ports(node).find(p=>p.kind==='slot'&&V(p.dir).dot(V([-1,0,0]))>.999);attach('r-red',node,'end',{},socket.key);}
  return m;
 }
 

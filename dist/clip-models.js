@@ -1,4 +1,4 @@
-import {part,emptyModel,targets,solve,add} from './engine.js';
+import {V,Q,part,emptyModel,targets,solve,add} from './engine.js';
 import {makeGroup,makeLayer} from './editor-state.js';
 export const HINGE_REFERENCE='https://www.knexusergroup.org.uk/en/knex-hint-A8.html';
 export function classicHingeModel(){
@@ -29,4 +29,11 @@ export function ballJointModel(){
  const support=attach('r-white',base,'end');attach('c-gray',support,'end');const fixed=m.parts.map(p=>p.id);m.parts.forEach(p=>p.grounded=true);makeGroup(m,fixed,'Locked fixture');makeLayer(m,fixed,'Locked fixture');
  const ball=attach('ball-small',base,'ball'),rod=attach('r-red',ball,'end');attach('socket-large',rod,'end');const upper=m.parts.filter(p=>!fixed.includes(p.id)).map(p=>p.id);makeGroup(m,upper,'First arm');makeLayer(m,upper,'First arm');
  const large=attach('ball-large',m.parts.at(-1),'ball'),tip=attach('r-blue',large,'end');attach('clip-blue',tip,'end');const lower=m.parts.filter(p=>!fixed.includes(p.id)&&!upper.includes(p.id)).map(p=>p.id);makeGroup(m,lower,'Second arm');makeLayer(m,lower,'Second arm');return m;
+}
+
+export const ANGLED_REFERENCE='https://www.knexusergroup.org.uk/en/knex-hint-A15.html';
+export function angledSupportModel(){
+ const m=emptyModel('Splayed support · original angled clips'),hub=part('c-white',[0,150,0],Q().setFromAxisAngle(V([1,0,0]),Math.PI/2).toArray());m.parts.push(hub);
+ for(const i of [0,2,4,6]){const start=m.parts.length,clip=add(m,solve(m,'clip-angled',targets(m,'clip-angled','wedge').find(t=>t.partId===hub.id&&t.key===`recess${i}f`),'wedge')),rod=add(m,solve(m,'r-red',targets(m,'r-red','end').find(t=>t.partId===clip.id),'end'));add(m,solve(m,'c-gray',targets(m,'c-gray','end').find(t=>t.partId===rod.id),'end'));makeGroup(m,m.parts.slice(start).map(p=>p.id),`Leg ${i/2+1}`);}
+ const min=Math.min(...m.parts.map(p=>p.pos[1]));for(const p of m.parts)p.pos[1]+=12-min;makeLayer(m,[hub.id],'Hub');makeLayer(m,m.parts.slice(1).map(p=>p.id),'Splayed legs');return m;
 }

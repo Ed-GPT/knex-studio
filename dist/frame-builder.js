@@ -23,7 +23,7 @@ export function buildFrame(options={}){
   if(d.kind==='frame'){const local={parts:[a],links:[]},p=solve(local,'c-blue',targets(local,'c-blue','interlock')[0],'interlock');m.parts.push(p.part);m.links.push(p.link);pair.push(p.part);}
   nodes.set(key(x,y,z),pair);row(y,pair.map(p=>p.id));
  }
- const span=(from,to,type,level)=>{const a=nodes.get(key(...from)),b=nodes.get(key(...to)),direction=V(b[0].pos).sub(V(a[0].pos)).normalize(),ap=a.flatMap(ports).find(p=>V(p.dir).dot(direction)>.99999),bp=b.flatMap(ports).find(p=>V(p.dir).dot(direction)<-.99999);if(!ap||!bp)throw Error('No real socket for this span.');
+ const span=(from,to,type,level)=>{const a=nodes.get(key(...from)),b=nodes.get(key(...to)),direction=V(b[0].pos).sub(V(a[0].pos)).normalize(),ap=a.flatMap(ports).find(p=>p.kind==='slot'&&V(p.dir).dot(direction)>.99999),bp=b.flatMap(ports).find(p=>p.kind==='slot'&&V(p.dir).dot(direction)<-.99999);if(!ap||!bp)throw Error('No real socket for this span.');
   const center=V(ap.pos).add(V(bp.pos)).multiplyScalar(.5),r=part(type,center.toArray(),Q().setFromUnitVectors(V([1,0,0]),direction).toArray()),ends=ports(r);
   if(V(ends[0].pos).distanceTo(V(ap.pos))>.001||V(ends[1].pos).distanceTo(V(bp.pos))>.001)throw Error('The chosen stock rod does not fit this span.');
   m.parts.push(r);m.links.push({a:ap.partId,ap:ap.key,b:r.id,bp:'end0',mode:'end'},{a:bp.partId,ap:bp.key,b:r.id,bp:'end1',mode:'end'});row(level,[r.id]);

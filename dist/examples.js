@@ -1,5 +1,5 @@
 import {buildFrame} from './frame-builder.js';
-import {ballJointModel,BALL_REFERENCE,classicHingeModel,classicClipBench,yClipBench,HINGE_REFERENCE} from './clip-models.js';
+import {angledSupportModel,ANGLED_REFERENCE,ballJointModel,BALL_REFERENCE,classicHingeModel,classicClipBench,yClipBench,HINGE_REFERENCE} from './clip-models.js';
 import {scaleModel,pantographModel,SCALE_REFERENCE,PANTOGRAPH_REFERENCE} from './mechanism-models.js';
 import {exampleModel,emptyModel,part,targets,solve,add} from './engine.js';
 import {repeatableSquare,towerModel,compoundGearModel} from './advanced-models.js';
@@ -28,6 +28,7 @@ export const EXAMPLES=[
  {id:'square',title:'One square',level:'Simple',skill:'Snap · repeat',hint:'Select the square, then use Repeat + to extend it.',factory:repeatableSquare,kind:'Original connection-grid demo',source:JOINT_REFERENCE},
  {id:'hinge',title:'Single hinge',level:'Simple',skill:'Lock · swing',hint:'Run the hinge, pull the red arm, and release it.',factory:singleHinge,action:'hinges',kind:'Joint demo with a fixed axle, not a freestanding model',source:JOINT_REFERENCE},
  {id:'axle',title:'Axle & bearings',level:'Simple',skill:'Slide · spin',hint:'Select a loose connector and drag the gold arrow or ring.',factory:()=>exampleModel('axle'),kind:'Original connection-method demo',source:JOINT_REFERENCE},
+ {id:'angled-support',title:'Splayed support',level:'Intermediate',skill:'Angled clips · 3D legs',hint:'Four original angled clips seat in the white connector recesses. Their red rods project 45° out of its plane. Open Stability to inspect the support footprint.',factory:angledSupportModel,kind:'Original 13-part support demonstrating Hint A15, not an exact manual model; peg dimensions are estimated',source:ANGLED_REFERENCE},
  {id:'grid',title:'Shared-edge grid',level:'Intermediate',skill:'Pattern · shared parts',hint:'Select the original square group and repeat it; shared edges are reused.',factory:gridWall,kind:'Original grid demo using standard rod pitch',source:JOINT_REFERENCE},
  {id:'swing',title:'Playground swing',level:'Intermediate',skill:'Pull · release',hint:'Run the hinge, drag the seat, and let go.',factory:swingModel,action:'hinges',kind:'Single-bay adaptation, not an exact manual copy',source:SWING_REFERENCE},
  {id:'vehicle',title:'Wheeled chassis',level:'Intermediate',skill:'Axles · wheels',hint:'Run the motor to turn the front axle; the rear wheels stay free.',factory:manualVehicle,action:'motors',kind:'Based on the illustrated vehicle guide',source:VEHICLE_MANUAL},

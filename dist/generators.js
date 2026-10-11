@@ -9,7 +9,7 @@ export function repeatSection(source,options={}){return repeatPattern(source,{co
 export function extendRun(source,{id,portKey,rod='r-yellow',segments=4}={}){
  countCheck(segments);if(BY_ID[rod]?.group!=='rods')throw Error('Choose a classic rod length.');const m=parseModel(exportModel(source));room(m,segments*2+1);
  let host=m.parts.find(p=>p.id===id);if(!host)throw Error('Select a rod or connector with an open end.');
- let port=ports(host).find(p=>p.key===portKey&&!busy(m,host.id,p.key));if(!port)throw Error('Choose an unused socket or rod end.');
+ let port=ports(host).find(p=>['slot','end'].includes(p.kind)&&p.key===portKey&&!busy(m,host.id,p.key));if(!port)throw Error('Choose an unused socket or rod end.');
  for(let i=0;i<segments;i++){
   if(port.kind==='end'){host=add(m,solve(m,'c-orange',port,'end',{portIndex:0}));port=ports(host).find(p=>p.key==='slot1');}
   const r=add(m,solve(m,rod,port,'end',{portIndex:0}));host=add(m,solve(m,'c-orange',ports(r).find(p=>p.key==='end1'),'end',{portIndex:0}));port=ports(host).find(p=>p.key==='slot1');

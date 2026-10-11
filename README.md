@@ -188,6 +188,12 @@ Racing hubs snap onto rod ends and spin freely without sliding. Narrow and spoke
 
 ![Classic wheel families and their distinct axle connections](docs/screenshots/classic-wheels.png)
 
+## Classic angled supports
+
+The orange 91690 clip fits a connector's triangular recess and holds a rod at 45° to its plane. Choose it from **Clips & spacers** and aim at a free recess. The keyed fit works from either face, preserves the connected assembly, and supports pattern copies. **Examples → Splayed support** opens an original four-leg build. [Sources and dimensional limits](docs/CLASSIC-PARTS.md#classic-angled-clip).
+
+![Original Classic angled-clip support](docs/screenshots/classic-angled-clips.png)
+
 ## Physics and accuracy
 
 Parts are procedural reconstructions from identified references, not production CAD. Nominal rod lengths differ from effective connector-center spacing. Small clip details, clearances, motor housing dimensions and tooth shapes remain approximate. The catalog does not include every historical part. Classic flexi rods in four stock lengths and split-tubing track are available as shape previews; Micro track is not included.
