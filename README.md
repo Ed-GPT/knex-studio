@@ -2,6 +2,24 @@
 
 A browser-based Three.js editor for classic K’NEX parts, connected mechanisms, and interactive physics experiments. Independent software, not an official K’NEX product.
 
+**[Open the live demo](https://ed-gpt.github.io/knex-studio/)** · [Report a bug or suggest an improvement](https://github.com/Ed-GPT/knex-studio/issues)
+
+No installation required. Builds save in your browser; use **Save** to download a portable copy.
+
+![Motor windmill in the editor, with connected-part selection and motor controls](docs/screenshots/windmill.png)
+
+## Screenshots
+
+### Build with real part references
+
+![Twin-motor rover with the parts library, wheels, connectors, and green battery motors](docs/screenshots/rover.png)
+
+### Explore the examples
+
+![Visual example gallery with a windmill, gearbox, braced tower, rover, and double hinge](docs/screenshots/examples.png)
+
+Screenshots captured from the working editor. Parts and physics are approximations; see the accuracy notes below.
+
 ## Run locally
 
 Use a current Node.js release. No dependency installation or build step is needed.

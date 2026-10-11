@@ -1,5 +1,13 @@
 # Hosting a website demo
 
+## GitHub Pages
+
+Public demo: https://ed-gpt.github.io/knex-studio/
+
+Repository Settings → Pages uses **GitHub Actions**. The `Deploy demo` workflow runs syntax checks and tests on each push to `main`, packages only `dist/`, and deploys it after verification succeeds. It can also be started manually from Actions. The separate `Checks` workflow validates pull requests.
+
+## Other static hosts
+
 Upload the **contents of `dist/`** to a static website directory such as `/knex/`. Keep the folder hierarchy, including `vendor/`. No server API or secret is required. Serve JavaScript as JavaScript and use HTTPS on a public website.
 
 The app uses relative asset and module URLs, so it can run at a site root or inside a subdirectory. Do not rewrite missing JavaScript files to an HTML page.
@@ -19,8 +27,8 @@ Provide an ordinary link to open the editor in a full window as well. Cross-site
 
 ## Repository and publication
 
-Run `npm run check` and `npm test` before publishing. The included GitHub workflow runs these checks on pushes and pull requests. It does not deploy a website automatically.
+Run `npm run check` and `npm test` before publishing. GitHub Pages deployment is automatic after a successful push to `main`; other hosts require their own deployment setup.
 
 The existing `.openai/hosting.json` belongs to the current Sites deployment. It is not needed for an independently hosted static demo. Publish `dist/` rather than the entire workspace, development logs, or repository metadata.
 
-No GitHub repository or website deployment is configured by these instructions. Choose the destination and visibility during connection setup.
+The public source repository is https://github.com/Ed-GPT/knex-studio. Screenshots in `docs/screenshots/` are for the README and are not included in the deployed application.
