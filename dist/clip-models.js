@@ -21,3 +21,12 @@ export function yClipBench(){
  }
  return m;
 }
+
+export const BALL_REFERENCE='https://www.knexusergroup.org.uk/en/knex-hint-A9.html';
+export function ballJointModel(){
+ const m=emptyModel('Classic ball joints · spatial pendulum'),base=part('socket-small',[100,300,0]);m.parts.push(base);
+ const attach=(type,host,mode)=>add(m,solve(m,type,targets(m,type,mode).find(t=>t.partId===host.id),mode));
+ const support=attach('r-white',base,'end');attach('c-gray',support,'end');const fixed=m.parts.map(p=>p.id);m.parts.forEach(p=>p.grounded=true);makeGroup(m,fixed,'Locked fixture');makeLayer(m,fixed,'Locked fixture');
+ const ball=attach('ball-small',base,'ball'),rod=attach('r-red',ball,'end');attach('socket-large',rod,'end');const upper=m.parts.filter(p=>!fixed.includes(p.id)).map(p=>p.id);makeGroup(m,upper,'First arm');makeLayer(m,upper,'First arm');
+ const large=attach('ball-large',m.parts.at(-1),'ball'),tip=attach('r-blue',large,'end');attach('clip-blue',tip,'end');const lower=m.parts.filter(p=>!fixed.includes(p.id)&&!upper.includes(p.id)).map(p=>p.id);makeGroup(m,lower,'Second arm');makeLayer(m,lower,'Second arm');return m;
+}

@@ -100,13 +100,28 @@ Each listing supplies an approximate 0.6 g mass. Their photos show the same peg-
 
 Side-on placement uses the nearest clear shaft position and conservative overlap checks. The reference bench includes ten separate three-part assemblies. Automated checks cover both attachment orders, arbitrary orientations, independent port occupancy, rejection of incompatible connections, rigid grouping, detach/reconnect, duplication and saving.
 
+## Classic ball-and-socket clips
+
+| Part | Supplier identity | Approximate supplier mass |
+| --- | --- | --- |
+| Standard ball end | [90940](https://shop.knexusergroup.org.uk/products/90940) | 0.73 g |
+| Standard socket end | [90945](https://shop.knexusergroup.org.uk/products/90945) | 0.81 g |
+| Large ball end | [99036B](https://shop.knexusergroup.org.uk/products/99036B) | 1.08 g |
+| Large socket end | [99036S](https://shop.knexusergroup.org.uk/products/99036S) | 1.34 g |
+
+The [Classic ball-joint guide](https://www.knexusergroup.org.uk/en/knex-hint-A9.html) documents both separate families and their spatial movement. Product photos, including the [assembled large pair](https://shop.knexusergroup.org.uk/products/99036), identify the ball, open cup and standard rod jaws. The large socket's individual image is low resolution, so its profile also uses the assembled-pair photo. Standard halves mate only with standard halves, and large halves only with large halves. Rod-end and side gripping use their standard jaws; invented through holes and drive keys are excluded.
+
+These are photo reconstructions. Ball radii (3.6 and 5.2 mm), cup-seat shape, 6.3 mm nominal thickness, large-joint center offset and molding clearances are unverified estimates. The model's open cup is a simplified extruded profile, not production CAD. No measured travel limits, contact stops, elastic snap force or material friction are available. The spatial solver holds the centers together without limiting angular travel; a rod can overlap the socket at an extreme angle. Approximate part mass is sourced; inertia uses approximate body dimensions.
+
+The original nine-part **Ball-joint pendulum** example combines both sizes and holds its mounting fixture in space. Terminal-arm editing exposes three rotation rings and direct aiming around the joint center. Chained joints run together in **Simulate → Joints**. Tests include both mating orders, rotated placement, incompatible-family rejection, standard rod jaws, mixed ball/hinge motion under hard pulls, fixed-support preservation, cancellation, frame-rate consistency and saved-pose resumption.
+
 ## Remaining coverage and reference work
 
 The following are identified candidates, not yet implemented. Their names and numbers come from the Classic catalog; geometry and behavior must be verified before adding them. This list must be expanded as the remaining catalog is audited.
 
 | Family | Identified candidates | Required work |
 | --- | --- | --- |
-| Clips | 91690 angled 3D; 90914OR orange Y clip (photo mismatch); 90940/90945 ball and socket; 90911 splice; 3010001 straight without hole; 23692E end cap | Distinct geometry and actual connections; parts without bores must not inherit through-hole behavior |
+| Clips | 91690 angled 3D; 90914OR orange Y clip (photo mismatch); 90911 splice; 3010001 straight without hole; 23692E end cap | Distinct geometry and actual connections; parts without bores must not inherit through-hole behavior |
 | Hinges | 9091213 packaged assembly; 3020001 long half | Audit original-system scope and distinct long-half geometry; implemented standard halves already mate |
 | Connector variants | Original color variants; distinct 90910 orange track connector | Reuse canonical geometry only when mold and connections match; audit interlock, motor mount and tyre compatibility |
 | Rigid/curved rods | 90957 tan rigid 128; 91956/919561/90956B rigid 190; 91995 long 405; 3011001/3012001/3013001 curved; 3007001 X-rod | Verify physical profiles, endpoint spacing, side clips and material differences |
