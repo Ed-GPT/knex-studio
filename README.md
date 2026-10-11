@@ -75,6 +75,14 @@ The swing is a single-bay adaptation of a published guide. The wheeled chassis f
 
 Example definitions and factories live in `dist/examples.js`. Existing models remain compatible with the version-1 JSON format.
 
+## Classic rod colors
+
+The **Rods** flyout now filters by length and includes 34 additional Classic straight-rod colors plus the translucent rigid 90956W. **Generate → Grid & frame → Color** changes the cell rods without changing their stock size. Where available, braces use the same named color in the next stock length; otherwise they use the standard next-size rod.
+
+Try **Examples → Rod color lattice**, or the **Classic rod colors** reference bench. Every variant has a separate part number and supplier approximate mass. Short rods retain their no-side-grip restriction. [Sources and reconstruction limits](docs/CLASSIC-PARTS.md#classic-rod-color-variants) include the two deferred mismatched supplier photos and the still-pending permanent curved rods.
+
+![Classic rod colors filtered by stock length](docs/screenshots/classic-rod-colors.png)
+
 ## Classic connector colors
 
 **Connectors** now includes 51 additional original-size color variants. Use the illustrated shape buttons to narrow the flyout, or search a part number. Matching eight-way colors retain motor mounts and tyre fitting; 3D variants retain their interlocking channels. Each variant keeps its own saved identity and approximate supplier mass.

@@ -8,7 +8,7 @@ Source: [K’NEX User Group picture catalog](https://www.knexusergroup.org.uk/en
 
 | Family | Available | Known limits |
 | --- | --- | --- |
-| Standard rigid rods | Six original lengths and standard colors | Nominal lengths differ from the engine's effective socket spacing; four rigid-material variants implemented below; additional colors pending |
+| Standard rigid rods | Six original lengths and standard colors | Nominal lengths differ from the engine's effective socket spacing; five rigid-material variants and 34 additional straight-rod colors implemented below |
 | Standard connectors | 1, straight 2, angled 2, 3, 4, 5, 8 way; 4 and 7 way 3D | 51 additional sourced color variants; mold details and surface finishes approximate |
 | Flexi rods | 12 variants across four approximate lengths, listed below | Fixed-length shape editing, tangent-aligned end sockets; no elastic dynamics or verified bend limits |
 | Coaster track | 91430 cross-tie, split purple tubing identified in 51587 manual | Unsupported layout preview; no coaster vehicle or rail splice mechanics |
@@ -273,3 +273,49 @@ Geometry remains a photo reconstruction: exact mold revisions, fit tolerances an
 | [908004](https://shop.knexusergroup.org.uk/products/908004) | K’NEX Connector 8-way Orange | 3.57 g |
 | [90908P](https://shop.knexusergroup.org.uk/products/90908p) | K’NEX Connector 8-way Purple | 3.57 g |
 | [908005](https://shop.knexusergroup.org.uk/products/908005) | K’NEX Connector 8-way Silver | 3.57 g |
+
+## Classic rod color variants
+
+The picker filters the six original Classic stock sizes by nominal length. Each color keeps its own part number and supplier approximate mass. The modeled endpoint spacing follows the existing square-root-of-two stock progression, not the rounded label. Sixteen-millimetre rods have no side grip; longer ribbed rods retain side grips and sliding axle connections. The solid-profile translucent rigid rod 90956W shares the conservative no-side-grip restriction of 91956. Its transparency and exact cross-section are not measured.
+
+| Size | Variant | Part | Mass |
+| --- | --- | --- | --- |
+| 16 mm | Black | [90960](https://shop.knexusergroup.org.uk/products/90960) | 0.467 g |
+| 16 mm | Dark green | [90950D](https://shop.knexusergroup.org.uk/products/90950d) | 0.467 g |
+| 16 mm | White | [90950W](https://shop.knexusergroup.org.uk/products/90950w) | 0.467 g |
+| 32 mm | Black | [90961](https://shop.knexusergroup.org.uk/products/90961) | 0.79 g |
+| 32 mm | Blue | [90963](https://shop.knexusergroup.org.uk/products/90963) | 0.79 g |
+| 32 mm | Gold | [90964](https://shop.knexusergroup.org.uk/products/90964) | 0.79 g |
+| 32 mm | Light Green | [909512](https://shop.knexusergroup.org.uk/products/909512) | 0.79 g |
+| 32 mm | Mid Blue | [909513](https://shop.knexusergroup.org.uk/products/909513) | 0.79 g |
+| 32 mm | Orange | [951003](https://shop.knexusergroup.org.uk/products/951003) | 0.79 g |
+| 32 mm | Silver | [90965](https://shop.knexusergroup.org.uk/products/90965) | 0.79 g |
+| 32 mm | Teal | [90962](https://shop.knexusergroup.org.uk/products/90962) | 0.79 g |
+| 54 mm | Black | [909523](https://shop.knexusergroup.org.uk/products/909523) | 1.314 g |
+| 54 mm | Dark Blue | [90952B](https://shop.knexusergroup.org.uk/products/90952b) | 1.314 g |
+| 54 mm | Fluorescent green | [90952FG](https://shop.knexusergroup.org.uk/products/90952fg) | 1.314 g |
+| 54 mm | Light purple | [909522](https://shop.knexusergroup.org.uk/products/909522) | 1.314 g |
+| 54 mm | Metallic blue | [91952](https://shop.knexusergroup.org.uk/products/91952) | 1.314 g |
+| 54 mm | Orange | [952002](https://shop.knexusergroup.org.uk/products/952002) | 1.314 g |
+| 54 mm | White | [90952W](https://shop.knexusergroup.org.uk/products/90952w) | 1.314 g |
+| 86 mm | Dark Gray | [909532D](https://shop.knexusergroup.org.uk/products/909532d) | 2.0 g |
+| 86 mm | Gold | [90953G](https://shop.knexusergroup.org.uk/products/90953g) | 2.0 g |
+| 86 mm | Gray | [909532](https://shop.knexusergroup.org.uk/products/909532) | 2.0 g |
+| 86 mm | Gray granite | [91953](https://shop.knexusergroup.org.uk/products/91953) | 2.0 g |
+| 86 mm | Red | [909533](https://shop.knexusergroup.org.uk/products/909533) | 2.0 g |
+| 128 mm | Black | [909542](https://shop.knexusergroup.org.uk/products/909542) | 3.04 g |
+| 128 mm | Blue | [90954B](https://shop.knexusergroup.org.uk/products/90954b) | 3.04 g |
+| 128 mm | Metallic green | [91954](https://shop.knexusergroup.org.uk/products/91954) | 3.04 g |
+| 128 mm | Orange | [90958](https://shop.knexusergroup.org.uk/products/90958) | 3.12 g |
+| 128 mm | Pink | [909541](https://shop.knexusergroup.org.uk/products/909541) | 3.04 g |
+| 128 mm | White | [90954W](https://shop.knexusergroup.org.uk/products/90954w) | 3.04 g |
+| 190 mm | Fluorescent orange | [91955](https://shop.knexusergroup.org.uk/products/91955) | 4.45 g |
+| 190 mm | Light gray | [90955LG](https://shop.knexusergroup.org.uk/products/90955lg) | 4.48 g |
+| 190 mm | Mid blue | [90955MB](https://shop.knexusergroup.org.uk/products/90955mb) | 4.48 g |
+| 190 mm | Purple | [909553](https://shop.knexusergroup.org.uk/products/909553) | 4.48 g |
+| 190 mm | White | [90955W](https://shop.knexusergroup.org.uk/products/90955w) | 4.48 g |
+| 190 mm | Translucent rigid | [90956W](https://shop.knexusergroup.org.uk/products/90956w) | 5.97 g |
+
+Geometry and colors are photo reconstructions; metallic and granite finishes are represented by tint. Supplier listings for red 32 mm 909514 and red 54 mm 909524 currently show mismatched longer pink/black rods, so those entries are deferred. The permanent curved 3011001/3012001/3013001 rods remain pending measured endpoint directions and curve dimensions; they are not substituted with flexis. Special 234/405 mm rods and metal shafts also remain pending fit/scope verification. Color editions using the same Classic molds are included regardless of the later sets they appeared in; Micro, Kid and K-Force-specific mechanisms are excluded.
+
+Procedural grids, frames, roofs and octagons accept these colors. Braces use a same-named color in the next stock size when available; otherwise the standard next-size rod. Every generated diagonal remains a real catalog part. **Rod color lattice** demonstrates this with black cells and gold diagonals.

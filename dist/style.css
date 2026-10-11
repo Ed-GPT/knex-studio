@@ -82,3 +82,5 @@ body:not(.screen-hints) .screen-hint,body:not(.screen-hints) .navigation-hint,bo
 #frame-apply{position:absolute;right:10px;top:10px;z-index:2}
 
 .connector-shapes{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px;padding:8px 12px;border-bottom:1px solid #465363}.connector-shapes button{min-width:0;padding:3px 1px;border-radius:6px}.connector-shapes svg{display:block;width:100%;height:24px}.connector-shapes small{font-size:9px;display:block}.connector-shapes button[aria-pressed=true]{background:#3c5877;border-color:#82b4d7}
+
+.rod-lengths{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;padding:10px 12px;border-bottom:1px solid #465363}.rod-lengths button{padding:6px 2px;min-width:0}.rod-lengths small{display:block;font-size:9px;color:var(--muted)}.rod-lengths button[aria-pressed=true]{background:#3c5877;border-color:#82b4d7}#frame-rod-color{min-width:0;width:100%;padding:5px}

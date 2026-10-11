@@ -1,11 +1,11 @@
-import {CLASSIC_RIGID_RODS} from './classic-rods.js';
+import {CLASSIC_RIGID_RODS,CLASSIC_ROD_COLORS} from './classic-rods.js';
 import {V,Q,BY_ID,SOCKET,part,ports,emptyModel,solve,targets,exportModel,parseModel,busy,definition} from './engine.js';
 import {makeGroup,makeLayer} from './editor-state.js';
 import {equivalent,linkAvailable} from './pattern.js';
 import {partsOverlap} from './slide-collision.js';
 export const FRAME_RODS=['r-green','r-white','r-blue','r-yellow','r-red','r-gray'];
-export const FRAME_ROD_CHOICES=[...FRAME_RODS,...CLASSIC_RIGID_RODS.map(d=>d.id)];
-export function frameDiagonal(rod){if(!FRAME_ROD_CHOICES.includes(rod))return undefined;const d=BY_ID[rod];return d.rigidRod?(d.stockIndex===4?'r-rigid-black':undefined):FRAME_RODS[FRAME_RODS.indexOf(rod)+1];}
+export const FRAME_ROD_CHOICES=[...FRAME_RODS,...CLASSIC_RIGID_RODS.map(d=>d.id),...CLASSIC_ROD_COLORS.map(d=>d.id)];
+export function frameDiagonal(rod){if(!FRAME_ROD_CHOICES.includes(rod))return undefined;const d=BY_ID[rod];return d.rigidRod?(d.stockIndex===4?'r-rigid-black':undefined):(d.rodVariant&&CLASSIC_ROD_COLORS.find(next=>next.stockIndex===d.stockIndex+1&&next.colorName===d.colorName)?.id||FRAME_RODS[d.stockIndex+1]);}
 export const framePanels=rod=>FRAME_ROD_CHOICES.includes(rod)?Object.values(BY_ID).filter(d=>d.panelShape==='square'&&Math.abs(d.pitch-BY_ID[rod].length-2*SOCKET)<1e-6):[];
 export function frameDimensions({kind='frame',counts=[3,2,2],rod='r-blue',braced=true,plane='xy',panel=null}={}){
  if(!['grid','frame'].includes(kind)||!['xy','xz'].includes(plane)||!FRAME_ROD_CHOICES.includes(rod))throw Error('Choose Classic rods and a grid or frame.');
