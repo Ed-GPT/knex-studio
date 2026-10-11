@@ -194,6 +194,12 @@ The orange 91690 clip fits a connector's triangular recess and holds a rod at 45
 
 ![Original Classic angled-clip support](docs/screenshots/classic-angled-clips.png)
 
+## Original two-speed motor
+
+The larger gray **92401 Tony motor** has its own reconstructed four-AA housing and mounting geometry. Open **Examples → Two-speed windmill**, then choose **Slow** or **Fast** in Simulate → Motors. The switch is saved with the part and used by controller keys and playground driving. Supplier approximate speeds are 48 and 240 RPM; playback does not calculate torque or battery load. [Sources and dimensional limits](docs/CLASSIC-PARTS.md#original-two-speed-motor).
+
+![Two-speed motor driving an original windmill example](docs/screenshots/classic-two-speed-motor.png)
+
 ## Physics and accuracy
 
 Parts are procedural reconstructions from identified references, not production CAD. Nominal rod lengths differ from effective connector-center spacing. Small clip details, clearances, motor housing dimensions and tooth shapes remain approximate. The catalog does not include every historical part. Classic flexi rods in four stock lengths and split-tubing track are available as shape previews; Micro track is not included.

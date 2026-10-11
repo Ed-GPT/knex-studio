@@ -1,3 +1,4 @@
+import {motorRate} from './classic-motors.js';
 import {groundingReason} from './grounding.js';
 import {V,Q,SOCKET,BY_ID,part,ports,targets,solve,add,emptyModel,definition,component} from './engine.js';
 import {rigidComponent,axleInfo,moveOnAxle} from './motion.js';
@@ -15,8 +16,9 @@ export function motorDrive(model,motorId){
  try{for(const stage of gearTransmission(model,shaft.id)){const reason=groundingReason(model,stage.ids);if(reason)return {...info,ready:false,reason};}}catch(error){return {...info,ready:false,reason:error.message};}
  return {...info,ready:true,shaftId:shaft.id,motorId};
 }
-export function stepMotor(model,motorId,seconds,{rpm=20,direction=1}={}){
- if(!Number.isFinite(seconds)||seconds<0||seconds>1||!Number.isFinite(rpm)||rpm<1||rpm>120||![-1,1].includes(direction))throw Error('Invalid motor playback settings.');
+export function stepMotor(model,motorId,seconds,{rpm=undefined,direction=1}={}){
+ rpm??=motorRate(model.parts.find(p=>p.id===motorId));
+ if(!Number.isFinite(seconds)||seconds<0||seconds>1||!Number.isFinite(rpm)||rpm<1||rpm>240||![-1,1].includes(direction))throw Error('Invalid motor playback settings.');
  const drive=motorDrive(model,motorId);if(!drive.ready)throw Error(drive.reason);
  const train=rotateTransmission(model,drive.shaftId,seconds*rpm*6*direction);return {...drive,train};
 }
@@ -47,3 +49,5 @@ export function poweredWindmill(motorType='m-blue'){
 }
 
 export function motorReferenceModels(){const m=emptyModel('Enclosed motors: 92840 and 22722');for(const [type,z] of [['m-blue',-50],['m-green',55]]){const motor=part(type,[30,22,z]);m.parts.push(motor);add(m,solve(m,'r-yellow',targets(m,'r-yellow','through').find(t=>t.partId===motor.id),'through'));}return m;}
+
+export function twoSpeedWindmill(){const m=poweredWindmill('m-two-speed');m.name='Two-speed windmill · 92401';return m;}

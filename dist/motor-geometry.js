@@ -38,4 +38,33 @@ export function enclosedMotor(d){const g=new T.Group(),plastic=mat(d.color),dark
  const screw=add(g,new T.CylinderGeometry(1.4,1.4,.5,16),mat('#9ba2a3'),-59,-8,15.42);screw.rotation.x=Math.PI/2;slab(g,dark,1.8,.3,.1,-59,-8,15.72,.04,0);
  return g;
 }
-export function motorIcon(d){return `<svg viewBox="0 0 120 58" aria-hidden="true"><g transform="translate(8 7)"><path d="M6 4h59q7 0 7 8v26H6q-4 0-4-5V9q0-5 4-5" fill="${d.color}" stroke="#1116"/><path d="M8 9h42v11H8z" fill="#1a211b"/><text x="29" y="18" text-anchor="middle" fill="#eee" stroke="none" font-size="10" font-weight="bold">K’NEX</text>${Array.from({length:13},(_,i)=>`<path d="M${6+i*4} 24v12" stroke="#fff2"/>`).join('')}<circle cx="74" cy="25" r="20" fill="${d.color}" stroke="#1116"/><circle cx="74" cy="25" r="4" fill="#dfbd32"/><circle cx="74" cy="25" r="2" fill="#20252d"/>${[0,90,180,270].map(a=>`<path d="M74 13v4" transform="rotate(${a} 74 25)" stroke="#fff4" stroke-width="3"/>`).join('')}</g></svg>`;}
+export function motorIcon(d){if(d.twoSpeed)return `<svg viewBox="0 0 120 58" aria-hidden="true"><g fill="${d.color}" stroke="#b6c1c7" stroke-width=".65"><rect x="7" y="9" width="78" height="40" rx="6"/><circle cx="88" cy="29" r="23"/><path d="M31 10V48M60 10V48" fill="none" stroke-width="3"/><circle cx="88" cy="29" r="4" fill="#252d30"/><rect x="13" y="15" width="13" height="6" rx="2" fill="#252d30"/><rect x="13" y="32" width="13" height="6" rx="2" fill="#2589b8"/>${[0,90,180,270].map(a=>`<path d="M88 18v4" transform="rotate(${a} 88 29)" stroke-width="2"/>`).join('')}</g></svg>`;return `<svg viewBox="0 0 120 58" aria-hidden="true"><g transform="translate(8 7)"><path d="M6 4h59q7 0 7 8v26H6q-4 0-4-5V9q0-5 4-5" fill="${d.color}" stroke="#1116"/><path d="M8 9h42v11H8z" fill="#1a211b"/><text x="29" y="18" text-anchor="middle" fill="#eee" stroke="none" font-size="10" font-weight="bold">K’NEX</text>${Array.from({length:13},(_,i)=>`<path d="M${6+i*4} 24v12" stroke="#fff2"/>`).join('')}<circle cx="74" cy="25" r="20" fill="${d.color}" stroke="#1116"/><circle cx="74" cy="25" r="4" fill="#dfbd32"/><circle cx="74" cy="25" r="2" fill="#20252d"/>${[0,90,180,270].map(a=>`<path d="M74 13v4" transform="rotate(${a} 74 25)" stroke="#fff4" stroke-width="3"/>`).join('')}</g></svg>`;}
+
+export function twoSpeedMotor(d){
+ const g=new T.Group(),plastic=mat(d.color),seam=mat('#596363'),dark=mat('#252d30'),blue=mat('#2589b8');g.name='K’NEX 92401 two-speed motor';
+ // Broad four-AA shell. Separate stepped lid panels, transverse ribs and the
+ // rounded gearbox reproduce the reference family, not the two-AA casing.
+ slab(g,plastic,109,54,55,-59.5,0,0,5,.65);
+ for(const sign of [-1,1]){
+  slab(g,seam,104,49,.55,-59,0,sign*28,4,.12);
+  for(const [x,w] of [[-95,31],[-57,36],[-22,27]])slab(g,plastic,w,47,1.1,x,0,sign*28.65,2,.25);
+  for(const x of [-76,-36])slab(g,plastic,2.5,53,2.4,x,0,sign*29.2,.7,.25);
+  for(const [x,y] of [[-104,-20],[-104,20],[-41,-20],[-41,20]]){
+   const boss=ring(new T.Group(),plastic,3.4,1.7,2.8);boss.position.set(x,y,sign*29.4);g.add(boss);
+  }
+ }
+ ring(g,plastic,29.5,3.35,57);ring(g,seam,29.7,29,.6);
+ for(const sign of [-1,1]){
+  ring(g,plastic,28.7,3.35,1.4,sign*29.1);ring(g,plastic,18,3.35,.7,sign*30.15);ring(g,dark,4.4,3.15,.55,sign*30.8);
+  for(const a of [22.5,112.5,202.5,292.5]){const angle=a*Math.PI/180,o=slab(g,plastic,2.4,3,5.1,8.2*Math.cos(angle),8.2*Math.sin(angle),sign*32.5,.6,.2);o.rotation.z=angle;}
+  for(const a of [-48,48,150]){const angle=a*Math.PI/180,boss=ring(new T.Group(),plastic,3.3,1.5,2);boss.position.set(24*Math.cos(angle),24*Math.sin(angle),sign*29.8);g.add(boss);}
+ }
+ // Two physically separate switches: direction/off and slow/fast. Colors and
+ // positions follow the supplier photo; no unverified lettering is invented.
+ for(const [x,z,color] of [[-91,-8,dark],[-91,9,blue]]){
+  const rim=slab(g,plastic,18,8,2,x,27.6,z,3,.3);rim.rotation.x=-Math.PI/2;
+  const slot=slab(g,dark,13.5,4.8,1.2,x,28.4,z,2,.2);slot.rotation.x=-Math.PI/2;
+  const button=slab(g,color,5.8,4.5,2.4,x+2,29.1,z,.8,.2);button.rotation.x=-Math.PI/2;
+ }
+ return g;
+}

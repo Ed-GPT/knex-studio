@@ -2,7 +2,7 @@ import {clipGeometry,clipIcon} from './clip-geometry.js';
 import * as T from './vendor/three.module.js';
 import {BY_ID,SOCKET,DEG} from './engine.js';
 import {wheelGeometry,wheelIcon} from './wheel-geometry.js';
-import {enclosedMotor,motorIcon} from './motor-geometry.js';
+import {enclosedMotor,twoSpeedMotor,motorIcon} from './motor-geometry.js';
 import {connectorGeometry,connectorIcon} from './connector-geometry.js';
 import {gearGeometry,gearIcon} from './gear-geometry.js';
 import {flexibleGeometry,crossTieArms,flexibleIcon} from './flexible-parts.js';
@@ -18,7 +18,7 @@ export function makePart(type,p){if(BY_ID[type].flexi||BY_ID[type].tubing)return
  if(d.group==='gears'){g.add(gearGeometry(d));
  }else if(d.group==='wheels'||d.endCap){g.add(wheelGeometry(d));
  }else if(d.clipGeometry){g.add(clipGeometry(d,mat));}
- else if(d.motor&&!d.legacy){g.add(enclosedMotor(d));
+ else if(d.motor&&!d.legacy){g.add(d.twoSpeed?twoSpeedMotor(d):enclosedMotor(d));
  }else if(d.motor){
  const dark=material('#252c35'),light=material('#d5dce3');
  box(g,mat,-18,0,0,22,54,30);box(g,mat,18,0,0,22,54,30);box(g,mat,0,23,0,22,8,30);box(g,mat,0,-23,0,22,8,30);box(g,dark,0,-34,0,57,14,32);

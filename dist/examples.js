@@ -5,7 +5,7 @@ import {exampleModel,emptyModel,part,targets,solve,add} from './engine.js';
 import {repeatableSquare,towerModel,compoundGearModel} from './advanced-models.js';
 import {repeatPattern} from './pattern.js';
 import {swingModel,nestedSwingModel,connectorReferenceModels,SWING_REFERENCE} from './swing-model.js';
-import {poweredWindmill,motorReferenceModels} from './motor.js';
+import {poweredWindmill,twoSpeedWindmill,motorReferenceModels} from './motor.js';
 import {manualVehicle,wheelReferenceModels,racingWheelBench,VEHICLE_MANUAL} from './wheel-models.js';
 import {roverModel} from './playground.js';
 import {prepareGroundedExample} from './example-grounding.js';
@@ -33,6 +33,7 @@ export const EXAMPLES=[
  {id:'swing',title:'Playground swing',level:'Intermediate',skill:'Pull · release',hint:'Run the hinge, drag the seat, and let go.',factory:swingModel,action:'hinges',kind:'Single-bay adaptation, not an exact manual copy',source:SWING_REFERENCE},
  {id:'vehicle',title:'Wheeled chassis',level:'Intermediate',skill:'Axles · wheels',hint:'Run the motor to turn the front axle; the rear wheels stay free.',factory:manualVehicle,action:'motors',kind:'Based on the illustrated vehicle guide',source:VEHICLE_MANUAL},
  {id:'powered',title:'Motor windmill',level:'Advanced',skill:'Motor · drive clip',hint:'Start the motor. The keyed rotor turns while the supports stay locked.',factory:poweredWindmill,action:'motors',kind:'Original build with referenced motor and keyed hub',source:'https://www.knexusergroup.org.uk/en/knex-hint-M4.html'},
+ {id:'two-speed',title:'Two-speed windmill',level:'Advanced',skill:'Original motor · slow / fast',hint:'Run the 92401 motor. Switch between Slow and Fast; the keyed rotor follows and the housing stays fixed.',factory:twoSpeedWindmill,action:'motors',kind:'Original windmill with photo-reconstructed 92401 motor; approximate unloaded preview speeds, no torque simulation',source:'https://www.knexusergroup.org.uk/en/knex-hint-M9.html'},
  {id:'compound',title:'Two-stage gearbox',level:'Advanced',skill:'Gears · ratios',hint:'Start the motor and compare the input and output axles.',factory:compoundGearModel,action:'motors',kind:'Original parallel-axis gear demonstration; approximate tooth geometry',source:'https://shop.knexusergroup.org.uk/collections/knex-parts-gears'},
  {id:'tower',title:'Braced tower',level:'Advanced',skill:'Layers · bracing',hint:'Open Scene to hide a storey or select a whole level.',factory:towerModel,kind:'Original structure using classic 3D joints',source:'https://www.knexusergroup.org.uk/en/knex-hint-A4.html'},
  {id:'rigid-tower',title:'Rigid-rod tower',level:'Advanced',skill:'Rigid rods · generated frame',hint:'An original four-storey frame with tan rigid edges and black rigid diagonals. Open Scene for levels, or Simulate → Stability to test its weight and support.',factory:rigidTower,kind:'Original generated structure, not a manual replica; rigid-body stability does not simulate bending or buckling',source:'https://www.knexusergroup.org.uk/en/knex-hint-A7.html'},

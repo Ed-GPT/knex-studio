@@ -1,6 +1,7 @@
 // K’NEX User Group product listings, checked 2026-10-11. Approximate supplier values, not factory measurements.
 // Motor load conditions and battery inclusion in listed mass are unspecified.
 export const PART_SPECS={
+ "m-two-speed":{partNumber:"92401",massG:167,rpm:48,rpmFast:240,source:"https://shop.knexusergroup.org.uk/products/92401",quality:"Supplier approximate; battery inclusion unspecified",checked:"2026-10-12"},
 "clip-angled":{"partNumber":"91690","massG":0.625,"source":"https://shop.knexusergroup.org.uk/products/91690","quality":"Supplier approximate","checked":"2026-10-12"},
 "r-rigid-tan":{"partNumber": "90957", "massG": 3.73, "source": "https://shop.knexusergroup.org.uk/products/90957", "quality": "Supplier approximate", "checked": "2026-10-12"},
 "r-rigid-black":{"partNumber": "919561", "massG": 5.96, "source": "https://shop.knexusergroup.org.uk/products/919561", "quality": "Supplier approximate", "checked": "2026-10-12"},

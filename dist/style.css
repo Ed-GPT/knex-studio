@@ -73,3 +73,5 @@ body:not(.screen-hints) .screen-hint,body:not(.screen-hints) .navigation-hint,bo
 
 .frame-kinds button,.frame-view button{display:inline-flex;align-items:center;gap:5px;padding:5px 8px}.frame-kinds svg,.frame-view svg{width:16px;height:16px}
 @media(min-width:761px){.frame-workspace{height:min(560px,calc(100vh - 180px))}.frame-stage{min-height:0}.frame-controls{overflow-y:auto;padding-right:5px}}
+
+#motor-presets button{flex:1;background:#242d38;color:#aebbc9}#motor-presets button[aria-pressed=true]{background:#31595c;border-color:#73d5ca;color:#e6fff9;box-shadow:inset 0 -2px #73d5ca;font-weight:650}
