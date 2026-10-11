@@ -1,7 +1,20 @@
 import * as T from './vendor/three.module.js';
 // Part identities are sourced; cross-section and cross-tie gauge are photo estimates.
 export const FLEXIBLE_PARTS=[
- {id:'f-green190',name:'Green flexi rod',partNumber:'91108',group:'flexible',flexi:true,length:190,nominal:190,color:'#8fcb20',slots:[],reference:'https://shop.knexusergroup.org.uk/products/91108'},
+ ...[
+  ['f-lightblue32','Light blue',32,'91480B','#42c5ed'],
+  ['f-purple32','Purple',32,'91480','#8154c7'],
+  ['f-blue52','Mid blue',52,'91490','#219dd4'],
+  ['f-lilac52','Lilac',52,'914901','#8b72d4'],
+  ['f-fluorange86','Fluorescent orange',86,'91282','#ff852f'],
+  ['f-orange86','Orange',86,'91282D','#e95b35'],
+  ['f-red86','Red',86,'91283','#de2746'],
+  ['f-green190','Green',190,'91108','#8fcb20'],
+  ['f-fluyellow190','Fluorescent yellow',190,'91107','#c6e834'],
+  ['f-yellow190','Yellow',190,'91107Y','#e5d923'],
+  ['f-lilac190','Lilac',190,'91109','#8b77cd'],
+  ['f-purple190','Purple',190,'90966','#7050a1'],
+ ].map(([id,colorName,length,partNumber,color])=>({id,name:`${colorName} flexi rod`,colorName,partNumber,group:'flexible',flexi:true,length,nominal:length,color,slots:[],reference:'https://shop.knexusergroup.org.uk/products/'+partNumber,geometryStatus:'Supplier approximate length; photo-based profile; bending limits unverified'})),
  {id:'track-purple',name:'Purple split tubing',group:'flexible',tubing:true,stockLength:6096,color:'#8757b4',slots:[],reference:'https://www.knexusergroup.org.uk/bk/51587.pdf'},
  {id:'c-cross-tie',name:'Green coaster cross-tie',partNumber:'91430',group:'connectors',crossTie:true,color:'#9cd622',slots:[202.5,247.5,292.5,337.5],reference:'https://shop.knexusergroup.org.uk/products/91430'},
 ];
