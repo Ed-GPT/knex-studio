@@ -1,3 +1,4 @@
+import {connectorVariantBench,variantWindmill} from './connector-models.js';
 import {buildTruss} from './truss-builder.js';
 import {idlerGearModel,classicGearBench} from './gear-models.js';
 import {SNAP_GEAR_REFERENCE} from './classic-gears.js';
@@ -32,6 +33,7 @@ export function rigidTower(){const m=buildFrame({rod:'r-rigid-tan',counts:[1,4,1
 export function octagonalTower(){const m=buildRadial({kind:'tube',counts:[2,4,1],rod:'r-yellow',braced:true}).model;m.name='Octagonal observation tower';for(const p of m.parts)p.pos[1]+=12;return m;}
 export function paneledTunnel(){const m=buildFrame({kind:'frame',counts:[3,2,2],rod:'r-blue',braced:false,panel:'panel-91072'}).model;m.name='Paneled tunnel';for(const p of m.parts)p.pos[1]+=15;return m;}
 export const EXAMPLES=[
+ {id:'variant-windmill',title:'Black connector windmill',level:'Advanced',skill:'Color variants · same mounts',hint:'Start the motor. The black 8-way connectors retain the same mounting and keyed rotor connections as the original white mold.',factory:variantWindmill,action:'motors',kind:'Original windmill using verified Classic connector color variants; approximate geometry and imposed motor speed',source:'https://shop.knexusergroup.org.uk/products/90968'},
  {id:'gable-roof',title:'Gable roof',level:'Advanced',skill:'45° rafters · repeat bays',hint:'Generate → Grid & frame → Gable roof changes the half-span, depth and internal bracing using actual stock rods. Each bay has its own layer.',factory:()=>{const m=buildTruss({kind:'roof',counts:[3,1,3],rod:'r-blue',braced:true}).model;m.name='Gable roof';for(const p of m.parts)p.pos[1]+=20;return m;},kind:'Original stock-length procedural demonstration, not an official manual model; no buckling or load certification',source:'https://www.knexusergroup.org.uk/en/knex-hint-A4.html'},
  {id:'idler-gears',title:'Snap-on idler gears',level:'Intermediate',skill:'Free gear · fixed axle',hint:'Run the motor. The small gray gear spins freely on its locked white rod; the gold output turns in the same direction as the input.',factory:idlerGearModel,action:'motors',kind:'Original parallel-axis test fixture based on Hint G2, not an official model or freestanding structure; approximate tooth geometry',source:SNAP_GEAR_REFERENCE},
  {id:'paneled-tunnel',title:'Paneled tunnel',level:'Advanced',skill:'Generated · four covered faces',hint:'Four faces use original molded panels. The two ends stay open because the blue connector pairs have no diagonal sockets in that plane. Generate → Grid & frame creates more sizes.',factory:paneledTunnel,kind:'Original generated frame with photo-based Classic panels, not an official model or load-bearing design',source:PANEL_REFERENCE},
@@ -57,6 +59,7 @@ export const EXAMPLES=[
  {id:'nested',title:'Double hinge',level:'Advanced',skill:'Coupled physics',hint:'Run the hinges and pull either hanging section.',factory:nestedSwingModel,action:'hinges',kind:'Mechanical variation of the single-bay swing',source:SWING_REFERENCE}
 ];
 export const REFERENCE_SCENES=[
+ {id:'connector-colors',title:'Classic connector colors',factory:connectorVariantBench},
  {id:'classic-gears',title:'Classic gear variants',factory:classicGearBench},
  {id:'classic-panels',title:'Classic molded panels',factory:panelBench},
  {id:'y-clips',title:'Y clips · grip & peg',factory:yClipBench},

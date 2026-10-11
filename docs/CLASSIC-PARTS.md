@@ -9,7 +9,7 @@ Source: [K’NEX User Group picture catalog](https://www.knexusergroup.org.uk/en
 | Family | Available | Known limits |
 | --- | --- | --- |
 | Standard rigid rods | Six original lengths and standard colors | Nominal lengths differ from the engine's effective socket spacing; four rigid-material variants implemented below; additional colors pending |
-| Standard connectors | 1, straight 2, angled 2, 3, 4, 5, 8 way; 4 and 7 way 3D | Mold details approximate; additional original colors pending |
+| Standard connectors | 1, straight 2, angled 2, 3, 4, 5, 8 way; 4 and 7 way 3D | 51 additional sourced color variants; mold details and surface finishes approximate |
 | Flexi rods | 12 variants across four approximate lengths, listed below | Fixed-length shape editing, tangent-aligned end sockets; no elastic dynamics or verified bend limits |
 | Coaster track | 91430 cross-tie, split purple tubing identified in 51587 manual | Unsupported layout preview; no coaster vehicle or rail splice mechanics |
 | Clips and spacers | 90900 tan drive clip, 848900 snap cap, 90994 blue spacer, 91224 sleeve; 90901 hole-end clip as 1-way connector | Three molded hinge halves, two rod-end stops, ten Y-clip colors, four ball-joint halves and the 91690 angled clip; other families pending |
@@ -179,7 +179,7 @@ The following are identified candidates, not yet implemented. Their names and nu
 | --- | --- | --- |
 | Clips | 90914OR orange Y clip (photo mismatch); 90911 orange coaster-track splice; 23692E end cap | Distinct geometry and actual connections; parts without bores must not inherit through-hole behavior |
 | Hinges | 9091213 packaged assembly | Audit package contents; implemented standard halves already mate |
-| Connector variants | Original color variants; distinct 90910 orange track connector | Reuse canonical geometry only when mold and connections match; audit interlock, motor mount and tyre compatibility |
+| Connector variants | Distinct 90910 orange track connector; remaining unlisted original variants | Reuse canonical geometry only when mold and connections match; audit interlock, motor mount and tyre compatibility |
 | Rigid/curved rods | 90956W white translucent rigid; 91995 long 405 (Mighty Makers scope to audit); 3011001/3012001/3013001 curved; 3007001 X-rod | Verify physical profiles, endpoint spacing, side clips and material differences |
 | Gears | 91700 partial crown, 90996 multitrack, 90983 motor gear; additional original variants | Tooth count, profile, grip, perpendicular/worm transmission; avoid treating every gear as a parallel spur gear |
 | Motors | 92890 spring, 92815 12 V, 92875/20554/92880 tethered, 92845 control; 92660 solar | Separate housings, mounts, drive geometry and controls. The 12 V motor drives 90983 by a worm, not a coaxial rod bore |
@@ -208,3 +208,68 @@ Scope exclusions confirmed during the clip audit: [3010001 straight clip without
 The **Snap-on idler gears** example has a red 34-tooth input, a gray 14-tooth free idler and a keyed gold 14-tooth output. Output rotation matches the input direction at 34/14 times its speed. The motor housing, white idler pin and two output bearings form a locked test fixture; it is not a freestanding official model. **Classic gear variants** is a separate reference scene.
 
 All new widths (6.3 mm), tooth shapes, cap profile and bearing clearances remain photo estimates. Crown gears currently support parallel-axis meshing only. There is no contact, backlash, torque or slip calculation. The green multitrack part is deliberately pending: its [90996 product listing](https://shop.knexusergroup.org.uk/products/90996) says 84 outer teeth, while [Hint G6](https://www.knexusergroup.org.uk/en/knex-hint-G6.html) says 82; both say 64 inner teeth. The partial crown 91700 also needs distinct engagement logic rather than a full-ring substitute.
+
+
+## Classic connector color variants
+
+The additional 51 identities below were checked against supplier photos and the original-size Classic catalog. They use the same connection layout as the matching existing connector family. The library now contains 61 connector-category entries, including the cross-tie, and 174 visible part types overall. Micro and K-Force connectors are excluded.
+
+The visual **Connector shape** filter separates one-way, straight two-way, angled two-way, three-, four-, five-, eight-way and the two 3D families. Search by part number clears the shape filter. Dark thumbnails have a fine contrasting outline. Original default identities are unchanged; saved variants keep their own IDs and supplier approximate masses.
+
+Motor face mounts and the two tyres that fit an eight-way connector now use its verified shape instead of requiring the white part ID. Tests cover both assembly orders and save/reload for all five new eight-way colors. Interlocking variants retain their actual open channel, reject a false axle bore and mate with either 3D family. All nine families retain their triangular angled-clip recesses. Pattern copies preserve color and do not merge different product identities.
+
+Geometry remains a photo reconstruction: exact mold revisions, fit tolerances and color rendering are not measured. Granite speckling and metallic surface effects currently use a representative solid tint. Listing weights are approximate supplier values. The **Black connector windmill** is an original demonstration using 90968 eight-way connectors, not a new official manual model; **Classic connector colors** is a separate reference scene.
+
+| Part reference | Supplier identity | Approximate mass |
+| --- | --- | --- |
+| [909011](https://shop.knexusergroup.org.uk/products/909011) | K’NEX Clip with Hole end Purple | 0.84 g |
+| [909012](https://shop.knexusergroup.org.uk/products/909012) | K’NEX Clip with Hole end Grey | 0.84 g |
+| [91902](https://shop.knexusergroup.org.uk/products/91902) | K’NEX Connector 2-way straight Brown | 1.41 g |
+| [91902D](https://shop.knexusergroup.org.uk/products/91902d) | K’NEX Connector 2-way straight Dark brown | 1.41 g |
+| [909023](https://shop.knexusergroup.org.uk/products/909023) | K’NEX Connector 2-way straight White | 1.41 g |
+| [91903](https://shop.knexusergroup.org.uk/products/91903) | K’NEX Connector 2-way Fluorescent orange | 1.26 g |
+| [909031](https://shop.knexusergroup.org.uk/products/909031) | K’NEX Connector 2-way Light Green | 1.26 g |
+| [91901](https://shop.knexusergroup.org.uk/products/91901) | K’NEX Connector 2-way Light grey granite | 1.26 g |
+| [909032](https://shop.knexusergroup.org.uk/products/909032) | K’NEX Connector 2-way Red | 1.26 g |
+| [91909](https://shop.knexusergroup.org.uk/products/91909) | K’NEX Connector 3-way Dark grey granite | 1.676 g |
+| [91904](https://shop.knexusergroup.org.uk/products/91904) | K’NEX Connector 3-way Fluorescent Red | 1.676 g |
+| [909042](https://shop.knexusergroup.org.uk/products/909042) | K’NEX Connector 3-way Grey | 1.676 g |
+| [909041](https://shop.knexusergroup.org.uk/products/909041) | K’NEX Connector 3-way Pink | 1.676 g |
+| [909052](https://shop.knexusergroup.org.uk/products/909052) | K’NEX Connector 4-way Black | 2.076 g |
+| [90905D](https://shop.knexusergroup.org.uk/products/90905d) | K’NEX Connector 4-way Dark green | 2.076 g |
+| [91908](https://shop.knexusergroup.org.uk/products/91908) | K’NEX Connector 4-way Fluorescent Green | 2.076 g |
+| [909055](https://shop.knexusergroup.org.uk/products/909055) | K’NEX Connector 4-way Grey | 2.076 g |
+| [909053](https://shop.knexusergroup.org.uk/products/909053) | K’NEX Connector 4-way Light green | 2.076 g |
+| [91905](https://shop.knexusergroup.org.uk/products/91905) | K’NEX Connector 4-way Metallic green | 2.076 g |
+| [909056](https://shop.knexusergroup.org.uk/products/909056) | K’NEX Connector 4-way Mid Blue | 2.076 g |
+| [909057](https://shop.knexusergroup.org.uk/products/909057) | K’NEX Connector 4-way Red | 2.076 g |
+| [90905W](https://shop.knexusergroup.org.uk/products/90905w) | K’NEX Connector 4-way White | 2.076 g |
+| [99086](https://shop.knexusergroup.org.uk/products/99086) | K’NEX Connector 4-way Yellow | 2.0 g |
+| [909062](https://shop.knexusergroup.org.uk/products/909062) | K’NEX Connector 5-way Dark Grey | 2.495 g |
+| [909064](https://shop.knexusergroup.org.uk/products/909064) | K’NEX Connector 5-way Light Green | 2.495 g |
+| [90949](https://shop.knexusergroup.org.uk/products/90949) | K’NEX Connector 5-way Light grey | 2.495 g |
+| [90906L](https://shop.knexusergroup.org.uk/products/90906l) | K’NEX Connector 5-way Light yellow | 2.495 g |
+| [909063](https://shop.knexusergroup.org.uk/products/909063) | K’NEX Connector 5-way Mid Blue | 2.495 g |
+| [90906OR](https://shop.knexusergroup.org.uk/products/90906or) | K’NEX Connector 5-way Orange | 2.495 g |
+| [909065](https://shop.knexusergroup.org.uk/products/909065) | K’NEX Connector 5-way Red | 2.495 g |
+| [909092D](https://shop.knexusergroup.org.uk/products/909092d) | K’NEX Connector 4-way 3D Dark purple | 2.152 g |
+| [90909FG](https://shop.knexusergroup.org.uk/products/90909fg) | K’NEX Connector 4-way 3D Fluor. Green | 2.152 g |
+| [909092](https://shop.knexusergroup.org.uk/products/909092) | K’NEX Connector 4-way 3D Purple | 2.152 g |
+| [909093](https://shop.knexusergroup.org.uk/products/909093) | K’NEX Connector 4-way 3D Red | 2.17 g |
+| [909091](https://shop.knexusergroup.org.uk/products/909091) | K’NEX Connector 4-way 3D Silver | 2.17 g |
+| [90909W](https://shop.knexusergroup.org.uk/products/90909w) | K’NEX Connector 4-way 3D White | 2.152 g |
+| [99084](https://shop.knexusergroup.org.uk/products/99084) | K’NEX Connector 4-way 3D Yellow | 2.2 g |
+| [909075](https://shop.knexusergroup.org.uk/products/909075) | K’NEX Connector 7-way 3D Black | 3.26 g |
+| [90907B](https://shop.knexusergroup.org.uk/products/90907b) | K’NEX Connector 7-way 3D Dark blue | 3.26 g |
+| [909073](https://shop.knexusergroup.org.uk/products/909073) | K’NEX Connector 7-way 3D Light Green | 3.26 g |
+| [909072](https://shop.knexusergroup.org.uk/products/909072) | K’NEX Connector 7-way 3D Lilac | 3.26 g |
+| [91907](https://shop.knexusergroup.org.uk/products/91907) | K’NEX Connector 7-way 3D Metallic blue | 3.26 g |
+| [909074](https://shop.knexusergroup.org.uk/products/909074) | K’NEX Connector 7-way 3D Mid Blue | 3.26 g |
+| [909076](https://shop.knexusergroup.org.uk/products/909076) | K’NEX Connector 7-way 3D Red | 3.26 g |
+| [90907W](https://shop.knexusergroup.org.uk/products/90907w) | K’NEX Connector 7-way 3D White | 3.26 g |
+| [99085](https://shop.knexusergroup.org.uk/products/99085) | K’NEX Connector 7-way 3D Yellow | 3.3 g |
+| [90968](https://shop.knexusergroup.org.uk/products/90968) | K’NEX Connector 8-way Black | 3.57 g |
+| [908003](https://shop.knexusergroup.org.uk/products/908003) | K’NEX Connector 8-way Blue | 3.57 g |
+| [908004](https://shop.knexusergroup.org.uk/products/908004) | K’NEX Connector 8-way Orange | 3.57 g |
+| [90908P](https://shop.knexusergroup.org.uk/products/90908p) | K’NEX Connector 8-way Purple | 3.57 g |
+| [908005](https://shop.knexusergroup.org.uk/products/908005) | K’NEX Connector 8-way Silver | 3.57 g |

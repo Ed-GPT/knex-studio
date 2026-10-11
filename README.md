@@ -75,6 +75,14 @@ The swing is a single-bay adaptation of a published guide. The wheeled chassis f
 
 Example definitions and factories live in `dist/examples.js`. Existing models remain compatible with the version-1 JSON format.
 
+## Classic connector colors
+
+**Connectors** now includes 51 additional original-size color variants. Use the illustrated shape buttons to narrow the flyout, or search a part number. Matching eight-way colors retain motor mounts and tyre fitting; 3D variants retain their interlocking channels. Each variant keeps its own saved identity and approximate supplier mass.
+
+![Connector shape filter and original eight-way color variants](docs/screenshots/classic-connector-colors.png)
+
+Try **Examples → Black connector windmill** or the **Classic connector colors** reference scene. [Sources and reconstruction limits](docs/CLASSIC-PARTS.md#classic-connector-color-variants) cover every added identity. Colors and finishes are approximate; no Micro or K-Force parts are included.
+
 ## Snap-on idler gears
 
 The original gray 91324 and black 99119 gears snap onto a rod end and spin independently of that rod. A locked support can therefore hold an idler while a motor drives the gears on either side. Select **Examples → Snap-on idler gears**, then start the motor. Gold and dark-blue 14-tooth, gray 34-tooth crown and black 82-tooth crown variants are also available under **Gears & chain**.
