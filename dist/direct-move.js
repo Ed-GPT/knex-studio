@@ -1,5 +1,5 @@
 import {partsOverlap} from './slide-collision.js';
-import {V,ports,busy,autoLinks,parseModel,exportModel} from './engine.js';
+import {V,ports,busy,autoLinks,definition,parseModel,exportModel} from './engine.js';
 import {editBlockReason} from './editor-state.js';
 import {externalLinks} from './relocation.js';
 // Translation only: magnetic end connections never rotate an existing section.
@@ -12,7 +12,7 @@ export function translatedSelection(source,ids,delta,{grid=0,magnet=0}={}){
  for(const p of moved)p.pos=V(p.pos).add(d).toArray();
  let snap=null;
  if(magnet>0){const outside=fixed.flatMap(p=>ports(p).filter(t=>!busy(model,p.id,t.key)).map(t=>({...t,owner:p.id})));
- for(const p of moved)for(const a of ports(p)){if(busy(model,p.id,a.key)||a.kind==='chain')continue;for(const b of outside){if(a.kind===b.kind||b.kind==='chain'||V(a.dir).dot(V(b.dir))>-.999)continue;const distance=V(a.pos).distanceTo(V(b.pos));if(distance<=magnet&&(!snap||distance<snap.distance))snap={distance,delta:V(b.pos).sub(V(a.pos)),target:b};}}
+ for(const p of moved)for(const a of ports(p)){if(busy(model,p.id,a.key)||a.kind==='chain')continue;for(const b of outside){const host=fixed.find(p=>p.id===b.owner),compatible=a.kind==='end'&&b.kind==='slot'||b.kind==='end'&&a.kind==='slot'||a.kind==='bearing'&&b.kind==='end'&&definition(host).group==='rods'||b.kind==='bearing'&&a.kind==='end'&&definition(p).group==='rods';if(!compatible||V(a.dir).dot(V(b.dir))>-.999)continue;const distance=V(a.pos).distanceTo(V(b.pos));if(distance<=magnet&&(!snap||distance<snap.distance))snap={distance,delta:V(b.pos).sub(V(a.pos)),target:b};}}
  if(snap)for(const p of moved)p.pos=V(p.pos).add(snap.delta).toArray();}
  const links=[];for(const p of moved){const next=autoLinks(model,p);model.links.push(...next);links.push(...next);}
  const blocked=new Set();for(const p of moved){const neighbours=new Set(model.links.filter(l=>l.a===p.id||l.b===p.id).map(l=>l.a===p.id?l.b:l.a));const context={parts:fixed.filter(o=>!neighbours.has(o.id))};for(const other of context.parts)if(partsOverlap(p,other))blocked.add(other.id);}

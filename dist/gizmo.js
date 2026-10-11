@@ -12,7 +12,7 @@ export function createGizmo({stage,camera,state,start,change,finish}){
   const scale=cam.isPerspectiveCamera?2*origin.distanceTo(cam.position)*Math.tan(cam.fov*Math.PI/360)/b.height:(cam.top-cam.bottom)/(cam.zoom*b.height);
   const axes=['axle','pivot'].includes(s.mode)?[{axis:s.axis,color:'#f4cc68',name:'Axle'}]:[{axis:[1,0,0],color:'#f18b87',name:'X'},{axis:[0,1,0],color:'#8cdb9b',name:'Y'},{axis:[0,0,1],color:'#8ebcff',name:'Z'}];
   for(const spec of axes){const axis=vec(spec.axis),end=screen(origin.clone().addScaledVector(axis,scale*85)),dx=end.x-o.x,dy=end.y-o.y;
-   if(!['rotate','pivot'].includes(s.mode)&&Math.hypot(dx,dy)>15){
+   if(!['rotate','pivot'].includes(s.mode)&&!(s.mode==='axle'&&s.min===0&&s.max===0)&&Math.hypot(dx,dy)>15){
     const h={kind:'move',axis:spec.axis,origin:s.origin,dx:dx/(scale*85),dy:dy/(scale*85),name:spec.name};
     const i=handles.push(h)-1;const both=s.mode==='axle',x=both?o.x-dx:o.x,y=both?o.y-dy:o.y;
     node('line',{x1:x,y1:y,x2:end.x,y2:end.y,stroke:spec.color,'stroke-width':4,'stroke-linecap':'round','data-handle':i,'aria-label':`Drag ${spec.name} to move`});

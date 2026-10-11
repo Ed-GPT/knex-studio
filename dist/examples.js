@@ -3,7 +3,7 @@ import {repeatableSquare,towerModel,compoundGearModel} from './advanced-models.j
 import {repeatPattern} from './pattern.js';
 import {swingModel,nestedSwingModel,connectorReferenceModels,SWING_REFERENCE} from './swing-model.js';
 import {poweredWindmill,motorReferenceModels} from './motor.js';
-import {manualVehicle,wheelReferenceModels,VEHICLE_MANUAL} from './wheel-models.js';
+import {manualVehicle,wheelReferenceModels,racingWheelBench,VEHICLE_MANUAL} from './wheel-models.js';
 import {roverModel} from './playground.js';
 import {prepareGroundedExample} from './example-grounding.js';
 import {makeGroup,makeLayer} from './editor-state.js';
@@ -36,6 +36,7 @@ export const EXAMPLES=[
 export const REFERENCE_SCENES=[
  {id:'connectors',title:'Classic connectors',factory:connectorReferenceModels},
  {id:'wheels',title:'Hubs & tyres',factory:wheelReferenceModels},
+ {id:'racing-wheels',title:'Racing wheels & bearings',factory:racingWheelBench},
  {id:'motors',title:'Motor housings',factory:motorReferenceModels}
 ];
 export function createExample(id){const entry=[...EXAMPLES,...REFERENCE_SCENES].find(e=>e.id===id);if(!entry)throw Error('Unknown example');const model=entry.factory();prepareGroundedExample(model,id);return model;}

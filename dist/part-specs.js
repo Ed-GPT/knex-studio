@@ -1,6 +1,17 @@
 // K’NEX User Group product listings, checked 2026-10-11. Approximate supplier values, not factory measurements.
 // Motor load conditions and battery inclusion in listed mass are unspecified.
 export const PART_SPECS={
+"h-spoked37-silver":{"partNumber": "91978", "massG": 2.3, "source": "https://shop.knexusergroup.org.uk/products/91978", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"h-spoked37-black":{"partNumber": "919780", "massG": 2.3, "source": "https://shop.knexusergroup.org.uk/products/919780", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"h-racing37-gray":{"partNumber": "91174", "massG": 4.05, "source": "https://shop.knexusergroup.org.uk/products/91174", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"h-racing37-black":{"partNumber": "91170", "massG": 4.06, "source": "https://shop.knexusergroup.org.uk/products/91170", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"h-racing50":{"partNumber": "91184", "massG": 7.87, "source": "https://shop.knexusergroup.org.uk/products/91184", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"h-narrow50-gray":{"partNumber": "91254", "massG": 4.55, "source": "https://shop.knexusergroup.org.uk/products/91254", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"h-narrow50-black":{"partNumber": "91254B", "massG": 4.46, "source": "https://shop.knexusergroup.org.uk/products/91254B", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"t-racing37":{"partNumber": "91150", "massG": 8.08, "source": "https://shop.knexusergroup.org.uk/products/91150", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"t-racing50":{"partNumber": "91160", "massG": 18.3, "source": "https://shop.knexusergroup.org.uk/products/91160", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"t-slick37":{"partNumber": "91380", "massG": 5.8, "source": "https://shop.knexusergroup.org.uk/products/91380", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"t-narrow50":{"partNumber": "91240", "massG": 9.0, "source": "https://shop.knexusergroup.org.uk/products/91240", "quality": "Supplier approximate", "checked": "2026-10-11"},
  "f-green190":{partNumber:"91108",massG:3.7,source:"https://shop.knexusergroup.org.uk/products/91108",quality:"Supplier approximate",checked:"2026-10-11"},
  "c-cross-tie":{partNumber:"91430",massG:3.68,source:"https://shop.knexusergroup.org.uk/products/91430",quality:"Supplier approximate",checked:"2026-10-11"},
   "g-blue14": {

@@ -3,7 +3,7 @@ import {slideDistance} from './slide-collision.js';
 import {V,Q,DEG,definition,component,part,emptyModel,targets,solve,add} from './engine.js';
 
 // A socket clip is rigid. An unlocked center hole acts as a bearing.
-export function rigidComponent(model,id){return component({...model,links:model.links.filter(l=>l.mode!=='mesh'&&(l.mode!=='through'||l.locked||model.parts.some(p=>(p.id===l.a||p.id===l.b)&&(definition(p).driveClip||definition(p).axleGrip))))},id);}
+export function rigidComponent(model,id){return component({...model,links:model.links.filter(l=>l.mode!=='mesh'&&l.mode!=='end-bearing'&&(l.mode!=='through'||l.locked||model.parts.some(p=>(p.id===l.a||p.id===l.b)&&(definition(p).driveClip||definition(p).axleGrip))))},id);}
 const rodFor=(model,l)=>model.parts.find(p=>(p.id===l.a||p.id===l.b)&&definition(p).group==='rods');
 export function axleInfo(model,id){
  const ids=rigidComponent(model,id),boundary=model.links.filter(l=>l.mode!=='mesh'&&(ids.has(l.a)!==ids.has(l.b)));
@@ -16,6 +16,7 @@ export function axleInfo(model,id){
   const r=rodFor(model,l),ra=V([1,0,0]).applyQuaternion(Q(r.quat)).normalize();
   const separation=V(r.pos).sub(origin);separation.addScaledVector(axis,-separation.dot(axis));
   if(Math.abs(axis.dot(ra))<.9999||separation.length()>.35)return {ids,available:false,reason:'This assembly is constrained by different axles. Detach a connection before moving it.'};
+  if(l.mode==='end-bearing'){min=Math.max(min,0);max=Math.min(max,0);continue;}
   const c=model.parts.find(p=>p.id===(l.a===r.id?l.b:l.a));
   const offset=V(c.pos).sub(V(r.pos)).dot(ra),cap=Math.max(0,definition(r).length/2-(definition(c).thickness||7)/2);
   const sign=(ids.has(c.id)?1:-1)*axis.dot(ra),lo=(-cap-offset)/sign,hi=(cap-offset)/sign;

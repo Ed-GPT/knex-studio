@@ -38,3 +38,18 @@ export function manualVehicle(){
  for(const node of[...white,...frontYellow]){const socket=ports(node).find(p=>V(p.dir).dot(V([-1,0,0]))>.999);attach('r-red',node,'end',{},socket.key);}
  return m;
 }
+
+// A comparison bench, not an official vehicle plan. Fixed rods make each
+// independent bearing easy to spin without moving another wheel family.
+export function racingWheelBench(){
+ const m=emptyModel('Classic racing wheel bench'),attach=(type,host,mode,key)=>add(m,solve(m,type,targets(m,type,mode).find(t=>t.partId===host.id&&(!key||t.key===key)),mode));
+ for(const [row,hubType,tyreType]of[[0,'h-racing37-gray','t-racing37'],[1,'h-racing37-black','t-slick37'],[2,'h-racing50','t-racing50']]){
+  const rod=part('r-blue',[(row-1)*90,45,-55],Q().setFromUnitVectors(V([1,0,0]),V([0,0,1])).toArray());rod.grounded=true;m.parts.push(rod);const hub=attach(hubType,rod,'end','end1');attach(tyreType,hub,'tire');
+ }
+ const wide=part('t-racing50',[-90,45,65]);m.parts.push(wide);
+ for(const [i,type]of ['h-narrow50-gray','h-narrow50-black'].entries())attach(type,wide,'tire','tire'+i);
+ const rod=part('r-blue',wide.pos,Q().setFromUnitVectors(V([1,0,0]),V([0,0,1])).toArray());rod.grounded=true;m.parts.push(rod);
+ for(const hub of m.parts.filter(p=>BY_ID[p.type].wheelStyle==='narrow'))m.links.push({a:rod.id,ap:'shaft',b:hub.id,bp:'hole',mode:'through',offset:hub.pos[2]-rod.pos[2]});
+ for(const [x,type,tyre]of [[0,'h-narrow50-gray','t-narrow50'],[90,'h-spoked37-silver','t-small'],[170,'h-spoked37-black','t-small']]){const rod=part('r-blue',[x,45,65],Q().setFromUnitVectors(V([1,0,0]),V([0,0,1])).toArray());rod.grounded=true;m.parts.push(rod);const hub=attach(type,rod,'through');attach(tyre,hub,'tire');}
+ return m;
+}

@@ -19,7 +19,7 @@ function massProperties(parts){
 }
 export function hingeSystem(model,selected){
  const groups=[],owner=new Map();for(const p of model.parts)if(!owner.has(p.id)){const ids=rigidComponent(model,p.id),group={ids,parts:model.parts.filter(p=>ids.has(p.id)),index:groups.length};for(const id of ids)owner.set(id,group);groups.push(group);}
- const edges=[];for(const l of model.links){const a=owner.get(l.a),b=owner.get(l.b);if(l.mode!=='through'||l.locked||a===b)continue;const rod=model.parts.find(p=>(p.id===l.a||p.id===l.b)&&definition(p).group==='rods');if(!rod)continue;const hole=model.parts.find(p=>p.id===(rod.id===l.a?l.b:l.a)),axis=V([1,0,0]).applyQuaternion(Q(rod.quat));edges.push({a,b,l,rod,hole,axis,origin:V(hole.pos).multiplyScalar(.001)});}
+ const edges=[];for(const l of model.links){const a=owner.get(l.a),b=owner.get(l.b);if(!['through','end-bearing'].includes(l.mode)||l.locked||a===b)continue;const rod=model.parts.find(p=>(p.id===l.a||p.id===l.b)&&definition(p).group==='rods');if(!rod)continue;const hole=model.parts.find(p=>p.id===(rod.id===l.a?l.b:l.a)),axis=V([1,0,0]).applyQuaternion(Q(rod.quat));edges.push({a,b,l,rod,hole,axis,origin:V(hole.pos).multiplyScalar(.001)});}
  if(!edges.length)throw Error('No free hinge found. Connect parts through an unlocked axle hole.');
  let seed=owner.get(selected);if(!seed||!edges.some(e=>e.a===seed||e.b===seed))seed=edges[0].a;
  const connected=new Set([seed]);let changed=true;while(changed){changed=false;for(const e of edges)if(connected.has(e.a)!==connected.has(e.b)){connected.add(e.a);connected.add(e.b);changed=true;}}
