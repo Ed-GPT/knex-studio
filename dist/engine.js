@@ -1,3 +1,4 @@
+import {CLASSIC_RIGID_RODS} from './classic-rods.js';
 import {BALL_JOINTS,ballCompatible,ballPort} from './ball-joints.js';
 import {CLASSIC_CLIPS,CLASSIC_Y_CLIPS,yClipPorts,hingeCompatible,hingePort} from './classic-clips.js';
 import {CLASSIC_WHEELS,tyreSeats,tyreSeatBusy,bearingPoint} from './classic-wheels.js';
@@ -26,6 +27,7 @@ export const CATALOG=[
  {id:'k-cap',name:'Black snap cap',partNumber:'848900',reference:'https://shop.knexusergroup.org.uk/products/848900',group:'extras',color:'#202226',endCap:true,thickness:6,slots:[]},
  {id:'k-tan',name:'Tan drive clip',group:'extras',color:'#c8ac7e',driveClip:true,thickness:6.4,slots:[]},
  ...[['green','Green',16,'#17915e'],['white','White',32,'#eeeae0'],['blue','Blue',54,'#246bd5'],['yellow','Yellow',86,'#f3c423'],['red','Red',128,'#de403b'],['gray','Gray',190,'#9fa8ad']].map(([id,name,nominal,color],i)=>({id:'r-'+id,name:`${name} rod`,group:'rods',color,nominal,length:37.5*Math.SQRT2**i-2*SOCKET,slots:[]})),
+ ...CLASSIC_RIGID_RODS,
  ...[
  ['c-gray','Gray · 1-way','#9ca4ac',[0]],
  ['c-orange','Orange · straight','#f58325',[0,180]],
@@ -71,8 +73,8 @@ export function targets(model,type,mode){const d=BY_ID[type];let list=[];for(con
  if(d.motor&&!d.legacy&&p.type==='c-white'&&!busy(model,p.id,'motor-mount'))list.push(worldPort(p,{key:'motor-mount',kind:'mount',pos:[0,0,0],dir:[0,0,1]}));
  if(type==='c-white'&&t.motor&&!t.legacy)for(const side of[-1,1]){const key=side<0?'mount-back':'mount-front';if(!busy(model,p.id,key))list.push(worldPort(p,{key,kind:'mount',pos:[0,0,side*18.75],dir:[0,0,side]}));}
  }else if(mode==='side'){
- if(d.group==='rods'&&d.id!=='r-green'&&(t.group==='connectors'||t.clipGeometry)&&!t.noSide)list.push(...ports(p).filter(x=>x.kind==='slot'||x.kind==='clip').filter(x=>!busy(model,p.id,x.key)).map(x=>({...x,kind:'side',pos:V(x.pos).addScaledVector(V(x.dir),4.4).toArray(),dir:V([0,0,1]).applyQuaternion(Q(p.quat)).toArray()})));
- if((d.group==='connectors'||d.clipGeometry)&&!d.noSide&&t.group==='rods'&&p.type!=='r-green')list.push(worldPort(p,{key:'shaft',kind:'shaft',pos:[0,0,0],dir:[1,0,0]}));
+ if(d.group==='rods'&&!d.noSide&&d.id!=='r-green'&&(t.group==='connectors'||t.clipGeometry)&&!t.noSide)list.push(...ports(p).filter(x=>x.kind==='slot'||x.kind==='clip').filter(x=>!busy(model,p.id,x.key)).map(x=>({...x,kind:'side',pos:V(x.pos).addScaledVector(V(x.dir),4.4).toArray(),dir:V([0,0,1]).applyQuaternion(Q(p.quat)).toArray()})));
+ if((d.group==='connectors'||d.clipGeometry)&&!d.noSide&&t.group==='rods'&&!t.noSide&&p.type!=='r-green')list.push(worldPort(p,{key:'shaft',kind:'shaft',pos:[0,0,0],dir:[1,0,0]}));
  }else if(mode==='interlock'&&d.interlock&&t.interlock&&!busy(model,p.id,'interlock'))list.push(worldPort(p,{key:'interlock',kind:'interlock',pos:[0,0,0],dir:[1,0,0]}));
  }return list;}
 export function solve(model,type,target,mode,{roll=0,offset=0,portIndex=0,path}={}){

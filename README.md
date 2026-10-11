@@ -138,6 +138,16 @@ The left rail shows compact families. Click a family to open its visual flyout, 
 
 ![Compact part families and the wheel flyout](docs/screenshots/parts-flyout.png)
 
+## Classic rigid rods
+
+The Rods flyout includes tan **90957** (128 mm), black **919561**, yellow-white **91956** and blue **90956B** (190 mm). Each keeps its own part identity, supplier approximate mass and color. The yellow-white rod has a solid square shaft profile; the others use reconstructed ribbed profiles. These are the original-size stronger rods documented in [Hint A7](https://www.knexusergroup.org.uk/en/knex-hint-A7.html).
+
+**Generate → Grid & frame** now accepts these rods. Tan rigid cells use black rigid diagonals; 190 mm cells have no matching stock diagonal, so braces switch off. Generated edges, shared boundaries and connections retain stock dimensions. **Examples → Rigid-rod tower** demonstrates a four-storey structure with tan edges and black braces, ready for a stability test.
+
+![Generated frame using tan rigid rods and black rigid diagonals](docs/screenshots/classic-rigid-rods.png)
+
+End snapping and axle bearings work with all four. Side gripping is available on ribbed variants; the solid yellow-white shaft's side fit remains unverified and is disabled. Nominal lengths are rounded supplier labels; endpoints use the existing Classic grid spacing. Shaft section sizes and fit tolerances remain photo estimates. Rod bending, stiffness differences, buckling and fracture are not simulated. See [part references and limitations](docs/CLASSIC-PARTS.md#classic-rigid-rods).
+
 ## Classic clips and molded hinges
 
 The Clips & spacers flyout includes blue **90912**, black **90919** and green **90913** hinge halves, plus blue **91440** and bronze **914401** rod-end stops. Each part has its own saved identity and photo-based profile. Blue pin halves mate with black or green socket halves through **Hinge** mode; the editor chooses this mode when a matching free half is present. Rod sockets use End or Side-on connections. End stops use End only.

@@ -1,13 +1,16 @@
+import {CLASSIC_RIGID_RODS} from './classic-rods.js';
 import {V,Q,BY_ID,SOCKET,part,ports,emptyModel,solve,targets,exportModel,parseModel,busy,definition} from './engine.js';
 import {makeGroup,makeLayer} from './editor-state.js';
 import {equivalent,linkAvailable} from './pattern.js';
 import {partsOverlap} from './slide-collision.js';
 export const FRAME_RODS=['r-green','r-white','r-blue','r-yellow','r-red','r-gray'];
+export const FRAME_ROD_CHOICES=[...FRAME_RODS,...CLASSIC_RIGID_RODS.map(d=>d.id)];
+export function frameDiagonal(rod){if(!FRAME_ROD_CHOICES.includes(rod))return undefined;const d=BY_ID[rod];return d.rigidRod?(d.stockIndex===4?'r-rigid-black':undefined):FRAME_RODS[FRAME_RODS.indexOf(rod)+1];}
 export function frameDimensions({kind='frame',counts=[3,2,2],rod='r-blue',braced=true,plane='xy'}={}){
- if(!['grid','frame'].includes(kind)||!['xy','xz'].includes(plane)||!FRAME_RODS.includes(rod))throw Error('Choose Classic rods and a grid or frame.');
+ if(!['grid','frame'].includes(kind)||!['xy','xz'].includes(plane)||!FRAME_ROD_CHOICES.includes(rod))throw Error('Choose Classic rods and a grid or frame.');
  if(!Array.isArray(counts)||counts.length!==3||counts.some(n=>!Number.isInteger(n)||n<1||n>30))throw Error('Use 1 to 30 cells along each axis.');
- const [x,y,z]=[counts[0],counts[1],kind==='grid'?0:counts[2]],pitch=BY_ID[rod].length+2*SOCKET,diagonal=FRAME_RODS[FRAME_RODS.indexOf(rod)+1];
- if(braced&&!diagonal)throw Error('Gray cells have no matching stock diagonal. Turn braces off.');
+ const [x,y,z]=[counts[0],counts[1],kind==='grid'?0:counts[2]],pitch=BY_ID[rod].length+2*SOCKET,diagonal=frameDiagonal(rod);
+ if(braced&&!diagonal)throw Error('This rod size has no matching stock diagonal. Turn braces off.');
  const nodes=(x+1)*(y+1)*(z+1),edges=x*(y+1)*(z+1)+(x+1)*y*(z+1)+(x+1)*(y+1)*z,braces=braced?x*y*(z+1)+(kind==='frame'?x*z*(y+1):0):0,total=nodes*(kind==='frame'?2:1)+edges+braces;
  if(total>2500)throw Error(`This needs ${total} parts. Maximum 2500; reduce the cell counts.`);
  return{kind,counts:[x,y,z],rod,braced,plane,pitch,diagonal,total,size:(kind==='grid'&&plane==='xz'?[x,0,y]:[x,y,z]).map(n=>n*pitch)};

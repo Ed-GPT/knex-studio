@@ -1,6 +1,10 @@
 // K’NEX User Group product listings, checked 2026-10-11. Approximate supplier values, not factory measurements.
 // Motor load conditions and battery inclusion in listed mass are unspecified.
 export const PART_SPECS={
+"r-rigid-tan":{"partNumber": "90957", "massG": 3.73, "source": "https://shop.knexusergroup.org.uk/products/90957", "quality": "Supplier approximate", "checked": "2026-10-12"},
+"r-rigid-black":{"partNumber": "919561", "massG": 5.96, "source": "https://shop.knexusergroup.org.uk/products/919561", "quality": "Supplier approximate", "checked": "2026-10-12"},
+"r-rigid-white":{"partNumber": "91956", "massG": 5.95, "source": "https://shop.knexusergroup.org.uk/products/91956", "quality": "Supplier approximate", "checked": "2026-10-12"},
+"r-rigid-blue":{"partNumber": "90956B", "massG": 4.55, "source": "https://shop.knexusergroup.org.uk/products/90956B", "quality": "Supplier approximate", "checked": "2026-10-12"},
 "ball-small":{"partNumber": "90940", "massG": 0.73, "source": "https://shop.knexusergroup.org.uk/products/90940", "quality": "Supplier approximate", "checked": "2026-10-12"},
 "socket-small":{"partNumber": "90945", "massG": 0.81, "source": "https://shop.knexusergroup.org.uk/products/90945", "quality": "Supplier approximate", "checked": "2026-10-12"},
 "ball-large":{"partNumber": "99036B", "massG": 1.08, "source": "https://shop.knexusergroup.org.uk/products/99036B", "quality": "Supplier approximate", "checked": "2026-10-12"},
