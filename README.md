@@ -89,6 +89,16 @@ Open **Generate → Grid & frame**. Choose a panel, rectangular frame, octagonal
 
 These are procedural demonstrations of the existing referenced Classic connector and rod system, not official building plans. Connector geometry and fit tolerances remain approximate; generated frames do not add structural load or collision simulation.
 
+### Paneled grids and frames
+
+Enable **Molded panels** and choose a color thumbnail. The builder offers only square panels that fit the selected stock rods: white, blue, yellow, red and tan rigid. Choosing panels turns diagonal braces off because they share sockets; choosing braces removes panels. Unsupported sizes disable the panel option.
+
+Grids fill every cell in either plane. Rectangular frames cover front, back, top and bottom, with separate panel layers. Their two side faces stay open because the paired blue connectors do not provide diagonal sockets in that plane. Every panel has four actual peg connections. **Examples → Paneled tunnel** opens a 171-part, 282-connection demonstration.
+
+![Procedural panel frame with matching colors and visible insertion control](docs/screenshots/paneled-frame-builder.png)
+
+Shared boundaries reuse panels as well as rods and connectors. A blocked corner omits the whole new panel, preserving existing parts and connections. Broad overlap checks include the full size of large plates. Tests cover every compatible panel, extensions along all three axes, competing occupied sockets, save/import and a connected 2,401-part sheet. Browser verification includes previewing and inserting that sheet, then undoing it. The same 2,500-part model limit applies. Structural loads, flex and buckling are not simulated by the generator.
+
 ### Octagonal rings and towers
 
 **Ring** makes a flat octagon in either plane. **Octagonal tower** stacks complete rings, with **+ / −** for stock rod segments per side and vertical levels. White 8-way connectors form rings; paired blue 3D connectors form tower nodes. The shape uses real 45° sockets and whole stock rods. Its width follows those lengths rather than an arbitrary radius.

@@ -27,7 +27,9 @@ export function gridWall(){
 }
 export function rigidTower(){const m=buildFrame({rod:'r-rigid-tan',counts:[1,4,1],braced:true}).model;m.name='Rigid-rod tower';for(const p of m.parts)p.pos[1]+=12;return m;}
 export function octagonalTower(){const m=buildRadial({kind:'tube',counts:[2,4,1],rod:'r-yellow',braced:true}).model;m.name='Octagonal observation tower';for(const p of m.parts)p.pos[1]+=12;return m;}
+export function paneledTunnel(){const m=buildFrame({kind:'frame',counts:[3,2,2],rod:'r-blue',braced:false,panel:'panel-91072'}).model;m.name='Paneled tunnel';for(const p of m.parts)p.pos[1]+=15;return m;}
 export const EXAMPLES=[
+ {id:'paneled-tunnel',title:'Paneled tunnel',level:'Advanced',skill:'Generated · four covered faces',hint:'Four faces use original molded panels. The two ends stay open because the blue connector pairs have no diagonal sockets in that plane. Generate → Grid & frame creates more sizes.',factory:paneledTunnel,kind:'Original generated frame with photo-based Classic panels, not an official model or load-bearing design',source:PANEL_REFERENCE},
  {id:'panel-wall',title:'Panel wall',level:'Intermediate',skill:'Panels · shared corners',hint:'Panels snap into the four inward diagonal sockets. Select a panel to disconnect and move it; the surrounding rods stay in place.',factory:panelWall,kind:'Original stock-grid demonstration using Classic molded panels; approximate plate details',source:PANEL_REFERENCE},
  {id:'square',title:'One square',level:'Simple',skill:'Snap · repeat',hint:'Select the square, then use Repeat + to extend it.',factory:repeatableSquare,kind:'Original connection-grid demo',source:JOINT_REFERENCE},
  {id:'hinge',title:'Single hinge',level:'Simple',skill:'Lock · swing',hint:'Run the hinge, pull the red arm, and release it.',factory:singleHinge,action:'hinges',kind:'Joint demo with a fixed axle, not a freestanding model',source:JOINT_REFERENCE},
