@@ -1,6 +1,6 @@
 import * as C from './vendor/cannon-es.js';
 import * as T from './vendor/three.module.js';
-import {V,Q,definition} from './engine.js';
+import {V,Q,definition,ports} from './engine.js';
 import {rigidComponent} from './motion.js';
 import {partMass,localMassCenter} from './mass.js';
 const STEP=1/240,cv=v=>new C.Vec3(...v),cq=q=>new C.Quaternion(...q),tv=v=>V([v.x,v.y,v.z]);
@@ -10,7 +10,7 @@ function massProperties(parts){
  const entries=parts.map(p=>{const d=definition(p),mass=partMass(p,d)/1000,center=V(localMassCenter(p,d)).applyQuaternion(Q(p.quat)).add(V(p.pos)).multiplyScalar(.001);return{p,d,mass,center};});
  const mass=entries.reduce((s,e)=>s+e.mass,0),center=V();for(const e of entries)center.addScaledVector(e.center,e.mass/mass);
  const a=Array.from({length:3},()=>[0,0,0]);
- for(const {p,d,mass:m,center:c} of entries){const r=c.clone().sub(center).toArray(),dims=d.group==='rods'?[d.length,5,5]:d.motor?[55,55,45]:d.diameter?[d.diameter,d.diameter,d.thickness||8]:d.group==='connectors'?[30,30,6.3]:[10,10,7],inertia=dims.map((_,i)=>m*(dims[(i+1)%3]**2+dims[(i+2)%3]**2)/12e6),axes=[[1,0,0],[0,1,0],[0,0,1]].map(v=>V(v).applyQuaternion(Q(p.quat)).toArray());
+ for(const {p,d,mass:m,center:c} of entries){const r=c.clone().sub(center).toArray(),dims=d.bodyDims|| (d.group==='rods'?[d.length,5,5]:d.motor?[55,55,45]:d.diameter?[d.diameter,d.diameter,d.thickness||8]:d.group==='connectors'?[30,30,6.3]:[10,10,7]),inertia=dims.map((_,i)=>m*(dims[(i+1)%3]**2+dims[(i+2)%3]**2)/12e6),axes=[[1,0,0],[0,1,0],[0,0,1]].map(v=>V(v).applyQuaternion(Q(p.quat)).toArray());
   for(let i=0;i<3;i++)for(let j=0;j<3;j++){a[i][j]+=m*((i===j?r.reduce((s,x)=>s+x*x,0):0)-r[i]*r[j]);for(let k=0;k<3;k++)a[i][j]+=inertia[k]*axes[k][i]*axes[k][j];}
  }
  // Symmetric Jacobi eigensolver: principal inertia axes, including off-diagonal terms.
@@ -19,8 +19,8 @@ function massProperties(parts){
 }
 export function hingeSystem(model,selected){
  const groups=[],owner=new Map();for(const p of model.parts)if(!owner.has(p.id)){const ids=rigidComponent(model,p.id),group={ids,parts:model.parts.filter(p=>ids.has(p.id)),index:groups.length};for(const id of ids)owner.set(id,group);groups.push(group);}
- const edges=[];for(const l of model.links){const a=owner.get(l.a),b=owner.get(l.b);if(!['through','end-bearing'].includes(l.mode)||l.locked||a===b)continue;const rod=model.parts.find(p=>(p.id===l.a||p.id===l.b)&&definition(p).group==='rods');if(!rod)continue;const hole=model.parts.find(p=>p.id===(rod.id===l.a?l.b:l.a)),axis=V([1,0,0]).applyQuaternion(Q(rod.quat));edges.push({a,b,l,rod,hole,axis,origin:V(hole.pos).multiplyScalar(.001)});}
- if(!edges.length)throw Error('No free hinge found. Connect parts through an unlocked axle hole.');
+ const edges=[];for(const l of model.links){const a=owner.get(l.a),b=owner.get(l.b);if(!['through','end-bearing','hinge'].includes(l.mode)||l.locked||a===b)continue;if(l.mode==='hinge'){const half=model.parts.find(p=>p.id===l.a),pivot=ports(half).find(p=>p.key==='pivot');edges.push({a,b,l,axis:V(pivot.dir),origin:V(pivot.pos).multiplyScalar(.001)});continue;}const rod=model.parts.find(p=>(p.id===l.a||p.id===l.b)&&definition(p).group==='rods');if(!rod)continue;const hole=model.parts.find(p=>p.id===(rod.id===l.a?l.b:l.a)),axis=V([1,0,0]).applyQuaternion(Q(rod.quat));edges.push({a,b,l,rod,hole,axis,origin:V(hole.pos).multiplyScalar(.001)});}
+ if(!edges.length)throw Error('No free hinge found. Connect a mating hinge pair or parts through an unlocked axle hole.');
  let seed=owner.get(selected);if(!seed||!edges.some(e=>e.a===seed||e.b===seed))seed=edges[0].a;
  const connected=new Set([seed]);let changed=true;while(changed){changed=false;for(const e of edges)if(connected.has(e.a)!==connected.has(e.b)){connected.add(e.a);connected.add(e.b);changed=true;}}
  const activeEdges=edges.filter(e=>connected.has(e.a)),grounded=[...connected].filter(g=>g.parts.some(p=>p.grounded)),fallback=grounded.length?null:[...connected].sort((a,b)=>b.parts.length-a.parts.length)[0];

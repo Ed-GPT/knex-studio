@@ -12,7 +12,7 @@ Source: [K’NEX User Group picture catalog](https://www.knexusergroup.org.uk/en
 | Standard connectors | 1, straight 2, angled 2, 3, 4, 5, 8 way; 4 and 7 way 3D | Mold details approximate; additional original colors pending |
 | Flexi rods | 12 variants across four approximate lengths, listed below | Fixed-length shape editing, tangent-aligned end sockets; no elastic dynamics or verified bend limits |
 | Coaster track | 91430 cross-tie, split purple tubing identified in 51587 manual | Unsupported layout preview; no coaster vehicle or rail splice mechanics |
-| Clips and spacers | 90900 tan drive clip, 848900 snap cap, 90994 blue spacer, 91224 sleeve; 90901 hole-end clip as 1-way connector | Additional original clip families pending |
+| Clips and spacers | 90900 tan drive clip, 848900 snap cap, 90994 blue spacer, 91224 sleeve; 90901 hole-end clip as 1-way connector | Three molded hinge halves and two rod-end stops, detailed below; other clip families pending |
 | Wheels | 16 hubs/tyres: pulley, spoked, racing and narrow families | Rod-end bearings, through bores, compatible tyre seats and keyed drive; profiles and tolerances approximate |
 | Gears and chain | 91317, 90988, 90985, 90993, 91998 and 90987 | Parallel-axis mesh only; chain is not an articulated transmission |
 | Enclosed battery motors | 92840 blue, 22722 green | Imposed preview speed; dimensions and torque remain unverified |
@@ -63,14 +63,30 @@ Open **Examples → Part reference scenes → Racing wheels & bearings** for the
 
 ![Classic racing, narrow and spoked wheels on independent axles](screenshots/classic-wheels.png)
 
+## Classic clips and hinge halves
+
+| Part | Identity and source | Connection / supplier approximate mass |
+| --- | --- | --- |
+| Blue hinge half | [90912](https://shop.knexusergroup.org.uk/products/90912) | Male pivot plus standard rod socket; 0.8 g |
+| Black hinge half | [90919](https://shop.knexusergroup.org.uk/products/90919) | Mating socket pivot plus rod socket; 0.62 g |
+| Green hinge half | [90913](https://shop.knexusergroup.org.uk/products/90913) | Same mating family; 0.62 g |
+| Blue rod-end stop | [91440](https://shop.knexusergroup.org.uk/products/91440) | Grips a Classic rod end; 0.61 g |
+| Bronze rod-end stop | [914401](https://shop.knexusergroup.org.uk/products/914401) | Same end-stop family; mass estimated, not sourced |
+
+Supplier product photos identify the distinct boss, socket ring, standard jaw and solid-backed end stop. The green product's title and image identify green; its description contains copied black-color wording. These are reconstructed profiles, not imported production CAD. The 6.3 mm mating-plane separation, boss/bore radii, body thicknesses and molding clearances are unverified photo estimates. No generic through-rod fit is assumed for the hinge holes. End stops have neither a center bore nor a drive key.
+
+The [hinge guide](https://www.knexusergroup.org.uk/en/knex-hint-A8.html) distinguishes this two-piece hinge from axle-and-connector hinges. Opposite halves snap at coincident pivots, preserve all rigidly clipped neighbors and rotate without translation. Chained hinges participate in the existing coupled simulation. Contact stops, maximum permitted hinge angle, snap force and wear are not simulated. Automated stress tests check closure during unreachable pulls and release, locked supports, save/import and rotation in multiple orientations.
+
+The **Molded double hinge** example has a mounting fixture locked in space. It demonstrates the two joints rather than a complete supported real-world build. The **Clips & hinge halves** reference scene also includes a rod with both end-stop variants.
+
 ## Remaining coverage and reference work
 
 The following are identified candidates, not yet implemented. Their names and numbers come from the Classic catalog; geometry and behavior must be verified before adding them. This list must be expanded as the remaining catalog is audited.
 
 | Family | Identified candidates | Required work |
 | --- | --- | --- |
-| Clips | 91440 blue end stop; 91690 angled 3D; 90914 rod-end/Y clip; 90940/90945 ball and socket; 90911 splice; 3010001 straight without hole; 23692E end cap | Distinct geometry and actual connections; parts without bores must not inherit through-hole behavior |
-| Hinges | 90919 black half, 90912 blue half, 90913 green half, 9091213 assembly, 3020001 long half | Verify hinge mating and pivot geometry; distinguish physical hinge pieces from existing axle hinges |
+| Clips | 91690 angled 3D; 90914 rod-end/Y clip; 90940/90945 ball and socket; 90911 splice; 3010001 straight without hole; 23692E end cap | Distinct geometry and actual connections; parts without bores must not inherit through-hole behavior |
+| Hinges | 9091213 packaged assembly; 3020001 long half | Audit original-system scope and distinct long-half geometry; implemented standard halves already mate |
 | Connector variants | Original color variants; distinct 90910 orange track connector | Reuse canonical geometry only when mold and connections match; audit interlock, motor mount and tyre compatibility |
 | Rigid/curved rods | 90957 tan rigid 128; 91956/919561/90956B rigid 190; 91995 long 405; 3011001/3012001/3013001 curved; 3007001 X-rod | Verify physical profiles, endpoint spacing, side clips and material differences |
 | Gears | 91700 partial crown, 90996 multitrack, 91324/99119 snap-on, 90983 motor gear; original color variants | Tooth count, profile, grip, perpendicular/worm transmission; avoid treating every gear as a parallel spur gear |

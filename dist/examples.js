@@ -1,3 +1,4 @@
+import {classicHingeModel,classicClipBench,HINGE_REFERENCE} from './clip-models.js';
 import {scaleModel,pantographModel,SCALE_REFERENCE,PANTOGRAPH_REFERENCE} from './mechanism-models.js';
 import {exampleModel,emptyModel,part,targets,solve,add} from './engine.js';
 import {repeatableSquare,towerModel,compoundGearModel} from './advanced-models.js';
@@ -34,9 +35,11 @@ export const EXAMPLES=[
  {id:'rover',title:'Twin-motor rover',level:'Advanced',skill:'Drive · controller',hint:'Open Test drive and use the arrow keys to steer.',factory:roverModel,action:'drive',kind:'Original differential-drive demo; approximate flat-ground physics',source:'https://www.knexusergroup.org.uk/en/knex-hint-M4.html'},
  {id:'scales',title:'Balance scale',level:'Advanced',skill:'Loads · coupled hinges',hint:'Run the hinges, pull either weight, then release. Use Left and Right extra payload to compare loads.',factory:scaleModel,action:'hinges',kind:'Adaptation of the 79565 balance mechanism with a braced beam and suspended wheel weights; not an exact manual copy',source:SCALE_REFERENCE},
  {id:'pantograph',title:'Pantograph · 2×',level:'Advanced',skill:'Closed loop · copy ratio',hint:'Use Top view, run the hinges and drag the short-link joint. The outer tip follows at twice its displacement from the locked pivot.',factory:pantographModel,action:'hinges',kind:'Adaptation of Maths activity 16 using rod-axle joints and equal-length arms; no pencil or trace output yet',source:PANTOGRAPH_REFERENCE},
+ {id:'molded-hinges',title:'Molded double hinge',level:'Advanced',skill:'Classic hinge halves · coupled motion',hint:'Run the hinges and drag either arm. Blue pin halves mate with black or green socket halves. The small mounting fixture is held fixed in space.',factory:classicHingeModel,action:'hinges',kind:'Original stress mechanism using the dedicated Classic hinge parts; approximate pivot dimensions',source:HINGE_REFERENCE},
  {id:'nested',title:'Double hinge',level:'Advanced',skill:'Coupled physics',hint:'Run the hinges and pull either hanging section.',factory:nestedSwingModel,action:'hinges',kind:'Mechanical variation of the single-bay swing',source:SWING_REFERENCE}
 ];
 export const REFERENCE_SCENES=[
+ {id:'classic-clips',title:'Clips & hinge halves',factory:classicClipBench},
  {id:'connectors',title:'Classic connectors',factory:connectorReferenceModels},
  {id:'wheels',title:'Hubs & tyres',factory:wheelReferenceModels},
  {id:'racing-wheels',title:'Racing wheels & bearings',factory:racingWheelBench},

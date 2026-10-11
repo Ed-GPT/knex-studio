@@ -1,6 +1,11 @@
 // K’NEX User Group product listings, checked 2026-10-11. Approximate supplier values, not factory measurements.
 // Motor load conditions and battery inclusion in listed mass are unspecified.
 export const PART_SPECS={
+"hinge-blue":{"partNumber": "90912", "massG": 0.8, "source": "https://shop.knexusergroup.org.uk/products/90912", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"hinge-black":{"partNumber": "90919", "massG": 0.62, "source": "https://shop.knexusergroup.org.uk/products/90919", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"hinge-green":{"partNumber": "90913", "massG": 0.62, "source": "https://shop.knexusergroup.org.uk/products/90913", "quality": "Supplier approximate", "checked": "2026-10-11"},
+"clip-blue":{"partNumber": "91440", "massG": 0.61, "source": "https://shop.knexusergroup.org.uk/products/91440", "quality": "Supplier approximate", "checked": "2026-10-11"},
+
 "h-spoked37-silver":{"partNumber": "91978", "massG": 2.3, "source": "https://shop.knexusergroup.org.uk/products/91978", "quality": "Supplier approximate", "checked": "2026-10-11"},
 "h-spoked37-black":{"partNumber": "919780", "massG": 2.3, "source": "https://shop.knexusergroup.org.uk/products/919780", "quality": "Supplier approximate", "checked": "2026-10-11"},
 "h-racing37-gray":{"partNumber": "91174", "massG": 4.05, "source": "https://shop.knexusergroup.org.uk/products/91174", "quality": "Supplier approximate", "checked": "2026-10-11"},
