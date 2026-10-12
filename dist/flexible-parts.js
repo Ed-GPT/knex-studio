@@ -21,27 +21,27 @@ export const FLEXIBLE_PARTS=[
  {id:'c-cross-tie',name:'Green coaster cross-tie',partNumber:'91430',group:'connectors',crossTie:true,color:'#9cd622',slots:[202.5,247.5,292.5,337.5],reference:'https://shop.knexusergroup.org.uk/products/91430'},
 ];
 export const ORANGE_TAB=[0,-10,0]; // Photo estimate: tab center in connector coordinates.
-export const trackSeat=(d,key)=>d.trackTab&&key==='rail'||d.crossTie&&['rail0','rail1'].includes(key);
-export const trackCompatible=(mount,key,tube,tubeKey)=>trackSeat(mount,key)&&tube.tubing&&tubeKey==='tube'&&(mount.trackFamily||'purple')===(tube.trackFamily||'purple');
+export const trackSeat=(d,key)=>d.splice&&['rail0','rail1'].includes(key)||d.trackTab&&key==='rail'||d.crossTie&&['rail0','rail1'].includes(key);
+export const trackCompatible=(mount,key,tube,tubeKey)=>trackSeat(mount,key)&&tube.tubing&&(mount.splice?(key==='rail0'?tubeKey==='tube1':tubeKey==='tube0'):tubeKey==='tube')&&(mount.trackFamily||'purple')===(tube.trackFamily||'purple');
 export const TRACK_GAUGE=44; // Unverified photo reconstruction, not a factory dimension.
 export const TRACK_RISE=18;
 export const pathLength=points=>points.slice(1).reduce((s,p,i)=>s+new T.Vector3(...p).distanceTo(new T.Vector3(...points[i])),0);
 export function defaultPath(d){return [[-(d.length||190)/2,0,0],[(d.length||190)/2,0,0]];}
-export function validatePath(p,d){if(p.curveBank!==undefined&&(!d.tubing||!Number.isFinite(p.curveBank)||Math.abs(p.curveBank)>60))throw Error('Invalid tubing bank');if(p.path===undefined)return;if(!(d.flexi||d.tubing)||!Array.isArray(p.path)||p.path.length<2||p.path.length>512||p.path.some(v=>!Array.isArray(v)||v.length!==3||v.some(x=>!Number.isFinite(x)||Math.abs(x)>10000)))throw Error('Invalid flexible part path');const n=pathLength(p.path);if(p.path.slice(1).some((v,i)=>new T.Vector3(...v).distanceTo(new T.Vector3(...p.path[i]))<.001)||n<1||(d.flexi&&Math.abs(n-d.length)>.15)||(d.tubing&&n>d.stockLength+.01))throw Error('Flexible part exceeds its stock length or has duplicate points');}
-export function copyPath(from,to){if(from.belt)to.belt={span:from.belt.span,radii:[...from.belt.radii]};if(from.path)to.path=from.path.map(p=>[...p]);if(from.curveBank!==undefined)to.curveBank=from.curveBank;return to;}
+export function validatePath(p,d){if(p.curveNormal!==undefined&&(!d.tubing||!Array.isArray(p.curveNormal)||p.curveNormal.length!==3||!p.curveNormal.every(Number.isFinite)||Math.abs(new T.Vector3(...p.curveNormal).length()-1)>.001))throw Error('Invalid tubing frame');if(p.curveBank!==undefined&&(!d.tubing||!Number.isFinite(p.curveBank)||Math.abs(p.curveBank)>60))throw Error('Invalid tubing bank');if(p.path===undefined)return;if(!(d.flexi||d.tubing)||!Array.isArray(p.path)||p.path.length<2||p.path.length>512||p.path.some(v=>!Array.isArray(v)||v.length!==3||v.some(x=>!Number.isFinite(x)||Math.abs(x)>10000)))throw Error('Invalid flexible part path');const n=pathLength(p.path);if(p.path.slice(1).some((v,i)=>new T.Vector3(...v).distanceTo(new T.Vector3(...p.path[i]))<.001)||n<1||(d.flexi&&Math.abs(n-d.length)>.15)||(d.tubing&&n>d.stockLength+.01))throw Error('Flexible part exceeds its stock length or has duplicate points');}
+export function copyPath(from,to){if(from.curveNormal)to.curveNormal=[...from.curveNormal];if(from.belt)to.belt={span:from.belt.span,radii:[...from.belt.radii]};if(from.path)to.path=from.path.map(p=>[...p]);if(from.curveBank!==undefined)to.curveBank=from.curveBank;return to;}
 export class SampledPath extends T.Curve{
  constructor(points){super();this.points=points.map(p=>new T.Vector3(...p));this.lengths=[0];for(let i=1;i<this.points.length;i++)this.lengths.push(this.lengths.at(-1)+this.points[i].distanceTo(this.points[i-1]));this.total=this.lengths.at(-1);}
  getPoint(t,target=new T.Vector3()){const s=Math.max(0,Math.min(1,t))*this.total;let i=1;while(i<this.lengths.length-1&&this.lengths[i]<s)i++;return target.copy(this.points[i-1]).lerp(this.points[i],(s-this.lengths[i-1])/(this.lengths[i]-this.lengths[i-1]||1));}
  getPointAt(t,target){return this.getPoint(t,target);}
 }
 // Parallel-transport frames avoid rail flips at vertical tangents and S-bends.
-export function transportedFrames(path,segments,bank=0){
- const frames=path.computeFrenetFrames(segments,false),first=frames.tangents[0],across=new T.Vector3().crossVectors(new T.Vector3(0,1,0),first);if(across.lengthSq()<1e-8)across.set(1,0,0);across.normalize();
+export function transportedFrames(path,segments,bank=0,startNormal=null){
+ const frames=path.computeFrenetFrames(segments,false),first=frames.tangents[0],across=startNormal?new T.Vector3(...startNormal).addScaledVector(first,-new T.Vector3(...startNormal).dot(first)):new T.Vector3().crossVectors(new T.Vector3(0,1,0),first);if(across.lengthSq()<1e-8)across.set(1,0,0);across.normalize();
  const angle=Math.atan2(new T.Vector3().crossVectors(frames.normals[0],across).dot(first),frames.normals[0].dot(across))+bank*Math.PI/180;
  for(let i=0;i<=segments;i++){frames.normals[i].applyAxisAngle(frames.tangents[i],angle);frames.binormals[i].crossVectors(frames.tangents[i],frames.normals[i]).normalize();}return frames;
 }
 export function flexibleGeometry(d,p={}){
- const g=new T.Group(),path=new SampledPath(p.path||defaultPath(d)),segments=Math.min(512,Math.max(32,Math.ceil(path.total/3))),frames=transportedFrames(path,segments,p.curveBank||0),mat=new T.MeshStandardMaterial({color:d.color,roughness:.36});
+ const g=new T.Group(),path=new SampledPath(p.path||defaultPath(d)),segments=Math.min(512,Math.max(32,Math.ceil(path.total/3))),frames=transportedFrames(path,segments,p.curveNormal?0:p.curveBank||0,p.curveNormal),mat=new T.MeshStandardMaterial({color:d.color,roughness:.36});
  // Tubing is split underneath, with a real opening rather than a solid cylinder.
  if(d.tubing){const positions=[],indices=[],steps=12;for(let i=0;i<=segments;i++){const center=path.getPoint(i/segments);for(const radius of[2.8,1.7])for(let j=0;j<=steps;j++){const a=.32+j*(Math.PI*2-.64)/steps,v=center.clone().addScaledVector(frames.normals[i],Math.sin(a)*radius).addScaledVector(frames.binormals[i],-Math.cos(a)*radius);positions.push(...v);}}const row=2*(steps+1);for(let i=0;i<segments;i++)for(let side=0;side<2;side++)for(let j=0;j<steps;j++){const a=i*row+side*(steps+1)+j,b=a+row;indices.push(a,b,a+1,a+1,b,b+1);}for(let i=0;i<segments;i++)for(const j of[0,steps]){const a=i*row+j,b=a+steps+1;indices.push(a,b,a+row,b,b+row,a+row);}const geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute(positions,3));geo.setIndex(indices);geo.computeVertexNormals();mat.side=T.DoubleSide;g.add(new T.Mesh(geo,mat));
  }else{
