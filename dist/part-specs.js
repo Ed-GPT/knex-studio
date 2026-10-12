@@ -1,6 +1,7 @@
 // K’NEX User Group product listings, checked 2026-10-11. Approximate supplier values, not factory measurements.
 // Motor load conditions and battery inclusion in listed mass are unspecified.
 export const PART_SPECS={
+"m-spring":{partNumber:"92890",massG:20.5,source:"https://shop.knexusergroup.org.uk/products/92890",quality:"Supplier approximate",checked:"2026-10-12"},
 "r-90960":{"partNumber": "90960", "massG": 0.467, "source": "https://shop.knexusergroup.org.uk/products/90960", "quality": "Supplier approximate", "checked": "2026-10-12"},
 "r-90950d":{"partNumber": "90950D", "massG": 0.467, "source": "https://shop.knexusergroup.org.uk/products/90950d", "quality": "Supplier approximate", "checked": "2026-10-12"},
 "r-90950w":{"partNumber": "90950W", "massG": 0.467, "source": "https://shop.knexusergroup.org.uk/products/90950w", "quality": "Supplier approximate", "checked": "2026-10-12"},

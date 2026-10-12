@@ -75,6 +75,16 @@ The swing is a single-bay adaptation of a published guide. The wheeled chassis f
 
 Example definitions and factories live in `dist/examples.js`. Existing models remain compatible with the version-1 JSON format.
 
+## Classic spring motor
+
+**Motors → Spring motor** adds the original **92890** with a reconstructed transparent case, visible mechanism and four mounting eyes. The eyes form two paired passages for support rods; the central bore drives a separate axle.
+
+Open **Examples → Spring motor fan**. Drag the rotor's rotation ring backward to wind it, or use **↶ +1 turn**. **Release spring** uses the stored turns and stops; **Hold** pauses. Winding survives save, undo and cloning. The 14-part fixture holds its supports fixed while the connected rotor turns.
+
+![Spring motor winding preview](docs/screenshots/classic-spring-motor.png)
+
+This is a finite-turn mechanical preview, with adjustable playback speed. Spring torque, real winding capacity and load-dependent speed remain unverified. The 20-turn software cap is not a physical specification. Spring vehicle motion is not yet supported in Test drive. See [sources, geometry estimates and limits](docs/CLASSIC-PARTS.md#classic-spring-motor-92890).
+
 ## Classic rod colors
 
 The **Rods** flyout now filters by length and includes 34 additional Classic straight-rod colors plus the translucent rigid 90956W. **Generate → Grid & frame → Color** changes the cell rods without changing their stock size. Where available, braces use the same named color in the next stock length; otherwise they use the standard next-size rod.

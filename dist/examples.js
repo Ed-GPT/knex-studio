@@ -1,3 +1,5 @@
+import {springFan} from './spring-motor-model.js';
+import {SPRING_REFERENCE} from './spring-motor.js';
 import {rodColorBench,rodColorLattice} from './rod-models.js';
 import {connectorVariantBench,variantWindmill} from './connector-models.js';
 import {buildTruss} from './truss-builder.js';
@@ -34,6 +36,7 @@ export function rigidTower(){const m=buildFrame({rod:'r-rigid-tan',counts:[1,4,1
 export function octagonalTower(){const m=buildRadial({kind:'tube',counts:[2,4,1],rod:'r-yellow',braced:true}).model;m.name='Octagonal observation tower';for(const p of m.parts)p.pos[1]+=12;return m;}
 export function paneledTunnel(){const m=buildFrame({kind:'frame',counts:[3,2,2],rod:'r-blue',braced:false,panel:'panel-91072'}).model;m.name='Paneled tunnel';for(const p of m.parts)p.pos[1]+=15;return m;}
 export const EXAMPLES=[
+ {id:'spring-fan',title:'Spring motor fan',level:'Intermediate',skill:'Wind · release · finite turns',hint:'Wind the spring with ↶ +1 turn, then Release spring. The four housing eyes are carried on two locked fixture rods. Preview speed is adjustable; spring torque is unverified.',factory:springFan,action:'motors',kind:'Original test fixture using Classic 92890, with reconstructed mount spacing; not a manual replica or calibrated spring simulation',source:SPRING_REFERENCE},
  {id:'rod-lattice',title:'Rod color lattice',level:'Advanced',skill:'Stock spans · color variants',hint:'Black 54 mm rods form the cells. Gold 86 mm rods brace the available diagonal planes. Use the generator to create another size.',factory:rodColorLattice,kind:'Original generated lattice using identified Classic rod color variants; no structural load analysis',source:'https://shop.knexusergroup.org.uk/products/909523'},
  {id:'variant-windmill',title:'Black connector windmill',level:'Advanced',skill:'Color variants · same mounts',hint:'Start the motor. The black 8-way connectors retain the same mounting and keyed rotor connections as the original white mold.',factory:variantWindmill,action:'motors',kind:'Original windmill using verified Classic connector color variants; approximate geometry and imposed motor speed',source:'https://shop.knexusergroup.org.uk/products/90968'},
  {id:'gable-roof',title:'Gable roof',level:'Advanced',skill:'45° rafters · repeat bays',hint:'Generate → Grid & frame → Gable roof changes the half-span, depth and internal bracing using actual stock rods. Each bay has its own layer.',factory:()=>{const m=buildTruss({kind:'roof',counts:[3,1,3],rod:'r-blue',braced:true}).model;m.name='Gable roof';for(const p of m.parts)p.pos[1]+=20;return m;},kind:'Original stock-length procedural demonstration, not an official manual model; no buckling or load certification',source:'https://www.knexusergroup.org.uk/en/knex-hint-A4.html'},

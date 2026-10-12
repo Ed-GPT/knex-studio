@@ -1,5 +1,5 @@
 import * as T from './vendor/three.module.js';
-import {V,Q,definition} from './engine.js';
+import {V,Q,definition,borePorts} from './engine.js';
 import {makePart} from './geometry.js';
 const templates=new Map();
 function template(type,p){if(!p?.path&&templates.has(type))return templates.get(type);const root=makePart(type,p),boxes=[];root.updateMatrixWorld(true);root.traverse(o=>{if(!o.isMesh)return;const geo=o.geometry;if(!geo.boundingBox)geo.computeBoundingBox();const center=geo.boundingBox.getCenter(new T.Vector3()).applyMatrix4(o.matrixWorld),half=geo.boundingBox.getSize(new T.Vector3()).multiplyScalar(.5),q=new T.Quaternion(),scale=new T.Vector3(),pos=new T.Vector3();o.matrixWorld.decompose(pos,q,scale);half.multiply(scale);boxes.push({center,half,axes:[V([1,0,0]),V([0,1,0]),V([0,0,1])].map(a=>a.applyQuaternion(q))});});if(!p?.path)templates.set(type,boxes);return boxes;}
@@ -16,7 +16,7 @@ function impact(a,b,velocity,max){const axes=[...a.axes,...b.axes];for(const x o
  if(enter<-.001){if(delta.dot(velocity)<-.001)return null;return 0;}
  return Math.max(0,enter-.04);
 }
-function borePass(a,b){let rod=a,hole=b;if(definition(b).group==='rods'){rod=b;hole=a;}const r=definition(rod),h=definition(hole);if(r.group!=='rods'||h.group==='rods'||h.endCap||h.endBearing||h.interlock||h.noBore)return false;const axis=V([1,0,0]).applyQuaternion(Q(rod.quat)),normal=V([0,0,1]).applyQuaternion(Q(hole.quat)),gap=V(rod.pos).sub(V(hole.pos));return Math.abs(axis.dot(normal))>.9999&&gap.addScaledVector(axis,-gap.dot(axis)).length()<.2;}
+function borePass(a,b){let rod=a,hole=b;if(definition(b).group==='rods'){rod=b;hole=a;}const r=definition(rod),h=definition(hole);if(r.group!=='rods'||h.group==='rods'||h.endCap||h.endBearing||h.interlock||h.noBore)return false;const axis=V([1,0,0]).applyQuaternion(Q(rod.quat));return (h.tire?[{pos:hole.pos,dir:V([0,0,1]).applyQuaternion(Q(hole.quat)).toArray()}]:borePorts(hole)).some(b=>{const gap=V(rod.pos).sub(V(b.pos));return Math.abs(axis.dot(V(b.dir)))>.9999&&gap.addScaledVector(axis,-gap.dot(axis)).length()<.2;});}
 export function slideDistance(model,ids,axis,distance){if(Math.abs(distance)<1e-9)return{distance:0,blockedBy:null};const velocity=V(axis).normalize().multiplyScalar(Math.sign(distance)),moving=model.parts.filter(p=>ids.has(p.id)),fixed=model.parts.filter(p=>!ids.has(p.id));let limit=Math.abs(distance),blockedBy=null;const cached=new Map(),get=p=>{if(!cached.has(p.id))cached.set(p.id,boxes(p));return cached.get(p.id);};
  for(const a of moving)for(const b of fixed){if(borePass(a,b))continue;const ab=get(a),bb=get(b);for(const x of ab)for(const y of bb){if(!sweepOverlap(x,y,velocity,limit))continue;const hit=impact(x,y,velocity,limit);if(hit!==null&&hit<limit){limit=hit;blockedBy=b.id;if(limit===0)return{distance:0,blockedBy};}}}
  return{distance:limit*Math.sign(distance),blockedBy};

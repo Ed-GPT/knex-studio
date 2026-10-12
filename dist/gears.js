@@ -13,7 +13,7 @@ export function gearTransmission(model,startId){
   for(const id of ids)seen.set(id,ratio);plans.push({ids,id:drivenId,ratio});
  }}return plans;
 }
-export function rotateTransmission(model,startId,degrees){const plan=gearTransmission(model,startId);for(const step of plan)assertUngrounded(model,step.ids);for(const step of plan)moveOnAxle(model,step.id,{degrees:degrees*step.ratio});return plan;}
+export function rotateTransmission(model,startId,degrees,{springPlayback=false}={}){const plan=gearTransmission(model,startId);for(const step of plan)assertUngrounded(model,step.ids);for(const step of plan)moveOnAxle(model,step.id,{degrees:degrees*step.ratio,springPlayback});return plan;}
 export function gearDemo(){const m=emptyModel('Motor gear train · 34 to 14 teeth'),motor=part('m-blue',[0,55,0]);m.parts.push(motor);const attach=(type,host,mode,options={})=>add(m,solve(m,type,targets(m,type,mode).find(t=>t.partId===host.id),mode,options));
  const axle=attach('r-gray',motor,'through'),clip=attach('k-tan',axle,'through',{offset:40}),gear=attach('g-red34',clip,'keyed');m.links.push({a:axle.id,ap:'shaft',b:gear.id,bp:'hole',mode:'through',offset:gear.pos[2]});
  const driven=attach('g-gray14',gear,'mesh'),out=attach('r-red',driven,'through');

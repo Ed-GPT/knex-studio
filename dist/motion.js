@@ -1,6 +1,7 @@
+import {SPRING_PREVIEW_LIMIT} from './spring-motor.js';
 import {assertUngrounded} from './grounding.js';
 import {slideDistance} from './slide-collision.js';
-import {V,Q,DEG,definition,component,ports,part,emptyModel,targets,solve,add} from './engine.js';
+import {V,Q,DEG,definition,component,ports,linkedBore,part,emptyModel,targets,solve,add} from './engine.js';
 
 // A socket clip is rigid. An unlocked center hole acts as a bearing.
 export function rigidComponent(model,id){return component({...model,links:model.links.filter(l=>l.mode!=='mesh'&&l.mode!=='end-bearing'&&l.mode!=='hinge'&&l.mode!=='ball'&&(l.mode!=='through'||l.locked||model.parts.some(p=>(p.id===l.a||p.id===l.b)&&(definition(p).driveClip||definition(p).axleGrip))))},id);}
@@ -22,7 +23,7 @@ export function axleInfo(model,id){
  if(boundary.some(l=>l.mode==='ball'))return{ids,available:false,reason:'This is a ball joint. Drag the arm or use its rotation rings.'};
  const selected=model.parts.find(p=>p.id===id);
  if(boundary.some(l=>l.mode==='hinge')){
-  const joints=boundary.map(l=>{if(l.mode==='hinge'){const p=model.parts.find(p=>p.id===l.a),port=ports(p).find(p=>p.key==='pivot');return{axis:V(port.dir),origin:V(port.pos)};}const rod=rodFor(model,l);if(!rod)return null;return{axis:V([1,0,0]).applyQuaternion(Q(rod.quat)),origin:V(model.parts.find(p=>p.id===(l.a===rod.id?l.b:l.a)).pos)};}),first=joints[0];
+  const joints=boundary.map(l=>{if(l.mode==='hinge'){const p=model.parts.find(p=>p.id===l.a),port=ports(p).find(p=>p.key==='pivot');return{axis:V(port.dir),origin:V(port.pos)};}const rod=rodFor(model,l);if(!rod)return null;return{axis:V([1,0,0]).applyQuaternion(Q(rod.quat)),origin:V(linkedBore(model,l).pos)};}),first=joints[0];
   if(!first||joints.some(j=>!j||Math.abs(j.axis.dot(first.axis))<.9999||j.origin.clone().sub(first.origin).cross(first.axis).length()>.35))return{ids,available:false,reason:'This assembly has multiple pivot axes. Use Simulate to move connected hinges together.'};
   return{ids,available:true,axis:first.axis.toArray(),origin:first.origin.toArray(),min:0,max:0,boundary,hinge:true};
  }
@@ -36,7 +37,7 @@ export function axleInfo(model,id){
   if(Math.abs(axis.dot(ra))<.9999||separation.length()>.35)return {ids,available:false,reason:'This assembly is constrained by different axles. Detach a connection before moving it.'};
   if(l.mode==='end-bearing'){min=Math.max(min,0);max=Math.min(max,0);continue;}
   const c=model.parts.find(p=>p.id===(l.a===r.id?l.b:l.a));
-  const offset=V(c.pos).sub(V(r.pos)).dot(ra),cap=Math.max(0,definition(r).length/2-(definition(c).thickness||7)/2);
+  const bore=linkedBore(model,l),offset=V(bore.pos).sub(V(r.pos)).dot(ra),cap=Math.max(0,definition(r).length/2-bore.thickness/2);
   const sign=(ids.has(c.id)?1:-1)*axis.dot(ra),lo=(-cap-offset)/sign,hi=(cap-offset)/sign;
   min=Math.max(min,Math.min(lo,hi));max=Math.min(max,Math.max(lo,hi));
  }
@@ -47,13 +48,14 @@ export function transformParts(model,ids,origin,axis,degrees=0,delta=[0,0,0]){
  assertUngrounded(model,ids);const center=V(origin),q=Q().setFromAxisAngle(V(axis).normalize(),degrees*DEG),shift=V(delta);
  for(const p of model.parts)if(ids.has(p.id)){p.pos=V(p.pos).sub(center).applyQuaternion(q).add(center).add(shift).toArray();p.quat=q.clone().multiply(Q(p.quat)).normalize().toArray();}
 }
-export function moveOnAxle(model,id,{distance=0,degrees=0}={}){
+export function moveOnAxle(model,id,{distance=0,degrees=0,springPlayback=false}={}){
  if(!Number.isFinite(distance)||!Number.isFinite(degrees))throw Error('Enter a finite distance and angle.');
  const info=axleInfo(model,id);if(!info.available)throw Error(info.reason);
  const limited=slideDistance(model,info.ids,info.axis,Math.max(info.min,Math.min(info.max,distance))),applied=limited.distance;
- transformParts(model,info.ids,info.origin,info.axis,degrees,V(info.axis).multiplyScalar(applied).toArray());
+ const winding=[];if(!springPlayback&&degrees)for(const l of info.boundary){const motor=model.parts.find(p=>(p.id===l.a||p.id===l.b)&&definition(p).springMotor);if(!motor||(motor.id===l.a?l.ap:l.bp)!=='hole')continue;const sign=(info.ids.has(motor.id)?-1:1)*V(info.axis).dot(V([0,0,1]).applyQuaternion(Q(motor.quat)));winding.push({motor,delta:-degrees*sign/360});}
+ transformParts(model,info.ids,info.origin,info.axis,degrees,V(info.axis).multiplyScalar(applied).toArray());for(const {motor,delta}of winding)motor.springTurns=Math.max(0,Math.min(SPRING_PREVIEW_LIMIT,(motor.springTurns||0)+delta));
  // Keep joint metadata in sync with the geometry. Endpoint order is preserved.
- for(const l of info.boundary){if(l.mode==='hinge'){l.roll=((l.roll||0)+(info.ids.has(l.b)?1:-1)*degrees)%360;continue;}const rod=rodFor(model,l),c=model.parts.find(p=>p.id===(l.a===rod.id?l.b:l.a));l.offset=V(c.pos).sub(V(rod.pos)).dot(V([1,0,0]).applyQuaternion(Q(rod.quat)));l.roll=((l.roll||0)+(info.ids.has(l.b)?1:-1)*degrees)%360;}
+ for(const l of info.boundary){if(l.mode==='hinge'){l.roll=((l.roll||0)+(info.ids.has(l.b)?1:-1)*degrees)%360;continue;}const rod=rodFor(model,l),c=model.parts.find(p=>p.id===(l.a===rod.id?l.b:l.a));l.offset=V(linkedBore(model,l).pos).sub(V(rod.pos)).dot(V([1,0,0]).applyQuaternion(Q(rod.quat)));l.roll=((l.roll||0)+(info.ids.has(l.b)?1:-1)*degrees)%360;}
  return {...info,distance:applied,degrees,blockedBy:limited.blockedBy};
 }
 export function windmillModel(){

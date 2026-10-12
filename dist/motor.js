@@ -1,11 +1,12 @@
+import {SPRING_PREVIEW_LIMIT} from './spring-motor.js';
 import {motorRate} from './classic-motors.js';
 import {groundingReason} from './grounding.js';
 import {V,Q,SOCKET,BY_ID,part,ports,targets,solve,add,emptyModel,definition,component} from './engine.js';
 import {rigidComponent,axleInfo,moveOnAxle} from './motion.js';
 import {rotateTransmission,gearTransmission} from './gears.js';
 export function motorDrive(model,motorId){
- const motor=model.parts.find(p=>p.id===motorId&&definition(p).motor);if(!motor)return {ready:false,reason:'Select a battery motor.'};
- const link=model.links.find(l=>l.mode==='through'&&(l.a===motorId||l.b===motorId));
+ const motor=model.parts.find(p=>p.id===motorId&&definition(p).motor);if(!motor)return {ready:false,reason:'Select a motor.'};
+ const link=model.links.find(l=>l.mode==='through'&&(l.a===motorId&&l.ap==='hole'||l.b===motorId&&l.bp==='hole'));
  if(!link)return {ready:false,reason:'Insert a rod through the motor drive hole.'};
  const shaft=model.parts.find(p=>p.id===(link.a===motorId?link.b:link.a));
  if(!shaft||definition(shaft).group!=='rods')return {ready:false,reason:'The motor needs a rod as its axle.'};
@@ -20,7 +21,7 @@ export function stepMotor(model,motorId,seconds,{rpm=undefined,direction=1}={}){
  rpm??=motorRate(model.parts.find(p=>p.id===motorId));
  if(!Number.isFinite(seconds)||seconds<0||seconds>1||!Number.isFinite(rpm)||rpm<1||rpm>240||![-1,1].includes(direction))throw Error('Invalid motor playback settings.');
  const drive=motorDrive(model,motorId);if(!drive.ready)throw Error(drive.reason);
- const train=rotateTransmission(model,drive.shaftId,seconds*rpm*6*direction);return {...drive,train};
+ const motor=model.parts.find(p=>p.id===motorId),spring=definition(motor).springMotor;let degrees=seconds*rpm*6*direction;if(spring){if(direction!==1)throw Error('Wind the spring before releasing it; this motor has no reversing switch.');degrees=Math.min((motor.springTurns||0)*360,seconds*rpm*6)*Math.sign(V(drive.axis).dot(V([0,0,1]).applyQuaternion(Q(motor.quat))));}const train=rotateTransmission(model,drive.shaftId,degrees,{springPlayback:true});if(spring){motor.springTurns=Math.max(0,(motor.springTurns||0)-Math.abs(degrees)/360);if(motor.springTurns<1e-9)motor.springTurns=0;}return {...drive,train,degrees,exhausted:spring&&motor.springTurns<1e-9};
 }
 export function poweredWindmill(motorType='m-blue'){
  const m=emptyModel('Motor-powered windmill'),span=37.5*Math.SQRT2**3,height=20+2*span;
@@ -51,3 +52,5 @@ export function poweredWindmill(motorType='m-blue'){
 export function motorReferenceModels(){const m=emptyModel('Enclosed motors: 92840 and 22722');for(const [type,z] of [['m-blue',-50],['m-green',55]]){const motor=part(type,[30,22,z]);m.parts.push(motor);add(m,solve(m,'r-yellow',targets(m,'r-yellow','through').find(t=>t.partId===motor.id),'through'));}return m;}
 
 export function twoSpeedWindmill(){const m=poweredWindmill('m-two-speed');m.name='Two-speed windmill · 92401';return m;}
+
+export function windSpring(model,motorId,turns=1){const motor=model.parts.find(p=>p.id===motorId);if(!motor||!definition(motor).springMotor||!Number.isFinite(turns)||turns<=0)throw Error('Choose a spring motor and a positive winding amount.');const drive=motorDrive(model,motorId);if(!drive.ready)throw Error(drive.reason);const amount=Math.min(turns,SPRING_PREVIEW_LIMIT-(motor.springTurns||0)),sign=Math.sign(V(drive.axis).dot(V([0,0,1]).applyQuaternion(Q(motor.quat))));rotateTransmission(model,drive.shaftId,-amount*360*sign,{springPlayback:true});motor.springTurns=(motor.springTurns||0)+amount;return amount;}
