@@ -1,3 +1,4 @@
+import {wormMotorDrive} from './worm-motor-drive.js';
 import {SPRING_PREVIEW_LIMIT} from './spring-motor.js';
 import {motorRate} from './classic-motors.js';
 import {groundingReason} from './grounding.js';
@@ -6,6 +7,7 @@ import {rigidComponent,axleInfo,moveOnAxle} from './motion.js';
 import {rotateTransmission,gearTransmission} from './gears.js';
 export function motorDrive(model,motorId){
  const motor=model.parts.find(p=>p.id===motorId&&definition(p).motor);if(!motor)return {ready:false,reason:'Select a motor.'};
+ if(definition(motor).wormMotor)return wormMotorDrive(model,motor);
  const link=model.links.find(l=>l.mode==='through'&&(l.a===motorId&&l.ap==='hole'||l.b===motorId&&l.bp==='hole'));
  if(!link)return {ready:false,reason:'Insert a rod through the motor drive hole.'};
  const shaft=model.parts.find(p=>p.id===(link.a===motorId?link.b:link.a));
@@ -21,7 +23,7 @@ export function stepMotor(model,motorId,seconds,{rpm=undefined,direction=1}={}){
  rpm??=motorRate(model.parts.find(p=>p.id===motorId));
  if(!Number.isFinite(seconds)||seconds<0||seconds>1||!Number.isFinite(rpm)||rpm<1||rpm>240||![-1,1].includes(direction))throw Error('Invalid motor playback settings.');
  const drive=motorDrive(model,motorId);if(!drive.ready)throw Error(drive.reason);
- const motor=model.parts.find(p=>p.id===motorId),spring=definition(motor).springMotor;let degrees=seconds*rpm*6*direction;if(spring){if(direction!==1)throw Error('Wind the spring before releasing it; this motor has no reversing switch.');degrees=Math.min((motor.springTurns||0)*360,seconds*rpm*6)*Math.sign(V(drive.axis).dot(V([0,0,1]).applyQuaternion(Q(motor.quat))));}const train=rotateTransmission(model,drive.shaftId,degrees,{springPlayback:true});if(spring){motor.springTurns=Math.max(0,(motor.springTurns||0)-Math.abs(degrees)/360);if(motor.springTurns<1e-9)motor.springTurns=0;}return {...drive,train,degrees,exhausted:spring&&motor.springTurns<1e-9};
+ const motor=model.parts.find(p=>p.id===motorId),spring=definition(motor).springMotor;let degrees=seconds*rpm*6*direction;if(definition(motor).wormMotor)degrees*=Math.sign(V(drive.axis).dot(V([0,0,1]).applyQuaternion(Q(motor.quat))));if(spring){if(direction!==1)throw Error('Wind the spring before releasing it; this motor has no reversing switch.');degrees=Math.min((motor.springTurns||0)*360,seconds*rpm*6)*Math.sign(V(drive.axis).dot(V([0,0,1]).applyQuaternion(Q(motor.quat))));}const train=rotateTransmission(model,drive.shaftId,degrees,{springPlayback:true});if(spring){motor.springTurns=Math.max(0,(motor.springTurns||0)-Math.abs(degrees)/360);if(motor.springTurns<1e-9)motor.springTurns=0;}return {...drive,train,degrees,exhausted:spring&&motor.springTurns<1e-9};
 }
 export function poweredWindmill(motorType='m-blue'){
  const m=emptyModel('Motor-powered windmill'),span=37.5*Math.SQRT2**3,height=20+2*span;

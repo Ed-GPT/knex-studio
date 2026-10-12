@@ -1,3 +1,5 @@
+import {wormReductionModel} from './worm-motor-model.js';
+import {WORM_REFERENCE} from './worm-motor.js';
 import {springFan} from './spring-motor-model.js';
 import {SPRING_REFERENCE} from './spring-motor.js';
 import {rodColorBench,rodColorLattice} from './rod-models.js';
@@ -36,6 +38,7 @@ export function rigidTower(){const m=buildFrame({rod:'r-rigid-tan',counts:[1,4,1
 export function octagonalTower(){const m=buildRadial({kind:'tube',counts:[2,4,1],rod:'r-yellow',braced:true}).model;m.name='Octagonal observation tower';for(const p of m.parts)p.pos[1]+=12;return m;}
 export function paneledTunnel(){const m=buildFrame({kind:'frame',counts:[3,2,2],rod:'r-blue',braced:false,panel:'panel-91072'}).model;m.name='Paneled tunnel';for(const p of m.parts)p.pos[1]+=15;return m;}
 export const EXAMPLES=[
+ {id:'worm-reduction',title:'12 V reduction bench',level:'Advanced',skill:'Worm drive · keyed axle · 14:82',hint:'The motor engages its dedicated white gear. A separate blue gear on the same keyed axle drives the yellow output at 14/82 speed. RPM previews the white-gear axle; the motor worm ratio is unverified.',factory:wormReductionModel,action:'motors',kind:'Original locked test fixture based on Classic 92815 mounting references; approximate dimensions, not an official manual replica',source:WORM_REFERENCE},
  {id:'crown-gears',title:'Three-axis crown gearbox',level:'Advanced',skill:'Two corners · three axles',hint:'Run the motor. Two crown pairs transfer rotation around two corners at 34:14 each. The gray support connectors stay locked.',factory:crownGearModel,action:'motors',kind:'Original locked test fixture, not a freestanding manual model; ideal pitch contact and approximate tooth clearance',source:'https://www.knexusergroup.org.uk/en/knex-hint-G1.html'},
  {id:'spring-fan',title:'Spring motor fan',level:'Intermediate',skill:'Wind · release · finite turns',hint:'Wind the spring with ↶ +1 turn, then Release spring. The four housing eyes are carried on two locked fixture rods. Preview speed is adjustable; spring torque is unverified.',factory:springFan,action:'motors',kind:'Original test fixture using Classic 92890, with reconstructed mount spacing; not a manual replica or calibrated spring simulation',source:SPRING_REFERENCE},
  {id:'rod-lattice',title:'Rod color lattice',level:'Advanced',skill:'Stock spans · color variants',hint:'Black 54 mm rods form the cells. Gold 86 mm rods brace the available diagonal planes. Use the generator to create another size.',factory:rodColorLattice,kind:'Original generated lattice using identified Classic rod color variants; no structural load analysis',source:'https://shop.knexusergroup.org.uk/products/909523'},

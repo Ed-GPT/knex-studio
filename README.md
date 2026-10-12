@@ -317,3 +317,15 @@ Choose a gear, then **90° gears** in the floating placement toolbar. Point at a
 Based on [K’NEX User Group Hint G1](https://www.knexusergroup.org.uk/en/knex-hint-G1.html). Pitch distances and the 3 mm crown contact plane are reconstructed estimates. This is ideal kinematic transmission without torque, tooth contact, backlash, slipping or swept collision simulation. Joints mode does not solve gear transmission.
 
 ![Two crown stages transferring rotation through three spatial axles](docs/screenshots/crown-gearbox.png)
+
+## Original 12 V motor and white gear
+
+The **92815 12 V motor** and **90983 dedicated white gear** have separate part identities. The housing mounts on two rods through its underside sleeves. **Worm drive** snaps only the matching motor/gear pair; the white gear cannot mesh with ordinary gears. Support its axle independently and use a tan clip to key the gear.
+
+Open **Examples → 12 V reduction bench**. Its dedicated gear drives an axle carrying a separate 14-tooth gear, which drives the 82-tooth output at 14/82 speed. The 19-part fixture has 21 connections and 11 locked support parts. It is an original test fixture, not an official manual reproduction.
+
+The RPM control previews the **white-gear axle**, defaulting to 5 RPM as a software choice. The supplier lists approximately 66 RPM without clearly identifying the shaft; neither that value nor an invented worm ratio is applied to the output. Reverse previews supply polarity. This tethered motor is excluded from remote vehicle controllers.
+
+The housing, mounting dimensions, 41 mm gear diameter, 56 visual teeth and seven visible worm turns are reconstruction estimates. Tooth count, worm starts/lead, internal speed ratio, torque, electrical dynamics and tooth contact are unverified. The worm is static display geometry; preview imposes motion on the keyed output, not a calibrated worm simulation. Sources and mass provenance are in [Classic parts coverage](docs/CLASSIC-PARTS.md#original-12-v-worm-drive).
+
+![Original 12 V drive and independent reduction axle](docs/screenshots/classic-12v-motor.png)

@@ -14,8 +14,9 @@ Source: [K’NEX User Group picture catalog](https://www.knexusergroup.org.uk/en
 | Coaster track | 91430 cross-tie, split purple tubing identified in 51587 manual | Unsupported layout preview; no coaster vehicle or rail splice mechanics |
 | Clips and spacers | 90900 tan drive clip, 848900 snap cap, 90994 blue spacer, 91224 sleeve; 90901 hole-end clip as 1-way connector | Three molded hinge halves, two rod-end stops, ten Y-clip colors, four ball-joint halves and the 91690 angled clip; other families pending |
 | Wheels | 16 hubs/tyres: pulley, spoked, racing and narrow families | Rod-end bearings, through bores, compatible tyre seats and keyed drive; profiles and tolerances approximate |
-| Gears and chain | 11 original gears plus 90987 chain; variants listed below | Parallel-axis and full crown right-angle mesh; chain is not an articulated transmission |
+| Gears and chain | 12 original gears plus 90987 chain; variants listed below | Parallel-axis and full crown right-angle mesh; chain is not an articulated transmission |
 | Enclosed battery motors | 92840 blue, 22722 green, 92401 two-speed | Separate reconstructed housings; imposed preview speeds, no torque/load simulation |
+| Other original motors | 92890 spring, 92815 external 12 V with dedicated 90983 gear | Finite spring turns and imposed worm-output preview; uncalibrated torque and internal ratio |
 
 ## Flexi variants
 
@@ -182,8 +183,8 @@ The following are identified candidates, not yet implemented. Their names and nu
 | Hinges | 9091213 packaged assembly | Audit package contents; implemented standard halves already mate |
 | Connector variants | Distinct 90910 orange track connector; remaining unlisted original variants | Reuse canonical geometry only when mold and connections match; audit interlock, motor mount and tyre compatibility |
 | Rigid/curved rods | 3310042 rigid 234; 91995 long 405 (Mighty Makers scope to audit); 3011001/3012001/3013001 curved; 3007001 X-rod | Verify physical profiles, endpoint spacing, side clips and material differences |
-| Gears | 91700 partial crown, 90996 multitrack, 90983 motor gear; additional original variants | Tooth count, profile, grip, partial engagement/worm transmission; avoid treating every gear as a parallel spur gear |
-| Motors | 92815 12 V, 92875/20554/92880 tethered, 92845 control; 92660 solar | Separate housings, mounts, drive geometry and controls. The 12 V motor drives 90983 by a worm, not a coaxial rod bore |
+| Gears | 91700 partial crown, 90996 multitrack; additional original variants | Tooth count, profile, grip, partial engagement/worm transmission; avoid treating every gear as a parallel spur gear |
+| Motors | 92875/20554/92880 tethered, 92845 control; 92660 solar | Separate housings, mounts, drive geometry and controls. The 12 V motor drives 90983 by a worm, not a coaxial rod bore |
 | Wheel families | 20301 narrow wheel and remaining original variants | Verify distinct molded profile, axle grip and dimensions |
 | Other panels | 99020 curved, 99005/99007/99008 flexible, 99013 special, 3310034 rectangular (scope to audit) | Attachment geometry, real sizes and optional mass; no generic plate substitutions |
 | Other mechanisms | Pulleys, rubber bands, original coaster cars, lift components and special axles | Finish catalog audit and identify documented original parts and supported mechanics |
@@ -340,3 +341,18 @@ The **Spring motor fan** example is a 14-part, 16-link test fixture, with two mo
 Contact validation checks axis alignment, radial pitch distance and the pinion height above the crown face. The 3 mm face height and tooth clearances are photo estimates. Ratios use tooth counts; direction follows tangential velocity at the contact, including reversed rods and reverse drive. Displaced gears, locked outputs and conflicting loops reject the drive before any rotation.
 
 The original **Three-axis crown gearbox** has 14 parts, 15 links and five locked fixture parts. Two 34:14 stages multiply speed by approximately 5.90. This is a spatial transmission test, not a freestanding manual build. Tests cover both assembly orders, multiple rim positions, rotated frames, long running/reversal, wrong faces, locking, reload and frame-rate consistency. No new physical parts are invented. Partial crowns and multitrack gears remain pending; torque, backlash and collision contact are not simulated.
+
+## Original 12 V worm drive
+
+| Part | Source | Mass used |
+| --- | --- | --- |
+| 92815 motor | [Supplier motor page](https://shop.knexusergroup.org.uk/products/92815), [independent supplier](https://knexreplacementparts.com/product/12v-motor-classic-sized/) | Approx. 96.45 g from independent supplier; original supplier's 96 g listing is a pack including gear and clip |
+| 90983 white/cream gear | [Supplier gear page](https://shop.knexusergroup.org.uk/products/90983) | Approx. 6.73 g |
+
+[Hint M3](https://www.knexusergroup.org.uk/en/knex-hint-M3.html) and its mounting photos show two underside mounting sleeves, a separate perpendicular driven axle, spacers and tan drive clips. The official [89790 Ferris wheel manual](https://www.basicfun.com/wp-content/uploads/2023/02/89790-KNEX-6ft-Ferris-Wheel.pdf), page 11, corroborates this mounting and dedicated gear arrangement. The supplier explicitly states that 90983 does not mesh with other K’NEX gears.
+
+The reconstruction uses a cylindrical gray case, rear power jack, thin mounting plate, two open sleeves and the exposed olive worm. Approximate dimensions: 28 mm case diameter, 51 mm cylinder length, 75 mm sleeve spacing, 45 mm sleeve length, 41 mm gear diameter, 24.5 mm worm-to-output axis offset. These are photo/grid-based estimates, not manufacturer measurements. The 56 visual perimeter teeth and seven visible worm turns are also unverified visual approximations; neither is used as a physical speed ratio. Key details and clearances are approximate.
+
+Worm drive connects only this dedicated pair. Playback requires a tan-keyed axle, separate bearing support and an aligned gear. Missing keys/bearings, displaced gears or locked driven groups block all motion. Ordinary gears can be added separately to the keyed axle. The original 19-part reduction bench demonstrates a separate 14:82 stage and locks its mounting fixture in space.
+
+The listed 66 RPM has an unspecified reference shaft. Output preview defaults to 5 RPM as a software setting; no calibrated worm ratio, torque, self-locking, backlash, friction, electrical power or lead contact is simulated. The exposed worm is static visual geometry while output motion is imposed. Reverse previews changed supply polarity rather than a physical reversing switch. The externally powered motor is unavailable in remote vehicle controls. Saved files preserve actual part and worm connection identities.

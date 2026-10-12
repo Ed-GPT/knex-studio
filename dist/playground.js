@@ -12,7 +12,7 @@ export function roverModel(){
  const bridge=part('c-orange',[-164.5,23.5,0],Q().setFromUnitVectors(V([1,0,0]),V([0,0,1])).toArray());m.parts.push(bridge);m.links.push(...autoLinks(m,bridge));
  m.controller=m.parts.filter(p=>definition(p).motor).map((p,i)=>({motorId:p.id,channel:i?'right':'left',forward:i?'KeyE':'KeyQ',reverse:i?'KeyD':'KeyA',invert:false}));return m;
 }
-export function defaultBindings(model){return model.parts.filter(p=>definition(p).motor&&!definition(p).springMotor).map((p,i)=>({motorId:p.id,channel:i===0?'left':i===1?'right':'aux',forward:i?'KeyE':'KeyQ',reverse:i?'KeyD':'KeyA',invert:false}));}
+export function defaultBindings(model){return model.parts.filter(p=>definition(p).motor&&!definition(p).springMotor&&!definition(p).wormMotor).map((p,i)=>({motorId:p.id,channel:i===0?'left':i===1?'right':'aux',forward:i?'KeyE':'KeyQ',reverse:i?'KeyD':'KeyA',invert:false}));}
 export function motorCommands(bindings,keys,{throttle=0,steer=0,gamepad=null}={}){
  const forward=Math.max(-1,Math.min(1,throttle+(keys.has('ArrowUp')?1:0)-(keys.has('ArrowDown')?1:0)+(gamepad?.throttle||0))),turn=Math.max(-1,Math.min(1,steer+(keys.has('ArrowLeft')?1:0)-(keys.has('ArrowRight')?1:0)+(gamepad?.steer||0)));
  return new Map(bindings.map(b=>{const direct=(keys.has(b.forward)?1:0)-(keys.has(b.reverse)?1:0),mix=b.channel==='left'?forward+turn:b.channel==='right'?forward-turn:b.channel==='all'?forward:0;return[b.motorId,Math.max(-1,Math.min(1,direct+mix))*(b.invert?-1:1)];}));
@@ -22,6 +22,7 @@ export const COURSES={
  slalom:{name:'Slalom playground',start:[-1050,0],yaw:0,obstacles:[{x:-500,z:-260,w:90,h:400},{x:0,z:260,w:90,h:400},{x:500,z:-260,w:90,h:400}],checkpoints:[[1000,0],[-1050,0]]}
 };
 export function createDrive(source,course='circuit'){
+ if(source.parts.some(p=>definition(p).wormMotor))throw Error('The 12 V motor is a tethered bench drive. Use Simulate → Motors.');
  if(!COURSES[course])throw Error('Unknown environment.');if(source.parts.some(p=>definition(p).springMotor))throw Error('Spring motors currently run in Simulate → Motors. Vehicle spring torque and coasting are not modeled yet.');const model=parseModel(exportModel(source)),motors=model.parts.filter(p=>definition(p).motor);if(!motors.length)throw Error('Add a motor, or load the Twin-motor rover example.');
  const channels=[];for(const motor of motors){const drive=motorDrive(model,motor.id);if(!drive.ready)continue;const tyres=model.parts.filter(p=>drive.ids.has(p.id)&&definition(p).tire);if(!tyres.length)continue;const axis=V(drive.axis);if(Math.abs(axis.z)<.99)throw Error('Driving currently needs horizontal wheel axles along Z. Rotate the build before testing.');channels.push({motorId:motor.id,radius:tyres.reduce((s,p)=>s+definition(p).diameter/2,0)/tyres.length,z:tyres.reduce((s,p)=>s+p.pos[2],0)/tyres.length,sign:Math.sign(axis.z),ids:drive.ids});}
  if(!channels.length)throw Error('No driven tyres found. Key a wheel to a motor axle with a tan clip.');
