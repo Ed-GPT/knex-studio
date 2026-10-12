@@ -1,3 +1,4 @@
+import {BoundsBroadphase} from './physics-broadphase.js';
 import * as C from './vendor/cannon-es.js';
 import * as T from './vendor/three.module.js';
 // Supplier: 90990 + 90991, approx. 46 mm. Mass/friction are adjustable estimates.
@@ -17,9 +18,9 @@ export function createBallWorld(meshes=[],options={}){
  const mass=options.mass??BALL.mass,friction=options.friction??.24,bounce=options.bounce??.18;
  if(!Number.isFinite(mass)||mass<1||mass>100||!Number.isFinite(friction)||friction<0||friction>1||!Number.isFinite(bounce)||bounce<0||bounce>.8)throw Error('Invalid ball settings.');
  const world=new C.World({gravity:new C.Vec3(0,-9.81,0),allowSleep:true});world.solver.iterations=14;world.solver.tolerance=1e-8;
- world.broadphase=new C.SAPBroadphase(world);world.broadphase.useBoundingBoxes=true;
+ world.broadphase=new BoundsBroadphase(world);world.broadphase.useBoundingBoxes=true;
  const material=new C.Material('ball-test');world.addContactMaterial(new C.ContactMaterial(material,material,{friction,restitution:bounce,contactEquationStiffness:1e8,contactEquationRelaxation:3}));
- const floor=new C.Body({mass:0,material,shape:new C.Plane()});floor.quaternion.setFromEuler(-Math.PI/2,0,0);world.addBody(floor);
+ const floor=new C.Body({mass:0,material,shape:new C.Plane()});floor.quaternion.setFromEuler(-Math.PI/2,0,0);floor.aabbNeedsUpdate=true;world.addBody(floor);
  const geometry=[];let total=0;
  for(const m of meshes){if(m.vertices.length%3||m.indices.length%3||m.vertices.some(v=>!Number.isFinite(v))||m.indices.some(i=>!Number.isInteger(i)||i<0||i>=m.vertices.length/3||i>32767))throw Error('Invalid ball-test collision mesh.');total+=m.indices.length/3;if(total>MAX_TRIANGLES)throw Error('This test exceeds 300,000 collision triangles. Test a smaller section.');
   const shape=new C.Trimesh(m.vertices,m.indices),body=new C.Body({mass:0,material,shape});world.addBody(body);geometry.push({shape,box:new T.Box3().setFromArray(m.vertices),data:m});

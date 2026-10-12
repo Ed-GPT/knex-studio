@@ -63,7 +63,7 @@ The complete static application is in `dist/`, including Three.js and cannon-es.
 
 ## Example gallery
 
-Every thumbnail is rendered from the actual example model. Counts come from its parts, rather than handwritten claims. Opening an example first archives the current model; simulations start when requested.
+The gallery opens immediately; visible thumbnails are generated one at a time and cached for the session. Every thumbnail is rendered from the actual example model. Counts come from its parts, rather than handwritten claims. Opening an example first archives the current model; simulations start when requested.
 
 | Level | Builds | Explore |
 | --- | --- | --- |
@@ -314,7 +314,7 @@ The model limit remains **2,500 parts**. Rigid rod and connector render meshes a
 
 Parts are procedural reconstructions from identified references, not production CAD. Nominal rod lengths differ from effective connector-center spacing. Small clip details, clearances, motor housing dimensions and tooth shapes remain approximate. Classic flexi rods and split-tubing track are shape previews; Micro track is not included.
 
-The shared physics workspace handles moving structures and balls. **Motor/gear playback and the driving playground remain prescribed-motion previews**, without torque, battery-load, suspension or full vehicle contacts. They do not currently drive the shared physics world. Placement and sliding retain separate conservative fit checks; rotation has no complete swept collision check. Supplier approximate masses and speed references are recorded in `dist/part-specs.js`; structural masses can be overridden for batteries or payload.
+The shared physics workspace handles moving structures and balls. **Motor/gear playback and the driving playground remain prescribed-motion previews**, without torque, battery-load, suspension or full vehicle contacts. The shared world now has its own torque-limited drive controls for the 92840, 22722 and 92401 enclosed motors. Placement and sliding retain separate conservative fit checks; rotation has no complete swept collision check. Supplier approximate masses and speed references are recorded in `dist/part-specs.js`; structural masses can be overridden for batteries or payload.
 
 ## Saving
 
@@ -467,3 +467,22 @@ The cap attaches rigidly to either rod end, in either assembly order. It has one
 The [9091213 packaged hinge](https://shop.knexusergroup.org.uk/products/9091213) is confirmed as the existing 90912 blue and 90919 black halves, not another molded part. The orange 90914OR listing remains deferred because its photo shows a ball-shaped end inconsistent with the listed rod-end identity. The [91620 stub-axle hint](https://www.knexusergroup.org.uk/en/knex-hint-W8.html) establishes attachment to 5-way/8-way connector faces and a free wheel on its rod end; detailed mounting geometry remains pending.
 
 ![Alternative Classic rod-end caps](docs/screenshots/classic-sleeve-cap.png)
+
+
+## Motorized ball run and fitting between connectors
+
+**Examples → Motor lift & ball run → Physics → Play** runs a 101-part, single-pass fixture. A reversing **92840** motor lifts the ball into a narrowed tubing intake. Banked orange rails descend around two bends, the ball drops onto two **91108 190 mm flexis**, then reaches the rod catcher. **Reset** reloads the ball. Build-to-build collisions are enabled. The track and motor housing are locked in space; this is an original test fixture, not a freestanding model or a recirculating elevator.
+
+![Motor lift, banked tubing, flexi run-out and catcher in the shared physics workspace](docs/screenshots/motor-ball-run.png)
+
+**Physics → Motors** enables a drive shaft and adjusts RPM, direction, reversing sweep and estimated torque limit. Supported enclosed motors: 92840, 22722 and 92401. Motor constraints, ball contacts, gravity and hinges run in the same solver. Gear teeth, belt tension and flexible chains do not yet transmit physical torque here. The separate motor preview still offers ideal gear and belt playback. RPM and torque settings are simulation parameters, not verified hardware ratings.
+
+Select two connectors, then **Generate → Fit between**. Choose the open sockets, stock rod or flexi, and bend direction in a 3D preview. Both connectors remain fixed; both ends connect when accepted. Rigid rods require the correct distance and facing sockets. Flexis retain their documented approximate stock length. Impossible spans are rejected; no rods are stretched. Bend limits and interference checks remain unverified.
+
+![Two fixed sockets joined by a stock-length flexi in the 3D fitting preview](docs/screenshots/fit-between.png)
+
+**Path builder → Ball rails** uses real blue cross-rods with 90910 track connectors and 92602 tubing cuts. Narrow transfer blends the entrance rail spacing from a white-rod-sized gap to the blue-rod gauge; clamps retain their actual side connections. Level ends blends banking to zero over the first and last 250 mm. Tubing joins use the existing 20501 inserts. The lift fixture leaves its intake tips overhanging the next cross-tie, with the fixture lock holding that geometry.
+
+Part evidence: [92840 motor and mounting](https://www.knexusergroup.org.uk/en/knex-hint-M4.html), [92602 tubing](https://shop.knexusergroup.org.uk/products/92602), [90910 track connector](https://shop.knexusergroup.org.uk/products/90910), [91108 flexi](https://shop.knexusergroup.org.uk/products/91108). These are identified parts with reconstructed profiles and approximate dimensions, not exact manufacturing CAD.
+
+Physics now refreshes the rotated floor's collision bounds and uses consistently sorted bounds for long assemblies, avoiding missed contacts. Large locked compounds are partitioned for collision lookup without changing their rendered parts or saved connections. Contact shapes remain simplified; small transient contact penetration and different outcomes after editing a track are still possible.
