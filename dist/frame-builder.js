@@ -7,21 +7,24 @@ export const FRAME_RODS=['r-green','r-white','r-blue','r-yellow','r-red','r-gray
 export const FRAME_ROD_CHOICES=[...FRAME_RODS,...CLASSIC_RIGID_RODS.map(d=>d.id),...CLASSIC_ROD_COLORS.map(d=>d.id)];
 export function frameDiagonal(rod){if(!FRAME_ROD_CHOICES.includes(rod))return undefined;const d=BY_ID[rod];return d.rigidRod?(d.stockIndex===4?'r-rigid-black':undefined):(d.rodVariant&&CLASSIC_ROD_COLORS.find(next=>next.stockIndex===d.stockIndex+1&&next.colorName===d.colorName)?.id||FRAME_RODS[d.stockIndex+1]);}
 export const framePanels=rod=>FRAME_ROD_CHOICES.includes(rod)?Object.values(BY_ID).filter(d=>d.panelShape==='square'&&Math.abs(d.pitch-BY_ID[rod].length-2*SOCKET)<1e-6):[];
-export function frameDimensions({kind='frame',counts=[3,2,2],rod='r-blue',braced=true,plane='xy',panel=null}={}){
+export function frameDimensions({kind='frame',counts=[3,2,2],rod='r-blue',braced=true,plane='xy',panel=null,openInterior=false,openEnds=false}={}){
  if(!['grid','frame'].includes(kind)||!['xy','xz'].includes(plane)||!FRAME_ROD_CHOICES.includes(rod))throw Error('Choose Classic rods and a grid or frame.');
  if(!Array.isArray(counts)||counts.length!==3||counts.some(n=>!Number.isInteger(n)||n<1||n>30))throw Error('Use 1 to 30 cells along each axis.');
+ if(typeof openInterior!=='boolean'||typeof openEnds!=='boolean')throw Error('Open interior must be on or off.');
+ openInterior=kind==='frame'&&openInterior;openEnds=openInterior&&openEnds;
  const [x,y,z]=[counts[0],counts[1],kind==='grid'?0:counts[2]],pitch=BY_ID[rod].length+2*SOCKET,diagonal=frameDiagonal(rod);
  if(panel&&!framePanels(rod).some(d=>d.id===panel))throw Error('Choose a square panel that fits this stock rod size.');
  if(panel&&braced)throw Error('Panels and braces use the same diagonal sockets. Choose one.');
  if(braced&&!diagonal)throw Error('This rod size has no matching stock diagonal. Turn braces off.');
- const nodes=(x+1)*(y+1)*(z+1),edges=x*(y+1)*(z+1)+(x+1)*y*(z+1)+(x+1)*(y+1)*z,braces=braced?x*y*(z+1)+(kind==='frame'?x*z*(y+1):0):0,panels=panel?(kind==='grid'?x*y:2*x*y+2*x*z):0,total=nodes*(kind==='frame'?2:1)+edges+braces+panels;
+ const interior=n=>Math.max(0,n-1),faceNodes=(a,b)=>(a+1)*(b+1)-(openInterior?interior(a)*interior(b):0),nodes=(x+1)*(y+1)*(z+1)-(openInterior?(openEnds?x+1:interior(x))*interior(y)*interior(z):0),edges=x*faceNodes(y,z)+(openEnds?2*(x+1)*(y+z):y*faceNodes(x,z)+z*faceNodes(x,y)),braces=braced?(openInterior?2*x*y+2*x*z:x*y*(z+1)+(kind==='frame'?x*z*(y+1):0)):0,panels=panel?(kind==='grid'?x*y:2*x*y+2*x*z):0,total=nodes*(kind==='frame'?2:1)+edges+braces+panels;
  if(total>2500)throw Error(`This needs ${total} parts. Maximum 2500; reduce the cell counts.`);
- return{kind,counts:[x,y,z],rod,braced,plane,panel,panels,pitch,diagonal,total,size:(kind==='grid'&&plane==='xz'?[x,0,y]:[x,y,z]).map(n=>n*pitch)};
+ return{kind,counts:[x,y,z],rod,braced,plane,panel,panels,openInterior,openEnds,pitch,diagonal,total,size:(kind==='grid'&&plane==='xz'?[x,0,y]:[x,y,z]).map(n=>n*pitch)};
 }
 export function buildFrame(options={}){
  const d=frameDimensions(options),[nx,ny,nz]=d.counts,m=emptyModel(d.kind==='grid'?'Generated grid':'Generated frame'),nodes=new Map(),rows=new Map(),rotation=d.kind==='grid'&&d.plane==='xz'?Q().setFromAxisAngle(V([1,0,0]),Math.PI/2):Q();
  const key=(x,y,z)=>`${x},${y},${z}`,row=(y,ids)=>{if(!rows.has(y))rows.set(y,[]);rows.get(y).push(...ids);};
  for(let y=0;y<=ny;y++)for(let z=0;z<=nz;z++)for(let x=0;x<=nx;x++){
+  if(d.openInterior&&(d.openEnds||x>0&&x<nx)&&y>0&&y<ny&&z>0&&z<nz)continue;
   const pos=V([x*d.pitch,y*d.pitch,z*d.pitch]).applyQuaternion(rotation).toArray(),a=part(d.kind==='grid'?'c-white':'c-blue',pos,rotation.toArray()),pair=[a];m.parts.push(a);
   if(d.kind==='frame'){const local={parts:[a],links:[]},p=solve(local,'c-blue',targets(local,'c-blue','interlock')[0],'interlock');m.parts.push(p.part);m.links.push(p.link);pair.push(p.part);}
   nodes.set(key(x,y,z),pair);row(y,pair.map(p=>p.id));
@@ -32,9 +35,9 @@ export function buildFrame(options={}){
   m.parts.push(r);m.links.push({a:ap.partId,ap:ap.key,b:r.id,bp:'end0',mode:'end'},{a:bp.partId,ap:bp.key,b:r.id,bp:'end1',mode:'end'});row(level,[r.id]);
  };
  for(let y=0;y<=ny;y++)for(let z=0;z<=nz;z++)for(let x=0;x<=nx;x++){
-  if(x<nx)span([x,y,z],[x+1,y,z],d.rod,y);if(y<ny)span([x,y,z],[x,y+1,z],d.rod,y+1);if(z<nz)span([x,y,z],[x,y,z+1],d.rod,y);
-  if(d.braced&&x<nx&&y<ny)span([x,y,z],[x+1,y+1,z],d.diagonal,y+1);
-  if(d.braced&&d.kind==='frame'&&x<nx&&z<nz)span([x,y,z],[x+1,y,z+1],d.diagonal,y);
+  if(x<nx&&(!d.openInterior||y===0||y===ny||z===0||z===nz))span([x,y,z],[x+1,y,z],d.rod,y);if(y<ny&&(!d.openInterior||!d.openEnds&&(x===0||x===nx)||z===0||z===nz))span([x,y,z],[x,y+1,z],d.rod,y+1);if(z<nz&&(!d.openInterior||!d.openEnds&&(x===0||x===nx)||y===0||y===ny))span([x,y,z],[x,y,z+1],d.rod,y);
+  if(d.braced&&x<nx&&y<ny&&(!d.openInterior||z===0||z===nz))span([x,y,z],[x+1,y+1,z],d.diagonal,y+1);
+  if(d.braced&&d.kind==='frame'&&x<nx&&z<nz&&(!d.openInterior||y===0||y===ny))span([x,y,z],[x+1,y,z+1],d.diagonal,y);
  }
  const panelLayers=new Map();
  if(d.panel){
@@ -45,6 +48,7 @@ export function buildFrame(options={}){
   if(d.kind==='frame')for(const y of [0,ny])for(let z=0;z<nz;z++)for(let x=0;x<nx;x++)face(x,y,z,'xz',y?'Top panels':'Bottom panels');
   m.name=d.kind==='grid'?'Generated paneled grid':'Generated paneled frame';
  }
+ if(d.openInterior)m.name=d.openEnds?(d.panel?'Generated paneled tunnel':'Generated open-ended frame'):(d.panel?'Generated paneled shell':'Generated hollow frame');
  for(const [name,ids]of panelLayers)makeLayer(m,ids,name);
  for(const [y,ids]of rows)makeLayer(m,ids,d.kind==='grid'?`Row ${y+1}`:y?`Level ${y}`:'Base');makeGroup(m,m.parts.map(p=>p.id),d.kind==='grid'?'Grid':'Frame');return{model:m,dimensions:d};
 }

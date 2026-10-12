@@ -505,3 +505,14 @@ The 11.8 mm end offset, 1.2 mm stop width, 7.4 mm cross diameter and bore thickn
 ![Bearing stopped before a molded rod barrier](screenshots/molded-axle-stops.png)
 
 Reference audit: the [20301 narrow red 37 mm wheel](https://shop.knexusergroup.org.uk/products/20301) is pictured in the Classic catalog and has a distinct spoked profile. Its supplier listing does not establish axle grip, end retention, compatible tyres or mass. It remains pending instead of inheriting another wheel's mounting behavior.
+
+
+## Hollow procedural frames
+
+The rectangular frame generator has **Open interior** and **Open ends** options. It retains the outer lattice with stock-length edges, existing blue 3D connector pairs and their available XY/XZ braces. Open ends removes the X-end grids, including their unused central nodes; YZ diagonals are not invented. Four faces can take matching square panels instead of braces. Panel pegs keep their four separate socket connections.
+
+A default **Hall** preset spans 8 × 4 × 3 blue-rod cells, 600 × 300 × 225 mm between outer connector centers: 660 parts and 906 connections, compared with 1,047 parts and 1,554 connections for the same filled lattice. Opening its ends yields 602 parts and 826 connections. The revised **Paneled tunnel** is 144 parts and 240 connections, with a continuous passage along X. Stock connector bodies reduce the usable opening relative to center spacing.
+
+Generation still reuses matching parts and skips blocked additions. It does not remove existing interior objects or members. One insertion is one undo step. Layer membership and original IDs, locks and payloads are preserved when reusing parts. Original saved tunnel models remain unchanged until the user chooses a new example.
+
+Eight focused tests cover standard stock lengths, one-cell dimensions, all four square-panel sizes, full peg/socket alignment, a connected 2,116-part shell, duplicate generation, extension along all three axes, preserved interior objects, saved-model round trips and open-ended passage geometry. This is not a structural strength, buckling, manufacturing-fit or load-capacity calculation.

@@ -145,7 +145,7 @@ Each bay gets a scene layer. Repeating at the previous roof's depth reuses the s
 
 Enable **Molded panels** and choose a color thumbnail. The builder offers only square panels that fit the selected stock rods: white, blue, yellow, red and tan rigid. Choosing panels turns diagonal braces off because they share sockets; choosing braces removes panels. Unsupported sizes disable the panel option.
 
-Grids fill every cell in either plane. Rectangular frames cover front, back, top and bottom, with separate panel layers. Their two side faces stay open because the paired blue connectors do not provide diagonal sockets in that plane. Every panel has four actual peg connections. **Examples → Paneled tunnel** opens a 171-part, 282-connection demonstration.
+Grids fill every cell in either plane. Rectangular frames cover front, back, top and bottom, with separate panel layers. Their two side faces stay open because the paired blue connectors do not provide diagonal sockets in that plane. Every panel has four actual peg connections. **Examples → Paneled tunnel** opens a 144-part, 240-connection demonstration with a clear interior and open ends.
 
 ![Procedural panel frame with matching colors and visible insertion control](docs/screenshots/paneled-frame-builder.png)
 
@@ -404,3 +404,16 @@ The original orange 90958 rod now stops coaxial bearings at its molded barriers.
 ![Sliding arm at an orange rod stop](docs/screenshots/molded-axle-stops.png)
 
 Stop dimensions and bore clearances remain photo estimates. This is an editor collision constraint, not a measured snap-force or contact-physics model. See [reference and limits](docs/CLASSIC-PARTS.md#molded-stops-on-orange-rods).
+
+
+### Hollow halls and tunnels
+
+**Generate → Grid & frame → Hall** creates a stock-rod outer frame. **Open interior** removes the generated internal lattice; **Open ends** also removes the two X-end grids to leave a continuous passage. Use + / − to grow the shell, choose another Classic rod size, or replace diagonal braces with matching molded panels.
+
+![Hollow frame with open-ends controls](docs/screenshots/hollow-frame-open-ends.png)
+
+The gallery's **Hollow hall frame** has 660 parts. **Paneled tunnel** now uses 144 parts and 240 connections with no interior crossbars or end-face grids. Existing saved builds are preserved. Adding a shell alongside another shares matching boundaries; generating over an existing filled frame does not remove its internal parts.
+
+![Paneled tunnel with a clear interior](docs/screenshots/paneled-tunnel-open.png)
+
+All members use existing stock lengths and real sockets. Tests cover a connected 2,116-part shell, every standard rod length, thin one-cell dimensions, all matching square-panel sizes, shared faces, preserved payloads and a clear passage. These are generated examples, not official manual replicas or load-rated structures. XY and XZ faces can be braced; the paired blue connectors do not provide YZ diagonal sockets. Dimensions refer to connector centers; molded bodies project into openings.
