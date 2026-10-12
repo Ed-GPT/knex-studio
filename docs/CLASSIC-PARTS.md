@@ -13,7 +13,7 @@ Source: [K’NEX User Group picture catalog](https://www.knexusergroup.org.uk/en
 | Flexi rods | 12 variants across four approximate lengths, listed below | Fixed-length shape editing, tangent-aligned end sockets; no elastic dynamics or verified bend limits |
 | Coaster track | 91430 cross-tie, split purple tubing identified in 51587 manual | Unsupported layout preview; no coaster vehicle or rail splice mechanics |
 | Clips and spacers | 90900 tan drive clip, 848900 snap cap, 90994 blue spacer, 91224 sleeve; 90901 hole-end clip as 1-way connector | Three molded hinge halves, two rod-end stops, ten Y-clip colors, four ball-joint halves and the 91690 angled clip; other families pending |
-| Wheels | 16 hubs/tyres: pulley, spoked, racing and narrow families | Rod-end bearings, through bores, compatible tyre seats and keyed drive; profiles and tolerances approximate |
+| Wheels | 18 wheels/hubs/tyres: small one-piece, pulley, spoked, racing and narrow families | Rod-end bearings, through bores, compatible tyre seats and keyed drive; profiles and tolerances approximate |
 | Gears and chain | 12 original gears plus 90987 chain; variants listed below | Parallel-axis and full crown right-angle mesh; chain is not an articulated transmission |
 | Enclosed battery motors | 92840 blue, 22722 green, 92401 two-speed | Separate reconstructed housings; imposed preview speeds, no torque/load simulation |
 | Other original motors | 92890 spring, 92815 external 12 V with dedicated 90983 gear | Finite spring turns and imposed worm-output preview; uncalibrated torque and internal ratio |
@@ -356,3 +356,19 @@ The reconstruction uses a cylindrical gray case, rear power jack, thin mounting 
 Worm drive connects only this dedicated pair. Playback requires a tan-keyed axle, separate bearing support and an aligned gear. Missing keys/bearings, displaced gears or locked driven groups block all motion. Ordinary gears can be added separately to the keyed axle. The original 19-part reduction bench demonstrates a separate 14:82 stage and locks its mounting fixture in space.
 
 The listed 66 RPM has an unspecified reference shaft. Output preview defaults to 5 RPM as a software setting; no calibrated worm ratio, torque, self-locking, backlash, friction, electrical power or lead contact is simulated. The exposed worm is static visual geometry while output motion is imposed. Reverse previews changed supply polarity rather than a physical reversing switch. The externally powered motor is unavailable in remote vehicle controls. Saved files preserve actual part and worm connection identities.
+
+
+## Classic 25 mm one-piece wheels
+
+| Part | Source | Mount | Approximate supplier mass |
+| --- | --- | --- | --- |
+| Open center 91140 | [Supplier listing](https://shop.knexusergroup.org.uk/products/91140) | Friction fit through a Classic axle; optional tan key | 1.53 g |
+| Closed center 918300 | [Supplier listing](https://shop.knexusergroup.org.uk/products/918300) | Free bearing on a rod end | 1.7 g |
+
+[Hint W1](https://www.knexusergroup.org.uk/en/knex-hint-W1.html) distinguishes the friction-fit and free-bearing versions and shows a tan key on the open wheel. Both are original-size Classic parts; their separate Micro use is outside this editor's scope. They are complete plastic wheels, with no invented tyre seat. The closed wheel has no through hole or verified key connection.
+
+Photo reconstructions include the six lightening holes, molded rim blocks, three-lobed open center and blind bearing cap. The supplier's 25 mm diameter is approximate. Modeled 6.3 mm width, 4.3 mm blind-bearing depth, hole sizes, lobes and grip/key tolerances are unverified estimates. Friction fit is treated as a rigid grip: no slip force or friction coefficient is simulated. Disconnect to reposition the gripping wheel; the blind wheel rotates independently but cannot slide along its axle.
+
+The six-part **Small wheels · grip and spin** example is a fixture locked in space, not a car or official manual build. Running its motor moves the red axle, gripping wheel and tan clip; the closed wheel remains free. The playground recognizes these complete wheels as rolling surfaces and uses their 12.5 mm modeled radius. Existing flat-ground driving limits remain: no tire deformation, calibrated traction or suspension/contact solver. Tests cover both assembly orders, off-center and rotated shafts, opposite rod ends, optional key, invalid connections, independent rotation, forward/reverse drive, locked-output atomicity, open geometry, save/import and driving consistency at 30/60/120 FPS.
+
+![Classic small wheels: gripping and free-bearing versions](screenshots/classic-small-wheels.png)

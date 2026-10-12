@@ -1,3 +1,4 @@
+import {SMALL_WHEELS} from './small-wheels.js';
 import {WORM_MOTOR,WORM_WHEEL,WORM_GEAR_CENTER,wormCompatible} from './worm-motor.js';
 import {localBores} from './bores.js';
 import {SPRING_MOTOR,SPRING_PREVIEW_LIMIT} from './spring-motor.js';
@@ -26,7 +27,7 @@ export const CATALOG=[
  WORM_MOTOR,WORM_WHEEL,SPRING_MOTOR,...CLASSIC_GEARS,...CLASSIC_PANELS,ANGLED_CLIP,TWO_SPEED_MOTOR,
  ...CLASSIC_CLIPS,...CLASSIC_Y_CLIPS,...BALL_JOINTS,
  ...FLEXIBLE_PARTS,
- ...CLASSIC_WHEELS,
+ ...CLASSIC_WHEELS,...SMALL_WHEELS,
  ...[['blue14','Blue gear · 14 teeth','91317',14,25,'#2574c7',false,false],['gray14','Push-on gear · 14 teeth','90988',14,25,'#a0a7ae',true,false],['red34','Red spur gear · 34 teeth','90985',34,55,'#d73539',false,false],['yellow34','Yellow crown gear · 34 teeth','90993',34,55,'#f4c52d',false,true],['yellow82','Large crown gear · 82 teeth','91998',82,130,'#ebc32e',false,true]].map(([id,name,partNumber,teeth,diameter,color,axleGrip,crown])=>({id:'g-'+id,name,partNumber,teeth,diameter,color,axleGrip,crown,pitchRadius:teeth*1.5625/2,gear:true,group:'gears',thickness:6.3,slots:[],reference:'https://shop.knexusergroup.org.uk/products/'+partNumber})),
  {id:'chain-large',name:'Large chain link',partNumber:'90987',chain:true,pitch:26,group:'gears',color:'#272b30',thickness:9,slots:[],reference:'https://shop.knexusergroup.org.uk/products/90987'},
  {id:'m-battery',name:'Legacy placeholder motor',legacy:true,group:'motors',color:'#286dc5',motor:true,thickness:32,slots:[]},
@@ -64,7 +65,7 @@ export function linkedBore(model,l){const p=model.parts.find(p=>(p.id===l.a||p.i
 export const ports=p=>localPorts(p).map(x=>worldPort(p,x));
 export function busy(model,id,key){if(/^tire[01]?$/.test(key))return tyreSeatBusy(model,id,key);return model.links.some(l=>(l.a===id&&occupancyKey(l.ap)===occupancyKey(key))||(l.b===id&&occupancyKey(l.bp)===occupancyKey(key)));}
 export const limits=p=>Math.max(0,definition(p).length/2-8);
-export const keyCompatible=d=>d.wheelHub&&d.keyable!==false||d.gear&&!d.axleGrip&&!d.endBearing&&!d.noBore&&d.keyable!==false||d.group==='connectors'&&!d.interlock&&!d.noBore;
+export const keyCompatible=d=>d.smallWheel&&d.keyable||d.wheelHub&&d.keyable!==false||d.gear&&!d.axleGrip&&!d.endBearing&&!d.noBore&&d.keyable!==false||d.group==='connectors'&&!d.interlock&&!d.noBore;
 export const keyZ=d=>d.driveClip?3.2:d.keyDepth!==undefined?d.keyDepth:-(d.thickness||6.3)/2;
 export const tireCompatible=(a,b)=>a.tire&&a.fits.includes(connectorShape(b))||b.tire&&b.fits.includes(connectorShape(a));
 export function targets(model,type,mode){const d=BY_ID[type];let list=[];for(const p of model.parts){const t=definition(p);if((d.flexi||t.flexi)&&mode!=='end'||d.tubing||t.tubing)continue;if(mode==='worm'&&wormCompatible(d,t)&&!busy(model,p.id,t.wormMotor?'worm':'teeth')){list.push(worldPort(p,{key:t.wormMotor?'worm':'teeth',kind:'worm',pos:t.wormMotor?WORM_GEAR_CENTER:[0,0,0],dir:[0,0,1]}));

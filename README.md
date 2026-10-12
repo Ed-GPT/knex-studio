@@ -339,3 +339,12 @@ The RPM control previews the **white-gear axle**, defaulting to 5 RPM as a softw
 The housing, mounting dimensions, 41 mm gear diameter, 56 visual teeth and seven visible worm turns are reconstruction estimates. Tooth count, worm starts/lead, internal speed ratio, torque, electrical dynamics and tooth contact are unverified. The worm is static display geometry; preview imposes motion on the keyed output, not a calibrated worm simulation. Sources and mass provenance are in [Classic parts coverage](docs/CLASSIC-PARTS.md#original-12-v-worm-drive).
 
 ![Original 12 V drive and independent reduction axle](docs/screenshots/classic-12v-motor.png)
+
+
+### Small Classic wheels: grip or free bearing
+
+**Parts → Wheels** includes [91140 open-center](https://shop.knexusergroup.org.uk/products/91140) and [918300 closed-center](https://shop.knexusergroup.org.uk/products/918300) 25 mm wheels. The open wheel grips the axle and turns with it; a tan key is optional. The closed wheel snaps onto a rod end and spins independently. Neither takes an extra tyre. These distinct connections follow [Hint W1](https://www.knexusergroup.org.uk/en/knex-hint-W1.html).
+
+**Examples → Small wheels · grip and spin** compares them on one powered shaft. Its support fixture is locked in space. The playground also recognizes complete wheels as rolling surfaces. Diameter and supplier mass are approximate; the 6.3 mm width, 4.3 mm bearing depth and molded details are photo estimates. Grip is idealized, with no calibrated slip or traction model.
+
+![Powered comparison of original small wheels](docs/screenshots/classic-small-wheels.png)

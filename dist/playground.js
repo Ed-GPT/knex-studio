@@ -1,3 +1,4 @@
+import {isRollingSurface} from './small-wheels.js';
 import {motorRate} from './classic-motors.js';
 import {assertUngrounded} from './grounding.js';
 import {V,Q,part,definition,component,ports,autoLinks,exportModel,parseModel} from './engine.js';
@@ -24,10 +25,10 @@ export const COURSES={
 export function createDrive(source,course='circuit'){
  if(source.parts.some(p=>definition(p).wormMotor))throw Error('The 12 V motor is a tethered bench drive. Use Simulate → Motors.');
  if(!COURSES[course])throw Error('Unknown environment.');if(source.parts.some(p=>definition(p).springMotor))throw Error('Spring motors currently run in Simulate → Motors. Vehicle spring torque and coasting are not modeled yet.');const model=parseModel(exportModel(source)),motors=model.parts.filter(p=>definition(p).motor);if(!motors.length)throw Error('Add a motor, or load the Twin-motor rover example.');
- const channels=[];for(const motor of motors){const drive=motorDrive(model,motor.id);if(!drive.ready)continue;const tyres=model.parts.filter(p=>drive.ids.has(p.id)&&definition(p).tire);if(!tyres.length)continue;const axis=V(drive.axis);if(Math.abs(axis.z)<.99)throw Error('Driving currently needs horizontal wheel axles along Z. Rotate the build before testing.');channels.push({motorId:motor.id,radius:tyres.reduce((s,p)=>s+definition(p).diameter/2,0)/tyres.length,z:tyres.reduce((s,p)=>s+p.pos[2],0)/tyres.length,sign:Math.sign(axis.z),ids:drive.ids});}
- if(!channels.length)throw Error('No driven tyres found. Key a wheel to a motor axle with a tan clip.');
+ const channels=[];for(const motor of motors){const drive=motorDrive(model,motor.id);if(!drive.ready)continue;const tyres=model.parts.filter(p=>drive.ids.has(p.id)&&isRollingSurface(definition(p)));if(!tyres.length)continue;const axis=V(drive.axis);if(Math.abs(axis.z)<.99)throw Error('Driving currently needs horizontal wheel axles along Z. Rotate the build before testing.');channels.push({motorId:motor.id,radius:tyres.reduce((s,p)=>s+definition(p).diameter/2,0)/tyres.length,z:tyres.reduce((s,p)=>s+p.pos[2],0)/tyres.length,sign:Math.sign(axis.z),ids:drive.ids});}
+ if(!channels.length)throw Error('No driven wheels found. Fit an open-center wheel, or key a wheel hub to the motor axle with a tan clip.');
  const ids=component(model,motors[0].id);assertUngrounded(model,ids);if(channels.some(c=>!ids.has(c.motorId)))throw Error('Connect all drive motors to one chassis before testing.');
- const tyres=model.parts.filter(p=>ids.has(p.id)&&definition(p).tire),minX=Math.min(...tyres.map(p=>p.pos[0]-definition(p).diameter/2)),maxX=Math.max(...tyres.map(p=>p.pos[0]+definition(p).diameter/2)),minZ=Math.min(...tyres.map(p=>p.pos[2]-definition(p).thickness/2)),maxZ=Math.max(...tyres.map(p=>p.pos[2]+definition(p).thickness/2));
+ const tyres=model.parts.filter(p=>ids.has(p.id)&&isRollingSurface(definition(p))),minX=Math.min(...tyres.map(p=>p.pos[0]-definition(p).diameter/2)),maxX=Math.max(...tyres.map(p=>p.pos[0]+definition(p).diameter/2)),minZ=Math.min(...tyres.map(p=>p.pos[2]-definition(p).thickness/2)),maxZ=Math.max(...tyres.map(p=>p.pos[2]+definition(p).thickness/2));
  const center=[(minX+maxX)/2,0,(minZ+maxZ)/2],wheelRadius=Math.hypot((maxX-minX)/2,(maxZ-minZ)/2),groundY=Math.min(...tyres.map(p=>p.pos[1]-definition(p).diameter/2));
  let radius=wheelRadius;for(const p of model.parts.filter(p=>ids.has(p.id))){const d=definition(p),points=d.group==='rods'?ports(p).map(p=>V(p.pos)):d.twoSpeed?[V(p.pos),V([-85,0,0]).applyQuaternion(Q(p.quat)).add(V(p.pos))]:[V(p.pos)];const r=d.group==='rods'?3:d.motor?50:d.diameter?d.diameter/2:d.chain?29:20;for(const v of points)radius=Math.max(radius,Math.hypot(v.x-center[0],v.z-center[2])+r);}
  if(radius>450)throw Error('This vehicle is too large for the test course. Use a build under 900 mm across.');
@@ -42,7 +43,7 @@ export function stepDrive(s,dt,commands,{rpm=80,brake=false}={}){
  const cp=COURSES[s.course].checkpoints[s.next];if(Math.hypot(s.x-cp[0],s.z-cp[1])<240){s.next=(s.next+1)%COURSES[s.course].checkpoints.length;if(s.next===1)s.laps++;}
  }
  for(const c of s.channels){const value=brake?0:commands.get(c.motorId)||0;if(Math.abs(value)>.001&&dt)stepMotor(s.model,c.motorId,dt,{rpm:Math.max(1,motorRate(s.model.parts.find(p=>p.id===c.motorId),rpm)*Math.abs(value)),direction:-Math.sign(value)*c.sign});}
- const driven=new Set(s.channels.flatMap(c=>[...c.ids])),done=new Set();for(const p of s.model.parts.filter(p=>s.ids.has(p.id)&&definition(p).tire&&!driven.has(p.id))){if(done.has(p.id))continue;const info=axleInfo(s.model,p.id);if(!info.available||info.ids.size>4)continue;for(const id of info.ids)done.add(id);const speed=s.v+s.w*(p.pos[2]-s.center[2]);moveOnAxle(s.model,p.id,{degrees:-speed*dt/(definition(p).diameter/2)*180/Math.PI*Math.sign(info.axis[2])});}
+ const driven=new Set(s.channels.flatMap(c=>[...c.ids])),done=new Set();for(const p of s.model.parts.filter(p=>s.ids.has(p.id)&&isRollingSurface(definition(p))&&!driven.has(p.id))){if(done.has(p.id))continue;const info=axleInfo(s.model,p.id);if(!info.available||info.ids.size>4)continue;for(const id of info.ids)done.add(id);const speed=s.v+s.w*(p.pos[2]-s.center[2]);moveOnAxle(s.model,p.id,{degrees:-speed*dt/(definition(p).diameter/2)*180/Math.PI*Math.sign(info.axis[2])});}
  for(const [id,value]of commands){if(brake||s.channels.some(c=>c.motorId===id)||Math.abs(value)<.001)continue;stepMotor(s.model,id,dt,{rpm:Math.max(1,motorRate(s.model.parts.find(p=>p.id===id),rpm)*Math.abs(value)),direction:Math.sign(value)});}
  return s;
 }
