@@ -4,10 +4,10 @@ import {slideDistance} from './slide-collision.js';
 import {V,Q,DEG,definition,component,ports,linkedBore,part,emptyModel,targets,solve,add} from './engine.js';
 
 // A socket clip is rigid. An unlocked center hole acts as a bearing.
-export function rigidComponent(model,id){return component({...model,links:model.links.filter(l=>l.mode!=='mesh'&&l.mode!=='worm'&&l.mode!=='end-bearing'&&l.mode!=='hinge'&&l.mode!=='ball'&&(l.mode!=='through'||l.locked||model.parts.some(p=>(p.id===l.a||p.id===l.b)&&(definition(p).driveClip||definition(p).axleGrip))))},id);}
+export function rigidComponent(model,id){return component({...model,links:model.links.filter(l=>l.mode!=='belt'&&l.mode!=='mesh'&&l.mode!=='worm'&&l.mode!=='end-bearing'&&l.mode!=='hinge'&&l.mode!=='ball'&&(l.mode!=='through'||l.locked||model.parts.some(p=>(p.id===l.a||p.id===l.b)&&(definition(p).driveClip||definition(p).axleGrip))))},id);}
 const rodFor=(model,l)=>model.parts.find(p=>(p.id===l.a||p.id===l.b)&&definition(p).group==='rods');
 export function ballInfo(model,id){
- const ids=rigidComponent(model,id),boundary=model.links.filter(l=>l.mode!=='mesh'&&l.mode!=='worm'&&(ids.has(l.a)!==ids.has(l.b)));
+ const ids=rigidComponent(model,id),boundary=model.links.filter(l=>l.mode!=='belt'&&l.mode!=='mesh'&&l.mode!=='worm'&&(ids.has(l.a)!==ids.has(l.b)));
  if(!boundary.some(l=>l.mode==='ball'))return{ids,available:false};
  const centers=boundary.map(l=>l.mode==='ball'?ports(model.parts.find(p=>p.id===l.a)).find(p=>p.key==='joint').pos:null),origin=centers.find(Boolean);
  if(centers.some(c=>!c||V(c).distanceTo(V(origin))>.02))return{ids,available:false,reason:'This section has several joint centers. Use Simulate to move them together.'};
@@ -19,7 +19,7 @@ export function pointBallToward(model,id,from,to){
  const q=Q().setFromUnitVectors(a.normalize(),b.normalize()),w=Math.max(-1,Math.min(1,q.w)),angle=2*Math.acos(w),axis=V([q.x,q.y,q.z]);if(axis.lengthSq()>1e-12)transformParts(model,info.ids,info.origin,axis.normalize().toArray(),angle/DEG);return info;
 }
 export function axleInfo(model,id){
- const ids=rigidComponent(model,id),boundary=model.links.filter(l=>l.mode!=='mesh'&&l.mode!=='worm'&&(ids.has(l.a)!==ids.has(l.b)));
+ const ids=rigidComponent(model,id),boundary=model.links.filter(l=>l.mode!=='belt'&&l.mode!=='mesh'&&l.mode!=='worm'&&(ids.has(l.a)!==ids.has(l.b)));
  if(boundary.some(l=>l.mode==='ball'))return{ids,available:false,reason:'This is a ball joint. Drag the arm or use its rotation rings.'};
  const selected=model.parts.find(p=>p.id===id);
  if(boundary.some(l=>l.mode==='hinge')){

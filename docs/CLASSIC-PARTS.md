@@ -187,7 +187,7 @@ The following are identified candidates, not yet implemented. Their names and nu
 | Motors | 92875/20554/92880 tethered, 92845 control; 92660 solar | Separate housings, mounts, drive geometry and controls. The 12 V motor drives 90983 by a worm, not a coaxial rod bore |
 | Wheel families | 20301 narrow wheel and remaining original variants | Verify distinct molded profile, axle grip and dimensions |
 | Other panels | 99020 curved, 99005/99007/99008 flexible, 99013 special, 3310034 rectangular (scope to audit) | Attachment geometry, real sizes and optional mass; no generic plate substitutions |
-| Other mechanisms | Pulleys, rubber bands, original coaster cars, lift components and special axles | Finish catalog audit and identify documented original parts and supported mechanics |
+| Other mechanisms | Additional rubber-band sizes, pulley colors, original coaster cars, lift components and special axles | Brown 92001 two-pulley drive implemented below; finish remaining catalog audit |
 
 Additional motor references: [spring motor](https://www.knexusergroup.org.uk/en/knex-hint-M1.html), [12 V motor](https://www.knexusergroup.org.uk/en/knex-hint-M3.html), [two-speed motor](https://www.knexusergroup.org.uk/en/knex-hint-M9.html).
 
@@ -372,3 +372,18 @@ Photo reconstructions include the six lightening holes, molded rim blocks, three
 The six-part **Small wheels · grip and spin** example is a fixture locked in space, not a car or official manual build. Running its motor moves the red axle, gripping wheel and tan clip; the closed wheel remains free. The playground recognizes these complete wheels as rolling surfaces and uses their 12.5 mm modeled radius. Existing flat-ground driving limits remain: no tire deformation, calibrated traction or suspension/contact solver. Tests cover both assembly orders, off-center and rotated shafts, opposite rod ends, optional key, invalid connections, independent rotation, forward/reverse drive, locked-output atomicity, open geometry, save/import and driving consistency at 30/60/120 FPS.
 
 ![Classic small wheels: gripping and free-bearing versions](screenshots/classic-small-wheels.png)
+
+
+## Classic pulley-band drive
+
+[Brown 92001](https://shop.knexusergroup.org.uk/products/92001) is listed as an approximately 185 mm unstretched rubber band with a 3 × 3 mm section, intended for pulleys, and approximate mass 3.52 g. [Hint W7](https://www.knexusergroup.org.uk/en/knex-hint-W7.html) and assembly photo hl7a.jpg show an open belt on Classic hub/pulleys. [Hint W6](https://www.knexusergroup.org.uk/en/knex-hint-W6.html) documents using tan keys to couple pulleys and axles.
+
+**Generate → Pulley belt**, or the band in **Clips & spacers**, fits this band between the existing small 90978 and medium 90979 hub/pulleys. The visual front preview shows the two radii, tangent spans, fitted loop length and ideal output/input ratio. Grooves must be coplanar with parallel axes, rims cannot overlap, and a groove cannot hold both a tyre and band. Select an existing band to refit it while keeping its identity and mass override. Insertion/refitting is one undo step. Copies and saved models preserve the fitted shape and both contacts.
+
+The band has an actual hollow loop and rectangular cross-section. Its centerline uses the existing reconstructed groove core radius plus half the band thickness, resulting in modeled radii 18.5 and 25 mm. These are not calibrated groove pitch measurements. The listing does not establish whether 185 mm means flattened length or circumference; no automatic stretch percentage, certified fit, tension or material strength is inferred. The 1000 mm center-span cap is a software limit, not a physical stretch limit. The band is a fitted geometric and no-slip kinematic preview; there is no elastic, slipping, torque, creep, wear, friction or joint-force simulation. Its visually uniform surface remains static while the pulleys rotate. Crossed belts, additional pulley routing and other band sizes are not yet supported.
+
+Motor playback traverses belt and gear stages together, using modeled pitch-radius ratios. Opposite shaft orientations preserve the correct open-belt direction. Missing contacts/bearings, displaced pulley centers, a locked belt/output, or conflicting transmission ratios reject the entire motor step before any part moves. An unkeyed pulley can spin on its bearing without driving the rod. Refit the band after changing pulley positions; it does not automatically stretch during joint physics.
+
+The original **Pulley reduction drive** fixture has 10 parts, 11 connections and three locked supports. Small-to-medium output is 0.74× input speed. This is a mounting/transmission example held in space, not a freestanding manual replica. Tests cover all supported pulley-size pairs, tangent-loop length, rotated assemblies, reversed rods, mixed gear stages, both directions, atomic failures, shape validation, hollow geometry, mass center, copy/save/refit preservation and 30/60/120 FPS.
+
+![Visual pulley-band fitting](screenshots/pulley-belt-builder.png)

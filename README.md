@@ -348,3 +348,14 @@ The housing, mounting dimensions, 41 mm gear diameter, 56 visual teeth and seven
 **Examples → Small wheels · grip and spin** compares them on one powered shaft. Its support fixture is locked in space. The playground also recognizes complete wheels as rolling surfaces. Diameter and supplier mass are approximate; the 6.3 mm width, 4.3 mm bearing depth and molded details are photo estimates. Grip is idealized, with no calibrated slip or traction model.
 
 ![Powered comparison of original small wheels](docs/screenshots/classic-small-wheels.png)
+
+
+### Pulley belts
+
+**Generate → Pulley belt** connects two existing small or medium Classic hub/pulleys with the [original brown 92001 band](https://shop.knexusergroup.org.uk/products/92001). The preview shows the loop, fitted length and ideal speed ratio. Select a band to refit it after moving the pulleys. Both insertion and refitting are undoable; models retain the band and its two contacts.
+
+![Original Classic pulley reduction fixture](docs/screenshots/pulley-drive.png)
+
+**Examples → Pulley reduction drive** demonstrates a 0.74× reduction with both shafts turning the same way. Belts and gears can form one transmission. Locked or displaced outputs stop the motor before any part turns. The mounting follows [Hint W7](https://www.knexusergroup.org.uk/en/knex-hint-W7.html); the example is an original fixture locked in space.
+
+Belt fit and tension are unverified. Supplier approximate section is 3 × 3 mm; modeled groove pitch radii are reconstruction estimates. The stated 185 mm unstretched length has an unspecified measurement convention. Playback assumes no slip and does not calculate elasticity, torque, friction, joint forces or a safe stretch limit. Crossed belts and multi-pulley routing remain future work.

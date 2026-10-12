@@ -1,6 +1,7 @@
 // K’NEX User Group product listings, checked 2026-10-11. Approximate supplier values, not factory measurements.
 // Motor load conditions and battery inclusion in listed mass are unspecified.
 export const PART_SPECS={
+"band-brown":{partNumber:"92001",massG:3.52,source:"https://shop.knexusergroup.org.uk/products/92001",quality:"Supplier approximate",checked:"2026-10-12"},
 "w-small-open":{partNumber:"91140",massG:1.53,source:"https://shop.knexusergroup.org.uk/products/91140",quality:"Supplier approximate",checked:"2026-10-12"},
 "w-small-closed":{partNumber:"918300",massG:1.7,source:"https://shop.knexusergroup.org.uk/products/918300",quality:"Supplier approximate",checked:"2026-10-12"},
 "m-12v":{partNumber:"92815",massG:96.45,source:"https://knexreplacementparts.com/product/12v-motor-classic-sized/",quality:"Supplier approximate; shaft for stated 66 RPM unspecified",checked:"2026-10-12"},
