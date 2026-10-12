@@ -38,6 +38,12 @@ export function singleHinge(){
  const arm=add(m,solve(m,'r-red',targets(m,'r-red','end').find(t=>t.partId===bearing.id),'end'));
  makeGroup(m,[bearing.id,arm.id],'Moving arm');makeLayer(m,[axle.id],'Locked axle');makeLayer(m,[bearing.id,arm.id],'Pendulum');return m;
 }
+export function stoppedAxle(){
+ const m=emptyModel('Molded axle stops'),rod=part('r-90958',[0,140,0]);rod.grounded=true;m.parts.push(rod);
+ for(const end of ['end0','end1']){const support=add(m,solve(m,'c-gray',targets(m,'c-gray','end').find(t=>t.partId===rod.id&&t.key===end),'end'));support.grounded=true;}
+ const bearing=add(m,solve(m,'c-gray',targets(m,'c-gray','through').find(t=>t.partId===rod.id),'through',{roll:-90})),arm=add(m,solve(m,'r-blue',targets(m,'r-blue','end').find(t=>t.partId===bearing.id),'end'));
+ makeGroup(m,[bearing.id,arm.id],'Slide and spin');makeLayer(m,[bearing.id,arm.id],'Moving arm');makeLayer(m,m.parts.filter(p=>p.grounded).map(p=>p.id),'Locked axle');return m;
+}
 export function gridWall(){
  const square=repeatableSquare(),row=repeatPattern(square,{ids:square.parts.map(p=>p.id),copies:2,delta:[75,0,0]}).model;
  const m=repeatPattern(row,{ids:row.parts.map(p=>p.id),copies:1,delta:[0,75,0]}).model;m.name='Shared-edge grid · 3 × 2';
@@ -48,6 +54,7 @@ export function rigidTower(){const m=buildFrame({rod:'r-rigid-tan',counts:[1,4,1
 export function octagonalTower(){const m=buildRadial({kind:'tube',counts:[2,4,1],rod:'r-yellow',braced:true}).model;m.name='Octagonal observation tower';for(const p of m.parts)p.pos[1]+=12;return m;}
 export function paneledTunnel(){const m=buildFrame({kind:'frame',counts:[3,2,2],rod:'r-blue',braced:false,panel:'panel-91072'}).model;m.name='Paneled tunnel';for(const p of m.parts)p.pos[1]+=15;return m;}
 export const EXAMPLES=[
+ {id:'axle-stops',title:'Molded axle stops',level:'Simple',skill:'Slide · spin · end stops',hint:'Select the moving arm. Drag the gold slide arrow toward either end: its bearing stops at the molded cross. Spin stays free. The fixture is locked in space.',factory:stoppedAxle,kind:'Original test fixture using Classic 90958; stop and bore clearances are photo estimates, not manufacturing tolerances',source:'https://shop.knexusergroup.org.uk/products/90958'},
  {id:'tethered-drive',title:'Tethered motor · two outputs',level:'Intermediate',skill:'End socket · through drive',hint:'Run or reverse the motor. Both separate rotors follow. The housing and mounting rods stay locked. Output ratio is an uncalibrated 1:1 preview.',factory:tetheredBench,action:'motors',kind:'Original fixture using the 92875 motor and docked holder from Hint M2; estimated geometry and dual-output ratio',source:TETHERED_REFERENCE},
  {id:'tethered-gray',title:'Gray tethered motor',level:'Intermediate',skill:'Classic 20554 · short lead',hint:'The short-lead gray version uses the same drive arrangement. Run both outputs or disconnect either rotor.',factory:()=>tetheredBench('m-tethered-gray'),action:'motors',kind:'Original fixture with the photographed 20554 motor kit; holder and motor currently form one docked part',source:TETHERED_REFERENCE},
  {id:'track-splicer',title:'Supported tubing splice',level:'Simple',skill:'Rod clip · two tubing cuts',hint:'The 90911 splicer grips the blue rod and supports two tubing ends meeting on its tab. Orange track connectors hold the rail on both sides.',factory:supportedTrackSplice,kind:'Original fixture following 63030 photo 6; approximate fitting geometry, no tubing deformation',source:'https://www.knexusergroup.org.uk/bk/63030.pdf'},

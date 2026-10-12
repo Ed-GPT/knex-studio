@@ -395,3 +395,12 @@ Long orange paths now use multiple stock-sized tubing cuts joined by original 20
 ![Classic tethered motor with two output shafts](docs/screenshots/classic-tethered-motor.png)
 
 The separate holder is currently modeled docked to the motor as one kit; its lead is schematic. Supplier approximate speed is 36 RPM, but its reference axis and relative output ratio are unspecified, so dual-output playback is labeled an uncalibrated 1:1 preview. Geometry, battery inclusion in the supplier mass, torque and load response remain unverified. See [sources and limitations](docs/CLASSIC-PARTS.md#classic-tethered-motors).
+
+
+### Molded axle stops
+
+The original orange 90958 rod now stops coaxial bearings at its molded barriers. Dragging a bearing or the rod cannot jump through a stop; sliding back and rotating remain available. Placement finds a nearby clear position. Try **Examples → Molded axle stops**, then select **Slide and spin** and drag the gold arrow.
+
+![Sliding arm at an orange rod stop](docs/screenshots/molded-axle-stops.png)
+
+Stop dimensions and bore clearances remain photo estimates. This is an editor collision constraint, not a measured snap-force or contact-physics model. See [reference and limits](docs/CLASSIC-PARTS.md#molded-stops-on-orange-rods).

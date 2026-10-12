@@ -1,3 +1,4 @@
+import {rodStopOverlap} from './rod-stops.js';
 import {localBores} from './bores.js';
 import {BY_ID,definition,solve} from './engine.js';
 import {partsOverlap} from './slide-collision.js';
@@ -8,7 +9,7 @@ function shaftPlacement(model,type,target,{offset=0,roll=0,portIndex=0,conflicts
  if(!Number.isFinite(cap)||cap<0)throw Error('This rod is too short for the through-hole part.');const preferred=Math.max(-cap,Math.min(cap,offset));
  const blocked=conflicts||((proposal)=>model.parts.filter(p=>p.id!==host.id&&partsOverlap(proposal.part,p)).map(p=>p.id));
  const offsets=[preferred];for(let step=1;step<=Math.ceil(cap*2);step++){if(preferred-step>=-cap)offsets.push(preferred-step);if(preferred+step<=cap)offsets.push(preferred+step);}offsets.push(-cap,cap);let first;
- for(const value of offsets){const next=solve(model,type,target,mode,{offset:value,roll,portIndex});first??=next;if(!blocked(next).length)return next;}return first;
+ for(const value of offsets){const next=solve(model,type,target,mode,{offset:value,roll,portIndex});first??=next;if(!rodStopOverlap(next.part,d,host,definition(host))&&!blocked(next).length)return next;}return first;
 }
 
 export const throughPlacement=(model,type,target,options)=>shaftPlacement(model,type,target,options,'through');
