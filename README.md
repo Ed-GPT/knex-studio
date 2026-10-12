@@ -280,6 +280,18 @@ The larger gray **92401 Tony motor** has its own reconstructed four-AA housing a
 
 The photos determine the outline, perforation pattern and peg arrangement; plate thickness, rib/peg tolerances and some dimensions remain estimates. Curved and flexible panels are still separate pending work. [Part identities and fit limits](docs/CLASSIC-PARTS.md#classic-molded-panels).
 
+## Rolling-ball test
+
+Open **Simulate → Ball test**. Choose **Try ramp → Feed ramp**, or use **Drop ball** and click a surface in the 3D view. The green preview shows clearance; pink means the ball would overlap a part or another ball. Pause, clear and restart without changing your editor model. Select a small section before opening the test to use **Selection** instead of the whole build.
+
+![Red/yellow K’NEX ball rolling on the orange-tubing test ramp](docs/screenshots/ball-test.png)
+
+The ball represents the assembled **90990 red + 90991 yellow halves**, approximately **46 mm** in diameter, as identified by the [K’NEX User Group ball-coaster guide](https://www.knexusergroup.org.uk/en/knex-hint-R5.html) and supplier pages for [90990](https://shop.knexusergroup.org.uk/products/90990) and [90991](https://shop.knexusergroup.org.uk/products/90991). The preview reconstructs the outer spherical profile and two colors; internal clips and manufacturing tolerances are not modeled. Its adjustable 24 g default, hollow-shell inertia, grip and restitution are estimates rather than calibrated material measurements.
+
+Balls fall, roll, bounce, collide with one another and contact the rendered part surfaces, including curved tubing. The example uses real 92602 orange tubing, 90910 track connectors and stock blue cross-rods with existing side-grip connections. Its narrow rail spacing supports a ball. It is held fixed as a test fixture, not a freestanding model or a replica of a specific instruction manual.
+
+This is an isolated **static-build ball simulation**. All structure parts stay fixed regardless of their editor lock state. Moving lifts, motor-driven contact, flexible track deformation, structural reactions and a complete ball-machine solver are not included. Tests currently allow 16 balls and 300,000 collision triangles. Larger geometry fails visibly instead of silently losing colliders; choose a smaller selection. The solver uses 480 Hz substeps, caps ball speed at 5 m/s and limits catch-up work per display frame. Slow devices may run below real time. These safeguards are not a continuous-collision guarantee for arbitrary geometry. Balls are temporary test objects and are not saved in model JSON or added to the parts inventory.
+
 ## Physics and accuracy
 
 Parts are procedural reconstructions from identified references, not production CAD. Nominal rod lengths differ from effective connector-center spacing. Small clip details, clearances, motor housing dimensions and tooth shapes remain approximate. The catalog does not include every historical part. Classic flexi rods in four stock lengths and split-tubing track are available as shape previews; Micro track is not included.
