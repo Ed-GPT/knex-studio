@@ -359,3 +359,12 @@ The housing, mounting dimensions, 41 mm gear diameter, 56 visual teeth and seven
 **Examples → Pulley reduction drive** demonstrates a 0.74× reduction with both shafts turning the same way. Belts and gears can form one transmission. Locked or displaced outputs stop the motor before any part turns. The mounting follows [Hint W7](https://www.knexusergroup.org.uk/en/knex-hint-W7.html); the example is an original fixture locked in space.
 
 Belt fit and tension are unverified. Supplier approximate section is 3 × 3 mm; modeled groove pitch radii are reconstruction estimates. The stated 185 mm unstretched length has an unspecified measurement convention. Playback assumes no slip and does not calculate elasticity, torque, friction, joint forces or a safe stretch limit. Crossed belts and multi-pulley routing remain future work.
+
+
+### Original pulley colors and tyre fittings
+
+The Wheels flyout now includes [gray small 90978G](https://shop.knexusergroup.org.uk/products/90978g), [gray medium 90979G](https://shop.knexusergroup.org.uk/products/90979g) and [white small 909782](https://shop.knexusergroup.org.uk/products/909782), alongside the silver variants. Each keeps its part number, supplier approximate mass, documented tyre fits and visible color. They slide and spin on rods, accept tan drive clips and work with the pulley-band builder.
+
+**Examples → Pulley colors & fits** compares a white-to-gray 0.74× belt drive with a separate freely rotating tyre. The medium pulley now has the photographed five-rib front face. Small moulding details, widths, groove profile and reverse-face key recesses remain estimates; see the [reference ledger](docs/CLASSIC-PARTS.md#classic-pulley-variants).
+
+![Pulley colors and fits](docs/screenshots/pulley-variants.png)

@@ -3,7 +3,7 @@ export const PULLEY_BAND={id:'band-brown',name:'Brown pulley band · 185 mm',par
 export const BELT_REFERENCE='https://www.knexusergroup.org.uk/en/knex-hint-W7.html';
 // Existing reconstructed pulley rim groove: core radius is 1.5 mm below flange.
 // A 3 mm belt centerline is consequently at the nominal flange radius.
-export const pulleyRadius=d=>['h-small','h-medium'].includes(d.id)?d.diameter/2:null;
+export const pulleyRadius=d=>d.pulley?d.diameter/2:null;
 export function validateBelt(p,d){if(p.belt===undefined){if(d.belt)throw Error('A pulley band needs its fitted shape.');return;}const b=p.belt;if(!d.belt||!b||!Number.isFinite(b.span)||b.span>1000||!Array.isArray(b.radii)||b.radii.length!==2||b.radii.some(r=>![18.5,25].includes(r))||b.span<=b.radii[0]+b.radii[1]+3)throw Error('Invalid pulley-band shape.');}
 export function beltOutline(b={span:130,radii:[18.5,25]}){const [a,c]=b.radii,theta=Math.acos((a-c)/b.span),points=[];for(const [x,r,start,end]of[[0,a,theta,2*Math.PI-theta],[b.span,c,2*Math.PI-theta,2*Math.PI+theta]]){const steps=Math.max(16,Math.ceil((end-start)*16));for(let i=0;i<=steps;i++){const angle=start+(end-start)*i/steps;points.push({pos:[x+r*Math.cos(angle),r*Math.sin(angle),0],normal:[Math.cos(angle),Math.sin(angle),0]});}}return points;}
 export function beltLength(b){const [a,c]=b.radii,theta=Math.acos((a-c)/b.span);return 2*Math.sqrt(b.span*b.span-(a-c)**2)+a*(2*Math.PI-2*theta)+c*2*theta;}

@@ -1,6 +1,9 @@
 // K’NEX User Group product listings, checked 2026-10-11. Approximate supplier values, not factory measurements.
 // Motor load conditions and battery inclusion in listed mass are unspecified.
 export const PART_SPECS={
+"h-small-gray":{partNumber:"90978G",massG:4.12,source:"https://shop.knexusergroup.org.uk/products/90978g",quality:"Supplier approximate",checked:"2026-10-12"},
+"h-medium-gray":{partNumber:"90979G",massG:7.5,source:"https://shop.knexusergroup.org.uk/products/90979g",quality:"Supplier approximate",checked:"2026-10-12"},
+"h-small-white":{partNumber:"909782",massG:3.79,source:"https://shop.knexusergroup.org.uk/products/909782",quality:"Supplier approximate",checked:"2026-10-12"},
 "band-brown":{partNumber:"92001",massG:3.52,source:"https://shop.knexusergroup.org.uk/products/92001",quality:"Supplier approximate",checked:"2026-10-12"},
 "w-small-open":{partNumber:"91140",massG:1.53,source:"https://shop.knexusergroup.org.uk/products/91140",quality:"Supplier approximate",checked:"2026-10-12"},
 "w-small-closed":{partNumber:"918300",massG:1.7,source:"https://shop.knexusergroup.org.uk/products/918300",quality:"Supplier approximate",checked:"2026-10-12"},

@@ -1,3 +1,4 @@
+import {PULLEY_HUBS,pulleyFits} from './pulley-hubs.js';
 import {PULLEY_BAND,pulleyRadius,validateBelt} from './belt-parts.js';
 import {SMALL_WHEELS} from './small-wheels.js';
 import {WORM_MOTOR,WORM_WHEEL,WORM_GEAR_CENTER,wormCompatible} from './worm-motor.js';
@@ -33,8 +34,8 @@ export const CATALOG=[
  {id:'chain-large',name:'Large chain link',partNumber:'90987',chain:true,pitch:26,group:'gears',color:'#272b30',thickness:9,slots:[],reference:'https://shop.knexusergroup.org.uk/products/90987'},
  {id:'m-battery',name:'Legacy placeholder motor',legacy:true,group:'motors',color:'#286dc5',motor:true,thickness:32,slots:[]},
  ...[['blue','Blue','92840','#233771'],['green','Green','22722','#15974a']].map(([id,name,partNumber,color])=>({id:'m-'+id,name:`${name} battery motor`,partNumber,reference:`https://shop.knexusergroup.org.uk/products/${partNumber}`,geometryStatus:'Photo reconstruction; dimensions unverified',group:'motors',color,motor:true,thickness:32,slots:[]})),
- ...[['small','Small hub / pulley','90978',37,6.2],['medium','Medium hub / pulley','90979',50,12]].map(([id,name,partNumber,diameter,thickness])=>({id:'h-'+id,name,partNumber,diameter,thickness,reference:`https://shop.knexusergroup.org.uk/products/${partNumber}`,group:'wheels',color:'#9ca4a6',wheelHub:true,slots:[]})),
- ...[['small','Small tyre','91975',47,37,8.2,['h-small','c-white','h-spoked37-silver','h-spoked37-black']],['medium','Medium tyre','91976',65,50,13,['h-medium']],['large','Large tyre','91977',90,50,19,['h-medium']]].map(([id,name,partNumber,diameter,fitDiameter,thickness,fits])=>({id:'t-'+id,name,partNumber,diameter,fitDiameter,thickness,fits,reference:`https://shop.knexusergroup.org.uk/products/${partNumber==='91976'?'90976':partNumber}`,group:'wheels',color:'#242629',tire:true,slots:[]})),
+ ...PULLEY_HUBS,
+ ...[['small','Small tyre','91975',47,37,8.2,[...pulleyFits(37),'c-white','h-spoked37-silver','h-spoked37-black']],['medium','Medium tyre','91976',65,50,13,pulleyFits(50)],['large','Large tyre','91977',90,50,19,pulleyFits(50)]].map(([id,name,partNumber,diameter,fitDiameter,thickness,fits])=>({id:'t-'+id,name,partNumber,diameter,fitDiameter,thickness,fits,reference:`https://shop.knexusergroup.org.uk/products/${partNumber==='91976'?'90976':partNumber}`,group:'wheels',color:'#242629',tire:true,slots:[]})),
  {id:'k-cap',name:'Black snap cap',partNumber:'848900',reference:'https://shop.knexusergroup.org.uk/products/848900',group:'extras',color:'#202226',endCap:true,thickness:6,slots:[]},
  {id:'k-tan',name:'Tan drive clip',group:'extras',color:'#c8ac7e',driveClip:true,thickness:6.4,slots:[]},
  ...[['green','Green',16,'#17915e'],['white','White',32,'#eeeae0'],['blue','Blue',54,'#246bd5'],['yellow','Yellow',86,'#f3c423'],['red','Red',128,'#de403b'],['gray','Gray',190,'#9fa8ad']].map(([id,name,nominal,color],i)=>({id:'r-'+id,name:`${name} rod`,group:'rods',color,colorName:name,nominal,stockIndex:i,noSide:i===0,length:37.5*Math.SQRT2**i-2*SOCKET,slots:[]})),

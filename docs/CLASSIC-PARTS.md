@@ -13,7 +13,7 @@ Source: [K’NEX User Group picture catalog](https://www.knexusergroup.org.uk/en
 | Flexi rods | 12 variants across four approximate lengths, listed below | Fixed-length shape editing, tangent-aligned end sockets; no elastic dynamics or verified bend limits |
 | Coaster track | 91430 cross-tie, split purple tubing identified in 51587 manual | Unsupported layout preview; no coaster vehicle or rail splice mechanics |
 | Clips and spacers | 90900 tan drive clip, 848900 snap cap, 90994 blue spacer, 91224 sleeve; 90901 hole-end clip as 1-way connector | Three molded hinge halves, two rod-end stops, ten Y-clip colors, four ball-joint halves and the 91690 angled clip; other families pending |
-| Wheels | 18 wheels/hubs/tyres: small one-piece, pulley, spoked, racing and narrow families | Rod-end bearings, through bores, compatible tyre seats and keyed drive; profiles and tolerances approximate |
+| Wheels | 21 wheels/hubs/tyres: small one-piece, pulley, spoked, racing and narrow families | Rod-end bearings, through bores, compatible tyre seats and keyed drive; profiles and tolerances approximate |
 | Gears and chain | 12 original gears plus 90987 chain; variants listed below | Parallel-axis and full crown right-angle mesh; chain is not an articulated transmission |
 | Enclosed battery motors | 92840 blue, 22722 green, 92401 two-speed | Separate reconstructed housings; imposed preview speeds, no torque/load simulation |
 | Other original motors | 92890 spring, 92815 external 12 V with dedicated 90983 gear | Finite spring turns and imposed worm-output preview; uncalibrated torque and internal ratio |
@@ -187,7 +187,7 @@ The following are identified candidates, not yet implemented. Their names and nu
 | Motors | 92875/20554/92880 tethered, 92845 control; 92660 solar | Separate housings, mounts, drive geometry and controls. The 12 V motor drives 90983 by a worm, not a coaxial rod bore |
 | Wheel families | 20301 narrow wheel and remaining original variants | Verify distinct molded profile, axle grip and dimensions |
 | Other panels | 99020 curved, 99005/99007/99008 flexible, 99013 special, 3310034 rectangular (scope to audit) | Attachment geometry, real sizes and optional mass; no generic plate substitutions |
-| Other mechanisms | Additional rubber-band sizes, pulley colors, original coaster cars, lift components and special axles | Brown 92001 two-pulley drive implemented below; finish remaining catalog audit |
+| Other mechanisms | Additional rubber-band sizes, original coaster cars, lift components and special axles | Brown 92001 two-pulley drive implemented below; finish remaining catalog audit |
 
 Additional motor references: [spring motor](https://www.knexusergroup.org.uk/en/knex-hint-M1.html), [12 V motor](https://www.knexusergroup.org.uk/en/knex-hint-M3.html), [two-speed motor](https://www.knexusergroup.org.uk/en/knex-hint-M9.html).
 
@@ -378,7 +378,7 @@ The six-part **Small wheels · grip and spin** example is a fixture locked in sp
 
 [Brown 92001](https://shop.knexusergroup.org.uk/products/92001) is listed as an approximately 185 mm unstretched rubber band with a 3 × 3 mm section, intended for pulleys, and approximate mass 3.52 g. [Hint W7](https://www.knexusergroup.org.uk/en/knex-hint-W7.html) and assembly photo hl7a.jpg show an open belt on Classic hub/pulleys. [Hint W6](https://www.knexusergroup.org.uk/en/knex-hint-W6.html) documents using tan keys to couple pulleys and axles.
 
-**Generate → Pulley belt**, or the band in **Clips & spacers**, fits this band between the existing small 90978 and medium 90979 hub/pulleys. The visual front preview shows the two radii, tangent spans, fitted loop length and ideal output/input ratio. Grooves must be coplanar with parallel axes, rims cannot overlap, and a groove cannot hold both a tyre and band. Select an existing band to refit it while keeping its identity and mass override. Insertion/refitting is one undo step. Copies and saved models preserve the fitted shape and both contacts.
+**Generate → Pulley belt**, or the band in **Clips & spacers**, fits this band between the small 90978 / 90978G / 909782 and medium 90979 / 90979G hub/pulleys. The visual front preview shows the two radii, tangent spans, fitted loop length and ideal output/input ratio. Grooves must be coplanar with parallel axes, rims cannot overlap, and a groove cannot hold both a tyre and band. Select an existing band to refit it while keeping its identity and mass override. Insertion/refitting is one undo step. Copies and saved models preserve the fitted shape and both contacts.
 
 The band has an actual hollow loop and rectangular cross-section. Its centerline uses the existing reconstructed groove core radius plus half the band thickness, resulting in modeled radii 18.5 and 25 mm. These are not calibrated groove pitch measurements. The listing does not establish whether 185 mm means flattened length or circumference; no automatic stretch percentage, certified fit, tension or material strength is inferred. The 1000 mm center-span cap is a software limit, not a physical stretch limit. The band is a fitted geometric and no-slip kinematic preview; there is no elastic, slipping, torque, creep, wear, friction or joint-force simulation. Its visually uniform surface remains static while the pulleys rotate. Crossed belts, additional pulley routing and other band sizes are not yet supported.
 
@@ -387,3 +387,26 @@ Motor playback traverses belt and gear stages together, using modeled pitch-radi
 The original **Pulley reduction drive** fixture has 10 parts, 11 connections and three locked supports. Small-to-medium output is 0.74× input speed. This is a mounting/transmission example held in space, not a freestanding manual replica. Tests cover all supported pulley-size pairs, tangent-loop length, rotated assemblies, reversed rods, mixed gear stages, both directions, atomic failures, shape validation, hollow geometry, mass center, copy/save/refit preservation and 30/60/120 FPS.
 
 ![Visual pulley-band fitting](screenshots/pulley-belt-builder.png)
+
+
+## Classic pulley variants
+
+The original silver pulley identities remain compatible with saved builds. Three additional supplier identities now appear in the Wheels flyout:
+
+| Part | Approximate diameter | Supplier mass | Tyre fitting |
+| --- | --- | --- | --- |
+| [90978G gray small](https://shop.knexusergroup.org.uk/products/90978g) | 37 mm | 4.12 g | 91975 small |
+| [90979G gray medium](https://shop.knexusergroup.org.uk/products/90979g) | 50 mm | 7.5 g | 90976 medium (app ID 91976), 91977 large |
+| [909782 white small](https://shop.knexusergroup.org.uk/products/909782) | 37 mm | 3.79 g | 91975 small |
+
+Supplier product JSON `weight` fields in grams preserve the listed decimal masses; its rounded `grams` fields are not used. The white listing identifies use in the London Eye set. These are Classic-size variants, not Micro parts. Palette icons and 3D materials retain gray, silver or white.
+
+Photos of 90978G and 909782 show the small pulley's six ribs, recessed web, center bore and two drive holes. Photos of [silver 90979](https://shop.knexusergroup.org.uk/products/90979) and gray 90979G show a different five-rib face with flared ribs and five molding bosses. The medium front now follows that visible face, without the previously exposed pair of key holes. [Hint W6](https://www.knexusergroup.org.uk/en/knex-hint-W6.html) establishes the tan-clip drive method. The reverse-face recess layout remains an estimate inherited from the existing drive mount; the available photo does not resolve that face. Widths of 6.2 / 12 mm, groove profile, rib/boss sizes, recess depth and tolerances are reconstruction estimates, not verified CAD.
+
+All five pulley identities support through-axle placement, off-center sliding, free rotation, tan-key drive and the brown 92001 band. Tyres are restricted to the documented families; a groove cannot take a tyre and belt together. Belt transmission retains the previous ideal no-slip assumptions and unverified physical fit/tension.
+
+**Examples → Pulley colors & fits** contains 13 parts and 13 connections with four locked supports. The white small pulley drives a gray medium pulley at 0.74× speed; a separate gray small pulley and tyre remain free on their locked axle. It is an original comparison fixture, not a freestanding model or manual replica.
+
+Tests cover all 25 pulley pairs, both drive directions, atomic locked-output rejection, off-center sliding on rotated shafts in both assembly orders, documented tyre compatibility in both orders, real bore openings, distinct medium front/back geometry, sourced colors/masses, free-tyre independence and save/reload preservation.
+
+![Classic pulley comparison](screenshots/pulley-variants.png)
