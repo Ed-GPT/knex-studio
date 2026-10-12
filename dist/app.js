@@ -341,7 +341,7 @@ function finishCatalogDrag(cancel=false,e=null){const d=catalogDrag;if(!d)return
 document.addEventListener('pointerdown',e=>{const card=e.target.closest('#catalog [data-part],#part-flyout [data-part]');if(!card||e.button!==0)return;catalogDrag={type:card.dataset.part,x:e.clientX,y:e.clientY,pointerId:e.pointerId,active:false,alt:e.altKey};});
 document.addEventListener('dragstart',e=>{if(e.target.closest('#catalog,#part-flyout'))e.preventDefault();});
 document.addEventListener('pointermove',e=>{const d=catalogDrag;if(!d||e.pointerId!==d.pointerId)return;if(!d.active&&Math.hypot(e.clientX-d.x,e.clientY-d.y)<7)return;e.preventDefault();e.stopImmediatePropagation();
- if(!d.active){if(BY_ID[d.type].belt){catalogDrag=null;openBeltBuilder();return;}if(BY_ID[d.type].tubing){catalogDrag=null;openPathBuilder('track');return;}d.active=true;chooseType(d.type,{straight:true});controls.enabled=false;document.body.classList.add('part-dragging');}
+ if(!d.active){if(BY_ID[d.type].belt){catalogDrag=null;openBeltBuilder();return;}if(BY_ID[d.type].tubing){catalogDrag=null;openPathBuilder('track',d.type);return;}d.active=true;chooseType(d.type,{straight:true});controls.enabled=false;document.body.classList.add('part-dragging');}
  d.alt=e.altKey;pointerInside=overWorkspace(e);if(pointerInside){updatePointer(eventPoint(e));$('#drop-hint').textContent=proposal?.conflicts?.length?'Blocked · move to a clear position':proposal?.link?'Release to connect · C changes connection · R rotates':'Release to place · R rotates · Esc cancels';}else{clearGhost();$('#drop-hint').textContent='Drag into the workspace · Esc cancels';}$('#drop-hint').hidden=false;
 },true);
 document.addEventListener('pointerup',e=>{if(catalogDrag?.active){e.preventDefault();e.stopImmediatePropagation();finishCatalogDrag(false,e);}else catalogDrag=null;},true);
@@ -406,7 +406,7 @@ function tickController(dt){if(!dt)return;const bindings=controllerBindings();le
 }
 function acceptGenerated(next){snapshot();model=next;selected=null;setTool('select');update();fit();toast('Generated parts added. Undo restores the previous build.');}
 function openBeltBuilder(){beltDialog({model,showDialog,commit:acceptGenerated,bandId:model.parts.find(p=>p.id===selected&&definition(p).belt)?.id});}
-function openPathBuilder(kind='track',flexiType='f-green190'){pathBuilderDialog({model,showDialog,commit:acceptGenerated,kind,flexiType});}
+function openPathBuilder(kind='track',flexiType='f-green190'){pathBuilderDialog({model,showDialog,commit:acceptGenerated,kind,flexiType,trackType:BY_ID[flexiType]?.tubing?flexiType:'track-purple'});}
 $('#generate').onclick=()=>generatorDialog({model,selected,showDialog,commit:acceptGenerated,openPathBuilder,openBeltBuilder});
 $('#controller-tool').onclick=controllerDialog;$('#playground-tool').onclick=playgroundDialog;$('#control-stop').onclick=()=>driveView?exitPlayground():stopController();
 $('#control-rpm').oninput=e=>{controlRpm=Number(e.target.value);$('#control-speed').textContent=controlRpm+' RPM';};

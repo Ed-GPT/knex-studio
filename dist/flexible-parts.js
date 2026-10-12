@@ -15,9 +15,14 @@ export const FLEXIBLE_PARTS=[
   ['f-lilac190','Lilac',190,'91109','#8b77cd'],
   ['f-purple190','Purple',190,'90966','#7050a1'],
  ].map(([id,colorName,length,partNumber,color])=>({id,name:`${colorName} flexi rod`,colorName,partNumber,group:'flexible',flexi:true,length,nominal:length,color,slots:[],reference:'https://shop.knexusergroup.org.uk/products/'+partNumber,geometryStatus:'Supplier approximate length; photo-based profile; bending limits unverified'})),
+ {id:'track-orange',name:'Orange split tubing',partNumber:'92602',group:'flexible',tubing:true,trackFamily:'orange',stockLength:1730,massPerMm:13/1730,color:'#f79d32',slots:[],reference:'https://shop.knexusergroup.org.uk/products/92602'},
+ {id:'c-track-orange',name:'Orange track connector · 5-way',partNumber:'90910',group:'connectors',trackTab:true,trackFamily:'orange',color:'#f79d32',slots:[0,45,90,135,180],reference:'https://shop.knexusergroup.org.uk/products/90910'},
  {id:'track-purple',name:'Purple split tubing',group:'flexible',tubing:true,stockLength:6096,color:'#8757b4',slots:[],reference:'https://www.knexusergroup.org.uk/bk/51587.pdf'},
  {id:'c-cross-tie',name:'Green coaster cross-tie',partNumber:'91430',group:'connectors',crossTie:true,color:'#9cd622',slots:[202.5,247.5,292.5,337.5],reference:'https://shop.knexusergroup.org.uk/products/91430'},
 ];
+export const ORANGE_TAB=[0,-10,0]; // Photo estimate: tab center in connector coordinates.
+export const trackSeat=(d,key)=>d.trackTab&&key==='rail'||d.crossTie&&['rail0','rail1'].includes(key);
+export const trackCompatible=(mount,key,tube,tubeKey)=>trackSeat(mount,key)&&tube.tubing&&tubeKey==='tube'&&(mount.trackFamily||'purple')===(tube.trackFamily||'purple');
 export const TRACK_GAUGE=44; // Unverified photo reconstruction, not a factory dimension.
 export const TRACK_RISE=18;
 export const pathLength=points=>points.slice(1).reduce((s,p,i)=>s+new T.Vector3(...p).distanceTo(new T.Vector3(...points[i])),0);

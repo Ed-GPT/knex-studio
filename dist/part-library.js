@@ -7,7 +7,7 @@ export function createPartLibrary({root,parts,icon,choose,active}){
  const flyout=document.createElement('section');flyout.id='part-flyout';flyout.className='part-flyout';flyout.hidden=true;flyout.setAttribute('role','dialog');flyout.setAttribute('aria-label','Part picker');document.body.append(flyout);
  let group=null,trigger=null,shape=null,length=null;
  const shapes=[['c-gray','1-way'],['c-orange','Straight'],['c-lgray','2-way'],['c-red','3-way'],['c-green','4-way'],['c-yellow','5-way'],['c-white','8-way'],['c-purple','4-way 3D'],['c-blue','7-way 3D'],['track','Track']];
- const shapeOf=d=>d.crossTie?'track':connectorShape(d);
+ const shapeOf=d=>d.crossTie||d.trackTab?'track':connectorShape(d);
  const shapePicker=()=>`<div class="connector-shapes" role="group" aria-label="Connector shape"><button data-connector-shape="" aria-pressed="true">All</button>${shapes.map(([key,label])=>{const d=parts.find(d=>d.id===key)||parts.find(d=>shapeOf(d)===key);return d?`<button data-connector-shape="${key}" aria-label="${label} connectors" aria-pressed="false">${icon(d)}<small>${label}</small></button>`:'';}).join('')}</div>`;
  const lengthPicker=()=>`<div class="rod-lengths" role="group" aria-label="Rod length"><button data-rod-length="" aria-pressed="true">All</button>${[16,32,54,86,128,190].map(n=>`<button data-rod-length="${n}" aria-pressed="false">${n}<small>mm</small></button>`).join('')}</div>`;
  const card=d=>`<button class="part-card ${active()===d.id?'active':''}" data-part="${d.id}" title="${d.name}${d.nominal?' '+d.nominal+' mm':''}"><span class="add-sign">+</span>${icon(d)}<strong>${d.name}</strong><small>${d.nominal?d.nominal+' mm · classic':d.tubing?'Cut-to-length · Classic':d.partNumber?'Part '+d.partNumber:''}</small></button>`;

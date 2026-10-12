@@ -26,9 +26,10 @@ export function connectorGeometry(d,mat){const g=new T.Group();g.name=`K'NEX ${d
   }
  }
  if(d.interlock){for(const sign of[-1,1])extrude(g,polygon([[-14.8,sign*3.3],[connectorShape(d)==='c-purple'?4.5:-2,sign*3.3],[connectorShape(d)==='c-purple'?4.5:-2,sign*4.65],[-14.8,sign*4.65]]),mat,6.3);}
+ if(d.trackTab){extrude(g,polygon([[-19.5,-5.5],[19.5,-5.5],[19.5,-4],[-19.5,-4]]),mat);extrude(g,polygon([[-3,-5.5],[3,-5.5],[3,-10.5],[-3,-10.5]]),mat,1.8);extrude(g,polygon([[-3,-11],[3,-11],[3,-9],[-3,-9]]),mat,3);}
  return g;
 }
 export function connectorIcon(d){const color=d.color,path=pts=>'M'+pts.map(p=>p.map(v=>v.toFixed(2)).join(' ')).join('L')+'Z';let outline;
  if(connectorShape(d)==='c-orange')outline=path([[-10.8,-4.5],[10.8,-4.5],[10.8,4.5],[-10.8,4.5]]);
  else{const pts=[];for(let i=0;i<48;i++)pts.push(polar(5.1,i*Math.PI/24));for(const a of d.slots)for(let i=-4;i<=4;i++)pts.push(polar(10.8,(a+i*5.625)*RAD));outline=path(hull(pts));}
- return `<svg viewBox="0 0 120 58" aria-hidden="true"><g stroke="#9bacbf" stroke-width=".28" stroke-linejoin="round" transform="translate(60 29) scale(1.2 -1.2)"><path d="${outline}" fill="${color}"/>${d.slots.map(a=>`<path transform="rotate(${a})" d="M9.8 -4.2H19.5V-2.7H16L14 -3.3 12 -2.4H10V2.4H12L14 3.3 16 2.7H19.5V4.2H9.8Z" fill="${color}"/>`).join('')}${d.slots.map(a=>`<path transform="rotate(${a})" d="M5.2 -1.55 9.4 -3.15 9.4 3.15 5.2 1.55Z" fill="#272c34"/>`).join('')}<circle r="3.2" fill="#272c34"/>${d.interlock?`<path d="M-15 -4H0M-15 4H0" stroke="${color}" stroke-width="1.3"/><path d="M-16 -3.2H0V3.2H-16Z" fill="#272c34"/>`:''}</g></svg>`;}
+ return `<svg viewBox="0 0 120 58" aria-hidden="true"><g stroke="#9bacbf" stroke-width=".28" stroke-linejoin="round" transform="translate(60 29) scale(1.2 -1.2)"><path d="${outline}" fill="${color}"/>${d.slots.map(a=>`<path transform="rotate(${a})" d="M9.8 -4.2H19.5V-2.7H16L14 -3.3 12 -2.4H10V2.4H12L14 3.3 16 2.7H19.5V4.2H9.8Z" fill="${color}"/>`).join('')}${d.slots.map(a=>`<path transform="rotate(${a})" d="M5.2 -1.55 9.4 -3.15 9.4 3.15 5.2 1.55Z" fill="#272c34"/>`).join('')}<circle r="3.2" fill="#272c34"/>${d.trackTab?`<path d="M-19.5 -4H19.5V-6H3V-11H-3V-6H-19.5Z" fill="${color}"/>`:''}${d.interlock?`<path d="M-15 -4H0M-15 4H0" stroke="${color}" stroke-width="1.3"/><path d="M-16 -3.2H0V3.2H-16Z" fill="#272c34"/>`:''}</g></svg>`;}

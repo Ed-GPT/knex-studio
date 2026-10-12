@@ -378,3 +378,9 @@ The preview shows physical dimensions and added, reused or blocked pieces. Placi
 The gallery includes a 37-part profile and a 755-part grandstand frame. These are original open frameworks, not official manual replicas, solid stairs or load-rated seating. The frame has XY and XZ bracing; paired blue connectors do not provide the YZ diagonal plane. Tests exercise connected 1,801-part flat and 2,435-part spatial builds.
 
 ![Stepped structure builder](docs/screenshots/stepped-builder.png)
+
+### Original orange coaster track
+
+Path builder now offers the original orange tubing system alongside purple tubing and green cross-ties. It generates 90910 five-way track connectors on 90958 rods with end stops, using cuts from the supplier's approximately 1.73 m 92602 tubing stock. The **Original orange track** example follows the assembly method in [63030, pages 3–4](https://www.knexusergroup.org.uk/bk/63030.pdf). Gauge, tab dimensions, stop profiles and bend limits remain unverified; these are layout assemblies requiring supports, with no running coaster-car physics. See [part evidence and limitations](docs/CLASSIC-PARTS.md#original-orange-coaster-track).
+
+![Original orange track builder](docs/screenshots/orange-track-builder.png)

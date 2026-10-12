@@ -35,6 +35,7 @@ export function makePart(type,p){if(BY_ID[type].belt)return beltGeometry(BY_ID[t
  if(d.rodProfile==='square')box(g,mat,0,0,0,L-8,4.15,4.15);else cylinderX(g,mat,0,2.12,Math.max(1,L-8));
  if(d.stockIndex!==0&&d.rodProfile!=='square')for(let i=0;i<4;i++){const a=i*Math.PI/2;const rib=box(g,mat,0,2.04*Math.cos(a),2.04*Math.sin(a),L-13,1.85,1.85);rib.rotation.x=a;}
  for(const s of[-1,1]){cylinderX(g,mat,s*(L/2-4),2.55,4.2);cylinderX(g,mat,s*(L/2-1.2),3.05,2.4);cylinderX(g,mat,s*(L/2-6.7),3.03,1.2);}
+ if(d.trackStops)for(const s of[-1,1]){box(g,mat,s*(L/2-11.8),0,0,1.2,7.4,2.5);box(g,mat,s*(L/2-11.8),0,0,1.2,2.5,7.4);}
  }else if(d.group==='extras'){
  ring(g,mat,5.7,3.23,d.thickness);
  }else{g.add(connectorGeometry(d,mat));}
