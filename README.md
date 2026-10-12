@@ -368,3 +368,13 @@ The Wheels flyout now includes [gray small 90978G](https://shop.knexusergroup.or
 **Examples → Pulley colors & fits** compares a white-to-gray 0.74× belt drive with a separate freely rotating tyre. The medium pulley now has the photographed five-rib front face. Small moulding details, widths, groove profile and reverse-face key recesses remain estimates; see the [reference ledger](docs/CLASSIC-PARTS.md#classic-pulley-variants).
 
 ![Pulley colors and fits](docs/screenshots/pulley-variants.png)
+
+### Stepped structures
+
+**Generate → Grid & frame → Stepped profile / Stepped frame** creates flat stepped lattices or wider 3D frames. Use **+ / −** for Steps, Rise cells and Depth bays, or type a value for a live preview. Rod lengths and diagonals use the existing Classic stock families. Higher rises contain intermediate connectors and rods; no part is stretched.
+
+The preview shows physical dimensions and added, reused or blocked pieces. Placing a larger structure at the same origin reuses the existing lattice, including its IDs, locks and payloads. Insertion is one undo step. Each step has its own layer.
+
+The gallery includes a 37-part profile and a 755-part grandstand frame. These are original open frameworks, not official manual replicas, solid stairs or load-rated seating. The frame has XY and XZ bracing; paired blue connectors do not provide the YZ diagonal plane. Tests exercise connected 1,801-part flat and 2,435-part spatial builds.
+
+![Stepped structure builder](docs/screenshots/stepped-builder.png)

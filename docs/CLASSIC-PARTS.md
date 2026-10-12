@@ -410,3 +410,21 @@ All five pulley identities support through-axle placement, off-center sliding, f
 Tests cover all 25 pulley pairs, both drive directions, atomic locked-output rejection, off-center sliding on rotated shafts in both assembly orders, documented tyre compatibility in both orders, real bore openings, distinct medium front/back geometry, sourced colors/masses, free-tyre independence and save/reload preservation.
 
 ![Classic pulley comparison](screenshots/pulley-variants.png)
+
+## Procedural stepped profiles and frames
+
+The stepped builders reuse the already referenced Classic stock rod families, white 8-way connectors and interlocking blue 3D connector pairs. A cell edge equals rod length plus two 10.1 mm socket offsets. A diagonal uses the next stock length in the square-root-of-two progression, following the existing grid/truss construction. Color variants and rigid rods keep their existing part identities and compatible diagonals.
+
+- **Stepped profile:** a filled 2D stepped lattice, vertical or horizontal, using white 8-way connectors.
+- **Stepped frame:** the same profile repeated across depth, with paired blue 3D nodes and cross-depth rods. Optional braces occupy XY and XZ planes only.
+- **Steps / Rise cells / Depth bays:** one stock cell per step run; rise may span several cells with an intermediate node at every stock length. The frame contains one named layer per step, covering every part once. Limits are 1–30 per control and 2,500 total parts, with rejection before assembly.
+
+`placeFrame` reuses existing matching parts and connections. Growing step count, rise or depth at the same origin preserves the old lattice. Extending in depth shares the boundary profile. Existing IDs, lock flags, mass overrides and groups remain intact. Blocked supports cause their incomplete spans to be skipped. The source model remains unchanged until insertion, which is one undo step.
+
+Numeric dimensions, side subdivisions and placement origin now refresh as the user types. Add is disabled while that preview is pending or invalid, preventing insertion of an older preview. Desktop builder layout keeps the preview and dimensions within the dialog while the controls scroll separately, including when the shape buttons wrap.
+
+The gallery has a **37-part stepped profile** (48 connections) and **755-part stepped grandstand frame** (1,102 connections). Both are original designs. No solid treads, seating panels, strength, buckling or usable-load claim is implied. Existing approximate part geometry and collision bounds still apply.
+
+Verification covers every supported stock rod/color family, compatible braced and unbraced cases, both flat planes, multi-cell rise, exact end-port coincidence and opposing normals, no repeated sockets or duplicate rods, connectedness, per-step layer coverage, preservation during growth and repeated insertion, blocked supports, serialization, and the 1,801-part flat / 2,435-part spatial stress builds.
+
+![Stepped grandstand frame](screenshots/stepped-frame.png)
