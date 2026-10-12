@@ -3,7 +3,7 @@ import {SPRING_REFERENCE} from './spring-motor.js';
 import {rodColorBench,rodColorLattice} from './rod-models.js';
 import {connectorVariantBench,variantWindmill} from './connector-models.js';
 import {buildTruss} from './truss-builder.js';
-import {idlerGearModel,classicGearBench} from './gear-models.js';
+import {crownGearModel,idlerGearModel,classicGearBench} from './gear-models.js';
 import {SNAP_GEAR_REFERENCE} from './classic-gears.js';
 import {panelWall,panelBench,PANEL_REFERENCE} from './panel-models.js';
 import {buildRadial} from './radial-builder.js';
@@ -36,6 +36,7 @@ export function rigidTower(){const m=buildFrame({rod:'r-rigid-tan',counts:[1,4,1
 export function octagonalTower(){const m=buildRadial({kind:'tube',counts:[2,4,1],rod:'r-yellow',braced:true}).model;m.name='Octagonal observation tower';for(const p of m.parts)p.pos[1]+=12;return m;}
 export function paneledTunnel(){const m=buildFrame({kind:'frame',counts:[3,2,2],rod:'r-blue',braced:false,panel:'panel-91072'}).model;m.name='Paneled tunnel';for(const p of m.parts)p.pos[1]+=15;return m;}
 export const EXAMPLES=[
+ {id:'crown-gears',title:'Three-axis crown gearbox',level:'Advanced',skill:'Two corners · three axles',hint:'Run the motor. Two crown pairs transfer rotation around two corners at 34:14 each. The gray support connectors stay locked.',factory:crownGearModel,action:'motors',kind:'Original locked test fixture, not a freestanding manual model; ideal pitch contact and approximate tooth clearance',source:'https://www.knexusergroup.org.uk/en/knex-hint-G1.html'},
  {id:'spring-fan',title:'Spring motor fan',level:'Intermediate',skill:'Wind · release · finite turns',hint:'Wind the spring with ↶ +1 turn, then Release spring. The four housing eyes are carried on two locked fixture rods. Preview speed is adjustable; spring torque is unverified.',factory:springFan,action:'motors',kind:'Original test fixture using Classic 92890, with reconstructed mount spacing; not a manual replica or calibrated spring simulation',source:SPRING_REFERENCE},
  {id:'rod-lattice',title:'Rod color lattice',level:'Advanced',skill:'Stock spans · color variants',hint:'Black 54 mm rods form the cells. Gold 86 mm rods brace the available diagonal planes. Use the generator to create another size.',factory:rodColorLattice,kind:'Original generated lattice using identified Classic rod color variants; no structural load analysis',source:'https://shop.knexusergroup.org.uk/products/909523'},
  {id:'variant-windmill',title:'Black connector windmill',level:'Advanced',skill:'Color variants · same mounts',hint:'Start the motor. The black 8-way connectors retain the same mounting and keyed rotor connections as the original white mold.',factory:variantWindmill,action:'motors',kind:'Original windmill using verified Classic connector color variants; approximate geometry and imposed motor speed',source:'https://shop.knexusergroup.org.uk/products/90968'},

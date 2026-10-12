@@ -107,7 +107,7 @@ The original gray 91324 and black 99119 gears snap onto a rod end and spin indep
 
 ![Original snap-on idler and keyed output in the motor test fixture](docs/screenshots/classic-idler-gears.png)
 
-See [part references and limits](docs/CLASSIC-PARTS.md#classic-snap-on-and-color-variant-gears). Geometry is reconstructed from photos; gear playback uses ideal parallel-axis ratios, without torque or contact simulation.
+See [part references and limits](docs/CLASSIC-PARTS.md#classic-snap-on-and-color-variant-gears). Geometry is reconstructed from photos; gear playback uses ideal parallel-axis and right-angle crown ratios, without torque or contact simulation.
 
 ## Visual grid and frame builder
 
@@ -276,7 +276,7 @@ Parts are procedural reconstructions from identified references, not production 
 
 - **Joints:** coupled rigid groups with gravity, mass and approximate inertia. Mouse pulling uses a force-limited, damped spring; pivot correction keeps connected hinges closed under hard pulls. Parallel-axis networks also correct rotational drift and preserve their motion plane, including closed loops. Ball-and-socket joints constrain their center while allowing spatial rotation; mixed networks remain spatial. Locked supports remain fixed. If no support is locked, the largest connected group is held fixed and the UI reports it. No part-to-part contacts, flexible members or gear transmission in this mode.
 - **Stability:** approximate rigid-build balance and tipping against a flat floor. Joint poses are held fixed during this test.
-- **Motors and gears:** imposed rotational speed and parallel-axis gear ratios. No torque, battery-load or swept rotational collision simulation.
+- **Motors and gears:** imposed rotational speed and parallel-axis/right-angle crown gear ratios. No torque, battery-load or swept rotational collision simulation.
 - **Playground:** approximate flat-ground traction and differential steering, without suspension, jumps or full vehicle contact physics.
 - **Placement and sliding:** occupied sockets and conservative overlap checks. Axle sliding checks obstructions continuously. Free translation checks its destination; rotation does not have a complete collision solver.
 
@@ -307,3 +307,13 @@ Autosave and the recovery archive are local to a browser and site origin. **Save
 - `tests/`: Node test suite for geometry, connections, motion, collisions, examples and serialization.
 
 Bundled third-party notices: [Three.js](dist/vendor/THREE-LICENSE), [cannon-es](dist/vendor/cannon-es.LICENSE), and the font OFL notices under `dist/fonts/`.
+
+## Right-angle crown gearing
+
+Choose a gear, then **90° gears** in the floating placement toolbar. Point at a crown gear and use **R** to move the contact around its rim. Either assembly order works. Mount both gears on independent rods; add a tan key for freely spinning gears.
+
+**Examples → Three-axis crown gearbox** runs two 34:14 stages through two corners. Its output turns at (34/14)², approximately 5.90 times input speed. The motor and four bearing connectors are locked test supports, not a freestanding frame.
+
+Based on [K’NEX User Group Hint G1](https://www.knexusergroup.org.uk/en/knex-hint-G1.html). Pitch distances and the 3 mm crown contact plane are reconstructed estimates. This is ideal kinematic transmission without torque, tooth contact, backlash, slipping or swept collision simulation. Joints mode does not solve gear transmission.
+
+![Two crown stages transferring rotation through three spatial axles](docs/screenshots/crown-gearbox.png)

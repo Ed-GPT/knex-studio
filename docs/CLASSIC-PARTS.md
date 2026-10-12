@@ -14,7 +14,7 @@ Source: [K’NEX User Group picture catalog](https://www.knexusergroup.org.uk/en
 | Coaster track | 91430 cross-tie, split purple tubing identified in 51587 manual | Unsupported layout preview; no coaster vehicle or rail splice mechanics |
 | Clips and spacers | 90900 tan drive clip, 848900 snap cap, 90994 blue spacer, 91224 sleeve; 90901 hole-end clip as 1-way connector | Three molded hinge halves, two rod-end stops, ten Y-clip colors, four ball-joint halves and the 91690 angled clip; other families pending |
 | Wheels | 16 hubs/tyres: pulley, spoked, racing and narrow families | Rod-end bearings, through bores, compatible tyre seats and keyed drive; profiles and tolerances approximate |
-| Gears and chain | 11 original gears plus 90987 chain; variants listed below | Parallel-axis mesh only; chain is not an articulated transmission |
+| Gears and chain | 11 original gears plus 90987 chain; variants listed below | Parallel-axis and full crown right-angle mesh; chain is not an articulated transmission |
 | Enclosed battery motors | 92840 blue, 22722 green, 92401 two-speed | Separate reconstructed housings; imposed preview speeds, no torque/load simulation |
 
 ## Flexi variants
@@ -182,7 +182,7 @@ The following are identified candidates, not yet implemented. Their names and nu
 | Hinges | 9091213 packaged assembly | Audit package contents; implemented standard halves already mate |
 | Connector variants | Distinct 90910 orange track connector; remaining unlisted original variants | Reuse canonical geometry only when mold and connections match; audit interlock, motor mount and tyre compatibility |
 | Rigid/curved rods | 3310042 rigid 234; 91995 long 405 (Mighty Makers scope to audit); 3011001/3012001/3013001 curved; 3007001 X-rod | Verify physical profiles, endpoint spacing, side clips and material differences |
-| Gears | 91700 partial crown, 90996 multitrack, 90983 motor gear; additional original variants | Tooth count, profile, grip, perpendicular/worm transmission; avoid treating every gear as a parallel spur gear |
+| Gears | 91700 partial crown, 90996 multitrack, 90983 motor gear; additional original variants | Tooth count, profile, grip, partial engagement/worm transmission; avoid treating every gear as a parallel spur gear |
 | Motors | 92815 12 V, 92875/20554/92880 tethered, 92845 control; 92660 solar | Separate housings, mounts, drive geometry and controls. The 12 V motor drives 90983 by a worm, not a coaxial rod bore |
 | Wheel families | 20301 narrow wheel and remaining original variants | Verify distinct molded profile, axle grip and dimensions |
 | Other panels | 99020 curved, 99005/99007/99008 flexible, 99013 special, 3310034 rectangular (scope to audit) | Attachment geometry, real sizes and optional mass; no generic plate substitutions |
@@ -208,7 +208,7 @@ Scope exclusions confirmed during the clip audit: [3010001 straight clip without
 
 The **Snap-on idler gears** example has a red 34-tooth input, a gray 14-tooth free idler and a keyed gold 14-tooth output. Output rotation matches the input direction at 34/14 times its speed. The motor housing, white idler pin and two output bearings form a locked test fixture; it is not a freestanding official model. **Classic gear variants** is a separate reference scene.
 
-All new widths (6.3 mm), tooth shapes, cap profile and bearing clearances remain photo estimates. Crown gears currently support parallel-axis meshing only. There is no contact, backlash, torque or slip calculation. The green multitrack part is deliberately pending: its [90996 product listing](https://shop.knexusergroup.org.uk/products/90996) says 84 outer teeth, while [Hint G6](https://www.knexusergroup.org.uk/en/knex-hint-G6.html) says 82; both say 64 inner teeth. The partial crown 91700 also needs distinct engagement logic rather than a full-ring substitute.
+All new widths (6.3 mm), tooth shapes, cap profile and bearing clearances remain photo estimates. Full crown gears support parallel-axis and right-angle meshing. There is no contact, backlash, torque or slip calculation. The green multitrack part is deliberately pending: its [90996 product listing](https://shop.knexusergroup.org.uk/products/90996) says 84 outer teeth, while [Hint G6](https://www.knexusergroup.org.uk/en/knex-hint-G6.html) says 82; both say 64 inner teeth. The partial crown 91700 also needs distinct engagement logic rather than a full-ring substitute.
 
 
 ## Classic connector color variants
@@ -332,3 +332,11 @@ Housing envelope (about 63 × 44 × 18.9 mm), eye spacing (modeled as 53.03 mm),
 Turn the connected axle backward with its rotation ring, middle-drag or Shift-R to wind it, or use **↶ +1 turn** in **Simulate → Motors**. **Release spring** rotates the axle and connected transmission forward, consumes the stored turns, and stops at zero; **Hold** pauses. Winding is preserved by save/import, cloning, undo and reset. Preview RPM is user-controlled: no spring constant, calibrated speed curve, winding capacity, torque, load response or elastic dynamics is claimed. The 20-turn cap is a software preview guard, not a manufacturer limit. The remote battery controller and vehicle test currently exclude this motor rather than treating it as an electric motor; spring-driven vehicle acceleration/coasting remains future work.
 
 The **Spring motor fan** example is a 14-part, 16-link test fixture, with two mounting rods and their clips locked in space. Its seven-part rotor can be wound and released. It is an original demonstration of the mounting and drive system, not a reproduction of the manual's racer or a freestanding supported structure.
+
+## Full crown gear transmission
+
+[Hint G1](https://www.knexusergroup.org.uk/en/knex-hint-G1.html), especially assembly photo hg1d.jpg, confirms Classic crown teeth transferring rotation between perpendicular rods. **90° gears** offers this arrangement when at least one selected part is a full crown gear. R advances the contact around the rim. The raised-tooth face is used; the back face is rejected. Existing parallel mesh connections remain readable.
+
+Contact validation checks axis alignment, radial pitch distance and the pinion height above the crown face. The 3 mm face height and tooth clearances are photo estimates. Ratios use tooth counts; direction follows tangential velocity at the contact, including reversed rods and reverse drive. Displaced gears, locked outputs and conflicting loops reject the drive before any rotation.
+
+The original **Three-axis crown gearbox** has 14 parts, 15 links and five locked fixture parts. Two 34:14 stages multiply speed by approximately 5.90. This is a spatial transmission test, not a freestanding manual build. Tests cover both assembly orders, multiple rim positions, rotated frames, long running/reversal, wrong faces, locking, reload and frame-rate consistency. No new physical parts are invented. Partial crowns and multitrack gears remain pending; torque, backlash and collision contact are not simulated.
