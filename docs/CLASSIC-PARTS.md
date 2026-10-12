@@ -11,12 +11,12 @@ Source: [K’NEX User Group picture catalog](https://www.knexusergroup.org.uk/en
 | Standard rigid rods | Six original lengths and standard colors | Nominal lengths differ from the engine's effective socket spacing; five rigid-material variants and 34 additional straight-rod colors implemented below |
 | Standard connectors | 1, straight 2, angled 2, 3, 4, 5, 8 way; 4 and 7 way 3D | 51 additional sourced color variants; mold details and surface finishes approximate |
 | Flexi rods | 12 variants across four approximate lengths, listed below | Fixed-length shape editing, tangent-aligned end sockets; no elastic dynamics or verified bend limits |
-| Coaster track | 91430 cross-tie, split purple tubing identified in 51587 manual | Unsupported layout preview; no coaster vehicle or rail splice mechanics |
+| Coaster track | Purple tubing and 91430 cross-tie; orange 92602 tubing, 90910 tabs, 90958 rods, 90911 clips and 20501 inserts | Stock-aware orange paths and splice assemblies; no running coaster vehicle, elasticity or verified bend limits |
 | Clips and spacers | 90900 tan drive clip, 848900 snap cap, 90994 blue spacer, 91224 sleeve; 90901 hole-end clip as 1-way connector | Three molded hinge halves, two rod-end stops, ten Y-clip colors, four ball-joint halves and the 91690 angled clip; other families pending |
 | Wheels | 21 wheels/hubs/tyres: small one-piece, pulley, spoked, racing and narrow families | Rod-end bearings, through bores, compatible tyre seats and keyed drive; profiles and tolerances approximate |
 | Gears and chain | 12 original gears plus 90987 chain; variants listed below | Parallel-axis and full crown right-angle mesh; chain is not an articulated transmission |
 | Enclosed battery motors | 92840 blue, 22722 green, 92401 two-speed | Separate reconstructed housings; imposed preview speeds, no torque/load simulation |
-| Other original motors | 92890 spring, 92815 external 12 V with dedicated 90983 gear | Finite spring turns and imposed worm-output preview; uncalibrated torque and internal ratio |
+| Other original motors | 92890 spring, 92815 external 12 V with dedicated 90983 gear; 92875 red and 20554 gray tethered kits | Finite spring turns, worm and dual-output previews; uncalibrated torque and internal ratios |
 
 ## Flexi variants
 
@@ -179,12 +179,12 @@ The following are identified candidates, not yet implemented. Their names and nu
 
 | Family | Identified candidates | Required work |
 | --- | --- | --- |
-| Clips | 90914OR orange Y clip (photo mismatch); 90911 orange coaster-track splice; 23692E end cap | Distinct geometry and actual connections; parts without bores must not inherit through-hole behavior |
+| Clips | 90914OR orange Y clip (photo mismatch); 23692E end cap | Distinct geometry and actual connections; parts without bores must not inherit through-hole behavior |
 | Hinges | 9091213 packaged assembly | Audit package contents; implemented standard halves already mate |
-| Connector variants | Distinct 90910 orange track connector; remaining unlisted original variants | Reuse canonical geometry only when mold and connections match; audit interlock, motor mount and tyre compatibility |
+| Connector variants | Remaining unlisted original connector variants | Reuse canonical geometry only when mold and connections match; audit interlock, motor mount and tyre compatibility |
 | Rigid/curved rods | 3310042 rigid 234; 91995 long 405 (Mighty Makers scope to audit); 3011001/3012001/3013001 curved; 3007001 X-rod | Verify physical profiles, endpoint spacing, side clips and material differences |
 | Gears | 91700 partial crown, 90996 multitrack; additional original variants | Tooth count, profile, grip, partial engagement/worm transmission; avoid treating every gear as a parallel spur gear |
-| Motors | 92875/20554/92880 tethered, 92845 control; 92660 solar | Separate housings, mounts, drive geometry and controls. The 12 V motor drives 90983 by a worm, not a coaxial rod bore |
+| Motors | 92880 compact tethered, 92845 control; 92660 solar | Separate housings, mounts, drive geometry and controls. The 12 V motor drives 90983 by a worm, not a coaxial rod bore |
 | Wheel families | 20301 narrow wheel and remaining original variants | Verify distinct molded profile, axle grip and dimensions |
 | Other panels | 99020 curved, 99005/99007/99008 flexible, 99013 special, 3310034 rectangular (scope to audit) | Attachment geometry, real sizes and optional mass; no generic plate substitutions |
 | Other mechanisms | Additional rubber-band sizes, original coaster cars, lift components and special axles | Brown 92001 two-pulley drive implemented below; finish remaining catalog audit |
@@ -468,3 +468,25 @@ The splicer's 10 mm modeled rail offset, jaw dimensions and tab profile, plus th
 ![Long track with stock splices](screenshots/long-track-builder.png)
 
 Browser verification also exposed a pending-save race: refreshing during the 160 ms autosave delay could restore the previous build. The editor now shows `Saving…` while pending and flushes that save on page hide. Immediate reload after loading the 84-part long track preserves all 108 connections.
+
+
+## Classic tethered motors
+
+[Hint M2](https://www.knexusergroup.org.uk/en/knex-hint-M2.html) documents a separate battery holder and motor, a central through-drive and a perpendicular rod-end drive socket. Both outputs can run together. The holder can dock to the motor, and rods through its mounting eyes attach the kit to a structure.
+
+| Kit | Verified supplier details |
+| --- | --- |
+| [92875 red holder](https://shop.knexusergroup.org.uk/products/92875) | Approx. 116 cm lead, 92.6 g, 3 V from two AA batteries, forward/off/reverse, approx. 36 RPM |
+| [20554 gray holder](https://shop.knexusergroup.org.uk/products/20554) | Short 15 cm lead, approx. 82 g; listed as the corresponding motor kit with a gray battery holder |
+
+The editor models each **docked kit as one catalog part**: transparent gearbox, visible yellow gear, electric motor can, two mounting passages, holder, switch and schematic folded lead. The lead metadata retains its stock length, but the displayed curve is not that length and is not flexible physics. The holder cannot yet be detached or positioned separately. Case sizes, mount spacing, bore clearances, center of mass and small molded details are reconstruction estimates, not measured CAD. Supplier mass inclusion of batteries and RPM load conditions are unspecified.
+
+Use **Through-hole** for the central drive or either mounting passage, and **End** for the perpendicular drive socket. Both assembly orders work. The end socket retains its rod and allows rotation without axial sliding. Mounting rods remain separate from the driven shafts; invented connector face mounts are disabled.
+
+Motor playback and controller keys rotate both attached transmissions. A blocked output rejects the whole step before either shaft moves. The source does not identify which axis the listed RPM measures or specify the relative output speed and direction. Both use an explicitly **uncalibrated 1:1 preview**, not a verified internal gear ratio. There is no torque, load response, battery discharge, gear-contact calculation or coupling of the outputs during manual dragging and joint simulation. Shared output transmissions are rejected. Vehicle testing currently supports only one connected output per tethered motor; use Motors to preview both.
+
+**Tethered motor · two outputs** and **Gray tethered motor** are original 17-part test fixtures with 16 connections and seven locked mounting parts. They demonstrate the referenced mounting and drive methods, not a freestanding official build. Tests cover both mounting orders in rotated frames, open through bores and blind end socket geometry, dual-output reversal, fixed supports, one-output operation, blocked-drive atomicity and save/import.
+
+The [92880](https://shop.knexusergroup.org.uk/products/92880) photograph shows a different compact housing. It remains pending rather than inheriting this kit's shape.
+
+![Classic docked tethered motor with two connected outputs](screenshots/classic-tethered-motor.png)

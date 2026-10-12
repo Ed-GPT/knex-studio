@@ -1,6 +1,8 @@
 // K’NEX User Group product listings, checked 2026-10-11. Approximate supplier values, not factory measurements.
 // Motor load conditions and battery inclusion in listed mass are unspecified.
 export const PART_SPECS={
+'m-tethered-red':{partNumber:'92875',massG:92.6,rpm:36,source:'https://shop.knexusergroup.org.uk/products/92875',checked:'2026-10-12',quality:'Supplier approximate; battery inclusion and output axis unspecified'},
+'m-tethered-gray':{partNumber:'20554',massG:82,rpm:36,source:'https://shop.knexusergroup.org.uk/products/20554',checked:'2026-10-12',quality:'Supplier approximate; battery inclusion and output axis unspecified'},
 'k-track-splicer':{partNumber:'90911',massG:.72,source:'https://shop.knexusergroup.org.uk/products/90911',checked:'2026-10-12',quality:'Supplier approximate'},
 'k-track-joiner':{partNumber:'20501',massG:.1,source:'https://shop.knexusergroup.org.uk/products/20501',checked:'2026-10-12',quality:'Supplier approximate'},
 'c-track-orange': {partNumber:'90910',massG:2.63,source:'https://shop.knexusergroup.org.uk/products/90910',checked:'2026-10-12',quality:'Supplier approximate'},

@@ -385,4 +385,13 @@ Path builder now offers the original orange tubing system alongside purple tubin
 
 ![Original orange track builder](docs/screenshots/orange-track-builder.png)
 
-Long orange paths now use multiple stock-sized tubing cuts joined by original 20501 red inserts. Optional cyan markers show the joints in the path preview. **Supported tubing splice** demonstrates the separate 90911 rod clip from the original manual. The library contains 222 Classic part types; fitting dimensions remain photo estimates. See [splice references and limits](docs/CLASSIC-PARTS.md#classic-tubing-splices-and-longer-generated-paths).
+Long orange paths now use multiple stock-sized tubing cuts joined by original 20501 red inserts. Optional cyan markers show the joints in the path preview. **Supported tubing splice** demonstrates the separate 90911 rod clip from the original manual. The library contains 224 Classic part types; fitting dimensions remain photo estimates. See [splice references and limits](docs/CLASSIC-PARTS.md#classic-tubing-splices-and-longer-generated-paths).
+
+
+### Classic tethered motor kits
+
+**Parts → Motors** now includes the original red **92875** and gray **20554** kits. Through-hole placement chooses the central drive or a mounting passage; End placement fits the perpendicular drive socket. Both shafts drive their connected assemblies together while the case and mounting rods stay fixed. Open **Tethered motor · two outputs** or **Gray tethered motor** to try the 17-part fixtures.
+
+![Classic tethered motor with two output shafts](docs/screenshots/classic-tethered-motor.png)
+
+The separate holder is currently modeled docked to the motor as one kit; its lead is schematic. Supplier approximate speed is 36 RPM, but its reference axis and relative output ratio are unspecified, so dual-output playback is labeled an uncalibrated 1:1 preview. Geometry, battery inclusion in the supplier mass, torque and load response remain unverified. See [sources and limitations](docs/CLASSIC-PARTS.md#classic-tethered-motors).
