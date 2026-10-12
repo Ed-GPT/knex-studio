@@ -19,13 +19,15 @@ export function buildRadial(options={}){
  for(let level=0;level<=d.levels;level++)for(const point of points){
   // Orient the corner pairs along the even side. Four alternating walls get
   // real 45-degree braces; the neighboring wall cannot share that same plane.
-  const side=point.index===0&&point.side%2?point.side-1:point.side,quat=rotation.clone().multiply(Q().setFromAxisAngle(V([0,0,1]),side*Math.PI/4)),pos=point.pos.clone().add(V([0,0,level*d.pitch])).applyQuaternion(rotation),a=part(d.kind==='ring'?'c-white':'c-blue',pos.toArray(),quat.toArray()),pair=[a];m.parts.push(a);layers[level].push(a.id);
+  // Cell arrays canonicalize opposite walls so their connector halves and
+  // brace directions match when those walls merge.
+  const side=point.index===0&&point.side%2?point.side-1:point.side,quat=rotation.clone().multiply(Q().setFromAxisAngle(V([0,0,1]),(options.sharedNodes?side%4:side)*Math.PI/4)),pos=point.pos.clone().add(V([0,0,level*d.pitch])).applyQuaternion(rotation),a=part(d.kind==='ring'?'c-white':'c-blue',pos.toArray(),quat.toArray()),pair=[a];m.parts.push(a);layers[level].push(a.id);
   if(d.kind==='tube'){const local={parts:[a],links:[]},p=solve(local,'c-blue',targets(local,'c-blue','interlock')[0],'interlock');m.parts.push(p.part);m.links.push(p.link);pair.push(p.part);layers[level].push(p.part.id);}nodes.push(pair);
  }
  const span=(ai,bi,type,level)=>{const a=nodes[ai],b=nodes[bi],dir=V(b[0].pos).sub(V(a[0].pos)).normalize(),ap=a.flatMap(ports).find(p=>p.kind==='slot'&&V(p.dir).dot(dir)>.999999),bp=b.flatMap(ports).find(p=>p.kind==='slot'&&V(p.dir).dot(dir)<-.999999);if(!ap||!bp)throw Error('No real socket for the octagonal span.');
   const rod=part(type,V(ap.pos).add(V(bp.pos)).multiplyScalar(.5).toArray(),Q().setFromUnitVectors(V([1,0,0]),dir).toArray()),ends=ports(rod);if(V(ends[0].pos).distanceTo(V(ap.pos))>1e-6||V(ends[1].pos).distanceTo(V(bp.pos))>1e-6)throw Error('Stock rod does not fit the octagonal span.');m.parts.push(rod);layers[level].push(rod.id);m.links.push({a:ap.partId,ap:ap.key,b:rod.id,bp:'end0',mode:'end'},{a:bp.partId,ap:bp.key,b:rod.id,bp:'end1',mode:'end'});
  };
- for(let level=0;level<=d.levels;level++)for(let i=0;i<perimeter;i++){const next=(i+1)%perimeter;span(level*perimeter+i,level*perimeter+next,d.rod,level);if(level<d.levels){span(level*perimeter+i,(level+1)*perimeter+i,d.rod,level+1);if(d.braced&&points[i].side%2===0)span(level*perimeter+i,(level+1)*perimeter+next,d.diagonal,level+1);}}
+ for(let level=0;level<=d.levels;level++)for(let i=0;i<perimeter;i++){const next=(i+1)%perimeter;span(level*perimeter+i,level*perimeter+next,d.rod,level);if(level<d.levels){span(level*perimeter+i,(level+1)*perimeter+i,d.rod,level+1);if(d.braced&&points[i].side%2===0)span(level*perimeter+(options.sharedNodes&&points[i].side>=4?next:i),(level+1)*perimeter+(options.sharedNodes&&points[i].side>=4?i:next),d.diagonal,level+1);}}
  const offset=V([0,0,0]);for(let i=0;i<3;i++)offset.setComponent(i,-Math.min(...nodes.map(n=>n[0].pos[i])));for(const p of m.parts)p.pos=V(p.pos).add(offset).toArray();
  layers.forEach((ids,i)=>makeLayer(m,ids,d.kind==='ring'?'Ring':i?`Level ${i}`:'Base ring'));makeGroup(m,m.parts.map(p=>p.id),d.kind==='ring'?'Octagonal ring':'Octagonal tower');return{model:m,dimensions:d};
 }

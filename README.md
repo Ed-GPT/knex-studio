@@ -123,6 +123,16 @@ Open **Generate → Grid & frame**. Choose a panel, rectangular frame, octagonal
 
 These are procedural demonstrations of the existing referenced Classic connector and rod system, not official building plans. Connector geometry and fit tolerances remain approximate; generated frames do not add structural load or collision simulation.
 
+### Octagonal cell grids and frames
+
+Choose **Octagonal grid** for a flat lattice or **Cell frame** for a spatial array. **Columns +** and **Rows +** repeat cells; **Levels +** grows their height. **Segments per side +** enlarges each octagon using whole stock rods. Flat grids can stand vertically or lie horizontally.
+
+![Octagonal cell frame with shared walls and stock diagonals](docs/screenshots/octagonal-cell-frame.png)
+
+Touching cells share full edges, rods and connectors. Four adjacent octagons leave a square opening between them. Spatial cells use paired blue 3D connectors and brace only the four compatible wall planes; shared walls retain one diagonal, not two crossing rods. Each cell has a layer, with shared boundary parts assigned to the first cell. Matching existing parts are reused on insertion, blocked spans are skipped, and insertion remains one undo step.
+
+**Examples → Octagonal cell frame** opens a 589-part, six-cell example. Tests cover connected 2,300-part flat grids and 2,275-part spatial frames, all supported Classic rod variants, socket alignment, save/import, shared-wall extension and obstacles. These are original procedural constructions using existing modeled Classic parts, not official manual models or verified physical load-bearing designs. Connector geometry and collision bounds remain approximate; connector bending and buckling are not simulated. Molded panels are not generated for these shapes.
+
 ### Roof trusses and gable roofs
 
 Choose **Roof truss** for a flat triangle or **Gable roof** for repeated triangular frames. **Half-span +** increases both half the width and the rise by one stock cell; the slope stays at 45°. **Depth bays +** extends the roof. The rafters always use the next matching stock rod length; unsupported rod choices are disabled. **Interior braces** adds diagonals inside the trusses and horizontal cross-bay planes while keeping the outside rafters when disabled.
