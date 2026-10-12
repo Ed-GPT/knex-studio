@@ -45,7 +45,7 @@ The complete static application is in `dist/`, including Three.js and cannon-es.
 - **Lock / Unlock** fixes a part's position and orientation. Press **G** or use the padlock. Layer editing locks are separate.
 - **Detach** releases external joints while preserving the joints inside a selection. **Reconnect** snaps it elsewhere.
 - **Clone** copies a selection. **Repeat +** uses the section's connection-grid spacing, reuses coincident parts, and skips obstructed additions.
-- Open **Simulate** for stability, coupled joints, or motor playback. **Test drive** runs a vehicle copy in a separate playground.
+- Open **Physics** for gravity, joints, balls and tipping; select a motor for its playback controls. **Test drive** runs a vehicle copy in a separate playground.
 - **Hints** toggles optional on-screen guidance. Fine adjustment, mass, transforms, connections, and part information are expandable.
 
 | Shortcut | Action |
@@ -222,7 +222,7 @@ End snapping and axle bearings work with all five. Side gripping is available on
 
 The Clips & spacers flyout includes blue **90912**, black **90919** and green **90913** hinge halves, plus blue **91440** and bronze **914401** rod-end stops. Each part has its own saved identity and photo-based profile. Blue pin halves mate with black or green socket halves through **Hinge** mode; the editor chooses this mode when a matching free half is present. Rod sockets use End or Side-on connections. End stops use End only.
 
-Select the outer arm to rotate it with the gold ring or **R**. The pivot cannot slide apart. For a chain of hinges, run **Simulate → Joints** and drag either arm. **Examples → Molded double hinge** is a two-joint stress model with its small mounting fixture locked in space; it is not a freestanding stand or an official building plan. **Part reference scenes → Clips & hinge halves** also shows the two end-stop colors.
+Select the outer arm to rotate it with the gold ring or **R**. The pivot cannot slide apart. For a chain of hinges, run **Physics** and drag either arm. **Examples → Molded double hinge** is a two-joint stress model with its small mounting fixture locked in space; it is not a freestanding stand or an official building plan. **Part reference scenes → Clips & hinge halves** also shows the two end-stop colors.
 
 ![Classic molded double hinge with the selected outer arm and rotation ring](docs/screenshots/classic-hinges.png)
 
@@ -244,7 +244,7 @@ Identities, photos and approximate supplier masses are recorded in [Classic part
 
 The Clips & spacers flyout contains standard **90940 / 90945** and large **99036B / 99036S** ball-and-socket clips. Matching halves snap through **Ball joint** mode, selected automatically when a free compatible partner exists. The two sizes cannot cross-connect. Each half also has a standard rod jaw; neither has a generic axle hole or drive key.
 
-Drag a terminal arm directly to aim it around its ball center, or use the three colored rotation rings. Clipped parts follow as a rigid group. For linked arms, use **Simulate → Joints → Run joints**, pull either arm and release. **Examples → Ball-joint pendulum** uses both sizes in a nine-part chain with a three-part fixture locked in space. It is an original motion demo, not a freestanding build or official manual model.
+Drag a terminal arm directly to aim it around its ball center, or use the three colored rotation rings. Clipped parts follow as a rigid group. For linked arms, use **Physics → Play**, pull either arm and release. **Examples → Ball-joint pendulum** uses both sizes in a nine-part chain with a three-part fixture locked in space. It is an original motion demo, not a freestanding build or official manual model.
 
 ![Classic ball-joint arm rotated directly around its socket, with three rotation rings](docs/screenshots/classic-ball-joints.png)
 
@@ -266,7 +266,7 @@ The orange 91690 clip fits a connector's triangular recess and holds a rod at 45
 
 ## Original two-speed motor
 
-The larger gray **92401 Tony motor** has its own reconstructed four-AA housing and mounting geometry. Open **Examples → Two-speed windmill**, then choose **Slow** or **Fast** in Simulate → Motors. The switch is saved with the part and used by controller keys and playground driving. Supplier approximate speeds are 48 and 240 RPM; playback does not calculate torque or battery load. [Sources and dimensional limits](docs/CLASSIC-PARTS.md#original-two-speed-motor).
+The larger gray **92401 Tony motor** has its own reconstructed four-AA housing and mounting geometry. Open **Examples → Two-speed windmill**, then choose **Slow** or **Fast** in the motor playback panel. The switch is saved with the part and used by controller keys and playground driving. Supplier approximate speeds are 48 and 240 RPM; playback does not calculate torque or battery load. [Sources and dimensional limits](docs/CLASSIC-PARTS.md#original-two-speed-motor).
 
 ![Two-speed motor driving an original windmill example](docs/screenshots/classic-two-speed-motor.png)
 
@@ -280,29 +280,41 @@ The larger gray **92401 Tony motor** has its own reconstructed four-AA housing a
 
 The photos determine the outline, perforation pattern and peg arrangement; plate thickness, rib/peg tolerances and some dimensions remain estimates. Curved and flexible panels are still separate pending work. [Part identities and fit limits](docs/CLASSIC-PARTS.md#classic-molded-panels).
 
-## Rolling-ball test
+## Shared physics workspace
 
-Open **Simulate → Ball test**. Choose **Try ramp → Feed ramp**, or use **Drop ball** and click a surface in the 3D view. The green preview shows clearance; pink means the ball would overlap a part or another ball. Pause, clear and restart without changing your editor model. Select a small section before opening the test to use **Selection** instead of the whole build.
+Open **Physics** in the main workspace, then **Play**. Gravity, articulated hinges, ball-and-socket joints, freely moving rigid sections, rolling balls, contacts and tipping share one Cannon world. Pull a free part with the mouse and release. **Reset** restores the starting pose; leaving Physics restores the editor build. Settings and ball start positions are saved, but simulated poses are temporary.
 
-![Red/yellow K’NEX ball rolling on the orange-tubing test ramp](docs/screenshots/ball-test.png)
+- **Free:** responds to gravity and contacts. There is no automatic hidden anchor.
+- **Locked:** holds a rigidly connected section in space while it supports and collides with other objects. The editor's lock remains the same saved property.
+- **Bypass:** holds a rigid section and excludes its contacts and joints. It does not act as an invisible support.
+- **Rigid assemblies:** freezes relative joint movement for the preview; an unlocked whole assembly can still fall or tip.
+- **Build-to-build collisions:** turn off to allow separate structure bodies to pass through one another. Balls and the floor still collide.
 
-The ball represents the assembled **90990 red + 90991 yellow halves**, approximately **46 mm** in diameter, as identified by the [K’NEX User Group ball-coaster guide](https://www.knexusergroup.org.uk/en/knex-hint-R5.html) and supplier pages for [90990](https://shop.knexusergroup.org.uk/products/90990) and [90991](https://shop.knexusergroup.org.uk/products/90991). The preview reconstructs the outer spherical profile and two colors; internal clips and manufacturing tolerances are not modeled. Its adjustable 24 g default, hollow-shell inertia, grip and restitution are estimates rather than calibrated material measurements.
+**Place ball** previews a vertical drop above the pointed surface and centers between nearby compatible rails. **Above selection** places directly above a selected part; **Drop height** controls clearance. **Ball track example** loads an original locked fixture using real 92602 orange tubing, 90910 clips and blue cross-rods. It is not a freestanding or manual-derived model.
 
-Balls fall, roll, bounce, collide with one another and contact the rendered part surfaces, including curved tubing. The example uses real 92602 orange tubing, 90910 track connectors and stock blue cross-rods with existing side-grip connections. Its narrow rail spacing supports a ball. It is held fixed as a test fixture, not a freestanding model or a replica of a specific instruction manual.
+![Shared physics controls and the Classic ball-track fixture](docs/screenshots/unified-physics.png)
 
-This is an isolated **static-build ball simulation**. All structure parts stay fixed regardless of their editor lock state. Moving lifts, motor-driven contact, flexible track deformation, structural reactions and a complete ball-machine solver are not included. Tests currently allow 16 balls and 300,000 collision triangles. Larger geometry fails visibly instead of silently losing colliders; choose a smaller selection. The solver uses 480 Hz substeps, caps ball speed at 5 m/s and limits catch-up work per display frame. Slow devices may run below real time. These safeguards are not a continuous-collision guarantee for arbitrary geometry. Balls are temporary test objects and are not saved in model JSON or added to the parts inventory.
+The ball represents assembled **90990 red + 90991 yellow halves**, approximately **46 mm** in diameter, identified by the [K’NEX User Group ball-coaster guide](https://www.knexusergroup.org.uk/en/knex-hint-R5.html). The outer profile is reconstructed; internal clips and manufacturing tolerances are not modeled. Its 24 g mass, hollow-shell inertia, grip and restitution are estimates.
+
+Collision shapes use simple rod, hub, socket and rail proxies. Other housings, panels and specialty fittings use conservative bounds. Small ribs, cavities, exact snap-fit friction, angular stops, separation force, flexible deformation and tooth contact are not simulated. The solver uses 240 Hz substeps, limited mouse forces and bounded catch-up work. Speeds are capped at 5 m/s and 100 rad/s. This is not a continuous-collision guarantee; difficult intersections and very fast contact can remain approximate. Limits are 32 balls and 12,000 collision shapes, with a visible error rather than silently missing colliders. A selected rigid section can be bypassed to reduce cost.
+
+## Part colors and crossing selection
+
+Rod and connector cards show one entry per mechanically equivalent shape or length, with real catalog color swatches. The last chosen color is remembered on this browser. Square, ribbed, rigid and molded-stop rods remain distinct where their geometry differs. Flat grids offer real 8-way variants, blue/purple 3D pairs and metallic-blue/silver 3D pairs; their socket orientations and interlocks remain genuine.
+
+![Grouped rod lengths with remembered color swatches](docs/screenshots/part-color-swatches.png)
+
+**Shift-drag in Select mode** selects parts whose projected bounds touch the box. A rod tip can be selected without enclosing its center. This is a conservative bounds test, not pixel-perfect silhouette selection; it does not automatically expand to the whole connected build.
+
+## Performance and limits
+
+The model limit remains **2,500 parts**. Rigid rod and connector render meshes are merged per material and cached, preserving their triangles and ray picking. Simulation attaches collision shapes in a batch and uses ID maps for pose updates. [Benchmark details](docs/PERFORMANCE.md) include before/after rendering, selection and solver measurements. Open `benchmark.html` on the demo or development server to reproduce the synthetic grid test. These device-specific results do not establish a safe higher cap for arbitrary builds.
 
 ## Physics and accuracy
 
-Parts are procedural reconstructions from identified references, not production CAD. Nominal rod lengths differ from effective connector-center spacing. Small clip details, clearances, motor housing dimensions and tooth shapes remain approximate. The catalog does not include every historical part. Classic flexi rods in four stock lengths and split-tubing track are available as shape previews; Micro track is not included.
+Parts are procedural reconstructions from identified references, not production CAD. Nominal rod lengths differ from effective connector-center spacing. Small clip details, clearances, motor housing dimensions and tooth shapes remain approximate. Classic flexi rods and split-tubing track are shape previews; Micro track is not included.
 
-- **Joints:** coupled rigid groups with gravity, mass and approximate inertia. Mouse pulling uses a force-limited, damped spring; pivot correction keeps connected hinges closed under hard pulls. Parallel-axis networks also correct rotational drift and preserve their motion plane, including closed loops. Ball-and-socket joints constrain their center while allowing spatial rotation; mixed networks remain spatial. Locked supports remain fixed. If no support is locked, the largest connected group is held fixed and the UI reports it. No part-to-part contacts, flexible members or gear transmission in this mode.
-- **Stability:** approximate rigid-build balance and tipping against a flat floor. Joint poses are held fixed during this test.
-- **Motors and gears:** imposed rotational speed and parallel-axis/right-angle crown gear ratios. No torque, battery-load or swept rotational collision simulation.
-- **Playground:** approximate flat-ground traction and differential steering, without suspension, jumps or full vehicle contact physics.
-- **Placement and sliding:** occupied sockets and conservative overlap checks. Axle sliding checks obstructions continuously. Free translation checks its destination; rotation does not have a complete collision solver.
-
-These are separate simulation modes, not one general physics simulation. Supplier approximate masses and speed references are recorded in `dist/part-specs.js`; total operating mass can be overridden to include batteries or payload. Unverified dimensions are not presented as exact manufacturing measurements.
+The shared physics workspace handles moving structures and balls. **Motor/gear playback and the driving playground remain prescribed-motion previews**, without torque, battery-load, suspension or full vehicle contacts. They do not currently drive the shared physics world. Placement and sliding retain separate conservative fit checks; rotation has no complete swept collision check. Supplier approximate masses and speed references are recorded in `dist/part-specs.js`; structural masses can be overridden for batteries or payload.
 
 ## Saving
 

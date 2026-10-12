@@ -1,32 +1,35 @@
+import {connectorShape} from './classic-connectors.js';
 import {CLASSIC_RIGID_RODS,CLASSIC_ROD_COLORS} from './classic-rods.js';
 import {V,Q,BY_ID,SOCKET,part,ports,emptyModel,solve,targets,exportModel,parseModel,busy,definition} from './engine.js';
 import {makeGroup,makeLayer} from './editor-state.js';
 import {equivalent,linkAvailable} from './pattern.js';
 import {partsOverlap} from './slide-collision.js';
+export const GRID_CONNECTORS=[...Object.values(BY_ID).filter(d=>connectorShape(d)==='c-white').map(d=>({id:d.id,name:d.name,types:[d.id]})),{id:'blue-purple',name:'Blue + purple 3D pair',types:['c-blue','c-purple']},{id:'metallic-pair',name:'Metallic blue + silver 3D pair',types:['c-91907','c-909091']}];
 export const FRAME_RODS=['r-green','r-white','r-blue','r-yellow','r-red','r-gray'];
 export const FRAME_ROD_CHOICES=[...FRAME_RODS,...CLASSIC_RIGID_RODS.map(d=>d.id),...CLASSIC_ROD_COLORS.map(d=>d.id)];
 export function frameDiagonal(rod){if(!FRAME_ROD_CHOICES.includes(rod))return undefined;const d=BY_ID[rod];return d.rigidRod?(d.stockIndex===4?'r-rigid-black':undefined):(d.rodVariant&&CLASSIC_ROD_COLORS.find(next=>next.stockIndex===d.stockIndex+1&&next.colorName===d.colorName)?.id||FRAME_RODS[d.stockIndex+1]);}
 export const framePanels=rod=>FRAME_ROD_CHOICES.includes(rod)?Object.values(BY_ID).filter(d=>d.panelShape==='square'&&Math.abs(d.pitch-BY_ID[rod].length-2*SOCKET)<1e-6):[];
-export function frameDimensions({kind='frame',counts=[3,2,2],rod='r-blue',braced=true,plane='xy',panel=null,openInterior=false,openEnds=false}={}){
+export function frameDimensions({kind='frame',counts=[3,2,2],rod='r-blue',braced=true,plane='xy',panel=null,openInterior=false,openEnds=false,gridConnector='c-white'}={}){
  if(!['grid','frame'].includes(kind)||!['xy','xz'].includes(plane)||!FRAME_ROD_CHOICES.includes(rod))throw Error('Choose Classic rods and a grid or frame.');
  if(!Array.isArray(counts)||counts.length!==3||counts.some(n=>!Number.isInteger(n)||n<1||n>30))throw Error('Use 1 to 30 cells along each axis.');
  if(typeof openInterior!=='boolean'||typeof openEnds!=='boolean')throw Error('Open interior must be on or off.');
  openInterior=kind==='frame'&&openInterior;openEnds=openInterior&&openEnds;
+ const connectorChoice=GRID_CONNECTORS.find(c=>c.id===gridConnector);if(!connectorChoice)throw Error('Choose a compatible grid connector.');
  const [x,y,z]=[counts[0],counts[1],kind==='grid'?0:counts[2]],pitch=BY_ID[rod].length+2*SOCKET,diagonal=frameDiagonal(rod);
  if(panel&&!framePanels(rod).some(d=>d.id===panel))throw Error('Choose a square panel that fits this stock rod size.');
  if(panel&&braced)throw Error('Panels and braces use the same diagonal sockets. Choose one.');
  if(braced&&!diagonal)throw Error('This rod size has no matching stock diagonal. Turn braces off.');
- const interior=n=>Math.max(0,n-1),faceNodes=(a,b)=>(a+1)*(b+1)-(openInterior?interior(a)*interior(b):0),nodes=(x+1)*(y+1)*(z+1)-(openInterior?(openEnds?x+1:interior(x))*interior(y)*interior(z):0),edges=x*faceNodes(y,z)+(openEnds?2*(x+1)*(y+z):y*faceNodes(x,z)+z*faceNodes(x,y)),braces=braced?(openInterior?2*x*y+2*x*z:x*y*(z+1)+(kind==='frame'?x*z*(y+1):0)):0,panels=panel?(kind==='grid'?x*y:2*x*y+2*x*z):0,total=nodes*(kind==='frame'?2:1)+edges+braces+panels;
+ const interior=n=>Math.max(0,n-1),faceNodes=(a,b)=>(a+1)*(b+1)-(openInterior?interior(a)*interior(b):0),nodes=(x+1)*(y+1)*(z+1)-(openInterior?(openEnds?x+1:interior(x))*interior(y)*interior(z):0),edges=x*faceNodes(y,z)+(openEnds?2*(x+1)*(y+z):y*faceNodes(x,z)+z*faceNodes(x,y)),braces=braced?(openInterior?2*x*y+2*x*z:x*y*(z+1)+(kind==='frame'?x*z*(y+1):0)):0,panels=panel?(kind==='grid'?x*y:2*x*y+2*x*z):0,total=nodes*(kind==='frame'?2:connectorChoice.types.length)+edges+braces+panels;
  if(total>2500)throw Error(`This needs ${total} parts. Maximum 2500; reduce the cell counts.`);
- return{kind,counts:[x,y,z],rod,braced,plane,panel,panels,openInterior,openEnds,pitch,diagonal,total,size:(kind==='grid'&&plane==='xz'?[x,0,y]:[x,y,z]).map(n=>n*pitch)};
+ return{gridConnector,connectorTypes:connectorChoice.types,kind,counts:[x,y,z],rod,braced,plane,panel,panels,openInterior,openEnds,pitch,diagonal,total,size:(kind==='grid'&&plane==='xz'?[x,0,y]:[x,y,z]).map(n=>n*pitch)};
 }
 export function buildFrame(options={}){
  const d=frameDimensions(options),[nx,ny,nz]=d.counts,m=emptyModel(d.kind==='grid'?'Generated grid':'Generated frame'),nodes=new Map(),rows=new Map(),rotation=d.kind==='grid'&&d.plane==='xz'?Q().setFromAxisAngle(V([1,0,0]),Math.PI/2):Q();
  const key=(x,y,z)=>`${x},${y},${z}`,row=(y,ids)=>{if(!rows.has(y))rows.set(y,[]);rows.get(y).push(...ids);};
  for(let y=0;y<=ny;y++)for(let z=0;z<=nz;z++)for(let x=0;x<=nx;x++){
   if(d.openInterior&&(d.openEnds||x>0&&x<nx)&&y>0&&y<ny&&z>0&&z<nz)continue;
-  const pos=V([x*d.pitch,y*d.pitch,z*d.pitch]).applyQuaternion(rotation).toArray(),a=part(d.kind==='grid'?'c-white':'c-blue',pos,rotation.toArray()),pair=[a];m.parts.push(a);
-  if(d.kind==='frame'){const local={parts:[a],links:[]},p=solve(local,'c-blue',targets(local,'c-blue','interlock')[0],'interlock');m.parts.push(p.part);m.links.push(p.link);pair.push(p.part);}
+  const pos=V([x*d.pitch,y*d.pitch,z*d.pitch]).applyQuaternion(rotation).toArray(),a=part(d.kind==='grid'?d.connectorTypes[0]:'c-blue',pos,rotation.toArray()),pair=[a];m.parts.push(a);
+  if(d.kind==='frame'||d.connectorTypes.length===2){const second=d.kind==='frame'?'c-blue':d.connectorTypes[1],local={parts:[a],links:[]},p=solve(local,second,targets(local,second,'interlock')[0],'interlock');m.parts.push(p.part);m.links.push(p.link);pair.push(p.part);}
   nodes.set(key(x,y,z),pair);row(y,pair.map(p=>p.id));
  }
  const span=(from,to,type,level)=>{const a=nodes.get(key(...from)),b=nodes.get(key(...to)),direction=V(b[0].pos).sub(V(a[0].pos)).normalize(),ap=a.flatMap(ports).find(p=>p.kind==='slot'&&V(p.dir).dot(direction)>.99999),bp=b.flatMap(ports).find(p=>p.kind==='slot'&&V(p.dir).dot(direction)<-.99999);if(!ap||!bp)throw Error('No real socket for this span.');

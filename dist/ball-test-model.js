@@ -10,3 +10,5 @@ export function ballRamp(){
  model.name='Ball test ramp';return model;
 }
 export const RAMP_DROP=[-195,240,0];
+
+export function ballTrackExample(){const m=ballRamp();m.name='Ball track';for(const p of m.parts)p.grounded=true;m.physics={gravity:9.81,friction:.24,bounce:.12,contacts:true,rigid:false,balls:[{pos:[...RAMP_DROP]}]};return m;}

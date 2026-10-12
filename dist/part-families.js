@@ -1,0 +1,5 @@
+import {connectorShape} from './classic-connectors.js';
+export function familyKey(d){if(d.group==='rods')return `rod:${d.stockIndex}:${d.rigidRod?'rigid':'normal'}:${d.rodProfile||'ribbed'}:${d.trackStops?'stops':''}`;if(d.group==='connectors')return `connector:${connectorShape(d)}`;return d.id;}
+export function partFamilies(parts){const map=new Map();for(const d of parts){const key=familyKey(d);if(!map.has(key))map.set(key,{key,parts:[]});map.get(key).parts.push(d);}return [...map.values()];}
+export function preferredPart(family,preferences={}){return family.parts.find(d=>d.id===preferences[family.key])||family.parts[0];}
+export function familyLabel(d){if(d.group==='rods')return `${d.nominal} mm ${d.rigidRod?'rigid rod':d.trackStops?'track rod':d.rodProfile==='square'?'square rod':'rod'}`;if(d.group==='connectors'){return({'c-gray':'1-way','c-orange':'Straight 2-way','c-lgray':'2-way','c-red':'3-way','c-green':'4-way','c-yellow':'5-way','c-white':'8-way','c-purple':'4-way 3D','c-blue':'7-way 3D'})[connectorShape(d)]||d.name;}return d.name;}

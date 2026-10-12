@@ -1,0 +1,4 @@
+import * as T from './vendor/three.module.js';
+// Crossing selection: any overlap of the projected part bounds counts, rather
+// than requiring its origin inside the rectangle. No assembly-wide expansion.
+export function crossesSelection(object,camera,rect,viewport){const box=new T.Box3().setFromObject(object);if(box.isEmpty())return false;const projected=[];for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z])projected.push(new T.Vector3(x,y,z).project(camera));const inFront=projected.filter(p=>p.z>=-1&&p.z<=1);if(!inFront.length)return false;const xs=inFront.map(p=>(p.x+1)*viewport.width/2),ys=inFront.map(p=>(1-p.y)*viewport.height/2);return Math.max(...xs)>=rect.minX&&Math.min(...xs)<=rect.maxX&&Math.max(...ys)>=rect.minY&&Math.min(...ys)<=rect.maxY;}
