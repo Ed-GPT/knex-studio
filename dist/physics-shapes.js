@@ -7,7 +7,7 @@ const cache=new Map();
 // are deliberately omitted; these shapes are not manufacturing CAD.
 export function collisionShapes(p){const d=definition(p);if(!p.path&&!p.belt&&cache.has(p.type))return cache.get(p.type);const shapes=[];
  const box=(size,pos=[0,0,0],quat=[0,0,0,1])=>shapes.push({shape:()=>new C.Box(new C.Vec3(...size.map(n=>Math.max(.0003,n/2000)))),pos,quat});
- const segment=(a,b,r)=>{const av=V(a),bv=V(b),delta=bv.clone().sub(av),length=delta.length();if(length<.01)return;const q=Q().setFromUnitVectors(V([0,1,0]),delta.normalize());shapes.push({shape:()=>new C.Cylinder(r/1000,r/1000,length/1000,8),pos:av.add(bv).multiplyScalar(.5).toArray(),quat:q.toArray()});};
+ const segment=(a,b,r)=>{const av=V(a),bv=V(b),delta=bv.clone().sub(av),length=delta.length();if(length<.01)return;const q=Q().setFromUnitVectors(V([0,1,0]),delta.normalize());shapes.push({shape:()=>new C.Cylinder(r/1000,r/1000,length/1000,24),pos:av.add(bv).multiplyScalar(.5).toArray(),quat:q.toArray()});};
  const sphere=(point,r)=>shapes.push({shape:()=>new C.Sphere(r/1000),pos:point,quat:[0,0,0,1]});
  if(d.tubing||d.flexi){const points=p.path||[[-(d.length||190)/2,0,0],[(d.length||190)/2,0,0]],simple=simplifyPath(points,.2),r=d.tubing?2.8:2.8;for(let i=1;i<simple.length;i++)segment(simple[i-1],simple[i],r);for(const v of simple)sphere(v,r);
  }else if(d.group==='rods'){segment([-d.length/2,0,0],[d.length/2,0,0],2.9);
