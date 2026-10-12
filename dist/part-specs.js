@@ -276,6 +276,7 @@ export const PART_SPECS={
     "checked": "2026-10-11",
     "quality": "Supplier approximate"
   },
+  "cap-sleeve-black":{"partNumber":"23692E","massG":0.32,"source":"https://shop.knexusergroup.org.uk/products/23692e","checked":"2026-10-12","quality":"Supplier approximate"},
   "k-cap": {
     "partNumber": "848900",
     "massG": 0.252,

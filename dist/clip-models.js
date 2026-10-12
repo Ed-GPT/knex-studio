@@ -8,7 +8,7 @@ export function classicHingeModel(){
  const black=attach('hinge-black',base,'hinge'),arm=attach('r-red',black,'end'),middle=attach('hinge-blue',arm,'end'),upper=m.parts.filter(p=>!fixed.includes(p.id)).map(p=>p.id);makeGroup(m,upper,'First arm');makeLayer(m,upper,'First arm');
  const green=attach('hinge-green',middle,'hinge'),lower=attach('r-blue',green,'end');attach('clip-blue',lower,'end');const lowerIds=m.parts.filter(p=>!fixed.includes(p.id)&&!upper.includes(p.id)).map(p=>p.id);makeGroup(m,lowerIds,'Second arm');makeLayer(m,lowerIds,'Second arm');return m;
 }
-export function classicClipBench(){const m=classicHingeModel();m.name='Classic clips and hinge halves';const rod=part('r-blue',[200,80,0]);m.parts.push(rod);for(const type of ['clip-blue','clip-bronze'])add(m,solve(m,type,targets(m,type,'end').find(t=>t.partId===rod.id),'end'));makeGroup(m,m.parts.slice(-3).map(p=>p.id),'Rod-end stops');return m;}
+export function classicClipBench(){const m=classicHingeModel();m.name='Classic clips and hinge halves';const rod=part('r-blue',[200,80,0]);m.parts.push(rod);for(const type of ['clip-blue','clip-bronze'])add(m,solve(m,type,targets(m,type,'end').find(t=>t.partId===rod.id),'end'));makeGroup(m,m.parts.slice(-3).map(p=>p.id),'Rod-end stops');const capped=part('r-white',[200,130,0]);m.parts.push(capped);for(const type of ['k-cap','cap-sleeve-black'])add(m,solve(m,type,targets(m,type,'end').find(t=>t.partId===capped.id),'end'));makeGroup(m,m.parts.slice(-3).map(p=>p.id),'Alternative end caps');return m;}
 
 export function yClipBench(){
  const m=emptyModel('Classic Y clips · side grip and rod end');

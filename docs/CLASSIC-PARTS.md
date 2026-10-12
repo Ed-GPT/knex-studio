@@ -179,15 +179,15 @@ The following are identified candidates, not yet implemented. Their names and nu
 
 | Family | Identified candidates | Required work |
 | --- | --- | --- |
-| Clips | 90914OR orange Y clip (photo mismatch); 23692E end cap | Distinct geometry and actual connections; parts without bores must not inherit through-hole behavior |
-| Hinges | 9091213 packaged assembly | Audit package contents; implemented standard halves already mate |
+| Clips | 90914OR orange Y clip (photo mismatch) | Distinct geometry and actual connections; parts without bores must not inherit through-hole behavior |
+| Hinges | 9091213 packaged assembly: covered by existing halves | Supplier confirms 90912 blue plus 90919 black; not a third distinct molded part |
 | Connector variants | Remaining unlisted original connector variants | Reuse canonical geometry only when mold and connections match; audit interlock, motor mount and tyre compatibility |
 | Rigid/curved rods | 3310042 rigid 234; 91995 long 405 (Mighty Makers scope to audit); 3011001/3012001/3013001 curved; 3007001 X-rod | Verify physical profiles, endpoint spacing, side clips and material differences |
 | Gears | 91700 partial crown, 90996 multitrack; additional original variants | Tooth count, profile, grip, partial engagement/worm transmission; avoid treating every gear as a parallel spur gear |
 | Motors | 92880 compact tethered, 92845 control; 92660 solar | Separate housings, mounts, drive geometry and controls. The 12 V motor drives 90983 by a worm, not a coaxial rod bore |
 | Wheel families | Remaining original variants | Verify distinct molded profile, axle grip and dimensions; 20301 is implemented below |
 | Other panels | 99020 curved, 99005/99007/99008 flexible, 99013 special, 3310034 rectangular (scope to audit) | Attachment geometry, real sizes and optional mass; no generic plate substitutions |
-| Other mechanisms | Additional rubber-band sizes, original coaster cars, lift components and special axles | Brown 92001 two-pulley drive implemented below; finish remaining catalog audit |
+| Other mechanisms | Additional rubber-band sizes, original coaster cars, lift components and 91620 stub axle | Brown 92001 two-pulley drive implemented below; finish remaining catalog audit |
 
 Additional motor references: [spring motor](https://www.knexusergroup.org.uk/en/knex-hint-M1.html), [12 V motor](https://www.knexusergroup.org.uk/en/knex-hint-M3.html), [two-speed motor](https://www.knexusergroup.org.uk/en/knex-hint-M9.html).
 
@@ -529,3 +529,16 @@ Placing a tan drive clip against an already mounted wheel, pulley, gear or compa
 Examples → Part reference scenes → Racing wheels & bearings includes the red wheel with its clip: 25 parts and 19 connections. The part remains a reconstruction, not measured CAD or a grip-force simulation. Tests verify both assembly orders, independent sliding/spinning, keyed motor rotation, unsupported tyre rejection, round trips and the existing pantograph/scale mechanisms.
 
 ![Red narrow wheel and part-number search](screenshots/classic-narrow-wheel.png)
+
+
+## Smooth Classic end cap
+
+**23692E Black sleeve end cap** joins the existing 848900 snap cap as a separate catalog part, bringing the visible Classic catalog to 226 types. The [supplier photograph](https://shop.knexusergroup.org.uk/products/23692e) shows a smooth cylindrical shell, and its product data gives approximately 0.32 g. The supplier-linked [50 Model Building Set manual, page 5, Surfer step 4](https://www.knexusergroup.org.uk/bk/12211.pdf) explicitly illustrates the smooth cap as an alternative to the snap cap on a Classic rod end.
+
+The cap attaches rigidly to either rod end, in either assembly order. It has one end socket and no through bore, side grip or drive key. Its modeled 8.4 mm outside diameter, 10 mm length, insertion depth and wall thickness are estimates, not measured CAD or verified fit tolerances. Existing cap models remain unchanged.
+
+**Examples → Part reference scenes → Clips & hinge halves** includes an **Alternative end caps** group showing both caps on a white rod. Isolate and frame that group to inspect them. Tests cover rotated assembly, endpoint alignment, socket occupancy, mass, open mouth/closed rear geometry and saved-model round trips.
+
+The [9091213 packaged hinge](https://shop.knexusergroup.org.uk/products/9091213) is confirmed as the existing 90912 blue and 90919 black halves, not another molded part. The orange 90914OR listing remains deferred because its photo shows a ball-shaped end inconsistent with the listed rod-end identity. The [91620 stub-axle hint](https://www.knexusergroup.org.uk/en/knex-hint-W8.html) establishes attachment to 5-way/8-way connector faces and a free wheel on its rod end; detailed mounting geometry remains pending.
+
+![Alternative Classic rod-end caps](screenshots/classic-sleeve-cap.png)

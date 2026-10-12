@@ -6,6 +6,9 @@ export const CLASSIC_CLIPS=[
  ['clip-blue','Blue rod-end stop','91440','#405a88',null,.61],
  ['clip-bronze','Bronze rod-end stop','914401','#927f70',null,null]
 ].map(([id,name,partNumber,color,hingeHalf,massG])=>({id,name,partNumber,color,hingeHalf,massG,clipGeometry:true,noBore:true,noSide:!hingeHalf,group:'extras',slots:[0],thickness:6.3,bodyDims:hingeHalf?[25,10,10]:[14,9,6.3],reference:`https://shop.knexusergroup.org.uk/products/${partNumber}`}));
+// 12211 manual p.5 step 4 explicitly shows this smooth cap as an alternative
+// to the snap cap on a Classic rod end. Envelope dimensions are estimated.
+CLASSIC_CLIPS.push({id:'cap-sleeve-black',name:'Black sleeve end cap',partNumber:'23692E',color:'#202226',endCap:true,sleeveCap:true,noBore:true,noSide:true,group:'extras',slots:[],thickness:10,bodyDims:[8.4,8.4,10],reference:'https://shop.knexusergroup.org.uk/products/23692e',geometryStatus:'Supplier photo and 12211 manual; diameter, depth and fit tolerance estimated'});
 export const hingeCompatible=(a,b)=>!!a.hingeHalf&&!!b.hingeHalf&&a.hingeHalf!==b.hingeHalf;
 export function hingePort(d){return{key:'pivot',kind:'hinge',pos:[0,0,d.hingeHalf==='pin'?3.15:-3.15],dir:[0,0,d.hingeHalf==='pin'?1:-1]};}
 
