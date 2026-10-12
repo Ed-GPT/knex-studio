@@ -30,7 +30,7 @@ test('end-bearing wheels participate in coupled hinge simulation with fixed supp
 });
 test('racing hub and tyre follow the motor only when keyed to its rod',()=>{
  const {m,rod,hub}=endWheel();const motor=attach(m,'m-blue',rod,'through'),tyre=attach(m,'t-racing37',hub,'tire');assert.equal(motorDrive(m,motor.id).ids.has(hub.id),false);
- const clip=attach(m,'k-tan',hub,'keyed');const offset=V(clip.pos).sub(V(rod.pos)).dot(V([1,0,0]).applyQuaternion(Q(rod.quat)));m.links.push({a:rod.id,ap:'shaft',b:clip.id,bp:'hole',mode:'through',locked:true,offset});assert.doesNotThrow(()=>parseModel(exportModel(m)));
+ const clip=attach(m,'k-tan',hub,'keyed');const offset=V(clip.pos).sub(V(rod.pos)).dot(V([1,0,0]).applyQuaternion(Q(rod.quat)));assert.doesNotThrow(()=>parseModel(exportModel(m)));
  const drive=motorDrive(m,motor.id);assert.ok(drive.ready);assert.ok(drive.ids.has(hub.id));assert.ok(drive.ids.has(tyre.id));const q=[...hub.quat];stepMotor(m,motor.id,.1);assert.notDeepEqual(hub.quat,q);
 });
 test('racing tyres reject same-diameter pulley hubs and accept only documented fittings',()=>{
@@ -57,4 +57,32 @@ test('wheel bench contains every new family and preserves independent bearings',
  const {racingWheelBench}=await import('../dist/wheel-models.js'),m=racingWheelBench();assert.doesNotThrow(()=>parseModel(exportModel(m)));
  for(const d of CLASSIC_WHEELS)assert.ok(m.parts.some(p=>p.type===d.id),d.id);
  const pair=m.parts.find(p=>p.type==='h-narrow50-black');assert.equal(rigidComponent(m,pair.id).size,3);const i=axleInfo(m,pair.id);assert.ok(i.available);assert.ok(moveOnAxle(m,pair.id,{degrees:30}).degrees===30);
+});
+test('20301 follows the manual through axle and tan clip, with no invented tyre fit',async()=>{
+ const d=BY_ID['h-narrow37-red'],{massOf}=await import('../dist/mass.js');assert.equal(d.partNumber,'20301');assert.equal(massOf(d),2.06);
+ for(const reverse of [false,true]){
+  const host=part(reverse?d.id:'r-gray',[10,70,-20],Q().setFromAxisAngle(V([1,1,1]).normalize(),.7).toArray()),m={parts:[host],links:[]};
+  const other=attach(m,reverse?'r-gray':d.id,host,'through'),rod=reverse?other:host,hub=reverse?host:other;rod.grounded=true;
+  const fixed=structuredClone(rod);assert.equal(m.links[0].locked,undefined);assert.equal(rigidComponent(m,hub.id).size,1);
+  const moved=moveOnAxle(m,hub.id,{distance:12,degrees:45});assert.equal(moved.distance,12);assert.equal(moved.degrees,45);assert.deepEqual(rod,fixed);
+  const clip=attach(m,'k-tan',hub,'keyed');assert.ok(m.links.some(l=>l.mode==='through'&&l.locked&&(l.a===clip.id||l.b===clip.id)));
+  assert.ok(rigidComponent(m,rod.id).has(hub.id));assert.doesNotThrow(()=>parseModel(exportModel(m)));
+  for(const t of Object.values(BY_ID).filter(t=>t.tire))assert.equal(targets({parts:[hub],links:[]},t.id,'tire').length,0,t.id);
+ }
+});
+test('20301 stays independent until keyed, then rotates with its motor shaft',()=>{
+ const m=emptyModel(),motor=part('m-blue');m.parts.push(motor);motor.grounded=true;
+ const rod=attach(m,'r-gray',motor,'through'),hub=attach(m,'h-narrow37-red',rod,'through');assert.equal(motorDrive(m,motor.id).ids.has(hub.id),false);
+ moveOnAxle(m,hub.id,{distance:60});attach(m,'k-tan',hub,'keyed');const drive=motorDrive(m,motor.id);assert.ok(drive.ready);assert.ok(drive.ids.has(hub.id));
+ const fixed=structuredClone(motor),before=[...hub.quat];for(let i=0;i<60;i++)stepMotor(m,motor.id,1/60);assert.notDeepEqual(hub.quat,before);assert.deepEqual(motor,fixed);assert.doesNotThrow(()=>parseModel(exportModel(m)));
+});
+test('keyed clip only captures a coaxial shaft that reaches its full bore',()=>{
+ for(const pos of [[0,0,0],[20,0,0],[0,0,20]]){
+  const hub=part('h-narrow37-red',[0,0,0]),m={parts:[hub],links:[]},clip=attach(m,'k-tan',hub,'keyed');assert.equal(m.links.length,1);
+  const rod=part('r-white',pos,Q().setFromUnitVectors(V([1,0,0]),V([0,0,1])).toArray());add(m,{part:rod});
+  const captures=m.links.filter(l=>l.mode==='through'&&l.locked);assert.equal(captures.length,pos.every(x=>x===0)?1:0);if(captures.length)assert.equal(captures[0].b,clip.id);
+ }
+ const hub=part('h-narrow37-red'),rod=part('r-green',[0,0,0]),m={parts:[hub,rod],links:[]};attach(m,'k-tan',hub,'keyed');assert.equal(m.links.length,1,'perpendicular rod must not be captured');
+ const shortHub=part('h-narrow37-red',[0,0,0]),shortRod=part('r-green',[0,0,0],Q().setFromUnitVectors(V([1,0,0]),V([0,0,1])).toArray()),short={parts:[shortHub,shortRod],links:[]};attach(short,'k-tan',shortHub,'keyed');assert.equal(short.links.length,1,'short rod does not reach the full clip bore');
+ const long=part('r-gray',shortRod.pos,shortRod.quat),duplicate=part('r-gray',long.pos,long.quat),overlap={parts:[shortHub,long,duplicate],links:[]};attach(overlap,'k-tan',shortHub,'keyed');assert.equal(overlap.links.filter(l=>l.mode==='through').length,1);assert.doesNotThrow(()=>parseModel(exportModel(overlap)));
 });

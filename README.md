@@ -417,3 +417,16 @@ The gallery's **Hollow hall frame** has 660 parts. **Paneled tunnel** now uses 1
 ![Paneled tunnel with a clear interior](docs/screenshots/paneled-tunnel-open.png)
 
 All members use existing stock lengths and real sockets. Tests cover a connected 2,116-part shell, every standard rod length, thin one-cell dimensions, all matching square-panel sizes, shared faces, preserved payloads and a clear passage. These are generated examples, not official manual replicas or load-rated structures. XY and XZ faces can be braced; the paired blue connectors do not provide YZ diagonal sockets. Dimensions refer to connector centers; molded bodies project into openings.
+
+
+## Narrow red wheel and automatic drive-clip capture
+
+The [20301 narrow red wheel](https://shop.knexusergroup.org.uk/products/20301) is now in Wheels, bringing the visible Classic catalog to 225 types. Its supplier photograph establishes the flanged rim and crossed spoke pattern; the listing identifies 37 mm diameter and its product data gives approximately 2.06 g. Width (modeled 6.2 mm), rib section, bore tolerances and key clearance remain photo estimates.
+
+The original [12078 Ferris Wheel manual, page 9, step 13](https://static.knexdb.com/12078-Collect-and-Build-Ferris-Wheel.pdf) shows this wheel threading onto a Classic gray axle, then receiving a tan drive clip. The editor supports that through-hole and keyed mounting. It slides and spins freely until keyed to the shaft. No tyre, belt fit or extra spoke attachment is offered without verified compatibility. The manual's Micro spokes and brick components are not added to this Classic-only catalog.
+
+Placing a tan drive clip against an already mounted wheel, pulley, gear or compatible connector now also captures the aligned shaft if it reaches through the clip's full bore. Adding that shaft last works too. Off-axis, perpendicular and out-of-reach rods are rejected; one bore cannot capture two overlapping rods. Existing saved models are not rewritten. Redundant hand-authored shaft links were removed from the affected example factories.
+
+Examples → Part reference scenes → Racing wheels & bearings includes the red wheel with its clip: 25 parts and 19 connections. The part remains a reconstruction, not measured CAD or a grip-force simulation. Tests verify both assembly orders, independent sliding/spinning, keyed motor rotation, unsupported tyre rejection, round trips and the existing pantograph/scale mechanisms.
+
+![Red narrow wheel and part-number search](docs/screenshots/classic-narrow-wheel.png)

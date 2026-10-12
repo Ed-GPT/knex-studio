@@ -185,7 +185,7 @@ The following are identified candidates, not yet implemented. Their names and nu
 | Rigid/curved rods | 3310042 rigid 234; 91995 long 405 (Mighty Makers scope to audit); 3011001/3012001/3013001 curved; 3007001 X-rod | Verify physical profiles, endpoint spacing, side clips and material differences |
 | Gears | 91700 partial crown, 90996 multitrack; additional original variants | Tooth count, profile, grip, partial engagement/worm transmission; avoid treating every gear as a parallel spur gear |
 | Motors | 92880 compact tethered, 92845 control; 92660 solar | Separate housings, mounts, drive geometry and controls. The 12 V motor drives 90983 by a worm, not a coaxial rod bore |
-| Wheel families | 20301 narrow wheel and remaining original variants | Verify distinct molded profile, axle grip and dimensions |
+| Wheel families | Remaining original variants | Verify distinct molded profile, axle grip and dimensions; 20301 is implemented below |
 | Other panels | 99020 curved, 99005/99007/99008 flexible, 99013 special, 3310034 rectangular (scope to audit) | Attachment geometry, real sizes and optional mass; no generic plate substitutions |
 | Other mechanisms | Additional rubber-band sizes, original coaster cars, lift components and special axles | Brown 92001 two-pulley drive implemented below; finish remaining catalog audit |
 
@@ -504,7 +504,7 @@ The 11.8 mm end offset, 1.2 mm stop width, 7.4 mm cross diameter and bore thickn
 
 ![Bearing stopped before a molded rod barrier](screenshots/molded-axle-stops.png)
 
-Reference audit: the [20301 narrow red 37 mm wheel](https://shop.knexusergroup.org.uk/products/20301) is pictured in the Classic catalog and has a distinct spoked profile. Its supplier listing does not establish axle grip, end retention, compatible tyres or mass. It remains pending instead of inheriting another wheel's mounting behavior.
+Reference audit: the [20301 narrow red 37 mm wheel](https://shop.knexusergroup.org.uk/products/20301) is pictured in the Classic catalog and has a distinct spoked profile. The subsequent manual audit below establishes its Classic through-axle and tan drive-clip mounting; supplier product data supplies its approximate mass. Tyre compatibility remains unverified.
 
 
 ## Hollow procedural frames
@@ -516,3 +516,16 @@ A default **Hall** preset spans 8 × 4 × 3 blue-rod cells, 600 × 300 × 225 mm
 Generation still reuses matching parts and skips blocked additions. It does not remove existing interior objects or members. One insertion is one undo step. Layer membership and original IDs, locks and payloads are preserved when reusing parts. Original saved tunnel models remain unchanged until the user chooses a new example.
 
 Eight focused tests cover standard stock lengths, one-cell dimensions, all four square-panel sizes, full peg/socket alignment, a connected 2,116-part shell, duplicate generation, extension along all three axes, preserved interior objects, saved-model round trips and open-ended passage geometry. This is not a structural strength, buckling, manufacturing-fit or load-capacity calculation.
+
+
+## Narrow red wheel and automatic drive-clip capture
+
+The [20301 narrow red wheel](https://shop.knexusergroup.org.uk/products/20301) is now in Wheels, bringing the visible Classic catalog to 225 types. Its supplier photograph establishes the flanged rim and crossed spoke pattern; the listing identifies 37 mm diameter and its product data gives approximately 2.06 g. Width (modeled 6.2 mm), rib section, bore tolerances and key clearance remain photo estimates.
+
+The original [12078 Ferris Wheel manual, page 9, step 13](https://static.knexdb.com/12078-Collect-and-Build-Ferris-Wheel.pdf) shows this wheel threading onto a Classic gray axle, then receiving a tan drive clip. The editor supports that through-hole and keyed mounting. It slides and spins freely until keyed to the shaft. No tyre, belt fit or extra spoke attachment is offered without verified compatibility. The manual's Micro spokes and brick components are not added to this Classic-only catalog.
+
+Placing a tan drive clip against an already mounted wheel, pulley, gear or compatible connector now also captures the aligned shaft if it reaches through the clip's full bore. Adding that shaft last works too. Off-axis, perpendicular and out-of-reach rods are rejected; one bore cannot capture two overlapping rods. Existing saved models are not rewritten. Redundant hand-authored shaft links were removed from the affected example factories.
+
+Examples → Part reference scenes → Racing wheels & bearings includes the red wheel with its clip: 25 parts and 19 connections. The part remains a reconstruction, not measured CAD or a grip-force simulation. Tests verify both assembly orders, independent sliding/spinning, keyed motor rotation, unsupported tyre rejection, round trips and the existing pantograph/scale mechanisms.
+
+![Red narrow wheel and part-number search](screenshots/classic-narrow-wheel.png)

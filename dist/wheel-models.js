@@ -50,6 +50,6 @@ export function racingWheelBench(){
  for(const [i,type]of ['h-narrow50-gray','h-narrow50-black'].entries())attach(type,wide,'tire','tire'+i);
  const rod=part('r-blue',wide.pos,Q().setFromUnitVectors(V([1,0,0]),V([0,0,1])).toArray());rod.grounded=true;m.parts.push(rod);
  for(const hub of m.parts.filter(p=>BY_ID[p.type].wheelStyle==='narrow'))m.links.push({a:rod.id,ap:'shaft',b:hub.id,bp:'hole',mode:'through',offset:hub.pos[2]-rod.pos[2]});
- for(const [x,type,tyre]of [[0,'h-narrow50-gray','t-narrow50'],[90,'h-spoked37-silver','t-small'],[170,'h-spoked37-black','t-small']]){const rod=part('r-blue',[x,45,65],Q().setFromUnitVectors(V([1,0,0]),V([0,0,1])).toArray());rod.grounded=true;m.parts.push(rod);const hub=attach(type,rod,'through');attach(tyre,hub,'tire');}
+ for(const [x,type,tyre]of [[250,'h-narrow37-red',null],[0,'h-narrow50-gray','t-narrow50'],[90,'h-spoked37-silver','t-small'],[170,'h-spoked37-black','t-small']]){const rod=part('r-blue',[x,45,65],Q().setFromUnitVectors(V([1,0,0]),V([0,0,1])).toArray());rod.grounded=true;m.parts.push(rod);const hub=attach(type,rod,'through');if(tyre)attach(tyre,hub,'tire');else attach('k-tan',hub,'keyed');}
  return m;
 }

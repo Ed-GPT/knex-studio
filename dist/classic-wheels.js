@@ -3,6 +3,7 @@
 // and racing tyre outside diameters below are photo estimates, not CAD data.
 const reference=number=>'https://shop.knexusergroup.org.uk/products/'+number;
 export const CLASSIC_WHEELS=[
+ {id:'h-narrow37-red',name:'Red narrow wheel · 37 mm',partNumber:'20301',diameter:37,thickness:6.2,color:'#cf263d',wheelStyle:'spoked-lattice',spokes:12,wheelHub:true,keyable:true,group:'wheels',slots:[],reference:reference('20301'),geometryStatus:'Supplier photo and 12078 manual step 13; width, spoke section and key clearance estimated; tyre fit unverified'},
  ...[
   ['h-spoked37-silver','Silver spoked hub','91978',37,6.2,'#929699','spoked',6],
   ['h-spoked37-black','Black spoked hub','919780',37,6.2,'#272b30','spoked-flat',6],

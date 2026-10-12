@@ -10,7 +10,7 @@ function builder(name){
  const attach=(type,host,mode,options={},key)=>{const t=targets(m,type,mode).find(t=>t.partId===host.id&&(!key||t.key===key));if(!t)throw Error(`Missing ${mode} target on ${host.type}`);return add(m,solve(m,type,t,mode,options));};
  const span=(a,b,type)=>{const dir=V(b.pos).sub(V(a.pos)).normalize(),ap=ports(a).find(p=>p.kind==='slot'&&V(p.dir).dot(dir)>.99999),bp=ports(b).find(p=>p.kind==='slot'&&V(p.dir).dot(dir)<-.99999);if(!ap||!bp)throw Error('Missing mechanism socket');const rod=attach(type,a,'end',{},ap.key);if(!ports(rod).some(p=>V(p.pos).distanceTo(V(bp.pos))<1e-6))throw Error('Mechanism stock length mismatch');return rod;};
  const label=(ids,name)=>{makeGroup(m,ids,name);makeLayer(m,ids,name);};
- const keyedAxle=(host,rodType='r-white',centerOffset=0)=>{const axle=attach(rodType,host,'through',{offset:-centerOffset}),clip=attach('k-tan',host,'keyed');const axis=V([1,0,0]).applyQuaternion(Q(axle.quat));m.links.push({a:axle.id,ap:'shaft',b:clip.id,bp:'hole',mode:'through',offset:V(clip.pos).sub(V(axle.pos)).dot(axis)});return axle;};
+ const keyedAxle=(host,rodType='r-white',centerOffset=0)=>{const axle=attach(rodType,host,'through',{offset:-centerOffset}),clip=attach('k-tan',host,'keyed');return axle;};
  return{m,node,attach,span,label,keyedAxle};
 }
 export function scaleModel({leftLoadG=0,rightLoadG=0}={}){
