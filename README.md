@@ -190,13 +190,13 @@ The left rail shows compact families. Click a family to open its visual flyout, 
 
 ## Classic rigid rods
 
-The Rods flyout includes tan **90957** (128 mm), black **919561**, yellow-white **91956** and blue **90956B** (190 mm). Each keeps its own part identity, supplier approximate mass and color. The yellow-white rod has a solid square shaft profile; the others use reconstructed ribbed profiles. These are the original-size stronger rods documented in [Hint A7](https://www.knexusergroup.org.uk/en/knex-hint-A7.html).
+The Rods flyout includes tan **90957** (128 mm), black **919561**, yellow-white **91956**, translucent **90956W** and blue **90956B** (190 mm). Each keeps its own part identity, supplier approximate mass and color. The yellow-white and translucent rods use a solid square shaft reconstruction; the others use reconstructed ribbed profiles. These are the original-size stronger rods documented in [Hint A7](https://www.knexusergroup.org.uk/en/knex-hint-A7.html).
 
 **Generate → Grid & frame** now accepts these rods. Tan rigid cells use black rigid diagonals; 190 mm cells have no matching stock diagonal, so braces switch off. Generated edges, shared boundaries and connections retain stock dimensions. **Examples → Rigid-rod tower** demonstrates a four-storey structure with tan edges and black braces, ready for a stability test.
 
 ![Generated frame using tan rigid rods and black rigid diagonals](docs/screenshots/classic-rigid-rods.png)
 
-End snapping and axle bearings work with all four. Side gripping is available on ribbed variants; the solid yellow-white shaft's side fit remains unverified and is disabled. Nominal lengths are rounded supplier labels; endpoints use the existing Classic grid spacing. Shaft section sizes and fit tolerances remain photo estimates. Rod bending, stiffness differences, buckling and fracture are not simulated. See [part references and limitations](docs/CLASSIC-PARTS.md#classic-rigid-rods).
+End snapping and axle bearings work with all five. Side gripping is available on ribbed variants; the solid yellow-white and translucent shafts’ side fit remains unverified and is disabled. Nominal lengths are rounded supplier labels; endpoints use the existing Classic grid spacing. Shaft section sizes and fit tolerances remain photo estimates. Rod bending, stiffness differences, buckling and fracture are not simulated. See [part references and limitations](docs/CLASSIC-PARTS.md#classic-rigid-rods).
 
 ## Classic clips and molded hinges
 

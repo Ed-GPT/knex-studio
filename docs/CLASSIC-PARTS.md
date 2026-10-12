@@ -122,6 +122,7 @@ The original nine-part **Ball-joint pendulum** example combines both sizes and h
 | Tan 128 mm | [90957](https://shop.knexusergroup.org.uk/products/90957) | 3.73 g | Ribbed |
 | Black 190 mm | [919561](https://shop.knexusergroup.org.uk/products/919561), formerly 90956 | 5.96 g | Ribbed |
 | Yellow-white 190 mm | [91956](https://shop.knexusergroup.org.uk/products/91956) | 5.95 g | Solid square |
+| Translucent 190 mm | [90956W](https://shop.knexusergroup.org.uk/products/90956W) | 5.97 g | Solid profile; transparency unmeasured |
 | Blue 190 mm | [90956B](https://shop.knexusergroup.org.uk/products/90956B) | 4.55 g | Ribbed; lower-resolution photo |
 
 [Hint A7](https://www.knexusergroup.org.uk/en/knex-hint-A7.html) confirms harder plastic and use as axles or structural members. Product photos distinguish the solid yellow-white shaft from the ribbed tan and black variants. The blue image provides less cross-section detail. Rib dimensions, the yellow-white 4.15 mm square section, end grooves and color are approximate photo reconstructions, not measured CAD. Supplier lengths are nominal; matching existing red/gray Classic grid endpoints preserves connector-center spacing. All variants accept standard end connections and axle bearings. Side clipping on the solid shaft is unverified and disabled; it is not silently treated as a ribbed rod.
@@ -180,7 +181,7 @@ The following are identified candidates, not yet implemented. Their names and nu
 | Clips | 90914OR orange Y clip (photo mismatch); 90911 orange coaster-track splice; 23692E end cap | Distinct geometry and actual connections; parts without bores must not inherit through-hole behavior |
 | Hinges | 9091213 packaged assembly | Audit package contents; implemented standard halves already mate |
 | Connector variants | Distinct 90910 orange track connector; remaining unlisted original variants | Reuse canonical geometry only when mold and connections match; audit interlock, motor mount and tyre compatibility |
-| Rigid/curved rods | 90956W white translucent rigid; 91995 long 405 (Mighty Makers scope to audit); 3011001/3012001/3013001 curved; 3007001 X-rod | Verify physical profiles, endpoint spacing, side clips and material differences |
+| Rigid/curved rods | 3310042 rigid 234; 91995 long 405 (Mighty Makers scope to audit); 3011001/3012001/3013001 curved; 3007001 X-rod | Verify physical profiles, endpoint spacing, side clips and material differences |
 | Gears | 91700 partial crown, 90996 multitrack, 90983 motor gear; additional original variants | Tooth count, profile, grip, perpendicular/worm transmission; avoid treating every gear as a parallel spur gear |
 | Motors | 92890 spring, 92815 12 V, 92875/20554/92880 tethered, 92845 control; 92660 solar | Separate housings, mounts, drive geometry and controls. The 12 V motor drives 90983 by a worm, not a coaxial rod bore |
 | Wheel families | 20301 narrow wheel and remaining original variants | Verify distinct molded profile, axle grip and dimensions |
