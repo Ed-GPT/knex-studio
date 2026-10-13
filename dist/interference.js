@@ -37,7 +37,10 @@ export function assertClearPlacement(model,changedIds){
 }
 export function assertClearMotion(before,after,changedIds){
  const old=new Map(before.parts.map(p=>[p.id,p])),guard=createInterferenceGuard(after);
+ // Allow repairing an imported overlap only when the edit ends completely clear.
+ const initial=new Set(createInterferenceGuard(before).check({changedIds,all:true}).map(h=>pairKey(h.a,h.b)));
+ const destination=guard.check({changedIds});if(destination)throw new InterferenceError(destination,after,'placement');
  let travel=0;for(const e of guard.entries)if(changedIds.has(e.id)&&old.has(e.id)){const p=old.get(e.id);travel=Math.max(travel,V(p.pos).distanceTo(V(e.p.pos))+Q(p.quat).angleTo(Q(e.p.quat))*(e.c.bounds.getSize(V()).length()/2+e.c.bounds.getCenter(V()).length()));}
  const count=Math.max(1,Math.ceil(travel/.5));if(count>512)throw Error('Move blocked: use smaller steps so clearance can be checked.');
- for(let i=1;i<=count;i++){const t=i/count,hit=guard.check({changedIds,pose:p=>{const a=old.get(p.id);return !a||!changedIds.has(p.id)?p:{pos:V(a.pos).lerp(V(p.pos),t).toArray(),quat:Q(a.quat).slerp(Q(p.quat),t).toArray()};}});if(hit)throw new InterferenceError(hit,after,'placement');}
+ for(let i=1;i<=count;i++){const t=i/count,hit=guard.check({changedIds,skipPair:(a,b)=>initial.has(pairKey(a,b)),pose:p=>{const a=old.get(p.id);return !a||!changedIds.has(p.id)?p:{pos:V(a.pos).lerp(V(p.pos),t).toArray(),quat:Q(a.quat).slerp(Q(p.quat),t).toArray()};}});if(hit)throw new InterferenceError(hit,after,'placement');}
 }

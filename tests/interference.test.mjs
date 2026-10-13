@@ -31,3 +31,4 @@ test('connected crank assemblies are checked despite the hinge contact exemption
  const saved=exportModel(bad),s=createCheckedPhysics(bad);assert.ok(s.joints.some(j=>j.constraint.collideConnected===false));let error;for(let i=0;i<420&&!error;i++)try{s.step(1/60);}catch(e){error=e;}
  assert.equal(error?.code,'PART_INTERFERENCE');assert.ok(error.partIds.includes(shaft.id));assert.equal(createInterferenceGuard(s.model).check(),null);assert.equal(exportModel(bad),saved);
 });
+test('an imported overlap can be pulled clear, but cannot be moved to another overlapping pose',()=>{const a=crossing(),b=structuredClone(a),ids=new Set([b.parts[1].id]);b.parts[1].pos[2]=15;assert.doesNotThrow(()=>assertClearMotion(a,b,ids));b.parts[1].pos[2]=1;assert.throws(()=>assertClearMotion(a,b,ids),/intersects/);});
