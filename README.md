@@ -494,3 +494,13 @@ The lift is an original stock-part crank-rocker adaptation, not a copied officia
 The motor lift now uses a stock yellow rod for its drive axle, offset through the 92840 housing so it still reaches the keyed crank hub but ends behind the connecting rod. The earlier gray axle intersected that rod during rotation. A regression checks rendered part bounds through more than a complete motor revolution, in addition to the full ball-run and pivot tests. Collision filtering for connected bodies is unchanged; this fixes the fixture geometry rather than claiming universal interference detection. Reopen **Examples → Motor lift & ball run** after updating to load the corrected fixture. Existing saved builds are preserved.
 
 ![Shortened stock motor axle clears the connecting rod](docs/screenshots/crank-clearance.png)
+
+### Interference guard
+
+The unified Physics workspace validates the modeled part surfaces before Play and after every solver substep. Hinge contact exemptions no longer hide collisions between other parts of the joined assemblies. A detected overlap stops playback, restores the last valid solver pose, highlights both parts and marks the intersection. **Show collision** focuses that point. The saved build is untouched. Reset or return to building to repair it.
+
+Placement, direct dragging, transform handles and discrete rotations also reject intersecting edits. Swept checks sample motion at up to 0.5 mm surface travel; excessive movement stops validation instead of silently skipping it. The guard uses reconstructed mesh dimensions with a 0.12 mm surface tolerance, not measured manufacturing tolerances. Directly fitted part pairs are exempt to allow modeled snap fits. Balls and floor retain solver contact response. Bypass and the explicit build-collisions-off setting disable the corresponding physics checks. Prescribed motor/controller/playground previews and bulk generators are not yet fully guarded; opening Physics performs a full preflight on their result.
+
+The unchanged motor-lift/ball-run example currently fails that preflight: orange tubing #37 intersects white connector #8; purple connectors #11 and #12 also overlap. These are reported rather than automatically altering the layout. The isolated crank linkage passes a full revolution with its current shaft; restoring the earlier long gray shaft causes a detected shaft/coupler collision and rollback.
+
+Mesh queries use [three-mesh-bvh 0.9.1](https://github.com/gkjohnson/three-mesh-bvh/tree/v0.9.1), vendored from the npm release under its MIT license in `dist/vendor/three-mesh-bvh.LICENSE`. Only the Three.js import path is adjusted for the local bundled module.
