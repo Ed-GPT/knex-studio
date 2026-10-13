@@ -1,5 +1,7 @@
 import test from 'node:test';import assert from 'node:assert/strict';
 import * as C from '../dist/vendor/cannon-es.js';
+import {Box3,Matrix4} from '../dist/vendor/three.module.js';
+import {makePart} from '../dist/geometry.js';
 import {BoundsBroadphase} from '../dist/physics-broadphase.js';
 import {createPhysics} from '../dist/unified-physics.js';
 import {ballMachine} from '../dist/ball-machine.js';
@@ -19,3 +21,16 @@ test('motor settings round-trip, reject invalid torque and freeze safely under R
 
 test('crank motor completes full turns while passive rocker reverses and pivots remain closed',()=>{const m=ballMachine(),s=createPhysics(m),rocker=m.editor.groups.find(g=>g.name==='Tipping lift and rocker'),id=rocker.partIds.find(id=>m.parts.find(p=>p.id===id).type==='r-yellow');let lastAngle=0,min=Infinity,max=-Infinity,positive=false,negative=false,lastY=null;assert.equal(s.joints.filter(j=>j.constraint.motorEquation.enabled).length,1);for(let i=0;i<20*60;i++){s.step(1/60);const angle=s.motors[0].angle;assert.ok(angle<=lastAngle+.002,'motor must not reverse');lastAngle=angle;const y=s.model.parts.find(p=>p.id===id).pos[1];min=Math.min(min,y);max=Math.max(max,y);if(lastY!==null){positive ||= y>lastY+.01;negative ||= y<lastY-.01;}lastY=y;for(const j of s.joints)assert.ok(j.a.body.pointToWorldFrame(j.constraint.pivotA).distanceTo(j.b.body.pointToWorldFrame(j.constraint.pivotB))<.0001);}assert.ok(lastAngle<-6*Math.PI);assert.ok(max-min>20);assert.ok(positive&&negative);});
 test('legacy sweep is explicitly ignored rather than silently driving a fictional reversing motor',()=>{const m=ballMachine();m.physics.motors[0].sweep=75;const s=createPhysics(m);assert.ok(s.warnings.some(w=>w.includes('Legacy automatic reversal')));run(s,.1);assert.ok(s.motors[0].joint.constraint.motorEquation.targetVelocity!==0);});
+
+test('motor axle spans the housing and crank hub but clears the connecting rod throughout a full rotation',()=>{
+ const m=ballMachine(),s=createPhysics(m),motor=m.parts.find(p=>p.type==='m-blue');
+ const driveLink=m.links.find(l=>l.mode==='through'&&(l.a===motor.id||l.b===motor.id)),shaft=m.parts.find(p=>p.id===(driveLink.a===motor.id?driveLink.b:driveLink.a));
+ const coupler=m.editor.groups.find(g=>g.name==='Connecting rod').partIds.map(id=>m.parts.find(p=>p.id===id));
+ const local=new Map([shaft,...coupler].map(p=>[p.id,new Box3().setFromObject(makePart(p.type,p))]));
+ const bound=id=>{const p=s.model.parts.find(p=>p.id===id);return local.get(id).clone().applyMatrix4(new Matrix4().compose(V(p.pos),Q(p.quat),V([1,1,1])));};
+ const ends=ports(shaft).map(p=>p.pos[2]).sort((a,b)=>a-b),hub=m.parts.find(p=>p.type==='c-white'&&Math.abs(p.pos[0]-motor.pos[0])<.001);
+ assert.ok(ends[0]<motor.pos[2]-16&&ends[1]>motor.pos[2]+16,'shaft must span both motor faces');
+ assert.ok(ends[0]<hub.pos[2]-3.15&&ends[1]>hub.pos[2]+3.15,'stock shaft must pass through keyed hub');
+ for(let i=0;i<7*60;i++){s.step(1/60);const axle=bound(shaft.id);for(const p of coupler)assert.ok(bound(p.id).min.z-axle.max.z>5,'motor axle must remain clear of every connecting-rod part');}
+ assert.ok(s.motors[0].angle<-2*Math.PI,'clearance checked through more than one complete revolution');
+});

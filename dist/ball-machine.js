@@ -23,7 +23,9 @@ export function liftMechanism(){
  const B=V(rockerTip.pos),O=V([-210,220,z]),r=length('r-blue'),l=length('r-gray'),delta=B.clone().sub(O);delta.z=0;const d=delta.length(),u=delta.clone().normalize(),along=(r*r-l*l+d*d)/(2*d),h=Math.sqrt(r*r-along*along);
  const A=O.clone().addScaledVector(u,along).addScaledVector(V([-u.y,u.x,0]),-h),angle=Math.atan2(A.y-O.y,A.x-O.x)*180/Math.PI;
  const motor=part('m-blue',[-210,220,z-45]);motor.grounded=true;m.parts.push(motor);
- const drive=attach('r-gray',motor,'through',{offset:-45}),crankKey=attach('k-tan',drive,'through',{offset:-6.35,roll:angle}),crankHub=attach('c-white',crankKey,'keyed'),crankRod=attach('r-blue',crankHub,'end',{},'slot0'),crankTip=attach('c-gray',crankRod,'end',{},'end1');
+ // A yellow stock axle spans the motor and keyed hub without reaching the
+ // connecting-rod plane. The previous gray axle crossed that rod every turn.
+ const drive=attach('r-yellow',motor,'through',{offset:-18}),crankKey=attach('k-tan',drive,'through',{offset:20.65,roll:angle}),crankHub=attach('c-white',crankKey,'keyed'),crankRod=attach('r-blue',crankHub,'end',{},'slot0'),crankTip=attach('c-gray',crankRod,'end',{},'end1');
  // Parallel planes leave room for the actual connector and tan-key stack.
  const ca=V(crankTip.pos),cb=V(rockerTip.pos);ca.z=-110;cb.z=-110;const dir=cb.clone().sub(ca).normalize(),orient=Q().setFromUnitVectors(V([1,0,0]),dir);
  const linkA=part('c-gray',ca.toArray(),orient.toArray()),linkB=part('c-gray',cb.toArray(),Q().setFromAxisAngle(V([0,0,1]),Math.PI).multiply(orient).toArray());m.parts.push(linkA,linkB);attach('r-gray',linkA,'end',{},'slot0');
