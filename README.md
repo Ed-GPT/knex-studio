@@ -504,3 +504,7 @@ Placement, direct dragging, transform handles and discrete rotations also reject
 The unchanged motor-lift/ball-run example currently fails that preflight: orange tubing #37 intersects white connector #8; purple connectors #11 and #12 also overlap. These are reported rather than automatically altering the layout. The isolated crank linkage passes a full revolution with its current shaft; restoring the earlier long gray shaft causes a detected shaft/coupler collision and rollback.
 
 Mesh queries use [three-mesh-bvh 0.9.1](https://github.com/gkjohnson/three-mesh-bvh/tree/v0.9.1), vendored from the npm release under its MIT license in `dist/vendor/three-mesh-bvh.LICENSE`. Only the Three.js import path is adjusted for the local bundled module.
+
+### Prompt-to-build MCP server
+
+A local MCP companion lets an AI host search actual K’NEX parts, inspect sockets, assemble and repeat sections, undo edits, validate collisions and publish an editable build. It includes an original 27-part airplane display model. The server uses the same snapping and mesh checks as the editor, with atomic edits and revision checks. Published builds open through a local **Load AI build** preview and are saved as `.knex` files. [Setup, tools and limitations](docs/mcp/README.md).
