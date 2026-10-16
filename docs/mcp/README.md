@@ -33,9 +33,11 @@ The host launches the server. Running `npm run mcp` alone waits for protocol mes
 2. `inspect_build`, `validate_build`, `undo_build`: inspect world-space ports, repair mistakes and validate. Every edit requires `expectedRevision`; invalid batches leave the draft unchanged.
 3. `publish_build`: saves an immutable `.knex` snapshot and returns a local preview URL. Open it, then choose **Load AI build**. Existing browser work is archived and Undo is available. Published snapshots stay saved after the server exits.
 
-The server also offers `shape_to_frame`, `example_airplane` and the `build_knex` prompt. Rough boxes, ellipsoids and tapers can be converted to stock-part frames. The existing **1,700-part aircraft grid test** is preserved as an experimental example. It does not follow the angled assemblies in real airplane manuals. For aircraft requests, start with [the manual study](aircraft-manual-study.md) and assemble actual parts instead of substituting this grid. [Shape workflow and detailed example](shapes.md).
+The server also offers `shape_to_frame`, `example_airplane` and the `build_knex` prompt. `example_airplane` now creates the **317-part swept-wing plane**: straight rods, triangular wing webs, a tapered 3D fuselage, a raised cockpit and tail fin, four wheels and a retained four-blade propeller. [Model, parts list and construction notes](swept-wing-plane.md).
 
-![3D airplane loaded in the editor](airplane-3d.png)
+![Swept-wing plane loaded in the editor](swept-wing-plane.png)
+
+The experimental 1,700-part aircraft grid remains preserved under **Examples → Aircraft grid test** and in [its original files](shapes.md). `shape_to_frame` still produces stepped grids. The new plane is assembled from a stock-part connection graph; it does not use that converter.
 
 The first flat proof-of-concept remains available as [the 27-part silhouette](airplane.knex).
 

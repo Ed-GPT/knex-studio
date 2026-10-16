@@ -507,8 +507,16 @@ Mesh queries use [three-mesh-bvh 0.9.1](https://github.com/gkjohnson/three-mesh-
 
 ### Prompt-to-build MCP server
 
-A local MCP companion lets an AI host search actual K’NEX parts, inspect sockets, assemble and repeat sections, undo edits, validate collisions and publish an editable build. It preserves an experimental 1,700-part aircraft grid test and a rough-volume grid converter. These are not manual-based aircraft builders. The server uses the same snapping and mesh checks as the editor, with atomic edits and revision checks. Published builds open through a local **Load AI build** preview and are saved as `.knex` files. [Setup, tools and limitations](docs/mcp/README.md).
+A local MCP companion lets an AI host search actual K’NEX parts, inspect sockets, assemble and repeat sections, undo edits, validate collisions and publish an editable build. It includes a 317-part straight-rod swept-wing plane, plus the preserved experimental aircraft grid and rough-volume grid converter. The server uses the same snapping and mesh checks as the editor, with atomic edits and revision checks. Published builds open through a local **Load AI build** preview and are saved as `.knex` files. [Setup, tools and limitations](docs/mcp/README.md).
 
 ### Experimental grid shells
 
-**Generate → Grid shell · experimental** converts editable boxes, ellipsoids and tapers into surface frames using actual stock rods and compatible connectors. Drag volumes, resize them, preview the conversion and add it as one reversible edit. The MCP `shape_to_frame` tool exposes the same conversion. **Examples → Aircraft grid test** preserves the 1,700-part stepped-grid prototype. The next aircraft approach follows real angled assemblies; see [the manual study](docs/mcp/aircraft-manual-study.md). This is an original approximate display model, not a flight simulation or a physically certified build. [Workflow, screenshots and model](docs/mcp/shapes.md).
+**Generate → Grid shell · experimental** converts editable boxes, ellipsoids and tapers into surface frames using actual stock rods and compatible connectors. Drag volumes, resize them, preview the conversion and add it as one reversible edit. The MCP `shape_to_frame` tool exposes the same conversion. **Examples → Aircraft grid test** preserves the 1,700-part stepped-grid prototype. The separate [swept-wing plane](docs/mcp/swept-wing-plane.md) now uses real angled assemblies. This is an original approximate display model, not a flight simulation or a physically certified build. [Workflow, screenshots and model](docs/mcp/shapes.md).
+
+### Straight-rod swept-wing plane
+
+Open **Examples → Swept-wing plane**, or call MCP `example_airplane`. This original 317-part aircraft has triangular wing webs, a tapered 3D fuselage, raised cockpit, horizontal tail, upright fin, four retained wheels and a four-blade propeller. All rods keep their stock length and remain straight. Its construction methods are informed by the Flying Fun manual, pages 11–15; it is not an official kit replica or a flight simulation.
+
+![Swept-wing plane in the editor](docs/mcp/swept-wing-plane.png)
+
+[Download the editable model](docs/mcp/swept-wing-plane.knex) · [Parts list and validation](docs/mcp/swept-wing-plane.md)

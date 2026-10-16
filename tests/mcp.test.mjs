@@ -48,6 +48,6 @@ test('real MCP stdio client discovers tools, edits a build, calls the prompt and
  const prompt=await client.getPrompt({name:'build_knex',arguments:{description:'Build an airplane'}});assert.match(prompt.messages[0].content.text,/Build an airplane/);
  const preview=await call('shape_to_frame',{shapes:[{name:'Box',kind:'box',center:[37.5,112.5,37.5],size:[75,75,75]}]});assert.equal(preview.previewOnly,true);const generated=await call('shape_to_frame',{previewOnly:false,shapes:[{name:'Box',kind:'box',center:[37.5,112.5,37.5],size:[75,75,75]}]});assert.equal(generated.revision,1);
  const b=await call('example_airplane'),result=await call('publish_build',{buildId:b.buildId,expectedRevision:b.revision});
- const file=parseModel(await readFile(result.file,'utf8'));assert.equal(file.parts.length,1700);const url=new URL(result.previewUrl),snapshot=await (await fetch(url.origin+'/ai-build?token='+url.searchParams.get('aiBridge'))).json();assert.equal(snapshot.model.parts.length,1700);assert.equal(snapshot.revision,b.revision);assert.match(stderr,/MCP ready/);
+ const file=parseModel(await readFile(result.file,'utf8'));assert.equal(file.parts.length,317);const url=new URL(result.previewUrl),snapshot=await (await fetch(url.origin+'/ai-build?token='+url.searchParams.get('aiBridge'))).json();assert.equal(snapshot.model.parts.length,317);assert.equal(snapshot.revision,b.revision);assert.match(stderr,/MCP ready/);
  }finally{await client.close();}
 });

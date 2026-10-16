@@ -1,0 +1,8586 @@
+{
+  "format": "knex-studio",
+  "version": 1,
+  "editor": {
+    "layers": [
+      {
+        "id": "layer-mvbfdh73-2",
+        "name": "Fuselage",
+        "partIds": [
+          "pmvbfdgzj-470",
+          "pmvbfdgzk-471",
+          "pmvbfdgzl-647",
+          "pmvbfdgzp-1187",
+          "pmvbfdgzp-1188",
+          "pmvbfdgzq-1364",
+          "pmvbfdgzt-1806",
+          "pmvbfdgzt-1807",
+          "pmvbfdgzu-1983",
+          "pmvbfdgzw-2243",
+          "pmvbfdgzw-2244",
+          "pmvbfdgzz-2602",
+          "pmvbfdgzz-2603",
+          "pmvbfdh00-2779",
+          "pmvbfdh04-3319",
+          "pmvbfdh04-3320",
+          "pmvbfdh05-3496",
+          "pmvbfdh08-3938",
+          "pmvbfdh08-3939",
+          "pmvbfdh09-4115",
+          "pmvbfdh0b-4473",
+          "pmvbfdh0b-4474",
+          "pmvbfdh0e-4762",
+          "pmvbfdh0e-4763",
+          "pmvbfdh0h-5135",
+          "pmvbfdh0h-5136",
+          "pmvbfdh0l-5809",
+          "pmvbfdh0l-5810",
+          "pmvbfdh0m-6093",
+          "pmvbfdh0q-6661",
+          "pmvbfdh0q-6662",
+          "pmvbfdh0s-6957",
+          "pmvbfdh0x-7525",
+          "pmvbfdh0x-7526",
+          "pmvbfdh0y-7705",
+          "pmvbfdh11-8259",
+          "pmvbfdh11-8260",
+          "pmvbfdh14-8604",
+          "pmvbfdh14-8605",
+          "pmvbfdh15-8888",
+          "pmvbfdh19-9456",
+          "pmvbfdh19-9457",
+          "pmvbfdh1c-9752",
+          "pmvbfdh1f-10320",
+          "pmvbfdh1g-10321",
+          "pmvbfdh1j-10500",
+          "pmvbfdh1n-11054",
+          "pmvbfdh1n-11055",
+          "pmvbfdh1p-11329",
+          "pmvbfdh1p-11330",
+          "pmvbfdh1t-11912",
+          "pmvbfdh1t-11913",
+          "pmvbfdh3c-21756",
+          "pmvbfdh3c-21757",
+          "pmvbfdh3c-21758",
+          "pmvbfdh3c-21759",
+          "pmvbfdh3c-21760",
+          "pmvbfdh3c-21761",
+          "pmvbfdh3c-21762",
+          "pmvbfdh3c-21763",
+          "pmvbfdh3c-21764",
+          "pmvbfdh3d-21765",
+          "pmvbfdh3d-21766",
+          "pmvbfdh3d-21767",
+          "pmvbfdh3d-21768",
+          "pmvbfdh3d-21769",
+          "pmvbfdh3d-21770",
+          "pmvbfdh3d-21771",
+          "pmvbfdh3d-21772",
+          "pmvbfdh3d-21773",
+          "pmvbfdh3d-21774",
+          "pmvbfdh3d-21775",
+          "pmvbfdh3d-21778",
+          "pmvbfdh3d-21779",
+          "pmvbfdh3d-21780",
+          "pmvbfdh3d-21781",
+          "pmvbfdh3d-21782",
+          "pmvbfdh3e-21783",
+          "pmvbfdh3e-21784",
+          "pmvbfdh3e-21785",
+          "pmvbfdh3e-21786",
+          "pmvbfdh3e-21787",
+          "pmvbfdh3e-21788",
+          "pmvbfdh3e-21789",
+          "pmvbfdh3e-21790",
+          "pmvbfdh3e-21791",
+          "pmvbfdh3e-21792",
+          "pmvbfdh3e-21793",
+          "pmvbfdh3e-21794",
+          "pmvbfdh3e-21795",
+          "pmvbfdh3f-21796",
+          "pmvbfdh3f-21797",
+          "pmvbfdh3f-21800",
+          "pmvbfdh3f-21801",
+          "pmvbfdh3f-21802",
+          "pmvbfdh3f-21803",
+          "pmvbfdh3f-21804",
+          "pmvbfdh3f-21805",
+          "pmvbfdh3f-21806",
+          "pmvbfdh3f-21807",
+          "pmvbfdh3f-21808",
+          "pmvbfdh3f-21809",
+          "pmvbfdh3f-21810",
+          "pmvbfdh3f-21811",
+          "pmvbfdh3f-21812",
+          "pmvbfdh3f-21813",
+          "pmvbfdh3f-21814",
+          "pmvbfdh3f-21815",
+          "pmvbfdh3f-21816",
+          "pmvbfdh3f-21817",
+          "pmvbfdh3g-21818",
+          "pmvbfdh3g-21819",
+          "pmvbfdh3g-21820",
+          "pmvbfdh3g-21821",
+          "pmvbfdh3g-21822",
+          "pmvbfdh3g-21823",
+          "pmvbfdh3g-21824",
+          "pmvbfdh3g-21825",
+          "pmvbfdh3g-21826",
+          "pmvbfdh3g-21832",
+          "pmvbfdh3g-21833",
+          "pmvbfdh3g-21834"
+        ],
+        "visible": true,
+        "locked": false
+      },
+      {
+        "id": "layer-mvbfdh73-3",
+        "name": "Tail boom",
+        "partIds": [
+          "pmvbfdh0i-5407",
+          "pmvbfdh0j-5465",
+          "pmvbfdh1v-12092",
+          "pmvbfdh20-12926",
+          "pmvbfdh20-12927",
+          "pmvbfdh3d-21776",
+          "pmvbfdh3d-21777",
+          "pmvbfdh3f-21798",
+          "pmvbfdh3f-21799",
+          "pmvbfdh3g-21827",
+          "pmvbfdh3g-21828",
+          "pmvbfdh3g-21829",
+          "pmvbfdh3g-21830",
+          "pmvbfdh3g-21831"
+        ],
+        "visible": true,
+        "locked": false
+      },
+      {
+        "id": "layer-mvbfdh73-4",
+        "name": "Left wing",
+        "partIds": [
+          "pmvbfdh21-13146",
+          "pmvbfdh23-13527",
+          "pmvbfdh25-13908",
+          "pmvbfdh26-14036",
+          "pmvbfdh27-14255",
+          "pmvbfdh2a-14636",
+          "pmvbfdh2b-14898",
+          "pmvbfdh2c-15117",
+          "pmvbfdh2e-15498",
+          "pmvbfdh2e-15626",
+          "pmvbfdh2f-15845",
+          "pmvbfdh2h-16107",
+          "pmvbfdh2i-16326",
+          "pmvbfdh2i-16454",
+          "pmvbfdh2j-16504",
+          "pmvbfdh3g-21835",
+          "pmvbfdh3g-21836",
+          "pmvbfdh3h-21837",
+          "pmvbfdh3h-21838",
+          "pmvbfdh3h-21839",
+          "pmvbfdh3h-21840",
+          "pmvbfdh3h-21841",
+          "pmvbfdh3h-21842",
+          "pmvbfdh3h-21843",
+          "pmvbfdh3h-21844",
+          "pmvbfdh3h-21845",
+          "pmvbfdh3h-21846",
+          "pmvbfdh3h-21847",
+          "pmvbfdh3h-21848",
+          "pmvbfdh3h-21849",
+          "pmvbfdh3h-21850",
+          "pmvbfdh3h-21851",
+          "pmvbfdh3h-21852",
+          "pmvbfdh3h-21853",
+          "pmvbfdh3h-21854",
+          "pmvbfdh3h-21855",
+          "pmvbfdh3i-21856",
+          "pmvbfdh3i-21857",
+          "pmvbfdh3i-21858",
+          "pmvbfdh3i-21859",
+          "pmvbfdh3i-21860",
+          "pmvbfdh3i-21861",
+          "pmvbfdh3i-21862",
+          "pmvbfdh3i-21863",
+          "pmvbfdh3i-21864",
+          "pmvbfdh3i-21865",
+          "pmvbfdh3i-21866",
+          "pmvbfdh3i-21867",
+          "pmvbfdh3i-21868",
+          "pmvbfdh3i-21869",
+          "pmvbfdh3i-21870"
+        ],
+        "visible": true,
+        "locked": false
+      },
+      {
+        "id": "layer-mvbfdh73-5",
+        "name": "Horizontal tail",
+        "partIds": [
+          "pmvbfdh2k-16718",
+          "pmvbfdh2k-16768",
+          "pmvbfdh2l-16896",
+          "pmvbfdh35-20688",
+          "pmvbfdh35-20739",
+          "pmvbfdh36-20867",
+          "pmvbfdh3i-21871",
+          "pmvbfdh3j-21872",
+          "pmvbfdh3j-21873",
+          "pmvbfdh3j-21874",
+          "pmvbfdh3j-21875",
+          "pmvbfdh3j-21876",
+          "pmvbfdh3m-21913",
+          "pmvbfdh3m-21914",
+          "pmvbfdh3m-21915",
+          "pmvbfdh3m-21916",
+          "pmvbfdh3m-21917",
+          "pmvbfdh3m-21918"
+        ],
+        "visible": true,
+        "locked": false
+      },
+      {
+        "id": "layer-mvbfdh73-6",
+        "name": "Right wing",
+        "partIds": [
+          "pmvbfdh2m-17115",
+          "pmvbfdh2o-17496",
+          "pmvbfdh2q-17877",
+          "pmvbfdh2r-18005",
+          "pmvbfdh2s-18224",
+          "pmvbfdh2u-18605",
+          "pmvbfdh2v-18867",
+          "pmvbfdh2w-19086",
+          "pmvbfdh2y-19467",
+          "pmvbfdh2z-19595",
+          "pmvbfdh30-19814",
+          "pmvbfdh31-20076",
+          "pmvbfdh33-20295",
+          "pmvbfdh34-20423",
+          "pmvbfdh34-20474",
+          "pmvbfdh3j-21877",
+          "pmvbfdh3j-21878",
+          "pmvbfdh3j-21879",
+          "pmvbfdh3j-21880",
+          "pmvbfdh3j-21881",
+          "pmvbfdh3j-21882",
+          "pmvbfdh3k-21883",
+          "pmvbfdh3k-21884",
+          "pmvbfdh3k-21885",
+          "pmvbfdh3k-21886",
+          "pmvbfdh3k-21887",
+          "pmvbfdh3k-21888",
+          "pmvbfdh3k-21889",
+          "pmvbfdh3k-21890",
+          "pmvbfdh3k-21891",
+          "pmvbfdh3k-21892",
+          "pmvbfdh3k-21893",
+          "pmvbfdh3k-21894",
+          "pmvbfdh3k-21895",
+          "pmvbfdh3k-21896",
+          "pmvbfdh3l-21897",
+          "pmvbfdh3l-21898",
+          "pmvbfdh3l-21899",
+          "pmvbfdh3l-21900",
+          "pmvbfdh3l-21901",
+          "pmvbfdh3l-21902",
+          "pmvbfdh3l-21903",
+          "pmvbfdh3l-21904",
+          "pmvbfdh3l-21905",
+          "pmvbfdh3l-21906",
+          "pmvbfdh3l-21907",
+          "pmvbfdh3l-21908",
+          "pmvbfdh3l-21909",
+          "pmvbfdh3l-21910",
+          "pmvbfdh3l-21911",
+          "pmvbfdh3l-21912"
+        ],
+        "visible": true,
+        "locked": false
+      },
+      {
+        "id": "layer-mvbfdh73-7",
+        "name": "Vertical fin",
+        "partIds": [
+          "pmvbfdh38-21081",
+          "pmvbfdh38-21132",
+          "pmvbfdh38-21255",
+          "pmvbfdh3m-21919",
+          "pmvbfdh3m-21920",
+          "pmvbfdh3m-21921",
+          "pmvbfdh3m-21922",
+          "pmvbfdh3m-21923",
+          "pmvbfdh3m-21924"
+        ],
+        "visible": true,
+        "locked": false
+      },
+      {
+        "id": "layer-mvbfdh73-8",
+        "name": "Cockpit",
+        "partIds": [
+          "pmvbfdh3a-21459",
+          "pmvbfdh3a-21460",
+          "pmvbfdh3b-21664",
+          "pmvbfdh3b-21665",
+          "pmvbfdh3m-21925",
+          "pmvbfdh3m-21926",
+          "pmvbfdh3m-21927",
+          "pmvbfdh3n-21928",
+          "pmvbfdh3n-21929"
+        ],
+        "visible": true,
+        "locked": false
+      },
+      {
+        "id": "layer-mvbfdh73-9",
+        "name": "Propeller support",
+        "partIds": [
+          "pmvbfdh3c-21750",
+          "pmvbfdh3c-21755",
+          "pmvbfdh3n-21930",
+          "pmvbfdh3n-21931",
+          "pmvbfdh3n-21932"
+        ],
+        "visible": true,
+        "locked": false
+      },
+      {
+        "id": "layer-mvbfdh73-10",
+        "name": "Landing gear",
+        "partIds": [
+          "pmvbfdh3n-21933",
+          "pmvbfdh3r-21934",
+          "pmvbfdh3u-21935",
+          "pmvbfdh3y-21936",
+          "pmvbfdh41-21937",
+          "pmvbfdh49-21938",
+          "pmvbfdh49-21939",
+          "pmvbfdh4a-21940",
+          "pmvbfdh4a-21941",
+          "pmvbfdh4a-21942",
+          "pmvbfdh4a-21943",
+          "pmvbfdh4a-21944",
+          "pmvbfdh4a-21945",
+          "pmvbfdh4a-21946",
+          "pmvbfdh4e-21947",
+          "pmvbfdh4i-21948",
+          "pmvbfdh4q-21949",
+          "pmvbfdh4q-21950",
+          "pmvbfdh4q-21951",
+          "pmvbfdh4q-21952",
+          "pmvbfdh4q-21953",
+          "pmvbfdh4q-21954",
+          "pmvbfdh4q-21955",
+          "pmvbfdh4q-21956"
+        ],
+        "visible": true,
+        "locked": false
+      },
+      {
+        "id": "layer-mvbfdh73-11",
+        "name": "Propeller",
+        "partIds": [
+          "pmvbfdh4q-21957",
+          "pmvbfdh4y-21958",
+          "pmvbfdh63-21959",
+          "pmvbfdh63-21960",
+          "pmvbfdh63-21961",
+          "pmvbfdh63-21962",
+          "pmvbfdh63-21963",
+          "pmvbfdh68-21964",
+          "pmvbfdh6b-21965",
+          "pmvbfdh6h-21966",
+          "pmvbfdh6l-21967",
+          "pmvbfdh6p-21968",
+          "pmvbfdh6t-21969",
+          "pmvbfdh6z-21970"
+        ],
+        "visible": true,
+        "locked": false
+      }
+    ],
+    "groups": [
+      {
+        "id": "group-mvbfdh73-1",
+        "name": "Swept-wing plane",
+        "partIds": [
+          "pmvbfdgzj-470",
+          "pmvbfdgzk-471",
+          "pmvbfdgzl-647",
+          "pmvbfdgzp-1187",
+          "pmvbfdgzp-1188",
+          "pmvbfdgzq-1364",
+          "pmvbfdgzt-1806",
+          "pmvbfdgzt-1807",
+          "pmvbfdgzu-1983",
+          "pmvbfdgzw-2243",
+          "pmvbfdgzw-2244",
+          "pmvbfdgzz-2602",
+          "pmvbfdgzz-2603",
+          "pmvbfdh00-2779",
+          "pmvbfdh04-3319",
+          "pmvbfdh04-3320",
+          "pmvbfdh05-3496",
+          "pmvbfdh08-3938",
+          "pmvbfdh08-3939",
+          "pmvbfdh09-4115",
+          "pmvbfdh0b-4473",
+          "pmvbfdh0b-4474",
+          "pmvbfdh0e-4762",
+          "pmvbfdh0e-4763",
+          "pmvbfdh0h-5135",
+          "pmvbfdh0h-5136",
+          "pmvbfdh0i-5407",
+          "pmvbfdh0j-5465",
+          "pmvbfdh0l-5809",
+          "pmvbfdh0l-5810",
+          "pmvbfdh0m-6093",
+          "pmvbfdh0q-6661",
+          "pmvbfdh0q-6662",
+          "pmvbfdh0s-6957",
+          "pmvbfdh0x-7525",
+          "pmvbfdh0x-7526",
+          "pmvbfdh0y-7705",
+          "pmvbfdh11-8259",
+          "pmvbfdh11-8260",
+          "pmvbfdh14-8604",
+          "pmvbfdh14-8605",
+          "pmvbfdh15-8888",
+          "pmvbfdh19-9456",
+          "pmvbfdh19-9457",
+          "pmvbfdh1c-9752",
+          "pmvbfdh1f-10320",
+          "pmvbfdh1g-10321",
+          "pmvbfdh1j-10500",
+          "pmvbfdh1n-11054",
+          "pmvbfdh1n-11055",
+          "pmvbfdh1p-11329",
+          "pmvbfdh1p-11330",
+          "pmvbfdh1t-11912",
+          "pmvbfdh1t-11913",
+          "pmvbfdh1v-12092",
+          "pmvbfdh20-12926",
+          "pmvbfdh20-12927",
+          "pmvbfdh21-13146",
+          "pmvbfdh23-13527",
+          "pmvbfdh25-13908",
+          "pmvbfdh26-14036",
+          "pmvbfdh27-14255",
+          "pmvbfdh2a-14636",
+          "pmvbfdh2b-14898",
+          "pmvbfdh2c-15117",
+          "pmvbfdh2e-15498",
+          "pmvbfdh2e-15626",
+          "pmvbfdh2f-15845",
+          "pmvbfdh2h-16107",
+          "pmvbfdh2i-16326",
+          "pmvbfdh2i-16454",
+          "pmvbfdh2j-16504",
+          "pmvbfdh2k-16718",
+          "pmvbfdh2k-16768",
+          "pmvbfdh2l-16896",
+          "pmvbfdh2m-17115",
+          "pmvbfdh2o-17496",
+          "pmvbfdh2q-17877",
+          "pmvbfdh2r-18005",
+          "pmvbfdh2s-18224",
+          "pmvbfdh2u-18605",
+          "pmvbfdh2v-18867",
+          "pmvbfdh2w-19086",
+          "pmvbfdh2y-19467",
+          "pmvbfdh2z-19595",
+          "pmvbfdh30-19814",
+          "pmvbfdh31-20076",
+          "pmvbfdh33-20295",
+          "pmvbfdh34-20423",
+          "pmvbfdh34-20474",
+          "pmvbfdh35-20688",
+          "pmvbfdh35-20739",
+          "pmvbfdh36-20867",
+          "pmvbfdh38-21081",
+          "pmvbfdh38-21132",
+          "pmvbfdh38-21255",
+          "pmvbfdh3a-21459",
+          "pmvbfdh3a-21460",
+          "pmvbfdh3b-21664",
+          "pmvbfdh3b-21665",
+          "pmvbfdh3c-21750",
+          "pmvbfdh3c-21755",
+          "pmvbfdh3c-21756",
+          "pmvbfdh3c-21757",
+          "pmvbfdh3c-21758",
+          "pmvbfdh3c-21759",
+          "pmvbfdh3c-21760",
+          "pmvbfdh3c-21761",
+          "pmvbfdh3c-21762",
+          "pmvbfdh3c-21763",
+          "pmvbfdh3c-21764",
+          "pmvbfdh3d-21765",
+          "pmvbfdh3d-21766",
+          "pmvbfdh3d-21767",
+          "pmvbfdh3d-21768",
+          "pmvbfdh3d-21769",
+          "pmvbfdh3d-21770",
+          "pmvbfdh3d-21771",
+          "pmvbfdh3d-21772",
+          "pmvbfdh3d-21773",
+          "pmvbfdh3d-21774",
+          "pmvbfdh3d-21775",
+          "pmvbfdh3d-21776",
+          "pmvbfdh3d-21777",
+          "pmvbfdh3d-21778",
+          "pmvbfdh3d-21779",
+          "pmvbfdh3d-21780",
+          "pmvbfdh3d-21781",
+          "pmvbfdh3d-21782",
+          "pmvbfdh3e-21783",
+          "pmvbfdh3e-21784",
+          "pmvbfdh3e-21785",
+          "pmvbfdh3e-21786",
+          "pmvbfdh3e-21787",
+          "pmvbfdh3e-21788",
+          "pmvbfdh3e-21789",
+          "pmvbfdh3e-21790",
+          "pmvbfdh3e-21791",
+          "pmvbfdh3e-21792",
+          "pmvbfdh3e-21793",
+          "pmvbfdh3e-21794",
+          "pmvbfdh3e-21795",
+          "pmvbfdh3f-21796",
+          "pmvbfdh3f-21797",
+          "pmvbfdh3f-21798",
+          "pmvbfdh3f-21799",
+          "pmvbfdh3f-21800",
+          "pmvbfdh3f-21801",
+          "pmvbfdh3f-21802",
+          "pmvbfdh3f-21803",
+          "pmvbfdh3f-21804",
+          "pmvbfdh3f-21805",
+          "pmvbfdh3f-21806",
+          "pmvbfdh3f-21807",
+          "pmvbfdh3f-21808",
+          "pmvbfdh3f-21809",
+          "pmvbfdh3f-21810",
+          "pmvbfdh3f-21811",
+          "pmvbfdh3f-21812",
+          "pmvbfdh3f-21813",
+          "pmvbfdh3f-21814",
+          "pmvbfdh3f-21815",
+          "pmvbfdh3f-21816",
+          "pmvbfdh3f-21817",
+          "pmvbfdh3g-21818",
+          "pmvbfdh3g-21819",
+          "pmvbfdh3g-21820",
+          "pmvbfdh3g-21821",
+          "pmvbfdh3g-21822",
+          "pmvbfdh3g-21823",
+          "pmvbfdh3g-21824",
+          "pmvbfdh3g-21825",
+          "pmvbfdh3g-21826",
+          "pmvbfdh3g-21827",
+          "pmvbfdh3g-21828",
+          "pmvbfdh3g-21829",
+          "pmvbfdh3g-21830",
+          "pmvbfdh3g-21831",
+          "pmvbfdh3g-21832",
+          "pmvbfdh3g-21833",
+          "pmvbfdh3g-21834",
+          "pmvbfdh3g-21835",
+          "pmvbfdh3g-21836",
+          "pmvbfdh3h-21837",
+          "pmvbfdh3h-21838",
+          "pmvbfdh3h-21839",
+          "pmvbfdh3h-21840",
+          "pmvbfdh3h-21841",
+          "pmvbfdh3h-21842",
+          "pmvbfdh3h-21843",
+          "pmvbfdh3h-21844",
+          "pmvbfdh3h-21845",
+          "pmvbfdh3h-21846",
+          "pmvbfdh3h-21847",
+          "pmvbfdh3h-21848",
+          "pmvbfdh3h-21849",
+          "pmvbfdh3h-21850",
+          "pmvbfdh3h-21851",
+          "pmvbfdh3h-21852",
+          "pmvbfdh3h-21853",
+          "pmvbfdh3h-21854",
+          "pmvbfdh3h-21855",
+          "pmvbfdh3i-21856",
+          "pmvbfdh3i-21857",
+          "pmvbfdh3i-21858",
+          "pmvbfdh3i-21859",
+          "pmvbfdh3i-21860",
+          "pmvbfdh3i-21861",
+          "pmvbfdh3i-21862",
+          "pmvbfdh3i-21863",
+          "pmvbfdh3i-21864",
+          "pmvbfdh3i-21865",
+          "pmvbfdh3i-21866",
+          "pmvbfdh3i-21867",
+          "pmvbfdh3i-21868",
+          "pmvbfdh3i-21869",
+          "pmvbfdh3i-21870",
+          "pmvbfdh3i-21871",
+          "pmvbfdh3j-21872",
+          "pmvbfdh3j-21873",
+          "pmvbfdh3j-21874",
+          "pmvbfdh3j-21875",
+          "pmvbfdh3j-21876",
+          "pmvbfdh3j-21877",
+          "pmvbfdh3j-21878",
+          "pmvbfdh3j-21879",
+          "pmvbfdh3j-21880",
+          "pmvbfdh3j-21881",
+          "pmvbfdh3j-21882",
+          "pmvbfdh3k-21883",
+          "pmvbfdh3k-21884",
+          "pmvbfdh3k-21885",
+          "pmvbfdh3k-21886",
+          "pmvbfdh3k-21887",
+          "pmvbfdh3k-21888",
+          "pmvbfdh3k-21889",
+          "pmvbfdh3k-21890",
+          "pmvbfdh3k-21891",
+          "pmvbfdh3k-21892",
+          "pmvbfdh3k-21893",
+          "pmvbfdh3k-21894",
+          "pmvbfdh3k-21895",
+          "pmvbfdh3k-21896",
+          "pmvbfdh3l-21897",
+          "pmvbfdh3l-21898",
+          "pmvbfdh3l-21899",
+          "pmvbfdh3l-21900",
+          "pmvbfdh3l-21901",
+          "pmvbfdh3l-21902",
+          "pmvbfdh3l-21903",
+          "pmvbfdh3l-21904",
+          "pmvbfdh3l-21905",
+          "pmvbfdh3l-21906",
+          "pmvbfdh3l-21907",
+          "pmvbfdh3l-21908",
+          "pmvbfdh3l-21909",
+          "pmvbfdh3l-21910",
+          "pmvbfdh3l-21911",
+          "pmvbfdh3l-21912",
+          "pmvbfdh3m-21913",
+          "pmvbfdh3m-21914",
+          "pmvbfdh3m-21915",
+          "pmvbfdh3m-21916",
+          "pmvbfdh3m-21917",
+          "pmvbfdh3m-21918",
+          "pmvbfdh3m-21919",
+          "pmvbfdh3m-21920",
+          "pmvbfdh3m-21921",
+          "pmvbfdh3m-21922",
+          "pmvbfdh3m-21923",
+          "pmvbfdh3m-21924",
+          "pmvbfdh3m-21925",
+          "pmvbfdh3m-21926",
+          "pmvbfdh3m-21927",
+          "pmvbfdh3n-21928",
+          "pmvbfdh3n-21929",
+          "pmvbfdh3n-21930",
+          "pmvbfdh3n-21931",
+          "pmvbfdh3n-21932",
+          "pmvbfdh3n-21933",
+          "pmvbfdh3r-21934",
+          "pmvbfdh3u-21935",
+          "pmvbfdh3y-21936",
+          "pmvbfdh41-21937",
+          "pmvbfdh49-21938",
+          "pmvbfdh49-21939",
+          "pmvbfdh4a-21940",
+          "pmvbfdh4a-21941",
+          "pmvbfdh4a-21942",
+          "pmvbfdh4a-21943",
+          "pmvbfdh4a-21944",
+          "pmvbfdh4a-21945",
+          "pmvbfdh4a-21946",
+          "pmvbfdh4e-21947",
+          "pmvbfdh4i-21948",
+          "pmvbfdh4q-21949",
+          "pmvbfdh4q-21950",
+          "pmvbfdh4q-21951",
+          "pmvbfdh4q-21952",
+          "pmvbfdh4q-21953",
+          "pmvbfdh4q-21954",
+          "pmvbfdh4q-21955",
+          "pmvbfdh4q-21956",
+          "pmvbfdh4q-21957",
+          "pmvbfdh4y-21958",
+          "pmvbfdh63-21959",
+          "pmvbfdh63-21960",
+          "pmvbfdh63-21961",
+          "pmvbfdh63-21962",
+          "pmvbfdh63-21963",
+          "pmvbfdh68-21964",
+          "pmvbfdh6b-21965",
+          "pmvbfdh6h-21966",
+          "pmvbfdh6l-21967",
+          "pmvbfdh6p-21968",
+          "pmvbfdh6t-21969",
+          "pmvbfdh6z-21970"
+        ]
+      }
+    ]
+  },
+  "name": "Swept-wing propeller plane",
+  "parts": [
+    {
+      "id": "pmvbfdgzj-470",
+      "type": "c-blue",
+      "pos": [
+        -225,
+        98.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdgzk-471",
+      "type": "c-blue",
+      "pos": [
+        -225,
+        98.5,
+        -75
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdgzl-647",
+      "type": "c-yellow",
+      "pos": [
+        -150,
+        98.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdgzp-1187",
+      "type": "c-blue",
+      "pos": [
+        -75,
+        98.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdgzp-1188",
+      "type": "c-blue",
+      "pos": [
+        -75,
+        98.5,
+        -75
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdgzq-1364",
+      "type": "c-yellow",
+      "pos": [
+        0,
+        98.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdgzt-1806",
+      "type": "c-blue",
+      "pos": [
+        75,
+        98.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdgzt-1807",
+      "type": "c-blue",
+      "pos": [
+        75,
+        98.5,
+        -75
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdgzu-1983",
+      "type": "c-yellow",
+      "pos": [
+        150,
+        98.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdgzw-2243",
+      "type": "c-blue",
+      "pos": [
+        225,
+        98.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdgzw-2244",
+      "type": "c-blue",
+      "pos": [
+        225,
+        98.5,
+        -75
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdgzz-2602",
+      "type": "c-blue",
+      "pos": [
+        -225,
+        98.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdgzz-2603",
+      "type": "c-blue",
+      "pos": [
+        -225,
+        98.5,
+        75
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdh00-2779",
+      "type": "c-yellow",
+      "pos": [
+        -150,
+        98.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh04-3319",
+      "type": "c-blue",
+      "pos": [
+        -75,
+        98.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh04-3320",
+      "type": "c-blue",
+      "pos": [
+        -75,
+        98.5,
+        75
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdh05-3496",
+      "type": "c-yellow",
+      "pos": [
+        0,
+        98.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh08-3938",
+      "type": "c-blue",
+      "pos": [
+        75,
+        98.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh08-3939",
+      "type": "c-blue",
+      "pos": [
+        75,
+        98.5,
+        75
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdh09-4115",
+      "type": "c-yellow",
+      "pos": [
+        150,
+        98.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh0b-4473",
+      "type": "c-blue",
+      "pos": [
+        225,
+        98.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh0b-4474",
+      "type": "c-blue",
+      "pos": [
+        225,
+        98.5,
+        75
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdh0e-4762",
+      "type": "c-blue",
+      "pos": [
+        -300,
+        98.5,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh0e-4763",
+      "type": "c-blue",
+      "pos": [
+        -300,
+        98.5,
+        0
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdh0h-5135",
+      "type": "c-blue",
+      "pos": [
+        300,
+        98.5,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh0h-5136",
+      "type": "c-blue",
+      "pos": [
+        300,
+        98.5,
+        0
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdh0i-5407",
+      "type": "c-white",
+      "pos": [
+        375,
+        98.5,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh0j-5465",
+      "type": "c-red",
+      "pos": [
+        450,
+        98.5,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865476
+      ]
+    },
+    {
+      "id": "pmvbfdh0l-5809",
+      "type": "c-blue",
+      "pos": [
+        -225,
+        173.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh0l-5810",
+      "type": "c-blue",
+      "pos": [
+        -225,
+        173.5,
+        -75
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdh0m-6093",
+      "type": "c-white",
+      "pos": [
+        -150,
+        173.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh0q-6661",
+      "type": "c-blue",
+      "pos": [
+        -75,
+        173.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh0q-6662",
+      "type": "c-blue",
+      "pos": [
+        -75,
+        173.5,
+        -75
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdh0s-6957",
+      "type": "c-white",
+      "pos": [
+        0,
+        173.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh0x-7525",
+      "type": "c-blue",
+      "pos": [
+        75,
+        173.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh0x-7526",
+      "type": "c-blue",
+      "pos": [
+        75,
+        173.5,
+        -75
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdh0y-7705",
+      "type": "c-yellow",
+      "pos": [
+        150,
+        173.5,
+        -75
+      ],
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pmvbfdh11-8259",
+      "type": "c-blue",
+      "pos": [
+        225,
+        173.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh11-8260",
+      "type": "c-blue",
+      "pos": [
+        225,
+        173.5,
+        -75
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdh14-8604",
+      "type": "c-blue",
+      "pos": [
+        -225,
+        173.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh14-8605",
+      "type": "c-blue",
+      "pos": [
+        -225,
+        173.5,
+        75
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdh15-8888",
+      "type": "c-white",
+      "pos": [
+        -150,
+        173.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh19-9456",
+      "type": "c-blue",
+      "pos": [
+        -75,
+        173.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh19-9457",
+      "type": "c-blue",
+      "pos": [
+        -75,
+        173.5,
+        75
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdh1c-9752",
+      "type": "c-white",
+      "pos": [
+        0,
+        173.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh1f-10320",
+      "type": "c-blue",
+      "pos": [
+        75,
+        173.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh1g-10321",
+      "type": "c-blue",
+      "pos": [
+        75,
+        173.5,
+        75
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdh1j-10500",
+      "type": "c-yellow",
+      "pos": [
+        150,
+        173.5,
+        75
+      ],
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pmvbfdh1n-11054",
+      "type": "c-blue",
+      "pos": [
+        225,
+        173.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh1n-11055",
+      "type": "c-blue",
+      "pos": [
+        225,
+        173.5,
+        75
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdh1p-11329",
+      "type": "c-blue",
+      "pos": [
+        -300,
+        173.5,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh1p-11330",
+      "type": "c-blue",
+      "pos": [
+        -300,
+        173.5,
+        0
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdh1t-11912",
+      "type": "c-blue",
+      "pos": [
+        300,
+        173.5,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh1t-11913",
+      "type": "c-blue",
+      "pos": [
+        300,
+        173.5,
+        0
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdh1v-12092",
+      "type": "c-yellow",
+      "pos": [
+        375,
+        173.5,
+        0
+      ],
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pmvbfdh20-12926",
+      "type": "c-blue",
+      "pos": [
+        450,
+        173.5,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh20-12927",
+      "type": "c-blue",
+      "pos": [
+        450,
+        173.5,
+        0
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdh21-13146",
+      "type": "c-yellow",
+      "pos": [
+        -150,
+        173.5,
+        -150
+      ],
+      "quat": [
+        0.27059805007309845,
+        0.6532814824381882,
+        0.6532814824381883,
+        -0.2705980500730985
+      ]
+    },
+    {
+      "id": "pmvbfdh23-13527",
+      "type": "c-white",
+      "pos": [
+        0,
+        173.5,
+        -150
+      ],
+      "quat": [
+        0.7071067811865475,
+        0,
+        0,
+        0.7071067811865476
+      ]
+    },
+    {
+      "id": "pmvbfdh25-13908",
+      "type": "c-white",
+      "pos": [
+        150,
+        173.5,
+        -150
+      ],
+      "quat": [
+        0.7071067811865475,
+        0,
+        0,
+        0.7071067811865476
+      ]
+    },
+    {
+      "id": "pmvbfdh26-14036",
+      "type": "c-yellow",
+      "pos": [
+        225,
+        173.5,
+        -150
+      ],
+      "quat": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "pmvbfdh27-14255",
+      "type": "c-yellow",
+      "pos": [
+        -75,
+        173.5,
+        -225
+      ],
+      "quat": [
+        0.27059805007309845,
+        0.6532814824381882,
+        0.6532814824381883,
+        -0.2705980500730985
+      ]
+    },
+    {
+      "id": "pmvbfdh2a-14636",
+      "type": "c-white",
+      "pos": [
+        75,
+        173.5,
+        -225
+      ],
+      "quat": [
+        0.7071067811865475,
+        0,
+        0,
+        0.7071067811865476
+      ]
+    },
+    {
+      "id": "pmvbfdh2b-14898",
+      "type": "c-yellow",
+      "pos": [
+        225,
+        173.5,
+        -225
+      ],
+      "quat": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "pmvbfdh2c-15117",
+      "type": "c-yellow",
+      "pos": [
+        0,
+        173.5,
+        -300
+      ],
+      "quat": [
+        0.27059805007309845,
+        0.6532814824381882,
+        0.6532814824381883,
+        -0.2705980500730985
+      ]
+    },
+    {
+      "id": "pmvbfdh2e-15498",
+      "type": "c-white",
+      "pos": [
+        150,
+        173.5,
+        -300
+      ],
+      "quat": [
+        0.7071067811865475,
+        0,
+        0,
+        0.7071067811865476
+      ]
+    },
+    {
+      "id": "pmvbfdh2e-15626",
+      "type": "c-yellow",
+      "pos": [
+        225,
+        173.5,
+        -300
+      ],
+      "quat": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "pmvbfdh2f-15845",
+      "type": "c-yellow",
+      "pos": [
+        75,
+        173.5,
+        -375
+      ],
+      "quat": [
+        0.27059805007309845,
+        0.6532814824381882,
+        0.6532814824381883,
+        -0.2705980500730985
+      ]
+    },
+    {
+      "id": "pmvbfdh2h-16107",
+      "type": "c-yellow",
+      "pos": [
+        225,
+        173.5,
+        -375
+      ],
+      "quat": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "pmvbfdh2i-16326",
+      "type": "c-yellow",
+      "pos": [
+        150,
+        173.5,
+        -450
+      ],
+      "quat": [
+        0.27059805007309845,
+        0.6532814824381882,
+        0.6532814824381883,
+        -0.2705980500730985
+      ]
+    },
+    {
+      "id": "pmvbfdh2i-16454",
+      "type": "c-yellow",
+      "pos": [
+        225,
+        173.5,
+        -450
+      ],
+      "quat": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "pmvbfdh2j-16504",
+      "type": "c-lgray",
+      "pos": [
+        225,
+        173.5,
+        -525
+      ],
+      "quat": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "pmvbfdh2k-16718",
+      "type": "c-yellow",
+      "pos": [
+        375,
+        173.5,
+        -75
+      ],
+      "quat": [
+        0.27059805007309845,
+        0.6532814824381882,
+        0.6532814824381883,
+        -0.2705980500730985
+      ]
+    },
+    {
+      "id": "pmvbfdh2k-16768",
+      "type": "c-lgray",
+      "pos": [
+        450,
+        173.5,
+        -150
+      ],
+      "quat": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "pmvbfdh2l-16896",
+      "type": "c-yellow",
+      "pos": [
+        450,
+        173.5,
+        -75
+      ],
+      "quat": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "pmvbfdh2m-17115",
+      "type": "c-yellow",
+      "pos": [
+        -150,
+        173.5,
+        150
+      ],
+      "quat": [
+        -0.27059805007309845,
+        -0.6532814824381882,
+        0.6532814824381883,
+        -0.2705980500730985
+      ]
+    },
+    {
+      "id": "pmvbfdh2o-17496",
+      "type": "c-white",
+      "pos": [
+        0,
+        173.5,
+        150
+      ],
+      "quat": [
+        0.7071067811865475,
+        0,
+        0,
+        0.7071067811865476
+      ]
+    },
+    {
+      "id": "pmvbfdh2q-17877",
+      "type": "c-white",
+      "pos": [
+        150,
+        173.5,
+        150
+      ],
+      "quat": [
+        0.7071067811865475,
+        0,
+        0,
+        0.7071067811865476
+      ]
+    },
+    {
+      "id": "pmvbfdh2r-18005",
+      "type": "c-yellow",
+      "pos": [
+        225,
+        173.5,
+        150
+      ],
+      "quat": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "pmvbfdh2s-18224",
+      "type": "c-yellow",
+      "pos": [
+        -75,
+        173.5,
+        225
+      ],
+      "quat": [
+        -0.27059805007309845,
+        -0.6532814824381882,
+        0.6532814824381883,
+        -0.2705980500730985
+      ]
+    },
+    {
+      "id": "pmvbfdh2u-18605",
+      "type": "c-white",
+      "pos": [
+        75,
+        173.5,
+        225
+      ],
+      "quat": [
+        0.7071067811865475,
+        0,
+        0,
+        0.7071067811865476
+      ]
+    },
+    {
+      "id": "pmvbfdh2v-18867",
+      "type": "c-yellow",
+      "pos": [
+        225,
+        173.5,
+        225
+      ],
+      "quat": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "pmvbfdh2w-19086",
+      "type": "c-yellow",
+      "pos": [
+        0,
+        173.5,
+        300
+      ],
+      "quat": [
+        -0.27059805007309845,
+        -0.6532814824381882,
+        0.6532814824381883,
+        -0.2705980500730985
+      ]
+    },
+    {
+      "id": "pmvbfdh2y-19467",
+      "type": "c-white",
+      "pos": [
+        150,
+        173.5,
+        300
+      ],
+      "quat": [
+        0.7071067811865475,
+        0,
+        0,
+        0.7071067811865476
+      ]
+    },
+    {
+      "id": "pmvbfdh2z-19595",
+      "type": "c-yellow",
+      "pos": [
+        225,
+        173.5,
+        300
+      ],
+      "quat": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "pmvbfdh30-19814",
+      "type": "c-yellow",
+      "pos": [
+        75,
+        173.5,
+        375
+      ],
+      "quat": [
+        -0.27059805007309845,
+        -0.6532814824381882,
+        0.6532814824381883,
+        -0.2705980500730985
+      ]
+    },
+    {
+      "id": "pmvbfdh31-20076",
+      "type": "c-yellow",
+      "pos": [
+        225,
+        173.5,
+        375
+      ],
+      "quat": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "pmvbfdh33-20295",
+      "type": "c-yellow",
+      "pos": [
+        150,
+        173.5,
+        450
+      ],
+      "quat": [
+        -0.27059805007309845,
+        -0.6532814824381882,
+        0.6532814824381883,
+        -0.2705980500730985
+      ]
+    },
+    {
+      "id": "pmvbfdh34-20423",
+      "type": "c-yellow",
+      "pos": [
+        225,
+        173.5,
+        450
+      ],
+      "quat": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "pmvbfdh34-20474",
+      "type": "c-lgray",
+      "pos": [
+        225,
+        173.5,
+        525
+      ],
+      "quat": [
+        -0.27059805007309845,
+        -0.6532814824381882,
+        0.6532814824381883,
+        -0.2705980500730985
+      ]
+    },
+    {
+      "id": "pmvbfdh35-20688",
+      "type": "c-yellow",
+      "pos": [
+        375,
+        173.5,
+        75
+      ],
+      "quat": [
+        -0.27059805007309845,
+        -0.6532814824381882,
+        0.6532814824381883,
+        -0.2705980500730985
+      ]
+    },
+    {
+      "id": "pmvbfdh35-20739",
+      "type": "c-lgray",
+      "pos": [
+        450,
+        173.5,
+        150
+      ],
+      "quat": [
+        -0.27059805007309845,
+        -0.6532814824381882,
+        0.6532814824381883,
+        -0.2705980500730985
+      ]
+    },
+    {
+      "id": "pmvbfdh36-20867",
+      "type": "c-yellow",
+      "pos": [
+        450,
+        173.5,
+        75
+      ],
+      "quat": [
+        0.5,
+        -0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "pmvbfdh38-21081",
+      "type": "c-yellow",
+      "pos": [
+        375,
+        248.5,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0.9238795325112867,
+        -0.3826834323650897
+      ]
+    },
+    {
+      "id": "pmvbfdh38-21132",
+      "type": "c-lgray",
+      "pos": [
+        450,
+        323.5,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0.9238795325112867,
+        -0.3826834323650897
+      ]
+    },
+    {
+      "id": "pmvbfdh38-21255",
+      "type": "c-yellow",
+      "pos": [
+        450,
+        248.5,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865476
+      ]
+    },
+    {
+      "id": "pmvbfdh3a-21459",
+      "type": "c-blue",
+      "pos": [
+        -75,
+        248.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3a-21460",
+      "type": "c-blue",
+      "pos": [
+        -75,
+        248.5,
+        -75
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdh3b-21664",
+      "type": "c-blue",
+      "pos": [
+        -75,
+        248.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3b-21665",
+      "type": "c-blue",
+      "pos": [
+        -75,
+        248.5,
+        75
+      ],
+      "quat": [
+        4.329780281177466e-17,
+        -0.7071067811865475,
+        0.7071067811865476,
+        4.329780281177467e-17
+      ]
+    },
+    {
+      "id": "pmvbfdh3c-21750",
+      "type": "c-red",
+      "pos": [
+        -375,
+        173.5,
+        0
+      ],
+      "quat": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pmvbfdh3c-21755",
+      "type": "c-gray",
+      "pos": [
+        -375,
+        98.5,
+        0
+      ],
+      "quat": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "pmvbfdh3c-21756",
+      "type": "r-90952w",
+      "pos": [
+        -187.5,
+        98.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3c-21757",
+      "type": "r-90952w",
+      "pos": [
+        -112.5,
+        98.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3c-21758",
+      "type": "r-90952w",
+      "pos": [
+        -37.5,
+        98.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3c-21759",
+      "type": "r-90952w",
+      "pos": [
+        37.5,
+        98.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3c-21760",
+      "type": "r-90952w",
+      "pos": [
+        112.5,
+        98.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3c-21761",
+      "type": "r-90952w",
+      "pos": [
+        187.5,
+        98.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3c-21762",
+      "type": "r-90952w",
+      "pos": [
+        -187.5,
+        98.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3c-21763",
+      "type": "r-90952w",
+      "pos": [
+        -112.5,
+        98.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3c-21764",
+      "type": "r-90952w",
+      "pos": [
+        -37.5,
+        98.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3d-21765",
+      "type": "r-90952w",
+      "pos": [
+        37.5,
+        98.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3d-21766",
+      "type": "r-90952w",
+      "pos": [
+        112.5,
+        98.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3d-21767",
+      "type": "r-90952w",
+      "pos": [
+        187.5,
+        98.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3d-21768",
+      "type": "r-90954w",
+      "pos": [
+        -225,
+        98.5,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3d-21769",
+      "type": "r-90954w",
+      "pos": [
+        -75,
+        98.5,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3d-21770",
+      "type": "r-90954w",
+      "pos": [
+        75,
+        98.5,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3d-21771",
+      "type": "r-90954w",
+      "pos": [
+        225,
+        98.5,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3d-21772",
+      "type": "r-909532",
+      "pos": [
+        -262.5,
+        98.5,
+        -37.5
+      ],
+      "quat": [
+        0,
+        0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3d-21773",
+      "type": "r-909532",
+      "pos": [
+        -262.5,
+        98.5,
+        37.5
+      ],
+      "quat": [
+        0,
+        -0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3d-21774",
+      "type": "r-909532",
+      "pos": [
+        262.5,
+        98.5,
+        -37.5
+      ],
+      "quat": [
+        0,
+        0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3d-21775",
+      "type": "r-909532",
+      "pos": [
+        262.5,
+        98.5,
+        37.5
+      ],
+      "quat": [
+        0,
+        -0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3d-21776",
+      "type": "r-90952w",
+      "pos": [
+        337.5,
+        98.5,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3d-21777",
+      "type": "r-90952w",
+      "pos": [
+        412.5,
+        98.5,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3d-21778",
+      "type": "r-90952w",
+      "pos": [
+        -187.5,
+        173.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3d-21779",
+      "type": "r-90952w",
+      "pos": [
+        -112.5,
+        173.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3d-21780",
+      "type": "r-90952w",
+      "pos": [
+        -37.5,
+        173.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3d-21781",
+      "type": "r-90952w",
+      "pos": [
+        37.5,
+        173.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3d-21782",
+      "type": "r-90952w",
+      "pos": [
+        112.5,
+        173.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3e-21783",
+      "type": "r-90952w",
+      "pos": [
+        187.5,
+        173.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3e-21784",
+      "type": "r-90952w",
+      "pos": [
+        -187.5,
+        173.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3e-21785",
+      "type": "r-90952w",
+      "pos": [
+        -112.5,
+        173.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3e-21786",
+      "type": "r-90952w",
+      "pos": [
+        -37.5,
+        173.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3e-21787",
+      "type": "r-90952w",
+      "pos": [
+        37.5,
+        173.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3e-21788",
+      "type": "r-90952w",
+      "pos": [
+        112.5,
+        173.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3e-21789",
+      "type": "r-90952w",
+      "pos": [
+        187.5,
+        173.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3e-21790",
+      "type": "r-90954w",
+      "pos": [
+        -225,
+        173.5,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3e-21791",
+      "type": "r-90954w",
+      "pos": [
+        -75,
+        173.5,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3e-21792",
+      "type": "r-90954w",
+      "pos": [
+        75,
+        173.5,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3e-21793",
+      "type": "r-90954w",
+      "pos": [
+        225,
+        173.5,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3e-21794",
+      "type": "r-909532",
+      "pos": [
+        -262.5,
+        173.5,
+        -37.5
+      ],
+      "quat": [
+        0,
+        0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3e-21795",
+      "type": "r-909532",
+      "pos": [
+        -262.5,
+        173.5,
+        37.5
+      ],
+      "quat": [
+        0,
+        -0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21796",
+      "type": "r-909532",
+      "pos": [
+        262.5,
+        173.5,
+        -37.5
+      ],
+      "quat": [
+        0,
+        0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21797",
+      "type": "r-909532",
+      "pos": [
+        262.5,
+        173.5,
+        37.5
+      ],
+      "quat": [
+        0,
+        -0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21798",
+      "type": "r-90952w",
+      "pos": [
+        337.5,
+        173.5,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21799",
+      "type": "r-90952w",
+      "pos": [
+        412.5,
+        173.5,
+        6.184466335694134e-16
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21800",
+      "type": "r-90952w",
+      "pos": [
+        -225,
+        136,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21801",
+      "type": "r-909532",
+      "pos": [
+        -187.5,
+        136,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21802",
+      "type": "r-90952w",
+      "pos": [
+        -150,
+        136,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21803",
+      "type": "r-909532",
+      "pos": [
+        -112.5,
+        136,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21804",
+      "type": "r-90952w",
+      "pos": [
+        -75,
+        136,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21805",
+      "type": "r-909532",
+      "pos": [
+        -37.5,
+        136,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21806",
+      "type": "r-90952w",
+      "pos": [
+        -6.184466335694134e-16,
+        136,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21807",
+      "type": "r-909532",
+      "pos": [
+        37.5,
+        136,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21808",
+      "type": "r-90952w",
+      "pos": [
+        75,
+        136,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21809",
+      "type": "r-909532",
+      "pos": [
+        112.5,
+        136,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21810",
+      "type": "r-90952w",
+      "pos": [
+        150,
+        136,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21811",
+      "type": "r-909532",
+      "pos": [
+        187.5,
+        136,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21812",
+      "type": "r-90952w",
+      "pos": [
+        225,
+        136,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21813",
+      "type": "r-90952w",
+      "pos": [
+        -225,
+        136,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21814",
+      "type": "r-909532",
+      "pos": [
+        -187.5,
+        136,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21815",
+      "type": "r-90952w",
+      "pos": [
+        -150,
+        136,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21816",
+      "type": "r-909532",
+      "pos": [
+        -112.5,
+        136,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3f-21817",
+      "type": "r-90952w",
+      "pos": [
+        -75,
+        136,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3g-21818",
+      "type": "r-909532",
+      "pos": [
+        -37.5,
+        136,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3g-21819",
+      "type": "r-90952w",
+      "pos": [
+        -6.184466335694134e-16,
+        136,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3g-21820",
+      "type": "r-909532",
+      "pos": [
+        37.5,
+        136,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3g-21821",
+      "type": "r-90952w",
+      "pos": [
+        75,
+        136,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3g-21822",
+      "type": "r-909532",
+      "pos": [
+        112.5,
+        136,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3g-21823",
+      "type": "r-90952w",
+      "pos": [
+        150,
+        136,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3g-21824",
+      "type": "r-909532",
+      "pos": [
+        187.5,
+        136,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3g-21825",
+      "type": "r-90952w",
+      "pos": [
+        225,
+        136,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3g-21826",
+      "type": "r-90952w",
+      "pos": [
+        -300,
+        136,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3g-21827",
+      "type": "r-90952w",
+      "pos": [
+        300,
+        136,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3g-21828",
+      "type": "r-90952w",
+      "pos": [
+        375,
+        136,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3g-21829",
+      "type": "r-90952w",
+      "pos": [
+        450,
+        136,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3g-21830",
+      "type": "r-909532",
+      "pos": [
+        337.5,
+        136,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3g-21831",
+      "type": "r-909532",
+      "pos": [
+        412.5,
+        136,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3g-21832",
+      "type": "r-90955w",
+      "pos": [
+        -150,
+        98.5,
+        0
+      ],
+      "quat": [
+        0,
+        -0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3g-21833",
+      "type": "r-90955w",
+      "pos": [
+        0,
+        98.5,
+        0
+      ],
+      "quat": [
+        0,
+        -0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3g-21834",
+      "type": "r-90955w",
+      "pos": [
+        150,
+        98.5,
+        0
+      ],
+      "quat": [
+        0,
+        -0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3g-21835",
+      "type": "r-red",
+      "pos": [
+        -75,
+        173.5,
+        -150
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3g-21836",
+      "type": "r-red",
+      "pos": [
+        75,
+        173.5,
+        -150
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3h-21837",
+      "type": "r-blue",
+      "pos": [
+        187.5,
+        173.5,
+        -150
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3h-21838",
+      "type": "r-yellow",
+      "pos": [
+        -187.5,
+        173.5,
+        -112.5
+      ],
+      "quat": [
+        0,
+        0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3h-21839",
+      "type": "r-yellow",
+      "pos": [
+        -112.5,
+        173.5,
+        -112.5
+      ],
+      "quat": [
+        0,
+        0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3h-21840",
+      "type": "r-yellow",
+      "pos": [
+        -37.5,
+        173.5,
+        -112.5
+      ],
+      "quat": [
+        0,
+        0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3h-21841",
+      "type": "r-yellow",
+      "pos": [
+        37.5,
+        173.5,
+        -112.5
+      ],
+      "quat": [
+        0,
+        0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3h-21842",
+      "type": "r-yellow",
+      "pos": [
+        112.5,
+        173.5,
+        -112.5
+      ],
+      "quat": [
+        0,
+        0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3h-21843",
+      "type": "r-yellow",
+      "pos": [
+        187.5,
+        173.5,
+        -112.5
+      ],
+      "quat": [
+        0,
+        0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3h-21844",
+      "type": "r-blue",
+      "pos": [
+        225,
+        173.5,
+        -112.5
+      ],
+      "quat": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3h-21845",
+      "type": "r-red",
+      "pos": [
+        0,
+        173.5,
+        -225
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3h-21846",
+      "type": "r-red",
+      "pos": [
+        150,
+        173.5,
+        -225
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3h-21847",
+      "type": "r-yellow",
+      "pos": [
+        -112.5,
+        173.5,
+        -187.5
+      ],
+      "quat": [
+        0,
+        0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3h-21848",
+      "type": "r-yellow",
+      "pos": [
+        -37.5,
+        173.5,
+        -187.5
+      ],
+      "quat": [
+        0,
+        0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3h-21849",
+      "type": "r-yellow",
+      "pos": [
+        37.5,
+        173.5,
+        -187.5
+      ],
+      "quat": [
+        0,
+        0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3h-21850",
+      "type": "r-yellow",
+      "pos": [
+        112.5,
+        173.5,
+        -187.5
+      ],
+      "quat": [
+        0,
+        0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3h-21851",
+      "type": "r-yellow",
+      "pos": [
+        187.5,
+        173.5,
+        -187.5
+      ],
+      "quat": [
+        0,
+        0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3h-21852",
+      "type": "r-blue",
+      "pos": [
+        225,
+        173.5,
+        -187.5
+      ],
+      "quat": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3h-21853",
+      "type": "r-red",
+      "pos": [
+        75,
+        173.5,
+        -300
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3h-21854",
+      "type": "r-blue",
+      "pos": [
+        187.5,
+        173.5,
+        -300
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3h-21855",
+      "type": "r-yellow",
+      "pos": [
+        -37.5,
+        173.5,
+        -262.5
+      ],
+      "quat": [
+        0,
+        0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3i-21856",
+      "type": "r-yellow",
+      "pos": [
+        37.5,
+        173.5,
+        -262.5
+      ],
+      "quat": [
+        0,
+        0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3i-21857",
+      "type": "r-yellow",
+      "pos": [
+        112.5,
+        173.5,
+        -262.5
+      ],
+      "quat": [
+        0,
+        0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3i-21858",
+      "type": "r-yellow",
+      "pos": [
+        187.5,
+        173.5,
+        -262.5
+      ],
+      "quat": [
+        0,
+        0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3i-21859",
+      "type": "r-blue",
+      "pos": [
+        225,
+        173.5,
+        -262.5
+      ],
+      "quat": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3i-21860",
+      "type": "r-red",
+      "pos": [
+        150,
+        173.5,
+        -375
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3i-21861",
+      "type": "r-yellow",
+      "pos": [
+        37.5,
+        173.5,
+        -337.5
+      ],
+      "quat": [
+        0,
+        0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3i-21862",
+      "type": "r-yellow",
+      "pos": [
+        112.5,
+        173.5,
+        -337.5
+      ],
+      "quat": [
+        0,
+        0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3i-21863",
+      "type": "r-yellow",
+      "pos": [
+        187.5,
+        173.5,
+        -337.5
+      ],
+      "quat": [
+        0,
+        0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3i-21864",
+      "type": "r-blue",
+      "pos": [
+        225,
+        173.5,
+        -337.5
+      ],
+      "quat": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3i-21865",
+      "type": "r-blue",
+      "pos": [
+        187.5,
+        173.5,
+        -450
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3i-21866",
+      "type": "r-yellow",
+      "pos": [
+        112.5,
+        173.5,
+        -412.5
+      ],
+      "quat": [
+        0,
+        0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3i-21867",
+      "type": "r-yellow",
+      "pos": [
+        187.5,
+        173.5,
+        -412.5
+      ],
+      "quat": [
+        0,
+        0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3i-21868",
+      "type": "r-blue",
+      "pos": [
+        225,
+        173.5,
+        -412.5
+      ],
+      "quat": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3i-21869",
+      "type": "r-yellow",
+      "pos": [
+        187.5,
+        173.5,
+        -487.5
+      ],
+      "quat": [
+        0,
+        0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3i-21870",
+      "type": "r-blue",
+      "pos": [
+        225,
+        173.5,
+        -487.5
+      ],
+      "quat": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3i-21871",
+      "type": "r-909533",
+      "pos": [
+        337.5,
+        173.5,
+        -37.5
+      ],
+      "quat": [
+        0,
+        0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3j-21872",
+      "type": "r-909533",
+      "pos": [
+        412.5,
+        173.5,
+        -112.5
+      ],
+      "quat": [
+        0,
+        0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3j-21873",
+      "type": "r-952002",
+      "pos": [
+        450,
+        173.5,
+        -37.5
+      ],
+      "quat": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3j-21874",
+      "type": "r-952002",
+      "pos": [
+        450,
+        173.5,
+        -112.5
+      ],
+      "quat": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3j-21875",
+      "type": "r-952002",
+      "pos": [
+        412.5,
+        173.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3j-21876",
+      "type": "r-909533",
+      "pos": [
+        412.5,
+        173.5,
+        -37.5
+      ],
+      "quat": [
+        0,
+        -0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3j-21877",
+      "type": "r-red",
+      "pos": [
+        -75,
+        173.5,
+        150
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3j-21878",
+      "type": "r-red",
+      "pos": [
+        75,
+        173.5,
+        150
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3j-21879",
+      "type": "r-blue",
+      "pos": [
+        187.5,
+        173.5,
+        150
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3j-21880",
+      "type": "r-yellow",
+      "pos": [
+        -187.5,
+        173.5,
+        112.5
+      ],
+      "quat": [
+        0,
+        -0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3j-21881",
+      "type": "r-yellow",
+      "pos": [
+        -112.5,
+        173.5,
+        112.5
+      ],
+      "quat": [
+        0,
+        -0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3j-21882",
+      "type": "r-yellow",
+      "pos": [
+        -37.5,
+        173.5,
+        112.5
+      ],
+      "quat": [
+        0,
+        -0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3k-21883",
+      "type": "r-yellow",
+      "pos": [
+        37.5,
+        173.5,
+        112.5
+      ],
+      "quat": [
+        0,
+        -0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3k-21884",
+      "type": "r-yellow",
+      "pos": [
+        112.5,
+        173.5,
+        112.5
+      ],
+      "quat": [
+        0,
+        -0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3k-21885",
+      "type": "r-yellow",
+      "pos": [
+        187.5,
+        173.5,
+        112.5
+      ],
+      "quat": [
+        0,
+        -0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3k-21886",
+      "type": "r-blue",
+      "pos": [
+        225,
+        173.5,
+        112.5
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3k-21887",
+      "type": "r-red",
+      "pos": [
+        0,
+        173.5,
+        225
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3k-21888",
+      "type": "r-red",
+      "pos": [
+        150,
+        173.5,
+        225
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3k-21889",
+      "type": "r-yellow",
+      "pos": [
+        -112.5,
+        173.5,
+        187.5
+      ],
+      "quat": [
+        0,
+        -0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3k-21890",
+      "type": "r-yellow",
+      "pos": [
+        -37.5,
+        173.5,
+        187.5
+      ],
+      "quat": [
+        0,
+        -0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3k-21891",
+      "type": "r-yellow",
+      "pos": [
+        37.5,
+        173.5,
+        187.5
+      ],
+      "quat": [
+        0,
+        -0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3k-21892",
+      "type": "r-yellow",
+      "pos": [
+        112.5,
+        173.5,
+        187.5
+      ],
+      "quat": [
+        0,
+        -0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3k-21893",
+      "type": "r-yellow",
+      "pos": [
+        187.5,
+        173.5,
+        187.5
+      ],
+      "quat": [
+        0,
+        -0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3k-21894",
+      "type": "r-blue",
+      "pos": [
+        225,
+        173.5,
+        187.5
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3k-21895",
+      "type": "r-red",
+      "pos": [
+        75,
+        173.5,
+        300
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3k-21896",
+      "type": "r-blue",
+      "pos": [
+        187.5,
+        173.5,
+        300
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3l-21897",
+      "type": "r-yellow",
+      "pos": [
+        -37.5,
+        173.5,
+        262.5
+      ],
+      "quat": [
+        0,
+        -0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3l-21898",
+      "type": "r-yellow",
+      "pos": [
+        37.5,
+        173.5,
+        262.5
+      ],
+      "quat": [
+        0,
+        -0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3l-21899",
+      "type": "r-yellow",
+      "pos": [
+        112.5,
+        173.5,
+        262.5
+      ],
+      "quat": [
+        0,
+        -0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3l-21900",
+      "type": "r-yellow",
+      "pos": [
+        187.5,
+        173.5,
+        262.5
+      ],
+      "quat": [
+        0,
+        -0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3l-21901",
+      "type": "r-blue",
+      "pos": [
+        225,
+        173.5,
+        262.5
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3l-21902",
+      "type": "r-red",
+      "pos": [
+        150,
+        173.5,
+        375
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3l-21903",
+      "type": "r-yellow",
+      "pos": [
+        37.5,
+        173.5,
+        337.5
+      ],
+      "quat": [
+        0,
+        -0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3l-21904",
+      "type": "r-yellow",
+      "pos": [
+        112.5,
+        173.5,
+        337.5
+      ],
+      "quat": [
+        0,
+        -0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3l-21905",
+      "type": "r-yellow",
+      "pos": [
+        187.5,
+        173.5,
+        337.5
+      ],
+      "quat": [
+        0,
+        -0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3l-21906",
+      "type": "r-blue",
+      "pos": [
+        225,
+        173.5,
+        337.5
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3l-21907",
+      "type": "r-blue",
+      "pos": [
+        187.5,
+        173.5,
+        450
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3l-21908",
+      "type": "r-yellow",
+      "pos": [
+        112.5,
+        173.5,
+        412.5
+      ],
+      "quat": [
+        0,
+        -0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3l-21909",
+      "type": "r-yellow",
+      "pos": [
+        187.5,
+        173.5,
+        412.5
+      ],
+      "quat": [
+        0,
+        -0.9238795325112867,
+        0,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3l-21910",
+      "type": "r-blue",
+      "pos": [
+        225,
+        173.5,
+        412.5
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3l-21911",
+      "type": "r-yellow",
+      "pos": [
+        187.5,
+        173.5,
+        487.5
+      ],
+      "quat": [
+        0,
+        -0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3l-21912",
+      "type": "r-blue",
+      "pos": [
+        225,
+        173.5,
+        487.5
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3m-21913",
+      "type": "r-909533",
+      "pos": [
+        337.5,
+        173.5,
+        37.5
+      ],
+      "quat": [
+        0,
+        -0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3m-21914",
+      "type": "r-909533",
+      "pos": [
+        412.5,
+        173.5,
+        112.5
+      ],
+      "quat": [
+        0,
+        -0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3m-21915",
+      "type": "r-952002",
+      "pos": [
+        450,
+        173.5,
+        37.5
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3m-21916",
+      "type": "r-952002",
+      "pos": [
+        450,
+        173.5,
+        112.5
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3m-21917",
+      "type": "r-952002",
+      "pos": [
+        412.5,
+        173.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3m-21918",
+      "type": "r-909533",
+      "pos": [
+        412.5,
+        173.5,
+        37.5
+      ],
+      "quat": [
+        0,
+        0.3826834323650898,
+        0,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3m-21919",
+      "type": "r-909533",
+      "pos": [
+        337.5,
+        211,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3m-21920",
+      "type": "r-909533",
+      "pos": [
+        412.5,
+        286,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3m-21921",
+      "type": "r-952002",
+      "pos": [
+        450,
+        211,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3m-21922",
+      "type": "r-952002",
+      "pos": [
+        450,
+        286,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3m-21923",
+      "type": "r-952002",
+      "pos": [
+        412.5,
+        248.5,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh3m-21924",
+      "type": "r-909533",
+      "pos": [
+        412.5,
+        211,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        -0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3m-21925",
+      "type": "r-909532d",
+      "pos": [
+        -112.5,
+        211,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3m-21926",
+      "type": "r-909532d",
+      "pos": [
+        -37.5,
+        211,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        -0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3m-21927",
+      "type": "r-909532d",
+      "pos": [
+        -112.5,
+        211,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3n-21928",
+      "type": "r-909532d",
+      "pos": [
+        -37.5,
+        211,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        -0.3826834323650898,
+        0.9238795325112867
+      ]
+    },
+    {
+      "id": "pmvbfdh3n-21929",
+      "type": "r-909542",
+      "pos": [
+        -75,
+        248.5,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3n-21930",
+      "type": "r-blue",
+      "pos": [
+        -337.5,
+        173.5,
+        6.184466335694134e-16
+      ],
+      "quat": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pmvbfdh3n-21931",
+      "type": "r-blue",
+      "pos": [
+        -375,
+        136,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        -0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3n-21932",
+      "type": "r-yellow",
+      "pos": [
+        -337.5,
+        136,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0.9238795325112867,
+        0.3826834323650899
+      ]
+    },
+    {
+      "id": "pmvbfdh3n-21933",
+      "type": "r-blue",
+      "pos": [
+        -75,
+        61,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        -0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3r-21934",
+      "type": "c-gray",
+      "pos": [
+        -75,
+        23.5,
+        -75
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865476,
+        0.7071067811865476
+      ]
+    },
+    {
+      "id": "pmvbfdh3u-21935",
+      "type": "r-blue",
+      "pos": [
+        -75,
+        61,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        -0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh3y-21936",
+      "type": "c-gray",
+      "pos": [
+        -75,
+        23.5,
+        75
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865476,
+        0.7071067811865476
+      ]
+    },
+    {
+      "id": "pmvbfdh41-21937",
+      "type": "r-gray",
+      "pos": [
+        -75,
+        23.5,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh49-21938",
+      "type": "s-blue",
+      "pos": [
+        -75.00000000000001,
+        23.5,
+        -80.49999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh49-21939",
+      "type": "h-small",
+      "pos": [
+        -75.00000000000001,
+        23.5,
+        -87.39999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh4a-21940",
+      "type": "t-small",
+      "pos": [
+        -75.00000000000001,
+        23.5,
+        -87.39999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh4a-21941",
+      "type": "s-blue",
+      "pos": [
+        -74.99999999999999,
+        23.5,
+        80.49999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh4a-21942",
+      "type": "h-small",
+      "pos": [
+        -74.99999999999999,
+        23.5,
+        87.39999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh4a-21943",
+      "type": "t-small",
+      "pos": [
+        -74.99999999999999,
+        23.5,
+        87.39999999999999
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh4a-21944",
+      "type": "k-cap",
+      "pos": [
+        -75.00000000000003,
+        23.5,
+        -95.96601717798215
+      ],
+      "quat": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pmvbfdh4a-21945",
+      "type": "k-cap",
+      "pos": [
+        -74.99999999999997,
+        23.5,
+        95.96601717798215
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh4a-21946",
+      "type": "r-blue",
+      "pos": [
+        375,
+        61,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        -0.7071067811865476,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh4e-21947",
+      "type": "c-gray",
+      "pos": [
+        375,
+        23.5,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0.7071067811865475,
+        0.7071067811865476
+      ]
+    },
+    {
+      "id": "pmvbfdh4i-21948",
+      "type": "r-blue",
+      "pos": [
+        375,
+        23.5,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh4q-21949",
+      "type": "s-blue",
+      "pos": [
+        375,
+        23.5,
+        -6.999999999999998
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh4q-21950",
+      "type": "h-small",
+      "pos": [
+        375,
+        23.5,
+        -14.999999999999996
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh4q-21951",
+      "type": "t-small",
+      "pos": [
+        375,
+        23.5,
+        -14.999999999999996
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh4q-21952",
+      "type": "s-blue",
+      "pos": [
+        375,
+        23.5,
+        6.999999999999998
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh4q-21953",
+      "type": "h-small",
+      "pos": [
+        375,
+        23.5,
+        14.999999999999996
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh4q-21954",
+      "type": "t-small",
+      "pos": [
+        375,
+        23.5,
+        14.999999999999996
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh4q-21955",
+      "type": "k-cap",
+      "pos": [
+        375,
+        23.5,
+        -27.4
+      ],
+      "quat": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pmvbfdh4q-21956",
+      "type": "k-cap",
+      "pos": [
+        375,
+        23.5,
+        27.4
+      ],
+      "quat": [
+        0,
+        1.1102230246251568e-16,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh4q-21957",
+      "type": "r-blue",
+      "pos": [
+        -395,
+        98.5,
+        0
+      ],
+      "quat": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "pmvbfdh4y-21958",
+      "type": "c-white",
+      "pos": [
+        -410,
+        98.5,
+        0
+      ],
+      "quat": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh63-21959",
+      "type": "s-blue",
+      "pos": [
+        -416.3,
+        98.5,
+        0
+      ],
+      "quat": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh63-21960",
+      "type": "s-blue",
+      "pos": [
+        -403.7,
+        98.5,
+        0
+      ],
+      "quat": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh63-21961",
+      "type": "k-cap",
+      "pos": [
+        -422.4,
+        98.5,
+        0
+      ],
+      "quat": [
+        0,
+        -0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh63-21962",
+      "type": "k-cap",
+      "pos": [
+        -367.6,
+        98.5,
+        0
+      ],
+      "quat": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh63-21963",
+      "type": "r-blue",
+      "pos": [
+        -410,
+        98.5,
+        -37.5
+      ],
+      "quat": [
+        0,
+        0.7071067811865474,
+        0,
+        0.7071067811865476
+      ]
+    },
+    {
+      "id": "pmvbfdh68-21964",
+      "type": "c-gray",
+      "pos": [
+        -410,
+        98.5,
+        -75
+      ],
+      "quat": [
+        0,
+        -0.7071067811865477,
+        0,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh6b-21965",
+      "type": "r-blue",
+      "pos": [
+        -410,
+        136,
+        -2.296212748401287e-15
+      ],
+      "quat": [
+        0,
+        4.329780281177465e-17,
+        0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh6h-21966",
+      "type": "c-gray",
+      "pos": [
+        -410,
+        173.5,
+        -4.592425496802574e-15
+      ],
+      "quat": [
+        0,
+        -4.329780281177466e-17,
+        -0.7071067811865476,
+        0.7071067811865476
+      ]
+    },
+    {
+      "id": "pmvbfdh6l-21967",
+      "type": "r-blue",
+      "pos": [
+        -410,
+        98.5,
+        37.50000000000001
+      ],
+      "quat": [
+        0,
+        -0.7071067811865476,
+        8.659560562354935e-17,
+        0.7071067811865476
+      ]
+    },
+    {
+      "id": "pmvbfdh6p-21968",
+      "type": "c-gray",
+      "pos": [
+        -410,
+        98.50000000000001,
+        75.00000000000001
+      ],
+      "quat": [
+        0,
+        0.7071067811865475,
+        -8.659560562354934e-17,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh6t-21969",
+      "type": "r-blue",
+      "pos": [
+        -410,
+        61,
+        6.88863824520386e-15
+      ],
+      "quat": [
+        0,
+        -1.2989340843532396e-16,
+        -0.7071067811865475,
+        0.7071067811865475
+      ]
+    },
+    {
+      "id": "pmvbfdh6z-21970",
+      "type": "c-gray",
+      "pos": [
+        -410,
+        23.5,
+        1.377727649040772e-14
+      ],
+      "quat": [
+        0,
+        1.2989340843532398e-16,
+        0.7071067811865476,
+        0.7071067811865476
+      ]
+    }
+  ],
+  "links": [
+    {
+      "a": "pmvbfdgzj-470",
+      "ap": "interlock",
+      "b": "pmvbfdgzk-471",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdgzp-1187",
+      "ap": "interlock",
+      "b": "pmvbfdgzp-1188",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdgzt-1806",
+      "ap": "interlock",
+      "b": "pmvbfdgzt-1807",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdgzw-2243",
+      "ap": "interlock",
+      "b": "pmvbfdgzw-2244",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdgzz-2602",
+      "ap": "interlock",
+      "b": "pmvbfdgzz-2603",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh04-3319",
+      "ap": "interlock",
+      "b": "pmvbfdh04-3320",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh08-3938",
+      "ap": "interlock",
+      "b": "pmvbfdh08-3939",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh0b-4473",
+      "ap": "interlock",
+      "b": "pmvbfdh0b-4474",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh0e-4762",
+      "ap": "interlock",
+      "b": "pmvbfdh0e-4763",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh0h-5135",
+      "ap": "interlock",
+      "b": "pmvbfdh0h-5136",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh0l-5809",
+      "ap": "interlock",
+      "b": "pmvbfdh0l-5810",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh0q-6661",
+      "ap": "interlock",
+      "b": "pmvbfdh0q-6662",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh0x-7525",
+      "ap": "interlock",
+      "b": "pmvbfdh0x-7526",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh11-8259",
+      "ap": "interlock",
+      "b": "pmvbfdh11-8260",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh14-8604",
+      "ap": "interlock",
+      "b": "pmvbfdh14-8605",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh19-9456",
+      "ap": "interlock",
+      "b": "pmvbfdh19-9457",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh1f-10320",
+      "ap": "interlock",
+      "b": "pmvbfdh1g-10321",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh1n-11054",
+      "ap": "interlock",
+      "b": "pmvbfdh1n-11055",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh1p-11329",
+      "ap": "interlock",
+      "b": "pmvbfdh1p-11330",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh1t-11912",
+      "ap": "interlock",
+      "b": "pmvbfdh1t-11913",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh20-12926",
+      "ap": "interlock",
+      "b": "pmvbfdh20-12927",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh3a-21459",
+      "ap": "interlock",
+      "b": "pmvbfdh3a-21460",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh3b-21664",
+      "ap": "interlock",
+      "b": "pmvbfdh3b-21665",
+      "bp": "interlock",
+      "mode": "interlock",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdgzj-470",
+      "ap": "slot3",
+      "b": "pmvbfdh3c-21756",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzl-647",
+      "ap": "slot4",
+      "b": "pmvbfdh3c-21756",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzl-647",
+      "ap": "slot0",
+      "b": "pmvbfdh3c-21757",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzp-1188",
+      "ap": "slot3",
+      "b": "pmvbfdh3c-21757",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzp-1187",
+      "ap": "slot3",
+      "b": "pmvbfdh3c-21758",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzq-1364",
+      "ap": "slot4",
+      "b": "pmvbfdh3c-21758",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzq-1364",
+      "ap": "slot0",
+      "b": "pmvbfdh3c-21759",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzt-1807",
+      "ap": "slot3",
+      "b": "pmvbfdh3c-21759",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzt-1806",
+      "ap": "slot3",
+      "b": "pmvbfdh3c-21760",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzu-1983",
+      "ap": "slot4",
+      "b": "pmvbfdh3c-21760",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzu-1983",
+      "ap": "slot0",
+      "b": "pmvbfdh3c-21761",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzw-2244",
+      "ap": "slot3",
+      "b": "pmvbfdh3c-21761",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzz-2602",
+      "ap": "slot3",
+      "b": "pmvbfdh3c-21762",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh00-2779",
+      "ap": "slot4",
+      "b": "pmvbfdh3c-21762",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh00-2779",
+      "ap": "slot0",
+      "b": "pmvbfdh3c-21763",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh04-3320",
+      "ap": "slot3",
+      "b": "pmvbfdh3c-21763",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh04-3319",
+      "ap": "slot3",
+      "b": "pmvbfdh3c-21764",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh05-3496",
+      "ap": "slot4",
+      "b": "pmvbfdh3c-21764",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh05-3496",
+      "ap": "slot0",
+      "b": "pmvbfdh3d-21765",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh08-3939",
+      "ap": "slot3",
+      "b": "pmvbfdh3d-21765",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh08-3938",
+      "ap": "slot3",
+      "b": "pmvbfdh3d-21766",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh09-4115",
+      "ap": "slot4",
+      "b": "pmvbfdh3d-21766",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh09-4115",
+      "ap": "slot0",
+      "b": "pmvbfdh3d-21767",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0b-4474",
+      "ap": "slot3",
+      "b": "pmvbfdh3d-21767",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzk-471",
+      "ap": "slot1",
+      "b": "pmvbfdh3d-21768",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzz-2603",
+      "ap": "slot5",
+      "b": "pmvbfdh3d-21768",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzp-1188",
+      "ap": "slot1",
+      "b": "pmvbfdh3d-21769",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh04-3320",
+      "ap": "slot5",
+      "b": "pmvbfdh3d-21769",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzt-1807",
+      "ap": "slot1",
+      "b": "pmvbfdh3d-21770",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh08-3939",
+      "ap": "slot5",
+      "b": "pmvbfdh3d-21770",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzw-2244",
+      "ap": "slot1",
+      "b": "pmvbfdh3d-21771",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0b-4474",
+      "ap": "slot5",
+      "b": "pmvbfdh3d-21771",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0e-4763",
+      "ap": "slot6",
+      "b": "pmvbfdh3d-21772",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzk-471",
+      "ap": "slot2",
+      "b": "pmvbfdh3d-21772",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0e-4763",
+      "ap": "slot0",
+      "b": "pmvbfdh3d-21773",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzz-2603",
+      "ap": "slot4",
+      "b": "pmvbfdh3d-21773",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0h-5136",
+      "ap": "slot4",
+      "b": "pmvbfdh3d-21774",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzw-2244",
+      "ap": "slot0",
+      "b": "pmvbfdh3d-21774",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0h-5136",
+      "ap": "slot2",
+      "b": "pmvbfdh3d-21775",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0b-4474",
+      "ap": "slot6",
+      "b": "pmvbfdh3d-21775",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0h-5135",
+      "ap": "slot3",
+      "b": "pmvbfdh3d-21776",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0i-5407",
+      "ap": "slot4",
+      "b": "pmvbfdh3d-21776",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0i-5407",
+      "ap": "slot0",
+      "b": "pmvbfdh3d-21777",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0j-5465",
+      "ap": "slot2",
+      "b": "pmvbfdh3d-21777",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0l-5809",
+      "ap": "slot3",
+      "b": "pmvbfdh3d-21778",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0m-6093",
+      "ap": "slot4",
+      "b": "pmvbfdh3d-21778",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0m-6093",
+      "ap": "slot0",
+      "b": "pmvbfdh3d-21779",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0q-6662",
+      "ap": "slot3",
+      "b": "pmvbfdh3d-21779",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0q-6661",
+      "ap": "slot3",
+      "b": "pmvbfdh3d-21780",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0s-6957",
+      "ap": "slot4",
+      "b": "pmvbfdh3d-21780",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0s-6957",
+      "ap": "slot0",
+      "b": "pmvbfdh3d-21781",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0x-7526",
+      "ap": "slot3",
+      "b": "pmvbfdh3d-21781",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0x-7525",
+      "ap": "slot3",
+      "b": "pmvbfdh3d-21782",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0y-7705",
+      "ap": "slot4",
+      "b": "pmvbfdh3d-21782",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0y-7705",
+      "ap": "slot0",
+      "b": "pmvbfdh3e-21783",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh11-8260",
+      "ap": "slot3",
+      "b": "pmvbfdh3e-21783",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh14-8604",
+      "ap": "slot3",
+      "b": "pmvbfdh3e-21784",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh15-8888",
+      "ap": "slot4",
+      "b": "pmvbfdh3e-21784",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh15-8888",
+      "ap": "slot0",
+      "b": "pmvbfdh3e-21785",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh19-9457",
+      "ap": "slot3",
+      "b": "pmvbfdh3e-21785",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh19-9456",
+      "ap": "slot3",
+      "b": "pmvbfdh3e-21786",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1c-9752",
+      "ap": "slot4",
+      "b": "pmvbfdh3e-21786",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1c-9752",
+      "ap": "slot0",
+      "b": "pmvbfdh3e-21787",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1g-10321",
+      "ap": "slot3",
+      "b": "pmvbfdh3e-21787",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1f-10320",
+      "ap": "slot3",
+      "b": "pmvbfdh3e-21788",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1j-10500",
+      "ap": "slot4",
+      "b": "pmvbfdh3e-21788",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1j-10500",
+      "ap": "slot0",
+      "b": "pmvbfdh3e-21789",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1n-11055",
+      "ap": "slot3",
+      "b": "pmvbfdh3e-21789",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0l-5810",
+      "ap": "slot1",
+      "b": "pmvbfdh3e-21790",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh14-8605",
+      "ap": "slot5",
+      "b": "pmvbfdh3e-21790",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0q-6662",
+      "ap": "slot1",
+      "b": "pmvbfdh3e-21791",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh19-9457",
+      "ap": "slot5",
+      "b": "pmvbfdh3e-21791",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0x-7526",
+      "ap": "slot1",
+      "b": "pmvbfdh3e-21792",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1g-10321",
+      "ap": "slot5",
+      "b": "pmvbfdh3e-21792",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh11-8260",
+      "ap": "slot1",
+      "b": "pmvbfdh3e-21793",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1n-11055",
+      "ap": "slot5",
+      "b": "pmvbfdh3e-21793",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1p-11330",
+      "ap": "slot6",
+      "b": "pmvbfdh3e-21794",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0l-5810",
+      "ap": "slot2",
+      "b": "pmvbfdh3e-21794",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1p-11330",
+      "ap": "slot0",
+      "b": "pmvbfdh3e-21795",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh14-8605",
+      "ap": "slot4",
+      "b": "pmvbfdh3e-21795",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1t-11913",
+      "ap": "slot4",
+      "b": "pmvbfdh3f-21796",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh11-8260",
+      "ap": "slot0",
+      "b": "pmvbfdh3f-21796",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1t-11913",
+      "ap": "slot2",
+      "b": "pmvbfdh3f-21797",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1n-11055",
+      "ap": "slot6",
+      "b": "pmvbfdh3f-21797",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1t-11912",
+      "ap": "slot3",
+      "b": "pmvbfdh3f-21798",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1v-12092",
+      "ap": "slot4",
+      "b": "pmvbfdh3f-21798",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1v-12092",
+      "ap": "slot0",
+      "b": "pmvbfdh3f-21799",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh20-12927",
+      "ap": "slot3",
+      "b": "pmvbfdh3f-21799",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzj-470",
+      "ap": "slot5",
+      "b": "pmvbfdh3f-21800",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0l-5809",
+      "ap": "slot1",
+      "b": "pmvbfdh3f-21800",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzj-470",
+      "ap": "slot4",
+      "b": "pmvbfdh3f-21801",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0m-6093",
+      "ap": "slot5",
+      "b": "pmvbfdh3f-21801",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzl-647",
+      "ap": "slot2",
+      "b": "pmvbfdh3f-21802",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0m-6093",
+      "ap": "slot6",
+      "b": "pmvbfdh3f-21802",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzl-647",
+      "ap": "slot1",
+      "b": "pmvbfdh3f-21803",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0q-6661",
+      "ap": "slot0",
+      "b": "pmvbfdh3f-21803",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzp-1187",
+      "ap": "slot5",
+      "b": "pmvbfdh3f-21804",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0q-6661",
+      "ap": "slot1",
+      "b": "pmvbfdh3f-21804",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzp-1187",
+      "ap": "slot4",
+      "b": "pmvbfdh3f-21805",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0s-6957",
+      "ap": "slot5",
+      "b": "pmvbfdh3f-21805",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzq-1364",
+      "ap": "slot2",
+      "b": "pmvbfdh3f-21806",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0s-6957",
+      "ap": "slot6",
+      "b": "pmvbfdh3f-21806",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzq-1364",
+      "ap": "slot1",
+      "b": "pmvbfdh3f-21807",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0x-7525",
+      "ap": "slot0",
+      "b": "pmvbfdh3f-21807",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzt-1806",
+      "ap": "slot5",
+      "b": "pmvbfdh3f-21808",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0x-7525",
+      "ap": "slot1",
+      "b": "pmvbfdh3f-21808",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzt-1806",
+      "ap": "slot4",
+      "b": "pmvbfdh3f-21809",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0y-7705",
+      "ap": "slot3",
+      "b": "pmvbfdh3f-21809",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzu-1983",
+      "ap": "slot2",
+      "b": "pmvbfdh3f-21810",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0y-7705",
+      "ap": "slot2",
+      "b": "pmvbfdh3f-21810",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzu-1983",
+      "ap": "slot1",
+      "b": "pmvbfdh3f-21811",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh11-8259",
+      "ap": "slot0",
+      "b": "pmvbfdh3f-21811",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzw-2243",
+      "ap": "slot5",
+      "b": "pmvbfdh3f-21812",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh11-8259",
+      "ap": "slot1",
+      "b": "pmvbfdh3f-21812",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzz-2602",
+      "ap": "slot5",
+      "b": "pmvbfdh3f-21813",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh14-8604",
+      "ap": "slot1",
+      "b": "pmvbfdh3f-21813",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzz-2602",
+      "ap": "slot4",
+      "b": "pmvbfdh3f-21814",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh15-8888",
+      "ap": "slot5",
+      "b": "pmvbfdh3f-21814",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh00-2779",
+      "ap": "slot2",
+      "b": "pmvbfdh3f-21815",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh15-8888",
+      "ap": "slot6",
+      "b": "pmvbfdh3f-21815",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh00-2779",
+      "ap": "slot1",
+      "b": "pmvbfdh3f-21816",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh19-9456",
+      "ap": "slot0",
+      "b": "pmvbfdh3f-21816",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh04-3319",
+      "ap": "slot5",
+      "b": "pmvbfdh3f-21817",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh19-9456",
+      "ap": "slot1",
+      "b": "pmvbfdh3f-21817",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh04-3319",
+      "ap": "slot4",
+      "b": "pmvbfdh3g-21818",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1c-9752",
+      "ap": "slot5",
+      "b": "pmvbfdh3g-21818",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh05-3496",
+      "ap": "slot2",
+      "b": "pmvbfdh3g-21819",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1c-9752",
+      "ap": "slot6",
+      "b": "pmvbfdh3g-21819",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh05-3496",
+      "ap": "slot1",
+      "b": "pmvbfdh3g-21820",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1f-10320",
+      "ap": "slot0",
+      "b": "pmvbfdh3g-21820",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh08-3938",
+      "ap": "slot5",
+      "b": "pmvbfdh3g-21821",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1f-10320",
+      "ap": "slot1",
+      "b": "pmvbfdh3g-21821",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh08-3938",
+      "ap": "slot4",
+      "b": "pmvbfdh3g-21822",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1j-10500",
+      "ap": "slot3",
+      "b": "pmvbfdh3g-21822",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh09-4115",
+      "ap": "slot2",
+      "b": "pmvbfdh3g-21823",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1j-10500",
+      "ap": "slot2",
+      "b": "pmvbfdh3g-21823",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh09-4115",
+      "ap": "slot1",
+      "b": "pmvbfdh3g-21824",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1n-11054",
+      "ap": "slot0",
+      "b": "pmvbfdh3g-21824",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0b-4473",
+      "ap": "slot5",
+      "b": "pmvbfdh3g-21825",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1n-11054",
+      "ap": "slot1",
+      "b": "pmvbfdh3g-21825",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0e-4762",
+      "ap": "slot5",
+      "b": "pmvbfdh3g-21826",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1p-11329",
+      "ap": "slot1",
+      "b": "pmvbfdh3g-21826",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0h-5135",
+      "ap": "slot5",
+      "b": "pmvbfdh3g-21827",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1t-11912",
+      "ap": "slot1",
+      "b": "pmvbfdh3g-21827",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0i-5407",
+      "ap": "slot2",
+      "b": "pmvbfdh3g-21828",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1v-12092",
+      "ap": "slot2",
+      "b": "pmvbfdh3g-21828",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0j-5465",
+      "ap": "slot0",
+      "b": "pmvbfdh3g-21829",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh20-12926",
+      "ap": "slot1",
+      "b": "pmvbfdh3g-21829",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0h-5135",
+      "ap": "slot4",
+      "b": "pmvbfdh3g-21830",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1v-12092",
+      "ap": "slot3",
+      "b": "pmvbfdh3g-21830",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0i-5407",
+      "ap": "slot1",
+      "b": "pmvbfdh3g-21831",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh20-12926",
+      "ap": "slot0",
+      "b": "pmvbfdh3g-21831",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzk-471",
+      "ap": "slot0",
+      "b": "pmvbfdh3g-21832",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh04-3320",
+      "ap": "slot4",
+      "b": "pmvbfdh3g-21832",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzp-1188",
+      "ap": "slot0",
+      "b": "pmvbfdh3g-21833",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh08-3939",
+      "ap": "slot4",
+      "b": "pmvbfdh3g-21833",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzt-1807",
+      "ap": "slot0",
+      "b": "pmvbfdh3g-21834",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0b-4474",
+      "ap": "slot4",
+      "b": "pmvbfdh3g-21834",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh21-13146",
+      "ap": "slot3",
+      "b": "pmvbfdh3g-21835",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh23-13527",
+      "ap": "slot4",
+      "b": "pmvbfdh3g-21835",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh23-13527",
+      "ap": "slot0",
+      "b": "pmvbfdh3g-21836",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh25-13908",
+      "ap": "slot4",
+      "b": "pmvbfdh3g-21836",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh25-13908",
+      "ap": "slot0",
+      "b": "pmvbfdh3h-21837",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh26-14036",
+      "ap": "slot2",
+      "b": "pmvbfdh3h-21837",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0l-5810",
+      "ap": "slot6",
+      "b": "pmvbfdh3h-21838",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh21-13146",
+      "ap": "slot0",
+      "b": "pmvbfdh3h-21838",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0q-6662",
+      "ap": "slot4",
+      "b": "pmvbfdh3h-21839",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh21-13146",
+      "ap": "slot2",
+      "b": "pmvbfdh3h-21839",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0q-6662",
+      "ap": "slot6",
+      "b": "pmvbfdh3h-21840",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh23-13527",
+      "ap": "slot3",
+      "b": "pmvbfdh3h-21840",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0x-7526",
+      "ap": "slot4",
+      "b": "pmvbfdh3h-21841",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh23-13527",
+      "ap": "slot1",
+      "b": "pmvbfdh3h-21841",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0x-7526",
+      "ap": "slot6",
+      "b": "pmvbfdh3h-21842",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh25-13908",
+      "ap": "slot3",
+      "b": "pmvbfdh3h-21842",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh11-8260",
+      "ap": "slot4",
+      "b": "pmvbfdh3h-21843",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh25-13908",
+      "ap": "slot1",
+      "b": "pmvbfdh3h-21843",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh11-8260",
+      "ap": "slot5",
+      "b": "pmvbfdh3h-21844",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh26-14036",
+      "ap": "slot0",
+      "b": "pmvbfdh3h-21844",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh27-14255",
+      "ap": "slot3",
+      "b": "pmvbfdh3h-21845",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2a-14636",
+      "ap": "slot4",
+      "b": "pmvbfdh3h-21845",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2a-14636",
+      "ap": "slot0",
+      "b": "pmvbfdh3h-21846",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2b-14898",
+      "ap": "slot2",
+      "b": "pmvbfdh3h-21846",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh21-13146",
+      "ap": "slot4",
+      "b": "pmvbfdh3h-21847",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh27-14255",
+      "ap": "slot0",
+      "b": "pmvbfdh3h-21847",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh23-13527",
+      "ap": "slot5",
+      "b": "pmvbfdh3h-21848",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh27-14255",
+      "ap": "slot2",
+      "b": "pmvbfdh3h-21848",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh23-13527",
+      "ap": "slot7",
+      "b": "pmvbfdh3h-21849",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2a-14636",
+      "ap": "slot3",
+      "b": "pmvbfdh3h-21849",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh25-13908",
+      "ap": "slot5",
+      "b": "pmvbfdh3h-21850",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2a-14636",
+      "ap": "slot1",
+      "b": "pmvbfdh3h-21850",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh25-13908",
+      "ap": "slot7",
+      "b": "pmvbfdh3h-21851",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2b-14898",
+      "ap": "slot1",
+      "b": "pmvbfdh3h-21851",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh26-14036",
+      "ap": "slot4",
+      "b": "pmvbfdh3h-21852",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2b-14898",
+      "ap": "slot0",
+      "b": "pmvbfdh3h-21852",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2c-15117",
+      "ap": "slot3",
+      "b": "pmvbfdh3h-21853",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2e-15498",
+      "ap": "slot4",
+      "b": "pmvbfdh3h-21853",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2e-15498",
+      "ap": "slot0",
+      "b": "pmvbfdh3h-21854",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2e-15626",
+      "ap": "slot2",
+      "b": "pmvbfdh3h-21854",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh27-14255",
+      "ap": "slot4",
+      "b": "pmvbfdh3h-21855",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2c-15117",
+      "ap": "slot0",
+      "b": "pmvbfdh3h-21855",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2a-14636",
+      "ap": "slot5",
+      "b": "pmvbfdh3i-21856",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2c-15117",
+      "ap": "slot2",
+      "b": "pmvbfdh3i-21856",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2a-14636",
+      "ap": "slot7",
+      "b": "pmvbfdh3i-21857",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2e-15498",
+      "ap": "slot3",
+      "b": "pmvbfdh3i-21857",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2b-14898",
+      "ap": "slot3",
+      "b": "pmvbfdh3i-21858",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2e-15498",
+      "ap": "slot1",
+      "b": "pmvbfdh3i-21858",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2b-14898",
+      "ap": "slot4",
+      "b": "pmvbfdh3i-21859",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2e-15626",
+      "ap": "slot0",
+      "b": "pmvbfdh3i-21859",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2f-15845",
+      "ap": "slot3",
+      "b": "pmvbfdh3i-21860",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2h-16107",
+      "ap": "slot2",
+      "b": "pmvbfdh3i-21860",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2c-15117",
+      "ap": "slot4",
+      "b": "pmvbfdh3i-21861",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2f-15845",
+      "ap": "slot0",
+      "b": "pmvbfdh3i-21861",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2e-15498",
+      "ap": "slot5",
+      "b": "pmvbfdh3i-21862",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2f-15845",
+      "ap": "slot2",
+      "b": "pmvbfdh3i-21862",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2e-15498",
+      "ap": "slot7",
+      "b": "pmvbfdh3i-21863",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2h-16107",
+      "ap": "slot1",
+      "b": "pmvbfdh3i-21863",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2e-15626",
+      "ap": "slot4",
+      "b": "pmvbfdh3i-21864",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2h-16107",
+      "ap": "slot0",
+      "b": "pmvbfdh3i-21864",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2i-16326",
+      "ap": "slot3",
+      "b": "pmvbfdh3i-21865",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2i-16454",
+      "ap": "slot2",
+      "b": "pmvbfdh3i-21865",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2f-15845",
+      "ap": "slot4",
+      "b": "pmvbfdh3i-21866",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2i-16326",
+      "ap": "slot0",
+      "b": "pmvbfdh3i-21866",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2h-16107",
+      "ap": "slot3",
+      "b": "pmvbfdh3i-21867",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2i-16326",
+      "ap": "slot2",
+      "b": "pmvbfdh3i-21867",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2h-16107",
+      "ap": "slot4",
+      "b": "pmvbfdh3i-21868",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2i-16454",
+      "ap": "slot0",
+      "b": "pmvbfdh3i-21868",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2i-16326",
+      "ap": "slot4",
+      "b": "pmvbfdh3i-21869",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2j-16504",
+      "ap": "slot1",
+      "b": "pmvbfdh3i-21869",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2i-16454",
+      "ap": "slot4",
+      "b": "pmvbfdh3i-21870",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2j-16504",
+      "ap": "slot0",
+      "b": "pmvbfdh3i-21870",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1t-11913",
+      "ap": "slot6",
+      "b": "pmvbfdh3i-21871",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2k-16718",
+      "ap": "slot0",
+      "b": "pmvbfdh3i-21871",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2k-16718",
+      "ap": "slot4",
+      "b": "pmvbfdh3j-21872",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2k-16768",
+      "ap": "slot1",
+      "b": "pmvbfdh3j-21872",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh20-12927",
+      "ap": "slot5",
+      "b": "pmvbfdh3j-21873",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2l-16896",
+      "ap": "slot0",
+      "b": "pmvbfdh3j-21873",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2l-16896",
+      "ap": "slot4",
+      "b": "pmvbfdh3j-21874",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2k-16768",
+      "ap": "slot0",
+      "b": "pmvbfdh3j-21874",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2k-16718",
+      "ap": "slot3",
+      "b": "pmvbfdh3j-21875",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2l-16896",
+      "ap": "slot2",
+      "b": "pmvbfdh3j-21875",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2k-16718",
+      "ap": "slot2",
+      "b": "pmvbfdh3j-21876",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh20-12927",
+      "ap": "slot4",
+      "b": "pmvbfdh3j-21876",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2m-17115",
+      "ap": "slot3",
+      "b": "pmvbfdh3j-21877",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2o-17496",
+      "ap": "slot4",
+      "b": "pmvbfdh3j-21877",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2o-17496",
+      "ap": "slot0",
+      "b": "pmvbfdh3j-21878",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2q-17877",
+      "ap": "slot4",
+      "b": "pmvbfdh3j-21878",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2q-17877",
+      "ap": "slot0",
+      "b": "pmvbfdh3j-21879",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2r-18005",
+      "ap": "slot2",
+      "b": "pmvbfdh3j-21879",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh14-8605",
+      "ap": "slot0",
+      "b": "pmvbfdh3j-21880",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2m-17115",
+      "ap": "slot0",
+      "b": "pmvbfdh3j-21880",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh19-9457",
+      "ap": "slot2",
+      "b": "pmvbfdh3j-21881",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2m-17115",
+      "ap": "slot2",
+      "b": "pmvbfdh3j-21881",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh19-9457",
+      "ap": "slot0",
+      "b": "pmvbfdh3j-21882",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2o-17496",
+      "ap": "slot5",
+      "b": "pmvbfdh3j-21882",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1g-10321",
+      "ap": "slot2",
+      "b": "pmvbfdh3k-21883",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2o-17496",
+      "ap": "slot7",
+      "b": "pmvbfdh3k-21883",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1g-10321",
+      "ap": "slot0",
+      "b": "pmvbfdh3k-21884",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2q-17877",
+      "ap": "slot5",
+      "b": "pmvbfdh3k-21884",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1n-11055",
+      "ap": "slot2",
+      "b": "pmvbfdh3k-21885",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2q-17877",
+      "ap": "slot7",
+      "b": "pmvbfdh3k-21885",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1n-11055",
+      "ap": "slot1",
+      "b": "pmvbfdh3k-21886",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2r-18005",
+      "ap": "slot4",
+      "b": "pmvbfdh3k-21886",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2s-18224",
+      "ap": "slot3",
+      "b": "pmvbfdh3k-21887",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2u-18605",
+      "ap": "slot4",
+      "b": "pmvbfdh3k-21887",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2u-18605",
+      "ap": "slot0",
+      "b": "pmvbfdh3k-21888",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2v-18867",
+      "ap": "slot2",
+      "b": "pmvbfdh3k-21888",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2m-17115",
+      "ap": "slot4",
+      "b": "pmvbfdh3k-21889",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2s-18224",
+      "ap": "slot0",
+      "b": "pmvbfdh3k-21889",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2o-17496",
+      "ap": "slot3",
+      "b": "pmvbfdh3k-21890",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2s-18224",
+      "ap": "slot2",
+      "b": "pmvbfdh3k-21890",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2o-17496",
+      "ap": "slot1",
+      "b": "pmvbfdh3k-21891",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2u-18605",
+      "ap": "slot5",
+      "b": "pmvbfdh3k-21891",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2q-17877",
+      "ap": "slot3",
+      "b": "pmvbfdh3k-21892",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2u-18605",
+      "ap": "slot7",
+      "b": "pmvbfdh3k-21892",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2q-17877",
+      "ap": "slot1",
+      "b": "pmvbfdh3k-21893",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2v-18867",
+      "ap": "slot3",
+      "b": "pmvbfdh3k-21893",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2r-18005",
+      "ap": "slot0",
+      "b": "pmvbfdh3k-21894",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2v-18867",
+      "ap": "slot4",
+      "b": "pmvbfdh3k-21894",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2w-19086",
+      "ap": "slot3",
+      "b": "pmvbfdh3k-21895",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2y-19467",
+      "ap": "slot4",
+      "b": "pmvbfdh3k-21895",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2y-19467",
+      "ap": "slot0",
+      "b": "pmvbfdh3k-21896",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2z-19595",
+      "ap": "slot2",
+      "b": "pmvbfdh3k-21896",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2s-18224",
+      "ap": "slot4",
+      "b": "pmvbfdh3l-21897",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2w-19086",
+      "ap": "slot0",
+      "b": "pmvbfdh3l-21897",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2u-18605",
+      "ap": "slot3",
+      "b": "pmvbfdh3l-21898",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2w-19086",
+      "ap": "slot2",
+      "b": "pmvbfdh3l-21898",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2u-18605",
+      "ap": "slot1",
+      "b": "pmvbfdh3l-21899",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2y-19467",
+      "ap": "slot5",
+      "b": "pmvbfdh3l-21899",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2v-18867",
+      "ap": "slot1",
+      "b": "pmvbfdh3l-21900",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2y-19467",
+      "ap": "slot7",
+      "b": "pmvbfdh3l-21900",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2v-18867",
+      "ap": "slot0",
+      "b": "pmvbfdh3l-21901",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2z-19595",
+      "ap": "slot4",
+      "b": "pmvbfdh3l-21901",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh30-19814",
+      "ap": "slot3",
+      "b": "pmvbfdh3l-21902",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh31-20076",
+      "ap": "slot2",
+      "b": "pmvbfdh3l-21902",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2w-19086",
+      "ap": "slot4",
+      "b": "pmvbfdh3l-21903",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh30-19814",
+      "ap": "slot0",
+      "b": "pmvbfdh3l-21903",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2y-19467",
+      "ap": "slot3",
+      "b": "pmvbfdh3l-21904",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh30-19814",
+      "ap": "slot2",
+      "b": "pmvbfdh3l-21904",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2y-19467",
+      "ap": "slot1",
+      "b": "pmvbfdh3l-21905",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh31-20076",
+      "ap": "slot3",
+      "b": "pmvbfdh3l-21905",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh2z-19595",
+      "ap": "slot0",
+      "b": "pmvbfdh3l-21906",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh31-20076",
+      "ap": "slot4",
+      "b": "pmvbfdh3l-21906",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh33-20295",
+      "ap": "slot3",
+      "b": "pmvbfdh3l-21907",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh34-20423",
+      "ap": "slot2",
+      "b": "pmvbfdh3l-21907",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh30-19814",
+      "ap": "slot4",
+      "b": "pmvbfdh3l-21908",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh33-20295",
+      "ap": "slot0",
+      "b": "pmvbfdh3l-21908",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh31-20076",
+      "ap": "slot1",
+      "b": "pmvbfdh3l-21909",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh33-20295",
+      "ap": "slot2",
+      "b": "pmvbfdh3l-21909",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh31-20076",
+      "ap": "slot0",
+      "b": "pmvbfdh3l-21910",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh34-20423",
+      "ap": "slot4",
+      "b": "pmvbfdh3l-21910",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh33-20295",
+      "ap": "slot4",
+      "b": "pmvbfdh3l-21911",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh34-20474",
+      "ap": "slot0",
+      "b": "pmvbfdh3l-21911",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh34-20423",
+      "ap": "slot0",
+      "b": "pmvbfdh3l-21912",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh34-20474",
+      "ap": "slot1",
+      "b": "pmvbfdh3l-21912",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1t-11913",
+      "ap": "slot0",
+      "b": "pmvbfdh3m-21913",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh35-20688",
+      "ap": "slot0",
+      "b": "pmvbfdh3m-21913",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh35-20688",
+      "ap": "slot4",
+      "b": "pmvbfdh3m-21914",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh35-20739",
+      "ap": "slot0",
+      "b": "pmvbfdh3m-21914",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh20-12927",
+      "ap": "slot1",
+      "b": "pmvbfdh3m-21915",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh36-20867",
+      "ap": "slot4",
+      "b": "pmvbfdh3m-21915",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh36-20867",
+      "ap": "slot0",
+      "b": "pmvbfdh3m-21916",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh35-20739",
+      "ap": "slot1",
+      "b": "pmvbfdh3m-21916",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh35-20688",
+      "ap": "slot3",
+      "b": "pmvbfdh3m-21917",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh36-20867",
+      "ap": "slot2",
+      "b": "pmvbfdh3m-21917",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh35-20688",
+      "ap": "slot2",
+      "b": "pmvbfdh3m-21918",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh20-12927",
+      "ap": "slot2",
+      "b": "pmvbfdh3m-21918",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1t-11912",
+      "ap": "slot4",
+      "b": "pmvbfdh3m-21919",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh38-21081",
+      "ap": "slot0",
+      "b": "pmvbfdh3m-21919",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh38-21081",
+      "ap": "slot4",
+      "b": "pmvbfdh3m-21920",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh38-21132",
+      "ap": "slot0",
+      "b": "pmvbfdh3m-21920",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh20-12926",
+      "ap": "slot5",
+      "b": "pmvbfdh3m-21921",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh38-21255",
+      "ap": "slot4",
+      "b": "pmvbfdh3m-21921",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh38-21255",
+      "ap": "slot0",
+      "b": "pmvbfdh3m-21922",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh38-21132",
+      "ap": "slot1",
+      "b": "pmvbfdh3m-21922",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh38-21081",
+      "ap": "slot3",
+      "b": "pmvbfdh3m-21923",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh38-21255",
+      "ap": "slot2",
+      "b": "pmvbfdh3m-21923",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh38-21081",
+      "ap": "slot2",
+      "b": "pmvbfdh3m-21924",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh20-12926",
+      "ap": "slot6",
+      "b": "pmvbfdh3m-21924",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0m-6093",
+      "ap": "slot1",
+      "b": "pmvbfdh3m-21925",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh3a-21459",
+      "ap": "slot0",
+      "b": "pmvbfdh3m-21925",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh3a-21459",
+      "ap": "slot2",
+      "b": "pmvbfdh3m-21926",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0s-6957",
+      "ap": "slot3",
+      "b": "pmvbfdh3m-21926",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh15-8888",
+      "ap": "slot1",
+      "b": "pmvbfdh3m-21927",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh3b-21664",
+      "ap": "slot0",
+      "b": "pmvbfdh3m-21927",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh3b-21664",
+      "ap": "slot2",
+      "b": "pmvbfdh3n-21928",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1c-9752",
+      "ap": "slot3",
+      "b": "pmvbfdh3n-21928",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh3a-21460",
+      "ap": "slot1",
+      "b": "pmvbfdh3n-21929",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh3b-21665",
+      "ap": "slot5",
+      "b": "pmvbfdh3n-21929",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh1p-11330",
+      "ap": "slot3",
+      "b": "pmvbfdh3n-21930",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh3c-21750",
+      "ap": "slot0",
+      "b": "pmvbfdh3n-21930",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh3c-21750",
+      "ap": "slot2",
+      "b": "pmvbfdh3n-21931",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh3c-21755",
+      "ap": "slot0",
+      "b": "pmvbfdh3n-21931",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh0e-4762",
+      "ap": "slot6",
+      "b": "pmvbfdh3n-21932",
+      "bp": "end0",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdh3c-21750",
+      "ap": "slot1",
+      "b": "pmvbfdh3n-21932",
+      "bp": "end1",
+      "mode": "end"
+    },
+    {
+      "a": "pmvbfdgzp-1187",
+      "ap": "slot1",
+      "b": "pmvbfdh3n-21933",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh3n-21933",
+      "ap": "end1",
+      "b": "pmvbfdh3r-21934",
+      "bp": "slot0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh04-3319",
+      "ap": "slot1",
+      "b": "pmvbfdh3u-21935",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh3u-21935",
+      "ap": "end1",
+      "b": "pmvbfdh3y-21936",
+      "bp": "slot0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh3r-21934",
+      "ap": "hole",
+      "b": "pmvbfdh41-21937",
+      "bp": "shaft",
+      "mode": "through",
+      "offset": -75,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh41-21937",
+      "ap": "shaft",
+      "b": "pmvbfdh3y-21936",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 75
+    },
+    {
+      "a": "pmvbfdh41-21937",
+      "ap": "shaft",
+      "b": "pmvbfdh49-21938",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -80.5,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh41-21937",
+      "ap": "shaft",
+      "b": "pmvbfdh49-21939",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -87.4,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh49-21939",
+      "ap": "tire",
+      "b": "pmvbfdh4a-21940",
+      "bp": "tire",
+      "mode": "tire",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh41-21937",
+      "ap": "shaft",
+      "b": "pmvbfdh4a-21941",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 80.5,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh41-21937",
+      "ap": "shaft",
+      "b": "pmvbfdh4a-21942",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 87.4,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh4a-21942",
+      "ap": "tire",
+      "b": "pmvbfdh4a-21943",
+      "bp": "tire",
+      "mode": "tire",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh41-21937",
+      "ap": "end0",
+      "b": "pmvbfdh4a-21944",
+      "bp": "slot0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh41-21937",
+      "ap": "end1",
+      "b": "pmvbfdh4a-21945",
+      "bp": "slot0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh0i-5407",
+      "ap": "slot6",
+      "b": "pmvbfdh4a-21946",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh4a-21946",
+      "ap": "end1",
+      "b": "pmvbfdh4e-21947",
+      "bp": "slot0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh4e-21947",
+      "ap": "hole",
+      "b": "pmvbfdh4i-21948",
+      "bp": "shaft",
+      "mode": "through",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh4i-21948",
+      "ap": "shaft",
+      "b": "pmvbfdh4q-21949",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -7,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh4i-21948",
+      "ap": "shaft",
+      "b": "pmvbfdh4q-21950",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -15,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh4q-21950",
+      "ap": "tire",
+      "b": "pmvbfdh4q-21951",
+      "bp": "tire",
+      "mode": "tire",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh4i-21948",
+      "ap": "shaft",
+      "b": "pmvbfdh4q-21952",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 7,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh4i-21948",
+      "ap": "shaft",
+      "b": "pmvbfdh4q-21953",
+      "bp": "hole",
+      "mode": "through",
+      "offset": 15,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh4q-21953",
+      "ap": "tire",
+      "b": "pmvbfdh4q-21954",
+      "bp": "tire",
+      "mode": "tire",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh4i-21948",
+      "ap": "end0",
+      "b": "pmvbfdh4q-21955",
+      "bp": "slot0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh4i-21948",
+      "ap": "end1",
+      "b": "pmvbfdh4q-21956",
+      "bp": "slot0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh3c-21755",
+      "ap": "hole",
+      "b": "pmvbfdh4q-21957",
+      "bp": "shaft",
+      "mode": "through",
+      "offset": 20,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh4q-21957",
+      "ap": "shaft",
+      "b": "pmvbfdh4y-21958",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -15,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh4q-21957",
+      "ap": "shaft",
+      "b": "pmvbfdh63-21959",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -21.3,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh4q-21957",
+      "ap": "shaft",
+      "b": "pmvbfdh63-21960",
+      "bp": "hole",
+      "mode": "through",
+      "offset": -8.7,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh4q-21957",
+      "ap": "end0",
+      "b": "pmvbfdh63-21961",
+      "bp": "slot0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh4q-21957",
+      "ap": "end1",
+      "b": "pmvbfdh63-21962",
+      "bp": "slot0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh4y-21958",
+      "ap": "slot0",
+      "b": "pmvbfdh63-21963",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh63-21963",
+      "ap": "end1",
+      "b": "pmvbfdh68-21964",
+      "bp": "slot0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh4y-21958",
+      "ap": "slot2",
+      "b": "pmvbfdh6b-21965",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh6b-21965",
+      "ap": "end1",
+      "b": "pmvbfdh6h-21966",
+      "bp": "slot0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh4y-21958",
+      "ap": "slot4",
+      "b": "pmvbfdh6l-21967",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh6l-21967",
+      "ap": "end1",
+      "b": "pmvbfdh6p-21968",
+      "bp": "slot0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh4y-21958",
+      "ap": "slot6",
+      "b": "pmvbfdh6t-21969",
+      "bp": "end0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    },
+    {
+      "a": "pmvbfdh6t-21969",
+      "ap": "end1",
+      "b": "pmvbfdh6z-21970",
+      "bp": "slot0",
+      "mode": "end",
+      "offset": 0,
+      "roll": 0,
+      "portIndex": 0
+    }
+  ]
+}

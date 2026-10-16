@@ -34,3 +34,7 @@ Useful as a smaller assembly-validation reference. It does not meet the requeste
 ## Current implementation boundary
 
 The existing grid converter, files and aircraft test are preserved as an explicitly experimental tool. The dialog now starts with a box, and the MCP guidance no longer recommends this grid as the solution to a realistic aircraft request. No diagonal/manual aircraft replacement has been implemented or validated by this change. A future arbitrary-shape converter must pass the reference assembly checks above before it is presented as a faithful K’NEX builder.
+
+## Straight-rod alternative, 16 October 2026
+
+Ed explicitly asked to skip rod bending and build another plane. The [swept-wing plane](swept-wing-plane.md) implements that alternative using an assembly graph, stock-length spans and real connector orientations. It uses the Flying Fun booklet as a construction-method reference, not as an exact replica. The 79621 replica and ordinary-rod bending remain outside this build.

@@ -33,7 +33,7 @@ Each shape uses `name`, `kind`, `center` and `size` in millimetres. Tapers also 
 
 ## Preserved aircraft grid experiment
 
-**Examples → Aircraft grid test** and MCP `example_airplane` build a 1,700-part original display airframe with 2,362 connections: a shaped fuselage, thick tapered wings, cockpit, horizontal tailplane, vertical fin and four 47 mm tyres on two supported axles. Stock color variants distinguish the body, cockpit, wings and tail. Region layers remain editable. The shell is approximately 1,050 × 450 × 1,425 mm measured between grid nodes before the landing gear is added.
+**Examples → Aircraft grid test** builds a 1,700-part original display airframe with 2,362 connections: a shaped fuselage, thick tapered wings, cockpit, horizontal tailplane, vertical fin and four 47 mm tyres on two supported axles. Stock color variants distinguish the body, cockpit, wings and tail. Region layers remain editable. The shell is approximately 1,050 × 450 × 1,425 mm measured between grid nodes before the landing gear is added.
 
 ![Detailed 3D airplane](airplane-3d.png)
 
@@ -42,3 +42,5 @@ Each shape uses `name`, `kind`, `center` and `size` in millimetres. Tapers also 
 The Aircraft grid test preset converts only the rough shell. The detailed airplane adds wheel assemblies through the regular socket/axle solver, with spacers and caps, and validates the completed model. Arbitrary shape conversion does not infer wheels, motors or mechanisms automatically.
 
 This is an original reconstruction, not an official K’NEX aircraft kit or a tested physical assembly. Part geometry is approximate; collision checks retain the editor's fitted-pair exemptions. The result is a surface frame, not an aerodynamic skin. Flight, strength and stability are not certified. Arbitrary mesh import, rotated primitives, subtractive volumes and automatic mechanical design are not implemented. Rough editing has local undo during the dialog; saved `.knex` files contain the converted parts, not a persistent parametric history.
+
+MCP `example_airplane` now builds the separate [straight-rod swept-wing plane](swept-wing-plane.md). The grid experiment remains preserved here.
