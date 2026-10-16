@@ -8,7 +8,7 @@ import {fileURLToPath} from 'node:url';
 import {Client} from '@modelcontextprotocol/client';
 import {StdioClientTransport} from '@modelcontextprotocol/client/stdio';
 import {BuildWorkspace} from '../mcp/workspace.mjs';
-import {buildAirplane} from '../mcp/airplane.mjs';
+import {buildAirplane} from '../mcp/airplane-flat.mjs';
 import {startPreview} from '../mcp/preview.mjs';
 import {parseModel,exportModel,ports,V} from '../dist/engine.js';
 const seed={op:'place',type:'c-white',position:[0,60,0],quaternion:[0,0,0,1],alias:'hub'};
@@ -40,13 +40,14 @@ test('real MCP stdio client discovers tools, edits a build, calls the prompt and
  const directory=await mkdtemp(path.join(os.tmpdir(),'knex-mcp-test-')),transport=new StdioClientTransport({command:process.execPath,args:[fileURLToPath(new URL('../mcp/server.mjs',import.meta.url))],env:{...process.env,KNEX_BUILDS_DIR:directory},stderr:'pipe'}),client=new Client({name:'knex-test',version:'1.0.0'});
  let stderr='';transport.stderr?.on('data',data=>stderr+=data);
  try{
- await client.connect(transport);const tools=await client.listTools();assert.equal(tools.tools.length,9);
+ await client.connect(transport);const tools=await client.listTools();assert.equal(tools.tools.length,10);
  const call=async(name,args={})=>{const r=await client.callTool({name,arguments:args});assert.ok(!r.isError,JSON.stringify(r));return JSON.parse(r.content[0].text);};
  const catalog=await call('search_parts',{query:'r-blue'});assert.ok(catalog.parts.some(p=>p.type==='r-blue'));
  let draft=await call('create_build',{name:'Protocol assembly'});draft=await call('edit_build',{buildId:draft.buildId,expectedRevision:0,commands:[seed,{op:'attach',type:'r-blue',host:'hub',socket:'slot0',mode:'end',alias:'rod'}]});assert.equal(draft.connections,1);
  const bad=await client.callTool({name:'edit_build',arguments:{buildId:draft.buildId,expectedRevision:0,commands:[seed]}});assert.equal(bad.isError,true);
  const prompt=await client.getPrompt({name:'build_knex',arguments:{description:'Build an airplane'}});assert.match(prompt.messages[0].content.text,/Build an airplane/);
+ const preview=await call('shape_to_frame',{shapes:[{name:'Box',kind:'box',center:[37.5,112.5,37.5],size:[75,75,75]}]});assert.equal(preview.previewOnly,true);const generated=await call('shape_to_frame',{previewOnly:false,shapes:[{name:'Box',kind:'box',center:[37.5,112.5,37.5],size:[75,75,75]}]});assert.equal(generated.revision,1);
  const b=await call('example_airplane'),result=await call('publish_build',{buildId:b.buildId,expectedRevision:b.revision});
- const file=parseModel(await readFile(result.file,'utf8'));assert.equal(file.parts.length,27);const url=new URL(result.previewUrl),snapshot=await (await fetch(url.origin+'/ai-build?token='+url.searchParams.get('aiBridge'))).json();assert.equal(snapshot.model.parts.length,27);assert.equal(snapshot.revision,b.revision);assert.match(stderr,/MCP ready/);
+ const file=parseModel(await readFile(result.file,'utf8'));assert.equal(file.parts.length,1700);const url=new URL(result.previewUrl),snapshot=await (await fetch(url.origin+'/ai-build?token='+url.searchParams.get('aiBridge'))).json();assert.equal(snapshot.model.parts.length,1700);assert.equal(snapshot.revision,b.revision);assert.match(stderr,/MCP ready/);
  }finally{await client.close();}
 });

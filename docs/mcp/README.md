@@ -33,9 +33,11 @@ The host launches the server. Running `npm run mcp` alone waits for protocol mes
 2. `inspect_build`, `validate_build`, `undo_build`: inspect world-space ports, repair mistakes and validate. Every edit requires `expectedRevision`; invalid batches leave the draft unchanged.
 3. `publish_build`: saves an immutable `.knex` snapshot and returns a local preview URL. Open it, then choose **Load AI build**. Existing browser work is archived and Undo is available. Published snapshots stay saved after the server exits.
 
-The server also offers `example_airplane` and the `build_knex` prompt. The included airplane is an original **27-part flat display silhouette**, made from stock rods and eight-way connectors. It has 32 actual socket connections and one connected component. It is not an official kit, a detailed aircraft replica or a flight simulation. [Download the example](airplane.knex).
+The server also offers `shape_to_frame`, `example_airplane` and the `build_knex` prompt. Rough boxes, ellipsoids and tapers can be converted to stock-part frames. The airplane is now a **1,700-part 3D airframe** with 2,362 connections, thick wings, cockpit, tail surfaces and four wheels. It is an original display design, not an official kit or a flight simulation. [Shape workflow and detailed example](shapes.md).
 
-![MCP airplane loaded in the editor](airplane.png)
+![3D airplane loaded in the editor](airplane-3d.png)
+
+The first flat proof-of-concept remains available as [the 27-part silhouette](airplane.knex).
 
 Coordinates use millimetres, Y up, and quaternions `[x,y,z,w]`. Edits support place, attach, translate a complete connected assembly, pattern repeat, lock and remove with undo. Attachment supports the editor's rigid-part connection modes, including holes, hinges, interlocks and gear fits.
 

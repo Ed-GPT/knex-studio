@@ -507,4 +507,8 @@ Mesh queries use [three-mesh-bvh 0.9.1](https://github.com/gkjohnson/three-mesh-
 
 ### Prompt-to-build MCP server
 
-A local MCP companion lets an AI host search actual K’NEX parts, inspect sockets, assemble and repeat sections, undo edits, validate collisions and publish an editable build. It includes an original 27-part airplane display model. The server uses the same snapping and mesh checks as the editor, with atomic edits and revision checks. Published builds open through a local **Load AI build** preview and are saved as `.knex` files. [Setup, tools and limitations](docs/mcp/README.md).
+A local MCP companion lets an AI host search actual K’NEX parts, inspect sockets, assemble and repeat sections, undo edits, validate collisions and publish an editable build. It includes an original 1,700-part 3D airplane airframe and a rough-shape converter. The server uses the same snapping and mesh checks as the editor, with atomic edits and revision checks. Published builds open through a local **Load AI build** preview and are saved as `.knex` files. [Setup, tools and limitations](docs/mcp/README.md).
+
+### Rough shapes and a 3D airplane
+
+**Generate → Shapes → K’NEX** converts editable boxes, ellipsoids and tapers into surface frames using actual stock rods and compatible connectors. Drag volumes, resize them, preview the conversion and add it as one reversible edit. The MCP `shape_to_frame` tool exposes the same conversion. **Examples → 3D airplane** provides a 1,700-part airframe with a cockpit, thick wings, tail surfaces and four wheels. This is an original approximate display model, not a flight simulation or a physically certified build. [Workflow, screenshots and model](docs/mcp/shapes.md).
