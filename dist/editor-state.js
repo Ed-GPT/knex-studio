@@ -12,7 +12,14 @@ export function selectablePart(m,id,isolated=null){return visiblePart(m,id,isola
 export function groupFor(m,id){return m.editor?.groups.find(g=>g.partIds.includes(id));}
 export function makeGroup(m,ids,name='Group'){const e=editorState(m),valid=new Set(m.parts.map(p=>p.id)),selected=[...new Set(ids)].filter(id=>valid.has(id));if(!selected.length)throw Error('Select parts first.');for(const g of e.groups)g.partIds=g.partIds.filter(id=>!selected.includes(id));e.groups=e.groups.filter(g=>g.partIds.length);const g={id:'group-'+Date.now().toString(36)+'-'+ ++serial,name:name.trim().slice(0,60)||'Group',partIds:selected};e.groups.push(g);return g;}
 export function makeLayer(m,ids,name='Layer'){const e=editorState(m),selected=[...new Set(ids)].filter(id=>m.parts.some(p=>p.id===id));for(const l of e.layers)l.partIds=l.partIds.filter(id=>!selected.includes(id));const l={id:'layer-'+Date.now().toString(36)+'-'+ ++serial,name:name.trim().slice(0,60)||'Layer',partIds:selected,visible:true,locked:false};e.layers.push(l);return l;}
-export function selectionClosure(m,ids){const result=new Set();for(const id of ids)if(m.parts.some(p=>p.id===id))for(const p of component(m,id))result.add(p);return result;}
+// Multi-source traversal: each connection is visited once, even when a whole
+// connected build is selected. Recompute per operation so edits cannot stale it.
+export function selectionClosure(m,ids){
+ const valid=new Set(m.parts.map(p=>p.id)),adjacent=new Map(),result=new Set([...ids].filter(id=>valid.has(id)));
+ for(const l of m.links){if(!adjacent.has(l.a))adjacent.set(l.a,[]);if(!adjacent.has(l.b))adjacent.set(l.b,[]);adjacent.get(l.a).push(l.b);adjacent.get(l.b).push(l.a);}
+ for(const id of result)for(const next of adjacent.get(id)||[])result.add(next);
+ return result;
+}
 export function editBlockReason(m,ids){return groundingReason(m,ids)||([...ids].some(id=>layerFor(m,id)?.locked)?'Connected parts are on a locked layer. Unlock it before transforming.':'');}
 export function editable(m,ids){return !editBlockReason(m,ids);}
 export function duplicateSelection(m,ids){const selected=new Set(ids),map=new Map(),batch=[];if(m.parts.length+selected.size>2500)throw Error('Maximum 2500 parts per model.');for(const p of m.parts.filter(p=>selected.has(p.id))){const n=part(p.type,V(p.pos).add(V([0,0,60])).toArray(),p.quat);copyMass(p,n);copyPath(p,n);map.set(p.id,n.id);batch.push(n);}m.links.push(...m.links.filter(l=>selected.has(l.a)&&selected.has(l.b)).map(l=>({...l,a:map.get(l.a),b:map.get(l.b)})));m.parts.push(...batch);if(m.controller)m.controller.push(...m.controller.filter(c=>map.has(c.motorId)).map(c=>({...c,motorId:map.get(c.motorId)})));const copies=[...map.values()];makeGroup(m,copies,'Copy');return copies;}
