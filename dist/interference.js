@@ -23,7 +23,13 @@ function overlap(a,b){
 }
 export class InterferenceError extends Error{constructor(hit,model,phase='motion'){const label=id=>{const p=model.parts.find(p=>p.id===id);return '#'+(model.parts.indexOf(p)+1)+' '+definition(p).name;};super(`${phase==='start'?'Cannot start':phase==='placement'?'Move blocked':'Simulation stopped'}: ${label(hit.a)} intersects ${label(hit.b)}.`);this.name='InterferenceError';this.code='PART_INTERFERENCE';this.partIds=[hit.a,hit.b];this.point=hit.point;this.phase=phase;}}
 export function createInterferenceGuard(model,{excluded=new Set()}={}){
- const fitted=new Set(model.links.map(l=>pairKey(l.a,l.b))),entries=model.parts.filter(p=>!excluded.has(p.id)).map(p=>({p,id:p.id,c:collider(p),matrix:new T.Matrix4(),inverse:new T.Matrix4(),bounds:new T.Box3()}));
+ const fitted=new Set(model.links.map(l=>pairKey(l.a,l.b)));
+ // Parts plugged into opposite ends of one rod sit at the rod's fixed stock spacing; on the short
+ // 16 mm rod their socket arm tips just touch, which is a normal fit rather than interference.
+ const rodEnds=new Map();
+ for(const l of model.links)for(const [rod,rp,other] of [[l.a,l.ap,l.b],[l.b,l.bp,l.a]]){if(rp!=='end0'&&rp!=='end1')continue;const ends=rodEnds.get(rod)||{end0:[],end1:[]};ends[rp].push(other);rodEnds.set(rod,ends);}
+ for(const ends of rodEnds.values())for(const a of ends.end0)for(const b of ends.end1)fitted.add(pairKey(a,b));
+ const entries=model.parts.filter(p=>!excluded.has(p.id)).map(p=>({p,id:p.id,c:collider(p),matrix:new T.Matrix4(),inverse:new T.Matrix4(),bounds:new T.Box3()}));
  function update(pose){for(const e of entries){const p=pose?.(e.p)||e.p;e.matrix.compose(V(p.pos),Q(p.quat),unit);e.inverse.copy(e.matrix).invert();e.bounds.copy(e.c.bounds).applyMatrix4(e.matrix);}}
  function check({pose,changedIds,skipPair,all=false}={}){update(pose);const sorted=[...entries].sort((a,b)=>a.bounds.min.x-b.bounds.min.x),hits=[];for(let i=0;i<sorted.length;i++){const a=sorted[i];for(let j=i+1;j<sorted.length;j++){const b=sorted[j];if(b.bounds.min.x>a.bounds.max.x)break;if(changedIds&&!changedIds.has(a.id)&&!changedIds.has(b.id)||fitted.has(pairKey(a.id,b.id))||skipPair?.(a.id,b.id)||!a.bounds.intersectsBox(b.bounds))continue;const point=overlap(a,b);if(point){const hit={a:a.id,b:b.id,point:point.toArray(),reason:point.reason};if(!all)return hit;hits.push(hit);}}}return all?hits:null;}
  return{check,entries};

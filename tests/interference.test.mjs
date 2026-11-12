@@ -32,3 +32,11 @@ test('connected crank assemblies are checked despite the hinge contact exemption
  assert.equal(error?.code,'PART_INTERFERENCE');assert.ok(error.partIds.includes(shaft.id));assert.equal(createInterferenceGuard(s.model).check(),null);assert.equal(exportModel(bad),saved);
 });
 test('an imported overlap can be pulled clear, but cannot be moved to another overlapping pose',()=>{const a=crossing(),b=structuredClone(a),ids=new Set([b.parts[1].id]);b.parts[1].pos[2]=15;assert.doesNotThrow(()=>assertClearMotion(a,b,ids));b.parts[1].pos[2]=1;assert.throws(()=>assertClearMotion(a,b,ids),/intersects/);});
+test('hubs on opposite ends of the short 16 mm rod are a legal fit, but a hub through the rod body is not',()=>{
+ const m=emptyModel(),hub=part('c-white',[0,100,0]);m.parts.push(hub);
+ const rod=add(m,solve(m,'r-green',targets(m,'r-green','end').find(t=>t.partId===hub.id),'end')).id;
+ const far=targets(m,'c-white','end').find(t=>t.partId===rod&&!m.links.some(l=>l.a===rod&&l.ap===t.key||l.b===rod&&l.bp===t.key));
+ const proposal=solve(m,'c-white',far,'end');add(m,proposal);
+ assert.equal(m.parts.length,3);assert.equal(createInterferenceGuard(m).check(),null);
+ m.parts.push(part('c-white',[0,100,0]));assert.ok(createInterferenceGuard(m).check());
+});
